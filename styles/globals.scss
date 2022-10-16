@@ -1,2 +1,13 @@
 @import "~bootstrap/scss/bootstrap";
 @import "custom/variables";
+
+
+img {
+  vertical-align: middle;
+  height: auto;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+}
