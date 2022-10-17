@@ -65,7 +65,7 @@
     left: 0;
     width: 100%;
     height: 10px;
-    // background-image: url(../img/line.png);
+    background-image: url("/static/images/line.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -224,6 +224,42 @@
   transition: all 0.4s ease-in-out;
 }
 
+.navToggleBtn {
+  background: 0 0;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  outline: 0;
+  position: relative;
+  z-index: 995;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: inherit;
+  display: inline-block;
+  margin-left: 70px;
+}
+
+.navToggle {
+  width: 29px;
+  height: 29px;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: auto;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
 .nav-toggle-btn.white {
   .stick {
     background-color: #fff;
@@ -252,17 +288,17 @@
 }
 
 .body-menu-opened {
-  .stick-1 {
+  .stick1 {
     animation: Bc 0.85s ease-out forwards;
   }
 
-  .stick-2 {
+  .stick2 {
     animation: Cc 0.85s linear forwards;
     width: 29px;
     margin-left: 0;
   }
 
-  .stick-3 {
+  .stick3 {
     animation: Dc 0.85s linear forwards;
   }
 }
@@ -312,17 +348,17 @@
 }
 
 .body-menu-close {
-  .stick-1 {
+  .stick1 {
     width: 3px;
     animation: Ec 0.85s ease-out forwards;
   }
 
-  .stick-2 {
+  .stick2 {
     animation: Fc 0.85s ease-out forwards;
     margin-left: 0;
   }
 
-  .stick-3 {
+  .stick3 {
     animation: Gc 0.85s ease-out forwards;
   }
 }
