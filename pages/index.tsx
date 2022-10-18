@@ -16,45 +16,48 @@ const HomePage: NextPageWithLayout = () => {
     return (
         // <Page title="Main Page">
         <>
-            <section className="banner-v8">
+            <section className={styles.bannerV8}>
               <div className="container">
-                <div className="banner-v8-content">
+                <div className={styles.bannerV8Content}>
                   <div className="row">
                     <div className="col-lg-5">
-                      <div className="banner-txt-v8 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                      <div className={classNames(styles.bannerTxtV8, "wow fadeInUp")}
+                           data-wow-duration="1000ms"
+                           data-wow-delay="0ms"
+                      >
                         <h2>Boost your business up to high level</h2>
                         <p>
                           Like any great agency, we are only as good as the result we
                           deliver of our recent work
                         </p>
-                        <NextLink href="#"  className="btn-default-v8">Get Started</NextLink>
+                        <NextLink href="#" className={styles.btnDefaultV8}>Get Started</NextLink>
                       </div>
-                      <div className="banner-wid">
+                      <div className={styles.bannerWid}>
                         <p>
                           If you are hurry, quick call for us. Our supporters alway
                           24/7 and will help you asap
                         </p>
-                        <div className="wd-inz">
-                          <span className="cinon"><i className="lni lni-phone"></i></span>
-                          <div className="wl-info">
+                        <div className={styles.wdInz}>
+                          <span className={styles.cinon}><i className="lni lni-phone"></i></span>
+                          <div className={styles.wlInfo}>
                             <span>hotline 24/7</span>
                             <h3>+65 - 3002 56 56 376</h3>
                           </div>
                         </div>
                       </div>
-                      banner-wid end
                     </div>
                     <div className="col-lg-7">
-                      <div className="banner-Image-v8 wow zoomIn" data-wow-duration="1000ms" data-wow-delay="0ms">
-                        <img src="/static/static/images/banner-v8.png" alt="" />
+                      <div className={styles.bannerImgV8}
+                           data-wow-duration="1000ms"
+                           data-wow-delay="0ms">
+                        <img src="/static/images/banner-v8.png" alt="" />
                       </div>
-                      banner-Image-v8 end
                     </div>
                   </div>
                 </div>
-                banner-v8-content end
               </div>
             </section>
+
             <section className="misson-section-v8">
               <div className="container">
                 <div className="mission-sec">
@@ -188,6 +191,7 @@ const HomePage: NextPageWithLayout = () => {
                 </ul>
               </div>
             </section>
+
             <section className="projects-v8">
               <div className="container">
                 <div className="title-v8 text-center">

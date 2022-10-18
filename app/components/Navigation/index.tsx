@@ -13,13 +13,11 @@ export const Navigation = ({setOpen}: Props) => {
     return <header className={styles.headerV8}>
         <div className="container">
             <div className={styles.headerContentV8}>
-
                 <div className={styles.logoV8}>
                     <NextLink href="index.html" title="logo">
                         <img src="/static/images/logo_8.png" alt="Logo" />
                     </NextLink>
                 </div>
-
                 <nav>
                     <ul>
                         {
@@ -42,7 +40,9 @@ export const Navigation = ({setOpen}: Props) => {
                         }
                         <li>
                             <div>Elements</div>
-                            <ul className={classNames(styles.hoverMenu, "w-300")}>
+                            <ul className={classNames(styles.hoverMenu)} style={{
+                                width: "300px"
+                            }}>
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-6">
