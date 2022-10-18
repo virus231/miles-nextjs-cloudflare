@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { ReactNode, ReactNodeArray, useState } from "react";
+import { Footer } from "../Footer";
 import { Navigation } from "../Navigation";
 import { RightMenu } from "../RightMenu";
 import styles from "./Layout.module.scss"
@@ -31,7 +32,7 @@ export function Layout({ title, keywords, description, children }: LayoutProps) 
             {/*        <>{children}</>*/}
             {/*    </Container>*/}
             {/*</Box>*/}
-            {/*<Footer/>*/}
+            <Footer/>
         </div>
     </div>
 }
