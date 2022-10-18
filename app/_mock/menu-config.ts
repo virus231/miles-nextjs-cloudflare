@@ -1,4 +1,4 @@
-export const menus = [
+export const rightMenu = [
     {
         name: 'Home',
         children: [
@@ -257,6 +257,89 @@ export const menus = [
             {
                 href: '/',
                 name: 'Slider',
+            },
+        ]
+    },
+]
+
+export const navigationItems = [
+    {
+        name: "About",
+        children: [
+            {
+                href: "/",
+                name: "About Agency",
+            },
+            {
+                href: "/",
+                name: "About Business",
+            },
+            {
+                href: "/",
+                name: "About Me",
+            },
+        ]
+    },
+    {
+        name: "Portfolio",
+        children: [
+            {
+                href: "/",
+                name: "Portfolio Parallax",
+            },
+            {
+                href: "/",
+                name: "Portfolio Horizontol",
+            },
+            {
+                href: "/",
+                name: "Portfolio Masonary",
+            },
+            {
+                href: "/",
+                name: "Portfolio Single Layout V1",
+            },
+            {
+                href: "/",
+                name: "Portfolio Single Layout  V2",
+            },
+            {
+                href: "/",
+                name: "Portfolio Single Layout  V3",
+            },
+        ]
+    },
+    {
+        name: "News",
+        children: [
+            {
+                href: "/",
+                name: "Blog V1",
+            },
+            {
+                href: "/",
+                name: "Blog V2",
+            },
+            {
+                href: "/",
+                name: "Blog Single V1",
+            },
+            {
+                href: "/",
+                name: "Blog Single V2",
+            },
+        ]
+    },
+    {
+        name: "Contact",
+        children: [
+            {
+                href: "/",
+                name: "Contact V1",
+            },
+            {
+                href: "/",
+                name: "Contact V2",
             },
         ]
     },

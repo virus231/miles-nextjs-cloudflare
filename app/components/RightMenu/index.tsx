@@ -1,7 +1,7 @@
 import {NextLink} from "../BaseNextLink";
 import styles from "./RightMenu.module.scss"
 import classNames from "classnames";
-import { menus } from "../../_mock/menu-config";
+import { rightMenu } from "../../_mock/menu-config";
 
 
 type Props = {
@@ -30,7 +30,7 @@ export const RightMenu = ({isOpen = false, closeMenu}: Props) => {
         </div>
         <ul className={styles.mobileMenu}>
             {
-                menus.map((menu, index) => (
+                rightMenu.map((menu, index) => (
                     <li key={menu.name} className={styles.menuItemHasChildren}>
                         <div>
                             {menu.name}
