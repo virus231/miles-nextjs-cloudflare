@@ -71,7 +71,7 @@ const HomePage: NextPageWithLayout = () => {
                               <h3>Website Optimization</h3>
                             </div>
                             <div className="crlce-Image">
-                              <img src="/static/images/crcle-Image1.png" alt="" />
+                              <img src="/static/images/crcle-img1.png" alt="" />
                             </div>
                             crlce-Image end
                           </li>
@@ -81,7 +81,7 @@ const HomePage: NextPageWithLayout = () => {
                               <h3>Email Marketing</h3>
                             </div>
                             <div className="crlce-Image">
-                              <img src="/static/images/crcle-Image2.png" alt="" />
+                              <img src="/static/images/crcle-img2.png" alt="" />
                             </div>
                             crlce-Image end
                           </li>
@@ -91,7 +91,7 @@ const HomePage: NextPageWithLayout = () => {
                               <h3>Marketing Strategy</h3>
                             </div>
                             <div className="crlce-Image">
-                              <img src="/static/images/crcle-Image3.png" alt="" />
+                              <img src="/static/images/crcle-img3.png" alt="" />
                             </div>
                             crlce-Image end
                           </li>

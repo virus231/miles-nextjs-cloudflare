@@ -12,40 +12,43 @@ export const Footer = () => {
                              data-wow-duration="1000ms"
                              data-wow-delay="0ms">
                             <h2>Boost your business up to high level</h2>
-                            <h2>Start by<NextLink href="#" > saying hi</NextLink></h2>
+                            <h2>Start by
+                                <div> saying hi</div>
+                            </h2>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className={styles.widgetFtServices}>
                             <h3>Services</h3>
                             <ul>
-                                <li><NextLink href="#" >SEO Marketing</NextLink></li>
-                                <li><NextLink href="#" >SEO Services</NextLink></li>
-                                <li><NextLink href="#" >Pay Per Click</NextLink></li>
-                                <li><NextLink href="#" >SEO Audit</NextLink></li>
-                                <li><NextLink href="#" >FB/GG Ads</NextLink></li>
-                                <li><NextLink href="#" >Email Marketing</NextLink></li>
+                                <li><NextLink href="#">SEO Marketing</NextLink></li>
+                                <li><NextLink href="#">SEO Services</NextLink></li>
+                                <li><NextLink href="#">Pay Per Click</NextLink></li>
+                                <li><NextLink href="#">SEO Audit</NextLink></li>
+                                <li><NextLink href="#">FB/GG Ads</NextLink></li>
+                                <li><NextLink href="#">Email Marketing</NextLink></li>
                             </ul>
                         </div>
                     </div>
                     <div className="col-lg-4">
-                        <div className="get-touch-txt mw-100 wow fadeInRight" data-wow-duration="1000ms"
+                        <div className={classNames(styles.getTouchTxt, "mw-100 wow fadeInRight")}
+                             data-wow-duration="1000ms"
                              data-wow-delay="0ms">
                             <h5>contact</h5>
                             <h4>90 Fairground Rd, FL 3290, United States</h4>
-                            <NextLink href="#" >hello@milseo.co</NextLink>
+                            <NextLink href="#">hello@milseo.co</NextLink>
                             <ul>
                                 <li>
-                                    <NextLink href="15_portfolio_horizontal_scroll.html" >Works</NextLink>
+                                    <NextLink href="15_portfolio_horizontal_scroll.html">Works</NextLink>
                                 </li>
-                                <li><NextLink href="24_about_agency.html" >About</NextLink></li>
-                                <li><NextLink href="blog-layout1.html" >News</NextLink></li>
-                                <li><NextLink href="30_contact_1.html" >Contact</NextLink></li>
+                                <li><NextLink href="24_about_agency.html">About</NextLink></li>
+                                <li><NextLink href="blog-layout1.html">News</NextLink></li>
+                                <li><NextLink href="30_contact_1.html">Contact</NextLink></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div className="mile-bottom-footer">
+                <div className={styles.mileBottomFooter}>
                     <div className="row align-items-center">
                         <div className="col-lg-8">
                             <div className="btm-copy">
@@ -54,21 +57,21 @@ export const Footer = () => {
                             </div>
                         </div>
                         <div className="col-lg-4">
-                            <ul className="social-header">
+                            <ul className={styles.socialHeader}>
                                 <li>
-                                    <NextLink href="#" ><i className="lni lni-twitter-original"></i></NextLink>
+                                    <NextLink href="#"><i className="lni lni-twitter-original"></i></NextLink>
                                 </li>
                                 <li>
-                                    <NextLink href="#" ><i className="lni lni-facebook-filled"></i></NextLink>
+                                    <NextLink href="#"><i className="lni lni-facebook-filled"></i></NextLink>
                                 </li>
                                 <li>
-                                    <NextLink href="#" ><i className="lni lni-instagram-original"></i></NextLink>
+                                    <NextLink href="#"><i className="lni lni-instagram-original"></i></NextLink>
                                 </li>
                                 <li>
-                                    <NextLink href="#" ><i className="lni lni-pinterest"></i></NextLink>
+                                    <NextLink href="#"><i className="lni lni-pinterest"></i></NextLink>
                                 </li>
                                 <li>
-                                    <NextLink href="#" ><i className="lni lni-youtube"></i></NextLink>
+                                    <NextLink href="#"><i className="lni lni-youtube"></i></NextLink>
                                 </li>
                             </ul>
                         </div>
