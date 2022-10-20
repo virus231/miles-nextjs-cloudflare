@@ -5,222 +5,147 @@
 .footerV6 {
   background-color: #f2f5fa;
   padding: 150px 0 100px;
+}
 
-  &.darkV {
-    background-color: #252629;
+.footerContentV6 {
+  .widgetAbt > h2 {
+    color: #000;
+    font-size: 48px;
+    margin-bottom: 81px;
 
-    .footerContentV6 {
-      .widgetAbt > h2 {
-        color: #fff;
-        font-weight: 400;
+    div {
+      display: inline-block;
+      color: #ff4800;
+      position: relative;
 
-        a {
-          color: #64f4ab;
-          margin-left: 20px;
-
-          &:before {
-            background-color: #64f4ab;
-          }
-        }
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #ff4800;
       }
+    }
 
-      .getTouchTxt {
-        > {
-          h5 {
-            color: #8b8d90;
-            text-transform: capitalize;
-            font-weight: 400;
-          }
-
-          h4 {
-            color: #8b8d90;
-            font-size: 24px;
-          }
-
-          a {
-            color: #fff;
-
-            &:hover {
-              color: #64f4ab;
-            }
-          }
-        }
-
-        ul li a {
-          color: #fff;
-          font-size: 16px;
-          text-transform: capitalize;
-          font-weight: 500;
-          position: relative;
-          display: inline-block;
-
-          &:before {
-            content: ">";
-            position: absolute;
-            top: 0;
-            right: -40px;
-            color: #fff;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease-in-out;
-          }
-
-          &:after {
-            content: "<";
-            position: absolute;
-            top: 0;
-            left: -40px;
-            color: #fff;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease-in-out;
-          }
-
-          &:hover {
-            color: #64f4ab;
-
-            &:before {
-              opacity: 1;
-              visibility: visible;
-              right: -20px;
-              color: #64f4ab;
-            }
-
-            &:after {
-              opacity: 1;
-              visibility: visible;
-              left: -20px;
-              color: #64f4ab;
-            }
-          }
-        }
-      }
-
-      .mileBottomFooter {
-        .socialHeader li a {
-          color: #fff;
-
-          &:hover {
-            color: #64f4ab;
-          }
-        }
-
-        margin-top: 163px;
-      }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
-  .container {
-    max-width: 1410px;
-    padding: 0 15px;
-  }
+  .getTouchTxt {
+    padding-left: 96px;
+    max-width: 380px;
 
-  .footerContentV6 {
-    .widgetAbt > h2 {
+    h5 {
       color: #000;
-      font-size: 48px;
-      margin-bottom: 81px;
+      font-size: 25px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 41px;
+    }
 
-      div {
-        display: inline-block;
-        color: #00b4ff;
-        position: relative;
+    h4 {
+      color: #666;
+      font-size: 24px;
+      margin-bottom: 21px;
+    }
 
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background-color: #00b4ff;
-        }
-      }
+    .email {
+      display: block;
+      color: #000;
+      font-size: 40px;
+      line-height: 36px;
+      margin-bottom: 88px;
+    }
+
+    .contactMenu li {
+      margin-bottom: 30px;
 
       &:last-child {
         margin-bottom: 0;
       }
-    }
 
-    .getTouchTxt {
-      padding-left: 96px;
-      max-width: 380px;
-      margin-top: 15px;
-
-      > {
-        h5 {
-          color: #000;
-          font-size: 14px;
-          text-transform: uppercase;
-          font-weight: 700;
-          margin-bottom: 41px;
-        }
-
-        h4 {
-          color: #666;
-          font-size: 24px;
-          margin-bottom: 21px;
-        }
-
-        a {
-          display: block;
-          color: #000;
-          font-size: 40px;
-          line-height: 36px;
-          margin-bottom: 88px;
-        }
-      }
-
-      ul li {
-        margin-bottom: 30px;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-
-        a {
-          display: block;
-          color: #000;
-          font-size: 14px;
-          text-transform: uppercase;
-          font-weight: 700;
-
-          &:hover {
-            color: #00b4ff;
-          }
-        }
-      }
-    }
-
-    .mileBottomFooter {
-      margin-top: 146px;
-
-      .socialHeader li a {
-        color: #010101;
-      }
-    }
-
-    .widgetFtServices {
-      > h3 {
+      a {
+        display: block;
         color: #000;
-        font-size: 25px;
-        margin-bottom: 47px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        &:hover {
+          color: #00b4ff;
+        }
+      }
+    }
+  }
+
+  .mileBottomFooter {
+    margin-top: 146px;
+
+    .btmCopy {
+      img {
+        display: inline-block;
       }
 
-      ul li {
-        margin-bottom: 30px;
+      p {
+        display: inline-block;
+        color: #666;
+        font-size: 16px;
+        padding-left: 43px;
+      }
+    }
 
-        &:last-child {
-          margin-bottom: 0;
-        }
+    .socialHeader li a {
+      color: #010101;
+    }
+  }
 
-        a {
-          display: block;
-          color: #000;
-          font-size: 14px;
-          font-weight: 700;
-          text-transform: uppercase;
-        }
+  .widgetFtServices {
+    > h3 {
+      color: #000;
+      font-size: 25px;
+      margin-bottom: 47px;
+    }
+
+    ul li {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: block;
+        color: #000;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.socialHeader {
+  margin-left: auto;
+  margin-top: 7px;
+
+  li {
+    display: inline-block;
+    margin-right: 26px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: inline-block;
+      color: #666;
+      font-size: 18px;
+
+      &:hover {
+        color: #000;
       }
     }
   }

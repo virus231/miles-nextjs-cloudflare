@@ -3,7 +3,7 @@ import { NextLink } from "../BaseNextLink"
 import styles from "./Footer.module.scss"
 
 export const Footer = () => {
-    return <footer className={classNames(styles.footerV6, "v8")}>
+    return <footer className={classNames(styles.footerV6, styles.v8)}>
         <div className="container">
             <div className={styles.footerContentV6}>
                 <div className="row">
@@ -36,8 +36,8 @@ export const Footer = () => {
                              data-wow-delay="0ms">
                             <h5>contact</h5>
                             <h4>90 Fairground Rd, FL 3290, United States</h4>
-                            <NextLink href="#">hello@milseo.co</NextLink>
-                            <ul>
+                            <NextLink className={styles.email} href="#">hello@milseo.co</NextLink>
+                            <ul className={styles.contactMenu}>
                                 <li>
                                     <NextLink href="15_portfolio_horizontal_scroll.html">Works</NextLink>
                                 </li>
@@ -51,7 +51,7 @@ export const Footer = () => {
                 <div className={styles.mileBottomFooter}>
                     <div className="row align-items-center">
                         <div className="col-lg-8">
-                            <div className="btm-copy">
+                            <div className={styles.btmCopy}>
                                 <img src="/static/images/logo8.png" alt="" />
                                 <p>© 2020. All Rights Reserved</p>
                             </div>
