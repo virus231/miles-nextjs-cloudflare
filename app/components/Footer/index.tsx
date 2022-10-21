@@ -34,7 +34,7 @@ export const Footer = () => {
                         <div className={classNames(styles.getTouchTxt, "mw-100 wow fadeInRight")}
                              data-wow-duration="1000ms"
                              data-wow-delay="0ms">
-                            <h5>contact</h5>
+                            <h5>Contact</h5>
                             <h4>90 Fairground Rd, FL 3290, United States</h4>
                             <NextLink className={styles.email} href="#">hello@milseo.co</NextLink>
                             <ul className={styles.contactMenu}>

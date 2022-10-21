@@ -24,7 +24,7 @@ export function Layout({ title, keywords, description, children }: LayoutProps) 
             {/*<link rel="icon" href="/static/favicon.ico"/>*/}
         </Head>
         <div className={styles.layoutRoot}>
-            <Navigation setOpen={() => setOpen(!open)}/>
+            {/* <Navigation setOpen={() => setOpen(!open)}/> */}
             <RightMenu closeMenu={() => setOpen(false)} isOpen={open} />
             {children}
             {/*<Box flex={1} position="relative">*/}
@@ -32,7 +32,7 @@ export function Layout({ title, keywords, description, children }: LayoutProps) 
             {/*        <>{children}</>*/}
             {/*    </Container>*/}
             {/*</Box>*/}
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     </div>
 }
