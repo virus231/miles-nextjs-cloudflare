@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const BaseNextLink = ({href, ...rest}: ComponentPropsWithoutRef<typeof Link>, ref: ForwardedRef<HTMLAnchorElement>) => {
   return <Link href={href} passHref {...rest}>
-    <a {...rest} ref={ref} target="_blank" />
+    <a {...rest} ref={ref} />
   </Link>
 }
 

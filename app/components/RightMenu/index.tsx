@@ -2,6 +2,7 @@ import {NextLink} from "../BaseNextLink";
 import styles from "./RightMenu.module.scss"
 import classNames from "classnames";
 import { rightMenu } from "../../_mock/menu-config";
+import { useState } from "react";
 
 
 type Props = {
@@ -10,6 +11,17 @@ type Props = {
 }
 
 export const RightMenu = ({isOpen = false, closeMenu}: Props) => {
+    const [openCollapse, setOpenCollapse] = useState({
+        name: "",
+        isOpen: false
+    });
+
+    const onClick = (menu: any) => {
+        setOpenCollapse({
+            name: menu.name,
+            isOpen: !openCollapse.isOpen
+        })
+    } 
 
     return <div className={classNames(styles.responsiveMenu, {
         [styles.active]: isOpen
@@ -30,14 +42,31 @@ export const RightMenu = ({isOpen = false, closeMenu}: Props) => {
         </div>
         <ul className={styles.mobileMenu}>
             {
-                rightMenu.map((menu, index) => (
-                    <li key={menu.name} className={styles.menuItemHasChildren}>
-                        <div>
+                rightMenu.map((menu) => (
+                    <li key={menu.name} className={classNames(styles.menuItemHasChildren, {
+                        [styles.active]: openCollapse.name === menu.name && openCollapse.isOpen
+                    })}>
+                        <div onClick={() => onClick(menu)}>
                             {menu.name}
                         </div>
-                        <ul>
+                        <ul style={{
+                            display: openCollapse.name === menu.name && openCollapse.isOpen ? "block" : "none",
+                            // transform: "translateY(-3rem)",
+                            // transition: "all 0.5s ease-in-out",
+                            // transitionDelay: "0.4s",
+                        }}>
                             {menu.children.map((child, index) => (
-                                <li key={child.name}>{child.name}</li>
+                                <li key={child.name} onClick={() => {
+                                    closeMenu();
+                                    setOpenCollapse({
+                                        name: "",
+                                        isOpen: false
+                                    })
+                                }}>
+                                    <NextLink href={child.href}>
+                                        {child.name}
+                                    </NextLink>
+                                </li>
                             ))}
                         </ul>
                     </li>

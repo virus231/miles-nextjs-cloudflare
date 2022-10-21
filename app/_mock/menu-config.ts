@@ -7,7 +7,7 @@ export const rightMenu = [
                 name: 'Home Agency',
             },
             {
-                href: '/',
+                href: '/index2',
                 name: 'Home Studio',
             },
             {

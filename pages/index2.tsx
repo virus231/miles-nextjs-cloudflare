@@ -1,5 +1,7 @@
+import { NextLink } from "../app/components/BaseNextLink";
 import { Layout } from "../app/components/Layout";
 import { NextPageWithLayout } from "./_app"
+
 
 const HomePage2: NextPageWithLayout = () => {
 	return (
@@ -9,9 +11,9 @@ const HomePage2: NextPageWithLayout = () => {
 			<div className="container-fluid">
 				<div className="header-content">
 					<div className="logo">
-						<a href="#" title="">
+						<NextLink href="/" title="logo">
 							<img src="/static/images/logo_13.png" alt=""/>
-						</a>
+						</NextLink>
 					</div>
 					<nav>
 						<ul>

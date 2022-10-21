@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Head from "next/head";
 import { ReactNode, ReactNodeArray, useState } from "react";
 import { Footer } from "../Footer";
@@ -24,7 +25,7 @@ export function Layout({ title, keywords, description, children }: LayoutProps) 
             {/*<link rel="icon" href="/static/favicon.ico"/>*/}
         </Head>
         <div className={styles.layoutRoot}>
-            {/* <Navigation setOpen={() => setOpen(!open)}/> */}
+            <Navigation setOpen={() => setOpen(!open)} />
             <RightMenu closeMenu={() => setOpen(false)} isOpen={open} />
             {children}
             {/*<Box flex={1} position="relative">*/}
