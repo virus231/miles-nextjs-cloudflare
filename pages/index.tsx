@@ -3,11 +3,15 @@ import { NextLink } from '../app/components/BaseNextLink'
 import styles from '../styles/Home.module.scss'
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
+import { Navigation } from '../app/components/Navigation'
 
 
 const HomePage: NextPageWithLayout = () => {
+
   return (
     <>
+      <Navigation />
+
       <section className={styles.bannerV8}>
         <div className="container">
           <div className={styles.bannerV8Content}>

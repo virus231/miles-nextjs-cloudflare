@@ -3,6 +3,9 @@ import { NextLink } from "../BaseNextLink"
 import styles from "./Footer.module.scss"
 
 export const Footer = () => {
+
+
+
     return <footer className={classNames(styles.footerV6, styles.v8)}>
         <div className="container">
             <div className={styles.footerContentV6}>

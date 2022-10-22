@@ -25,8 +25,8 @@ export function Layout({ title, keywords, description, children }: LayoutProps) 
             {/*<link rel="icon" href="/static/favicon.ico"/>*/}
         </Head>
         <div className={styles.layoutRoot}>
-            <Navigation setOpen={() => setOpen(!open)} />
-            <RightMenu closeMenu={() => setOpen(false)} isOpen={open} />
+            {/* <Navigation setOpen={() => setOpen(!open)} />
+            <RightMenu closeMenu={() => setOpen(false)} isOpen={open} /> */}
             {children}
             {/*<Box flex={1} position="relative">*/}
             {/*    <Container maxWidth="lg">*/}
