@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.scss'
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import { Navigation } from '../app/components/Navigation'
+import { Footer } from '../app/components/Footer'
 
 
 const HomePage: NextPageWithLayout = () => {
@@ -1264,6 +1265,8 @@ const HomePage: NextPageWithLayout = () => {
           </div>
         </div>
       </section>
+
+      <Footer/>
     </>
   )
 }
