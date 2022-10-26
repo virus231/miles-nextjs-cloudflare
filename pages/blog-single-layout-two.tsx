@@ -13,7 +13,6 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 
 			{/* @include('partials/header-v1.html') */}
 
-
 			<section className="page-content bb-0">
 				<div className="single-post-meta">
 					<h2>Brief Guide into Social Media Marketing Trends 2020</h2>
@@ -476,7 +475,7 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 										</h3>
 										<ul>
 											<li>
-												<a href="26_about_me.html" title="">
+												<a href="about-me.tsx" title="">
 													About
 												</a>
 											</li>
@@ -486,17 +485,17 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 												</a>
 											</li>
 											<li>
-												<a href="30_contact_1.html" title="">
+												<a href="contact.tsx" title="">
 													Contact
 												</a>
 											</li>
 											<li>
-												<a href="28_services_2.html" title="">
+												<a href="service-two.tsx" title="">
 													Services
 												</a>
 											</li>
 											<li>
-												<a href="blog-layout1.html" title="">
+												<a href="blog-layout-one.tsx" title="">
 													News
 												</a>
 											</li>

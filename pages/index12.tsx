@@ -27,17 +27,17 @@ const HomePage12: NextPageWithLayout = () => {
 									</a>
 									<ul>
 										<li>
-											<a href="24_about_agency.html" title="">
+											<a href="about-agency.tsx" title="">
 												About Agency
 											</a>
 										</li>
 										<li>
-											<a href="25_about_business.html" title="">
+											<a href="about-business.tsx" title="">
 												About Business
 											</a>
 										</li>
 										<li>
-											<a href="26_about_me.html" title="">
+											<a href="about-me.tsx" title="">
 												About Me
 											</a>
 										</li>
@@ -69,12 +69,12 @@ const HomePage12: NextPageWithLayout = () => {
 											</a>
 										</li>
 										<li>
-											<a href="18_portfolio_single_layout_2.html" title="">
+											<a href="portfolio-single-layout-two.tsx" title="">
 												Portfolio Single Layout V2
 											</a>
 										</li>
 										<li>
-											<a href="19_portfolio_single_layout_3.html" title="">
+											<a href="portfolio-single-layout-three.tsx" title="">
 												Portfolio Single Layout V3
 											</a>
 										</li>
@@ -86,12 +86,12 @@ const HomePage12: NextPageWithLayout = () => {
 									</a>
 									<ul>
 										<li>
-											<a href="blog-layout1.html" title="">
+											<a href="blog-layout-one.tsx" title="">
 												Blog V1
 											</a>
 										</li>
 										<li>
-											<a href="blog-layout2.html" title="">
+											<a href="blog-layout-two.tsx" title="">
 												Blog V2
 											</a>
 										</li>
@@ -113,12 +113,12 @@ const HomePage12: NextPageWithLayout = () => {
 									</a>
 									<ul>
 										<li>
-											<a href="30_contact_1.html" title="">
+											<a href="contact.tsx" title="">
 												Contact V1
 											</a>
 										</li>
 										<li>
-											<a href="31_contact_2.html" title="">
+											<a href="contact-two.tsx" title="">
 												Contact V2
 											</a>
 										</li>
@@ -311,7 +311,7 @@ const HomePage12: NextPageWithLayout = () => {
 						<ul>
 							<li>
 								<a
-									href="24_about_agency.html"
+									href="about-agency.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -322,7 +322,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="25_about_business.html"
+									href="about-business.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -333,7 +333,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="26_about_me.html"
+									href="about-me.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -389,7 +389,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="18_portfolio_single_layout_2.html"
+									href="portfolio-single-layout-two.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -400,7 +400,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="19_portfolio_single_layout_3.html"
+									href="portfolio-single-layout-three.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -418,7 +418,7 @@ const HomePage12: NextPageWithLayout = () => {
 						<ul>
 							<li>
 								<a
-									href="27_service_1.html"
+									href="service-one.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -429,7 +429,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="28_services_2.html"
+									href="service-two.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -440,7 +440,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="29_services_3.html"
+									href="service-three.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -469,7 +469,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="33_career.html"
+									href="career.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -480,7 +480,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="34_career_detail.html"
+									href="career-detail.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -491,7 +491,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="37_pricing.html"
+									href="pricing.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -502,7 +502,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="35_404_error.html"
+									href="error.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -513,7 +513,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="36_coming_soon.html"
+									href="coming-soon.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -531,7 +531,7 @@ const HomePage12: NextPageWithLayout = () => {
 						<ul>
 							<li>
 								<a
-									href="blog-layout1.html"
+									href="blog-layout-one.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -542,7 +542,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="blog-layout2.html"
+									href="blog-layout-two.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -582,7 +582,7 @@ const HomePage12: NextPageWithLayout = () => {
 						<ul>
 							<li>
 								<a
-									href="30_contact_1.html"
+									href="contact.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -593,7 +593,7 @@ const HomePage12: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<a
-									href="31_contact_2.html"
+									href="contact-two.tsx"
 									className="animsition-link"
 									data-animsition-out-class="fade-out"
 									title=""
@@ -718,7 +718,7 @@ const HomePage12: NextPageWithLayout = () => {
 													clearly, achieve marketing goals &amp; look fantastic
 												</p>
 												<a
-													href="24_about_agency.html"
+													href="about-agency.tsx"
 													title=""
 													className="btn-default-v12 no-bg"
 												>

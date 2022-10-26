@@ -208,7 +208,7 @@ const HomePage3: NextPageWithLayout = () => {
                             <ul>
                                 <li>
                                     <a
-                                        href="24_about_agency.html"
+                                        href="about-agency.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -219,7 +219,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="25_about_business.html"
+                                        href="about-business.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -230,7 +230,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="26_about_me.html"
+                                        href="about-me.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -286,7 +286,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="18_portfolio_single_layout_2.html"
+                                        href="portfolio-single-layout-two.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -297,7 +297,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="19_portfolio_single_layout_3.html"
+                                        href="portfolio-single-layout-three.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -315,7 +315,7 @@ const HomePage3: NextPageWithLayout = () => {
                             <ul>
                                 <li>
                                     <a
-                                        href="27_service_1.html"
+                                        href="service-one.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -326,7 +326,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="28_services_2.html"
+                                        href="service-two.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -337,7 +337,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="29_services_3.html"
+                                        href="service-three.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -366,7 +366,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="33_career.html"
+                                        href="career.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -377,7 +377,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="34_career_detail.html"
+                                        href="career-detail.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -388,7 +388,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="37_pricing.html"
+                                        href="pricing.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -399,7 +399,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="35_404_error.html"
+                                        href="error.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -410,7 +410,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="36_coming_soon.html"
+                                        href="coming-soon.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -428,7 +428,7 @@ const HomePage3: NextPageWithLayout = () => {
                             <ul>
                                 <li>
                                     <a
-                                        href="blog-layout1.html"
+                                        href="blog-layout-one.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -439,7 +439,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="blog-layout2.html"
+                                        href="blog-layout-two.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -479,7 +479,7 @@ const HomePage3: NextPageWithLayout = () => {
                             <ul>
                                 <li>
                                     <a
-                                        href="30_contact_1.html"
+                                        href="contact.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -490,7 +490,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <a
-                                        href="31_contact_2.html"
+                                        href="contact-two.tsx"
                                         className="animsition-link"
                                         data-animsition-out-class="fade-out"
                                         title=""
@@ -521,7 +521,7 @@ const HomePage3: NextPageWithLayout = () => {
                                         You are a freelancer and you love dogs just like me! Lets shake
                                         hands, bro
                                     </p>
-                                    <a href="30_contact_1.html" title="" className="btn-default3">
+                                    <a href="contact.tsx" title="" className="btn-default3">
                                         let’s chat!
                                     </a>
                                 </div>
@@ -553,7 +553,7 @@ const HomePage3: NextPageWithLayout = () => {
                                     </span>
                                     <h3>
                                         <a
-                                            href="27_service_1.html"
+                                            href="service-one.tsx"
                                             title=""
                                             className="animsition-link"
                                             data-animsition-out-class="fade-out"
@@ -585,7 +585,7 @@ const HomePage3: NextPageWithLayout = () => {
                                     </span>
                                     <h3>
                                         <a
-                                            href="27_service_1.html"
+                                            href="service-one.tsx"
                                             title=""
                                             className="animsition-link"
                                             data-animsition-out-class="fade-out"
@@ -618,7 +618,7 @@ const HomePage3: NextPageWithLayout = () => {
                                     </span>
                                     <h3>
                                         <a
-                                            href="27_service_1.html"
+                                            href="service-one.tsx"
                                             title=""
                                             className="animsition-link"
                                             data-animsition-out-class="fade-out"
@@ -902,7 +902,7 @@ const HomePage3: NextPageWithLayout = () => {
                                 <span>Let’s work together and i’ll help you by all my best</span>
                             </div>
                             <div className="inq-btn">
-                                <a href="30_contact_1.html" title="" className="btn-default3">
+                                <a href="contact.tsx" title="" className="btn-default3">
                                     Let’s Chat!
                                 </a>
                             </div>
@@ -950,7 +950,7 @@ const HomePage3: NextPageWithLayout = () => {
                             </div>
                             <ul className="nav-btm-links">
                                 <li>
-                                    <a href="25_about_business.html" title="">
+                                    <a href="about-business.tsx" title="">
                                         about
                                     </a>
                                 </li>
@@ -960,17 +960,17 @@ const HomePage3: NextPageWithLayout = () => {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="27_service_1.html" title="">
+                                    <a href="service-one.tsx" title="">
                                         services
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="blog-layout1.html" title="">
+                                    <a href="blog-layout-one.tsx" title="">
                                         news
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="30_contact_1.html" title="">
+                                    <a href="contact.tsx" title="">
                                         contact
                                     </a>
                                 </li>

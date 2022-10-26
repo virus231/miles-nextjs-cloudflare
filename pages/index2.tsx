@@ -19,9 +19,9 @@ const HomePage2: NextPageWithLayout = () => {
 						<ul>
 							<li className="active"><a className="active" href="#" title="" data-text="about">about</a>
 								<ul>
-									<li><a href="24_about_agency.html" title="" data-text="About Agency">About Agency</a></li>
-									<li><a href="25_about_business.html" title="" data-text="About Business">About Business</a></li>
-									<li><a href="26_about_me.html" title="" data-text="About Me">About Me</a></li>
+									<li><a href="about-agency.tsx" title="" data-text="About Agency">About Agency</a></li>
+									<li><a href="about-business.tsx" title="" data-text="About Business">About Business</a></li>
+									<li><a href="about-me.tsx" title="" data-text="About Me">About Me</a></li>
 								</ul>
 							</li>
 							<li><a href="#" title="" data-text="Portfolio">Portfolio</a>
@@ -30,22 +30,22 @@ const HomePage2: NextPageWithLayout = () => {
 									<li><a href="15_portfolio_horizontal_scroll.html" title="" data-text="Portfolio Horizontol">Portfolio Horizontol</a></li>
 									<li><a href="16_portfolio_masonry.html" title="" data-text="Portfolio Masonary">Portfolio Masonary</a></li>
 									<li><a href="17_portfolio_single_layout_1.html" title="" data-text="Portfolio Single Layout V1">Portfolio Single Layout V1</a></li>
-									<li><a href="18_portfolio_single_layout_2.html" title="" data-text="Portfolio Single Layout V2">Portfolio Single Layout V2</a></li>
-									<li><a href="19_portfolio_single_layout_3.html" title="" data-text="Portfolio Single Layout V3">Portfolio Single Layout V3</a></li>
+									<li><a href="portfolio-single-layout-two.tsx" title="" data-text="Portfolio Single Layout V2">Portfolio Single Layout V2</a></li>
+									<li><a href="portfolio-single-layout-three.tsx" title="" data-text="Portfolio Single Layout V3">Portfolio Single Layout V3</a></li>
 								</ul>
 							</li>
 							<li><a href="#" title="" data-text="News">News</a>
 								<ul>
-									<li><a href="blog-layout1.html" title="" data-text="Blog V2">Blog V1</a></li>
-									<li><a href="blog-layout2.html" title="" data-text="Blog V2">Blog V2</a></li>
+									<li><a href="blog-layout-one.tsx" title="" data-text="Blog V2">Blog V1</a></li>
+									<li><a href="blog-layout-two.tsx" title="" data-text="Blog V2">Blog V2</a></li>
 									<li><a href="blog-single-layout1.html" title="" data-text="Blog Single V1">Blog Single V1</a></li>
 									<li><a href="blog-single-layout2.html" title="" data-text="Blog Single V2">Blog Single V2</a></li>
 								</ul>
 							</li>
 							<li><a href="#" title="" data-text="Contact">Contact</a>
 								<ul>
-									<li><a href="30_contact_1.html" title="" data-text="Contact V1">Contact V1</a></li>
-									<li><a href="31_contact_2.html" title="" data-text="Contact V2">Contact V2</a></li>
+									<li><a href="contact.tsx" title="" data-text="Contact V1">Contact V1</a></li>
+									<li><a href="contact-two.tsx" title="" data-text="Contact V2">Contact V2</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -95,9 +95,9 @@ const HomePage2: NextPageWithLayout = () => {
 				</li>
 				<li><a href="#" title="">About</a>
 					<ul>
-						<li><a href="24_about_agency.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="About Agency">About Agency</a></li>
-						<li><a href="25_about_business.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="About Business">About Business</a></li>
-						<li><a href="26_about_me.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="About Me">About Me</a></li>
+						<li><a href="about-agency.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="About Agency">About Agency</a></li>
+						<li><a href="about-business.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="About Business">About Business</a></li>
+						<li><a href="about-me.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="About Me">About Me</a></li>
 					</ul>
 				</li>
 				<li><a href="#" title="">Portfolio</a>
@@ -106,39 +106,39 @@ const HomePage2: NextPageWithLayout = () => {
 						<li><a href="15_portfolio_horizontal_scroll.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Porfolio Horizontal Scroll">Porfolio Horizontal Scroll</a></li>
 						<li><a href="16_portfolio_masonry.html" title="">Porfolio Masonary</a></li>
 						<li><a href="17_portfolio_single_layout_1.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Porfolio Single V1">Porfolio Single V1</a></li>
-						<li><a href="18_portfolio_single_layout_2.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Porfolio Single V2">Porfolio Single V2</a></li>
-						<li><a href="19_portfolio_single_layout_3.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Porfolio Single V3">Porfolio Single V3</a></li>
+						<li><a href="portfolio-single-layout-two.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Porfolio Single V2">Porfolio Single V2</a></li>
+						<li><a href="portfolio-single-layout-three.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Porfolio Single V3">Porfolio Single V3</a></li>
 					</ul>
 				</li>
 				<li><a href="#" title="">Service</a>
 					<ul>
-						<li><a href="27_service_1.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Service V1">Service V1</a></li>
-						<li><a href="28_services_2.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Service V2">Service V2</a></li>
-						<li><a href="29_services_3.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Service V3">Service V3</a></li>
+						<li><a href="service-one.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Service V1">Service V1</a></li>
+						<li><a href="service-two.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Service V2">Service V2</a></li>
+						<li><a href="service-three.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Service V3">Service V3</a></li>
 					</ul>
 				</li>
 				<li><a href="#" title="">Pages</a>
 					<ul>
 						<li><a href="32_team.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Team">Team</a></li>
-						<li><a href="33_career.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Career">Career</a></li>
-						<li><a href="34_career_detail.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Career Details">Career Details</a></li>
-						<li><a href="37_pricing.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Pricing">Pricing</a></li>
-						<li><a href="35_404_error.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="404">404</a></li>
-						<li><a href="36_coming_soon.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Coming Soon">Coming Soon</a></li>
+						<li><a href="career.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Career">Career</a></li>
+						<li><a href="career-detail.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Career Details">Career Details</a></li>
+						<li><a href="pricing.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Pricing">Pricing</a></li>
+						<li><a href="error.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="404">404</a></li>
+						<li><a href="coming-soon.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Coming Soon">Coming Soon</a></li>
 					</ul>
 				</li>
 				<li><a href="#" title="">Blogs</a>
 					<ul>
-						<li><a href="blog-layout1.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Blog Layout V1">Blog Layout V1</a></li>
-						<li><a href="blog-layout2.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Blog Layout V2">Blog Layout V2</a></li>
+						<li><a href="blog-layout-one.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Blog Layout V1">Blog Layout V1</a></li>
+						<li><a href="blog-layout-two.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Blog Layout V2">Blog Layout V2</a></li>
 						<li><a href="blog-single-layout1.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Blog Single Layout V1">Blog Single Layout V1</a></li>
 						<li><a href="blog-single-layout2.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Blog Single Layout V2">Blog Single Layout V2</a></li>
 					</ul>
 				</li>
 				<li><a href="#" title="">Contact</a>
 					<ul>
-						<li><a href="30_contact_1.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Contact V1">Contact V1</a></li>
-						<li><a href="31_contact_2.html" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Contact V2">Contact V2</a></li>
+						<li><a href="contact.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Contact V1">Contact V1</a></li>
+						<li><a href="contact-two.tsx" className="animsition-link" data-animsition-out-className="fade-out" title="" data-text="Contact V2">Contact V2</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -220,7 +220,7 @@ const HomePage2: NextPageWithLayout = () => {
 						<div className="abot-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
 							<h2>who we are?</h2>
 							<p>Founded in 2007, Miles is specializing in providing innovative services such as website design, brand identity and marketing</p>
-							<a href="24_about_agency.html" title="" className="link2">learn more</a>
+							<a href="about-agency.tsx" title="" className="link2">learn more</a>
 						</div>
 					</div>
 				</div>
@@ -506,7 +506,7 @@ const HomePage2: NextPageWithLayout = () => {
 					</div>
 					<div className="row">
 						<div className="col-12 text-center">
-							<a href="blog-layout1.html" title="" className="link3">see more articles</a>
+							<a href="blog-layout-one.tsx" title="" className="link3">see more articles</a>
 						</div>
 					</div>
 				</div>
@@ -550,11 +550,11 @@ const HomePage2: NextPageWithLayout = () => {
 							<span>Head Office</span>
 							<h2>116 Fairground Rd. <br /> Melbourne, FL 32904, United States</h2>
 							<ul className="ft-links-mile">
-								<li><a href="24_about_agency.html" title="">about us</a></li>
-								<li><a href="33_career.html" title="">jobs</a></li>
-								<li><a href="30_contact_1.html" title="">contact us</a></li>
-								<li><a href="28_services_2.html" title="">services</a></li>
-								<li><a href="blog-layout1.html" title="">news</a></li>
+								<li><a href="about-agency.tsx" title="">about us</a></li>
+								<li><a href="career.tsx" title="">jobs</a></li>
+								<li><a href="contact.tsx" title="">contact us</a></li>
+								<li><a href="service-two.tsx" title="">services</a></li>
+								<li><a href="blog-layout-one.tsx" title="">news</a></li>
 							</ul>
 							<ul className="social-links v2">
 								<li><a href="#" title=""><i className="fab fa-facebook-square"></i></a></li>

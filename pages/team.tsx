@@ -330,7 +330,7 @@ const TeamPage: NextPageWithLayout = () => {
 							>
 								<i className="lni lni-users" />
 								<h3>
-									<a href="33_career.html" title="">
+									<a href="career.tsx" title="">
 										Become Our Member
 									</a>
 								</h3>
@@ -393,7 +393,7 @@ const TeamPage: NextPageWithLayout = () => {
 										</h3>
 										<ul>
 											<li>
-												<a href="26_about_me.html" title="">
+												<a href="about-me.tsx" title="">
 													About
 												</a>
 											</li>
@@ -403,17 +403,17 @@ const TeamPage: NextPageWithLayout = () => {
 												</a>
 											</li>
 											<li>
-												<a href="30_contact_1.html" title="">
+												<a href="contact.tsx" title="">
 													Contact
 												</a>
 											</li>
 											<li>
-												<a href="28_services_2.html" title="">
+												<a href="service-two.tsx" title="">
 													Services
 												</a>
 											</li>
 											<li>
-												<a href="blog-layout1.html" title="">
+												<a href="blog-layout-one.tsx" title="">
 													News
 												</a>
 											</li>
