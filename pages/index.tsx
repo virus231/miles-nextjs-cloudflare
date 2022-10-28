@@ -4,6 +4,10 @@ import { Navigation } from '../app/components/Navigation'
 import { Footer } from '../app/components/Footer'
 import CountUp  from "react-countup";
 import VisibilitySensor from 'react-visibility-sensor';
+import { Testi } from '../app/components/Testi';
+import {KeepConnected} from "../app/components/KeepConnected";
+
+
 
 
 const HomePage: NextPageWithLayout = () => {
@@ -11,7 +15,7 @@ const HomePage: NextPageWithLayout = () => {
 
   return (
     <>
-      <Navigation />
+        <Navigation/>
 
         <section className="banner-v8">
             <div className="container">
@@ -34,12 +38,12 @@ const HomePage: NextPageWithLayout = () => {
                             </div>
                             <div className="banner-wid">
                                 <p>
-                                    If you're hurry, quick call for us. Our supporters alway 24/7
+                                    If you are hurry, quick call for us. Our supporters alway 24/7
                                     and will help you asap
                                 </p>
                                 <div className="wd-inz">
                 <span className="cinon">
-                  <i className="lni lni-phone" />
+                  <i className="lni lni-phone"/>
                 </span>
                                     <div className="wl-info">
                                         <span>hotline 24/7</span>
@@ -54,7 +58,7 @@ const HomePage: NextPageWithLayout = () => {
                                 data-wow-duration="1000ms"
                                 data-wow-delay="0ms"
                             >
-                                <img src="/static/images/banner-v8.png" alt="" />
+                                <img src="/static/images/banner-v8.png" alt=""/>
                             </div>
                         </div>
                     </div>
@@ -74,29 +78,29 @@ const HomePage: NextPageWithLayout = () => {
                                 <ul className="crlce-list">
                                     <li className="v1">
                                         <div className="crlce-info">
-                                            <i className="lni lni-layout" />
+                                            <i className="lni lni-layout"/>
                                             <h3>Website Optimization</h3>
                                         </div>
                                         <div className="crlce-img">
-                                            <img src="/static/images/crcle-img1.png" alt="" />
+                                            <img src="/static/images/crcle-img1.png" alt=""/>
                                         </div>
                                     </li>
                                     <li className="v2">
                                         <div className="crlce-info">
-                                            <i className="lni lni-envelope" />
+                                            <i className="lni lni-envelope"/>
                                             <h3>Email Marketing</h3>
                                         </div>
                                         <div className="crlce-img">
-                                            <img src="/static/images/crcle-img2.png" alt="" />
+                                            <img src="/static/images/crcle-img2.png" alt=""/>
                                         </div>
                                     </li>
                                     <li className="v3">
                                         <div className="crlce-info">
-                                            <i className="lni lni-bulb" />
+                                            <i className="lni lni-bulb"/>
                                             <h3>Marketing Strategy</h3>
                                         </div>
                                         <div className="crlce-img">
-                                            <img src="/static/images/crcle-img3.png" alt="" />
+                                            <img src="/static/images/crcle-img3.png" alt=""/>
                                         </div>
                                     </li>
                                 </ul>
@@ -161,7 +165,7 @@ const HomePage: NextPageWithLayout = () => {
                                     className="view-btn html5lightbox"
                                 >
                 <span className="pl-btn">
-                  <i className="lni lni-play" />
+                  <i className="lni lni-play"/>
                 </span>
                                     <span className="vt">view our story</span>
                                 </a>
@@ -169,12 +173,12 @@ const HomePage: NextPageWithLayout = () => {
                         </div>
                         <div className="col-lg-7">
                             <div className="gw-img">
-                                <img src="/static/images/v2.png" alt="" />
+                                <img src="/static/images/v2.png" alt=""/>
                                 <div className="gw-text">
                                     <h1>25</h1>
                                     <h2>
-                                        years <br />
-                                        of <br />
+                                        years <br/>
+                                        of <br/>
                                         experience
                                     </h2>
                                     <h3>The Leading In Digital Marketing Industrial</h3>
@@ -191,25 +195,27 @@ const HomePage: NextPageWithLayout = () => {
                 >
                     <li>
                         <div className="counter-cont">
-                            <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }} onChange={(e: any) => console.log(e)}>
-                                {({ isVisible }: {isVisible: boolean}) => (
+                            <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}
+                                              onChange={(e: any) => console.log(e)}>
+                                {({isVisible}: { isVisible: boolean }) => (
                                     <h2 className="clr1 count">
-                                        {isVisible ? <CountUp end={100} /> : "0"}
+                                        {isVisible ? <CountUp end={100}/> : "0"}
                                     </h2>
                                 )}
                             </VisibilitySensor>
                             <span>
-                              satisfaction <br />
+                              satisfaction <br/>
                               clients
                             </span>
                         </div>
                     </li>
                     <li>
                         <div className="counter-cont">
-                            <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }} onChange={(e: any) => console.log(e)}>
-                                {({ isVisible }: {isVisible: boolean}) => (
+                            <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}
+                                              onChange={(e: any) => console.log(e)}>
+                                {({isVisible}: { isVisible: boolean }) => (
                                     <h2 className="clr2 count">
-                                        {isVisible ? <CountUp end={250} /> : "0"}
+                                        {isVisible ? <CountUp end={250}/> : "0"}
                                     </h2>
                                 )}
                             </VisibilitySensor>
@@ -218,10 +224,11 @@ const HomePage: NextPageWithLayout = () => {
                     </li>
                     <li>
                         <div className="counter-cont">
-                            <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }} onChange={(e: any) => console.log(e)}>
-                                {({ isVisible }: {isVisible: boolean}) => (
+                            <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}
+                                              onChange={(e: any) => console.log(e)}>
+                                {({isVisible}: { isVisible: boolean }) => (
                                     <h2 className="clr3 count">
-                                        {isVisible ? <CountUp end={3875} /> : "0"}
+                                        {isVisible ? <CountUp end={3875}/> : "0"}
                                     </h2>
                                 )}
                             </VisibilitySensor>
@@ -345,7 +352,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -369,7 +376,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -393,7 +400,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -417,7 +424,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -441,7 +448,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -465,7 +472,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -498,7 +505,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -522,7 +529,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -546,7 +553,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -570,7 +577,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -594,7 +601,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -618,7 +625,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -651,7 +658,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -675,7 +682,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -699,7 +706,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -723,7 +730,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -747,7 +754,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -771,7 +778,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -804,7 +811,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -828,7 +835,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -852,7 +859,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -876,7 +883,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -900,7 +907,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -924,7 +931,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -957,7 +964,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -981,7 +988,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1005,7 +1012,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1029,7 +1036,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1053,7 +1060,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1077,7 +1084,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1110,7 +1117,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1134,7 +1141,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1158,7 +1165,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1182,7 +1189,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1206,7 +1213,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1230,7 +1237,7 @@ const HomePage: NextPageWithLayout = () => {
                                         </div>
                                         <span className="category">Website SEO</span>
                                         <a href="#" title="" className="share">
-                                            <i className="lni lni-share" />
+                                            <i className="lni lni-share"/>
                                         </a>
                                     </div>
                                 </div>
@@ -1263,7 +1270,7 @@ const HomePage: NextPageWithLayout = () => {
                             </h3>
                             <p>Help business with their brading identity system better</p>
                             <span className="fzt-icon v1">
-              <i className="lni lni-users" />
+              <i className="lni lni-users"/>
             </span>
                         </div>
                     </div>
@@ -1278,7 +1285,7 @@ const HomePage: NextPageWithLayout = () => {
                                 Reach out your clients better through website &amp; mobile app
                             </p>
                             <span className="fzt-icon v2">
-              <i className="lni lni-invention" />
+              <i className="lni lni-invention"/>
             </span>
                         </div>
                     </div>
@@ -1293,7 +1300,7 @@ const HomePage: NextPageWithLayout = () => {
                                 Building plan &amp; strategy for your business by social marketing
                             </p>
                             <span className="fzt-icon v3">
-              <i className="lni lni-money-protection" />
+              <i className="lni lni-money-protection"/>
             </span>
                         </div>
                     </div>
@@ -1306,7 +1313,7 @@ const HomePage: NextPageWithLayout = () => {
                             </h3>
                             <p>Improve quality of product with high resolution photos</p>
                             <span className="fzt-icon v4">
-              <i className="lni lni-headphone" />
+              <i className="lni lni-headphone"/>
             </span>
                         </div>
                     </div>
@@ -1315,105 +1322,7 @@ const HomePage: NextPageWithLayout = () => {
         </section>
         <section className="testi-v3-sec">
             <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-lg-6 col-md-5">
-                        <div className="testi-v3-slider">
-                            <div className="testi-v3-slide current" id="tab1">
-              <span className="t-icon">
-                <i className="lni lni-quotation" />
-              </span>
-                                <p>
-                                    I don’t know what else to say, this is something that you
-                                    haven’t seen before. Unique design, lightweight, and outstanding
-                                    support.
-                                </p>
-                                <h3>Edison Cavani</h3>
-                                <span>Product Management at Spotify</span>
-                            </div>
-                            <div className="testi-v3-slide" id="tab2">
-              <span className="t-icon">
-                <i className="lni lni-quotation" />
-              </span>
-                                <p>
-                                    this is something that you haven’t seen before. Unique design,
-                                    lightweight, and outstanding support.
-                                </p>
-                                <h3>Edison Cavani</h3>
-                                <span>Product Management at Spotify</span>
-                            </div>
-                            <div className="testi-v3-slide" id="tab3">
-              <span className="t-icon">
-                <i className="lni lni-quotation" />
-              </span>
-                                <p>
-                                    I don’t know what else to say before. Unique design,
-                                    lightweight, and outstanding support.
-                                </p>
-                                <h3>Logan Cee</h3>
-                                <span>Product Management at Spotify</span>
-                            </div>
-                            <div className="testi-v3-slide" id="tab4">
-              <span className="t-icon">
-                <i className="lni lni-quotation" />
-              </span>
-                                <p>
-                                    I don’t know what else to say, this is something that you
-                                    haven’t seen before. Unique design, lightweight, and outstanding
-                                    support.
-                                </p>
-                                <h3>Edison Cavani</h3>
-                                <span>Product Management at Spotify</span>
-                            </div>
-                            <div className="testi-v3-slide" id="tab5">
-              <span className="t-icon">
-                <i className="lni lni-quotation" />
-              </span>
-                                <p>
-                                    this is something that you haven’t seen before. Unique design,
-                                    lightweight, and outstanding support.
-                                </p>
-                                <h3>Edison Cavani</h3>
-                                <span>Product Management at Spotify</span>
-                            </div>
-                            <div className="testi-v3-slide" id="tab6">
-              <span className="t-icon">
-                <i className="lni lni-quotation" />
-              </span>
-                                <p>
-                                    I don’t know what else to say before. Unique design,
-                                    lightweight, and outstanding support.
-                                </p>
-                                <h3>Logan Cee</h3>
-                                <span>Product Management at Spotify</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6 col-md-7">
-                        <div className="testi-bg">
-                            <img src="/static/images/testi-bg.png" alt="" />
-                            <ul className="testi-thumbs">
-                                <li data-tab="tab1" className="v1 current">
-                                    <img src="/static/images/tm1.jpg" alt="" />
-                                </li>
-                                <li data-tab="tab2" className="v2">
-                                    <img src="/static/images/tm2.jpg" alt="" />
-                                </li>
-                                <li data-tab="tab3" className="v3">
-                                    <img src="/static/images/tm3.jpg" alt="" />
-                                </li>
-                                <li data-tab="tab4" className="v4">
-                                    <img src="/static/images/tm4.jpg" alt="" />
-                                </li>
-                                <li data-tab="tab5" className="v5">
-                                    <img src="/static/images/tm5.jpg" alt="" />
-                                </li>
-                                <li data-tab="tab6" className="v6">
-                                    <img src="/static/images/tm6.jpg" alt="" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <Testi/>
             </div>
         </section>
         <section className="partners-v8-sec">
@@ -1432,77 +1341,77 @@ const HomePage: NextPageWithLayout = () => {
                 <div className="pt-logos-v8 row">
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po1.png" alt="" />
+                            <img src="/static/images/po1.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po2.png" alt="" />
+                            <img src="/static/images/po2.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po3.png" alt="" />
+                            <img src="/static/images/po3.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po4.png" alt="" />
+                            <img src="/static/images/po4.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po5.png" alt="" />
+                            <img src="/static/images/po5.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po6.png" alt="" />
+                            <img src="/static/images/po6.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po7.png" alt="" />
+                            <img src="/static/images/po7.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po8.png" alt="" />
+                            <img src="/static/images/po8.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po9.png" alt="" />
+                            <img src="/static/images/po9.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po10.png" alt="" />
+                            <img src="/static/images/po10.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po11.png" alt="" />
+                            <img src="/static/images/po11.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po12.png" alt="" />
+                            <img src="/static/images/po12.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po13.png" alt="" />
+                            <img src="/static/images/po13.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po14.png" alt="" />
+                            <img src="/static/images/po14.png" alt=""/>
                         </div>
                     </div>
                     <div className="col-lg-2">
                         <div className="pt-logo-v8">
-                            <img src="/static/images/po15.png" alt="" />
+                            <img src="/static/images/po15.png" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -1522,7 +1431,7 @@ const HomePage: NextPageWithLayout = () => {
                         <div className="col-lg-4 col-md-6 col-sm-6">
                             <div className="blog-post-v7">
                                 <div className="blog-thumbnail">
-                                    <img src="/static/images/blog4.jpg" alt="" className="w-100" />
+                                    <img src="/static/images/blog4.jpg" alt="" className="w-100"/>
                                 </div>
                                 <div className="blog-info">
                                     <ul className="meta">
@@ -1544,10 +1453,10 @@ const HomePage: NextPageWithLayout = () => {
                                     </h2>
                                     <ul className="meta2">
                                         <li>
-                                            <i className="lni lni-comments" /> 25
+                                            <i className="lni lni-comments"/> 25
                                         </li>
                                         <li>
-                                            <i className="lni lni-eye" /> 32.6K
+                                            <i className="lni lni-eye"/> 32.6K
                                         </li>
                                     </ul>
                                 </div>
@@ -1556,7 +1465,7 @@ const HomePage: NextPageWithLayout = () => {
                         <div className="col-lg-4 col-md-6 col-sm-6">
                             <div className="blog-post-v7">
                                 <div className="blog-thumbnail">
-                                    <img src="/static/images/blog5.jpg" alt="" className="w-100" />
+                                    <img src="/static/images/blog5.jpg" alt="" className="w-100"/>
                                 </div>
                                 <div className="blog-info">
                                     <ul className="meta">
@@ -1578,10 +1487,10 @@ const HomePage: NextPageWithLayout = () => {
                                     </h2>
                                     <ul className="meta2">
                                         <li>
-                                            <i className="lni lni-comments" /> 4
+                                            <i className="lni lni-comments"/> 4
                                         </li>
                                         <li>
-                                            <i className="lni lni-eye" /> 7.2K
+                                            <i className="lni lni-eye"/> 7.2K
                                         </li>
                                     </ul>
                                 </div>
@@ -1590,7 +1499,7 @@ const HomePage: NextPageWithLayout = () => {
                         <div className="col-lg-4 col-md-6 col-sm-6">
                             <div className="blog-post-v7">
                                 <div className="blog-thumbnail">
-                                    <img src="/static/images/blog6.jpg" alt="" className="w-100" />
+                                    <img src="/static/images/blog6.jpg" alt="" className="w-100"/>
                                 </div>
                                 <div className="blog-info">
                                     <ul className="meta">
@@ -1612,10 +1521,10 @@ const HomePage: NextPageWithLayout = () => {
                                     </h2>
                                     <ul className="meta2">
                                         <li>
-                                            <i className="lni lni-comments" /> 18
+                                            <i className="lni lni-comments"/> 18
                                         </li>
                                         <li>
-                                            <i className="lni lni-eye" /> 57.4K
+                                            <i className="lni lni-eye"/> 57.4K
                                         </li>
                                     </ul>
                                 </div>
@@ -1627,31 +1536,11 @@ const HomePage: NextPageWithLayout = () => {
         </section>
         <section className="newslettter-sec-v7">
             <div className="container">
-                <div
-                    className="news-letter-v7 wow fadeInUp"
-                    data-wow-duration="1000ms"
-                    data-wow-delay="0ms"
-                >
-                    <div className="row align-items-center">
-                        <div className="col-lg-5">
-                            <div className="newsletter-text">
-                                <h2>Keep Connected</h2>
-                                <span>Get updates by subscribe my weekly newsletter</span>
-                            </div>
-                        </div>
-                        <div className="col-lg-7">
-                            <form className="newsletter-form-v7">
-                                <input type="email" name="email" placeholder="Email Address" />
-                                <button type="submit">Subscribe</button>
-                                <i className="lni lni-envelope" />
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                <KeepConnected/>
             </div>
         </section>
 
-      <Footer/>
+        <Footer/>
     </>
   )
 }
