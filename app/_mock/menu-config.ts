@@ -11,47 +11,47 @@ export const rightMenu = [
                 name: 'Home Studio',
             },
             {
-                href: '/',
+                href: '/index3',
                 name: 'Home Freelancer',
             },
             {
-                href: '/',
+                href: '/index4',
                 name: 'Home Developer',
             },
             {
-                href: '/',
+                href: '/index5',
                 name: 'Home Blogger',
             },
             {
-                href: '/',
+                href: '/index6',
                 name: 'Home Coach',
             },
             {
-                href: '/',
+                href: '/index7',
                 name: 'Business Startup',
             },
             {
-                href: '/',
+                href: '/index8',
                 name: 'Marketing Agency',
             },
             {
-                href: '/',
+                href: '/index9',
                 name: 'Business Consulting',
             },
             {
-                href: '/',
+                href: '/index10',
                 name: 'Creative Agency',
             },
             {
-                href: '/',
+                href: '/index11',
                 name: 'Creative Agency 2',
             },
             {
-                href: '/',
+                href: '/index12',
                 name: 'Home Developer',
             },
             {
-                href: '/',
+                href: '/index13',
                 name: 'Home Portfolio 2',
             },
         ]

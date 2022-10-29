@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Sticky.scss';
 
 interface StickyProps {
-    child: React.ReactChild,
+    child: React.ReactNode,
     top: number,
 }
 

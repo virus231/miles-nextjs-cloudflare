@@ -1,11 +1,16 @@
 import { Layout } from "../app/components/Layout"
 import { Testi } from "../app/components/Testi";
 import { NextPageWithLayout } from "./_app"
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 const HomePage3: NextPageWithLayout = () => {
+
+
+
     return (
             <>
-                <header className="header-v3">
+                <header className="header-v3 sticky">
                     <div className="container">
                         <div className="header-content d-flex flex-wrap">
                             <div className="logo">
@@ -682,19 +687,40 @@ const HomePage3: NextPageWithLayout = () => {
                         >
                             <li>
                                 <div className="count-dv">
-                                    <h2 className="count">10</h2>
+                                    <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}>
+                                        {({isVisible}: { isVisible: boolean }) => (
+                                            <h2 className="count">
+                                                {isVisible ? <CountUp end={10}/> : "0"}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+                                    {/*<h2 className="count">10</h2>*/}
                                     <span>Years Experience</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="count-dv">
-                                    <h2 className="count">102</h2>
+                                    <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}>
+                                        {({isVisible}: { isVisible: boolean }) => (
+                                            <h2 className="count">
+                                                {isVisible ? <CountUp end={102}/> : "0"}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+                                    {/*<h2 className="count">102</h2>*/}
                                     <span>Satisfaction Clients</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="count-dv">
-                                    <h2 className="count">285</h2>
+                                    <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}>
+                                        {({isVisible}: { isVisible: boolean }) => (
+                                            <h2 className="count">
+                                                {isVisible ? <CountUp end={285}/> : "0"}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+                                    {/*<h2 className="count">285</h2>*/}
                                     <span>
                                         Projects Completed On <br /> 34 Countries
                                     </span>

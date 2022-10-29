@@ -5,13 +5,14 @@ import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import { MainNavigation } from '../app/components/Navigation/MainNavigation'
 import { MainFooter } from '../app/components/Footer/MainFooter'
-import {FooterVariant2} from "../app/components/Footer/FooterVariant2";
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1'
+import {HeaderV1} from "../app/components/Navigation/HeaderV1";
 
 
 const TeamPage: NextPageWithLayout = () => {
 	return (
 		<>
-
+            <HeaderV1/>
 			<section className="team-page">
 				<div className="container">
 					<div
@@ -340,7 +341,7 @@ const TeamPage: NextPageWithLayout = () => {
 					</div>
 				</div>
 			</section>
-            <FooterVariant2/>
+            <FooterVariant1/>
 		</>
 	)
 }

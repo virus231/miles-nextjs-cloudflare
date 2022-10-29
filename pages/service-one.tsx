@@ -1,7 +1,7 @@
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
-import {FooterVariant2} from "../app/components/Footer/FooterVariant2";
 import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
 const ServiceOne: NextPageWithLayout = () => {
@@ -428,7 +428,7 @@ const ServiceOne: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant2/>
+            <FooterVariant1/>
         </>
     )
 }

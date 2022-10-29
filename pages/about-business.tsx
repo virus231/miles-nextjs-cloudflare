@@ -1,6 +1,6 @@
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
-import {FooterVariant2} from "../app/components/Footer/FooterVariant2";
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
 const AboutBusiness: NextPageWithLayout = () => {
@@ -1090,7 +1090,7 @@ const AboutBusiness: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant2/>
+            <FooterVariant1/>
         </>
     )
 }

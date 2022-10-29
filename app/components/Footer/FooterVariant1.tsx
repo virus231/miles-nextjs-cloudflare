@@ -45,7 +45,7 @@ export const FooterVariant1 = () => {
                                 </h3>
                                 <ul>
                                     <li>
-                                        <a href="about-me.tsx" title="">
+                                        <a href="about-me" title="">
                                             About
                                         </a>
                                     </li>
@@ -60,12 +60,12 @@ export const FooterVariant1 = () => {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="service-two.tsx" title="">
+                                        <a href="service-two" title="">
                                             Services
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="blog-layout-one.tsx" title="">
+                                        <a href="blog-layout-one" title="">
                                             News
                                         </a>
                                     </li>

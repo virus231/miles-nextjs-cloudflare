@@ -6,12 +6,13 @@ import CountUp  from "react-countup";
 import VisibilitySensor from 'react-visibility-sensor';
 import { Testi } from '../app/components/Testi';
 import {KeepConnected} from "../app/components/KeepConnected";
+import {useScrollPosition} from "../app/hooks/useScroll";
 
 
 
 
 const HomePage: NextPageWithLayout = () => {
-
+    const scrollPos = useScrollPosition();
 
   return (
     <>
@@ -196,7 +197,7 @@ const HomePage: NextPageWithLayout = () => {
                     <li>
                         <div className="counter-cont">
                             <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}
-                                              onChange={(e: any) => console.log(e)}>
+                            >
                                 {({isVisible}: { isVisible: boolean }) => (
                                     <h2 className="clr1 count">
                                         {isVisible ? <CountUp end={100}/> : "0"}
@@ -211,8 +212,7 @@ const HomePage: NextPageWithLayout = () => {
                     </li>
                     <li>
                         <div className="counter-cont">
-                            <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}
-                                              onChange={(e: any) => console.log(e)}>
+                            <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}>
                                 {({isVisible}: { isVisible: boolean }) => (
                                     <h2 className="clr2 count">
                                         {isVisible ? <CountUp end={250}/> : "0"}
@@ -224,8 +224,7 @@ const HomePage: NextPageWithLayout = () => {
                     </li>
                     <li>
                         <div className="counter-cont">
-                            <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}
-                                              onChange={(e: any) => console.log(e)}>
+                            <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}>
                                 {({isVisible}: { isVisible: boolean }) => (
                                     <h2 className="clr3 count">
                                         {isVisible ? <CountUp end={3875}/> : "0"}

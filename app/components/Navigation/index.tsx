@@ -1,10 +1,12 @@
 import classNames from "classnames"
-import { useState } from "react"
+import {useEffect, useRef, useState} from "react"
+import { useScrollPage } from "../../hooks/useScroll"
 import { NextLink } from "../BaseNextLink"
 import { RightMenu } from "../RightMenu"
 import { Burger } from "./Burger"
 import { Links } from "./Links"
 import styles from "./Navigation.module.scss"
+import {useScroll} from "@react-hooks-library/core";
 
 
 export const Navigation = () => {

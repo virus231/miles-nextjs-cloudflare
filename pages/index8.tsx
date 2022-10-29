@@ -1,11 +1,6 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
-import { Navigation } from '../app/components/Navigation'
-import { Footer } from '../app/components/Footer'
-import {FooterVariant2} from "../app/components/Footer/FooterVariant2";
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1'
 
 
 const HomePage8: NextPageWithLayout = () => {
@@ -1145,7 +1140,7 @@ const HomePage8: NextPageWithLayout = () => {
                     </form>
                 </div>
             </section>
-            <FooterVariant2/>
+            <FooterVariant1/>
 
         </>
     )
