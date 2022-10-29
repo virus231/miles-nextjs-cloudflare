@@ -3,16 +3,15 @@ import { NextLink } from '../app/components/BaseNextLink'
 import styles from '../styles/Home.module.scss'
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
-import { MainNavigation } from '../app/components/Navigation/MainNavigation'
-import { MainFooter } from '../app/components/MainFooter'
 import {FooterVariant1} from "../app/components/Footer/FooterVariant1";
+import {HeaderV1} from "../app/components/Navigation/HeaderV1";
 
 
 const PortfolioMasonry: NextPageWithLayout = () => {
     return (
         <>
 
-            {/* @include('partials/header-v1.html') */}
+            <HeaderV1/>
 
             <section className="portfolio-ms-page">
                 <div className="container-fluid">

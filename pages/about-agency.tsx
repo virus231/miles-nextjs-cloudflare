@@ -1,12 +1,13 @@
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import {FooterVariant2} from "../app/components/Footer/FooterVariant2";
+import {HeaderV1} from "../app/components/Navigation/HeaderV1";
 
 
 const AboutAgency: NextPageWithLayout = () => {
 return (
     <>
-        {/*@include('partials/header-v1.html')*/}
+        <HeaderV1/>
 
         <section className="about-v1-page">
             <div className="about-agency-content">

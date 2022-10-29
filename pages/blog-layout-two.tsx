@@ -1,12 +1,14 @@
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import {FooterVariant1} from "../app/components/Footer/FooterVariant1";
+import {HeaderV1} from "../app/components/Navigation/HeaderV1";
 
 
 const BlogLayoutTwo: NextPageWithLayout = () => {
 return (
     <>
-        {/*@include('partials/header-v1.html')*/}
+        <HeaderV1/>
+
         <section className="page-content">
             <div className="container v-3">
                 <div className="featured-post-sec">

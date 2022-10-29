@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.scss'
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import { MainNavigation } from '../app/components/Navigation/MainNavigation'
-import { MainFooter } from '../app/components/MainFooter'
+import { MainFooter } from '../app/components/Footer/MainFooter'
 import {FooterVariant2} from "../app/components/Footer/FooterVariant2";
 
 

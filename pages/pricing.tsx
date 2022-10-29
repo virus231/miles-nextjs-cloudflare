@@ -1,12 +1,13 @@
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import {FooterVariant2} from "../app/components/Footer/FooterVariant2";
+import {HeaderV1} from "../app/components/Navigation/HeaderV1";
 
 
 const Pricing: NextPageWithLayout = () => {
     return (
         <>
-            {/*@include('partials/header-v1.html')*/}
+            <HeaderV1/>
 
             <section className="pricing-v10 clr-default">
                 <div className="container">

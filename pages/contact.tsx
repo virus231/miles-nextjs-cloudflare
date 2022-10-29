@@ -1,11 +1,12 @@
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
+import {HeaderV1} from "../app/components/Navigation/HeaderV1";
 
 
 const ContactPage: NextPageWithLayout = () => {
     return (
         <>
-            {/*@include('partials/header-v1.html')*/}
+            <HeaderV1/>
 
             <section className="contact-v1-map">
                 <div className="container-fluid">
