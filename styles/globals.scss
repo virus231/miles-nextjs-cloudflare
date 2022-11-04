@@ -8416,6 +8416,7 @@ body.dark-v {
       .share,
       &:before {
         opacity: 1;
+        z-index: 1;
         visibility: visible;
       }
     }
