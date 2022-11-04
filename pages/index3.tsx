@@ -6,8 +6,6 @@ import VisibilitySensor from "react-visibility-sensor";
 
 const HomePage3: NextPageWithLayout = () => {
 
-
-
     return (
             <>
                 <header className="header-v3 sticky">
