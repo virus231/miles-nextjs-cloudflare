@@ -6,18 +6,124 @@ import CountUp  from "react-countup";
 import VisibilitySensor from 'react-visibility-sensor';
 import { Testi } from '../app/components/Testi';
 import {KeepConnected} from "../app/components/KeepConnected";
-import {useScrollPosition} from "../app/hooks/useScroll";
+import CarouselCenterMode from '../app/components/carousel/CarouselCenterMode';
+import {Card, CardHeader, CardContent } from '@mui/material';
+import { useState } from 'react';
+import { Tabs } from '../app/components/Tabs/Tabs';
 
+// const _carouselsExample = [...Array(5)].map((_, index) => ({
+//     id: index.toString(),
+//     title: "123",
+//     image: "/static/images/1.jpg",
+//     description: "Description",
+// }));
 
+export const _carouselsExample = [
+    {
+        id: "1",
+        title: "123",
+        image: "/static/images/project1.jpg",
+        description: "Description",
+    },
+    {
+        id: "2",
+        title: "123",
+        image: "/static/images/project2.jpg",
+        description: "Description",
+    },
+    {
+        id: "3",
+        title: "123",
+        image: "/static/images/project3.jpg",
+        description: "Description",
+    },
+    {
+        id: "4",
+        title: "123",
+        image: "/static/images/project1.jpg",
+        description: "Description",
+    },
+    {
+        id: "5",
+        title: "123",
+        image: "/static/images/project1.jpg",
+        description: "Description",
+    },
+    {
+        id: "6",
+        title: "123",
+        image: "/static/images/project2.jpg",
+        description: "Description",
+    },
+    {
+        id: "7",
+        title: "123",
+        image: "/static/images/project3.jpg",
+        description: "Description",
+    },
+    {
+        id: "8",
+        title: "123",
+        image: "/static/images/project1.jpg",
+        description: "Description",
+    },
+    {
+        id: "9",
+        title: "123",
+        image: "/static/images/project1.jpg",
+        description: "Description",
+    },
+    {
+        id: "10",
+        title: "123",
+        image: "/static/images/project2.jpg",
+        description: "Description",
+    },
+    {
+        id: "11",
+        title: "123",
+        image: "/static/images/project3.jpg",
+        description: "Description",
+    },
+    {
+        id: "12",
+        title: "123",
+        image: "/static/images/project1.jpg",
+        description: "Description",
+    },
+    {
+        id: "13",
+        title: "123",
+        image: "/static/images/project1.jpg",
+        description: "Description",
+    },
+    {
+        id: "14",
+        title: "123",
+        image: "/static/images/project2.jpg",
+        description: "Description",
+    },
+    {
+        id: "18",
+        title: "123",
+        image: "/static/images/project3.jpg",
+        description: "Description",
+    },
+    {
+        id: "19",
+        title: "123",
+        image: "/static/images/project1.jpg",
+        description: "Description",
+    }
+]
 
+const tabItems = ["all", "Website seo", "fb/gg ads", "email marketing", "web design", "video viral"]
 
 const HomePage: NextPageWithLayout = () => {
-    const scrollPos = useScrollPosition();
 
   return (
     <>
         <Navigation/>
-
         <section className="banner-v8">
             <div className="container">
                 <div className="banner-v8-content">
@@ -66,6 +172,7 @@ const HomePage: NextPageWithLayout = () => {
                 </div>
             </div>
         </section>
+
         <section className="misson-section-v8">
             <div className="container">
                 <div className="mission-sec">
@@ -132,6 +239,7 @@ const HomePage: NextPageWithLayout = () => {
                 </div>
             </div>
         </section>
+
         <section className="grow-business-v8">
             <div className="container">
                 <div className="grw-content-v8">
@@ -237,12 +345,14 @@ const HomePage: NextPageWithLayout = () => {
                 </ul>
             </div>
         </section>
+
         <section className="projects-v8">
             <div className="container">
                 <div className="title-v8 text-center">
                     <h2>Our Latest Projects</h2>
                 </div>
                 <div className="projects-tab-sec">
+                    <Tabs tabItems={tabItems} />
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item">
                             <a
@@ -323,6 +433,7 @@ const HomePage: NextPageWithLayout = () => {
                             </a>
                         </li>
                     </ul>
+
                     <div className="tab-content" id="myTabContent">
                         <div
                             className="tab-pane fade show active"
@@ -1246,6 +1357,7 @@ const HomePage: NextPageWithLayout = () => {
                 </div>
             </div>
         </section>
+        
         <section className="why-us-v8">
             <div className="container">
                 <div
@@ -1319,6 +1431,7 @@ const HomePage: NextPageWithLayout = () => {
                 </div>
             </div>
         </section>
+
         <section className="testi-v3-sec">
             <div className="container">
                 <Testi/>
