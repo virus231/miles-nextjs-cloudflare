@@ -25,13 +25,13 @@ export default function CarouselCenterMode({ data }: Props) {
 
     const carouselSettings = {
         slidesToShow: 3,
-        dots: false,
+        dots: true,
+        arrows: false,
         centerMode: false,
-        centerPadding: '60px',
         rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
-            sx: { mt: 3 },
+            sx: { mt: "10px" },
         }),
         responsive: [
             {
@@ -59,31 +59,27 @@ export default function CarouselCenterMode({ data }: Props) {
 
     return (
         <Box
-            // sx={{
-            //     overflow: 'hidden',
-            //     position: 'relative',
-            //     '& .slick-list': {
-            //         borderRadius: 2,
-            //         // boxShadow: (theme) => theme.customShadows.z16,
-            //     },
-            // }}
+            sx={{
+                overflow: 'hidden',
+                position: 'relative',
+                '& .slick-list': {
+                    borderRadius: 2,
+                    // boxShadow: (theme) => theme.customShadows.z16,
+                },
+            }}
         >
             <CarouselArrows
                 // icon="noto:rightwards-hand"
                 onNext={handleNext}
                 onPrevious={handlePrev}
-                // sx={{
-                //     top: '10%',
-                //     zIndex: 9,
-                //     color: "#ccc",
-                //     marginTop: theme.spacing(-2.5),
-                // }}
+                sx={{
+                    zIndex: 9,
+                    color: "#ccc",
+                }}
             >
                 <Carousel ref={carouselRef} {...carouselSettings}>
                     {data.map((item) => (
-                        // <Box key={item.id}>
                             <CarouselItem key={item.id} item={item} />
-                        // </Box>
                     ))}
                 </Carousel>
             </CarouselArrows>
@@ -107,13 +103,15 @@ function CarouselItem({ item }: { item: CarouselItemProps }) {
     return (
         <Paper
             className="project-slide"
-            // sx={{
-            //     borderRadius: 2,
-            //     overflow: 'hidden',
-            //     position: 'relative',
-            // }}
+            sx={{
+                width: "100%",
+                height: "325px",
+                overflow: 'hidden',
+                position: 'relative',
+                borderRadius: "none",
+            }}
         >
-            <Image className="w-100" alt={title} src={image} ratio="1/1" />
+            <Image  alt={title} src={image} ratio="1/1" />
             <div className="project-slide-info">
                 <h3>
                     <a href="17_portfolio_single_layout_1.html" title="">

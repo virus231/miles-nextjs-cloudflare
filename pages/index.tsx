@@ -353,7 +353,8 @@ const HomePage: NextPageWithLayout = () => {
                 </div>
                 <div className="projects-tab-sec">
                     <Tabs tabItems={tabItems} />
-                    <ul className="nav nav-tabs" id="myTab" role="tablist">
+
+                    {/* <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item">
                             <a
                                 className="nav-link active"
@@ -1353,7 +1354,7 @@ const HomePage: NextPageWithLayout = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

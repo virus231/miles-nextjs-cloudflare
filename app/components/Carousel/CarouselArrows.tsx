@@ -94,6 +94,7 @@ export default function CarouselArrows({
           onClick={onPrevious}
           {...leftButtonProps}
           sx={{
+            top: "35%",
             left: 16,
             ...leftButtonProps?.sx,
           }}
@@ -110,6 +111,7 @@ export default function CarouselArrows({
           onClick={onNext}
           {...rightButtonProps}
           sx={{
+            top: "35%",
             right: 16,
             ...rightButtonProps?.sx,
           }}
