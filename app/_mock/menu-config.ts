@@ -60,15 +60,15 @@ export const rightMenu = [
         name: 'About',
         children: [
             {
-                href: '/',
+                href: '/about-agency',
                 name: 'About Agency',
             },
             {
-                href: '/',
+                href: '/about-business',
                 name: 'About Business',
             },
             {
-                href: '/',
+                href: '/about-me',
                 name: 'About Me',
             },
         ]
@@ -173,12 +173,12 @@ export const rightMenu = [
         name: 'Contact',
         children: [
             {
-                href: '/',
+                href: '/contact',
                 name: 'Contact V1',
             },
             {
-                href: '/',
-                name: 'Contact V1',
+                href: '/contact-two',
+                name: 'Contact V2',
             },
         ]
     },
@@ -266,16 +266,16 @@ export const navigationItems = [
     {
         name: "About",
         children: [
-            {
-                href: "/",
+            {   
+                href: "/about-agency",
                 name: "About Agency",
             },
             {
-                href: "/",
+                href: '/about-business',
                 name: "About Business",
             },
             {
-                href: "/",
+                href: "/about-me",
                 name: "About Me",
             },
         ]
@@ -313,19 +313,19 @@ export const navigationItems = [
         name: "News",
         children: [
             {
-                href: "/",
+                href: "/blog-layout-one",
                 name: "Blog V1",
             },
             {
-                href: "/",
+                href: "/blog-layout-two",
                 name: "Blog V2",
             },
             {
-                href: "/",
+                href: "/blog-single-layout-one",
                 name: "Blog Single V1",
             },
             {
-                href: "/",
+                href: "/blog-single-layout-two",
                 name: "Blog Single V2",
             },
         ]
@@ -334,11 +334,11 @@ export const navigationItems = [
         name: "Contact",
         children: [
             {
-                href: "/",
+                href: "/contact",
                 name: "Contact V1",
             },
             {
-                href: "/",
+                href: "/contact-two",
                 name: "Contact V2",
             },
         ]

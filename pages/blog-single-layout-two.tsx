@@ -1,13 +1,23 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import {FooterVariant1} from "../app/components/Footer/FooterVariant1";
 import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import {_carouselsExample} from "./index";
+import Carousel from '../app/components/carousel'
+import { useRef } from 'react'
 
 
 const BlogSingleLayoutTwo: NextPageWithLayout = () => {
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
 	return (
 		<>
 
@@ -35,21 +45,15 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 					<div className="container v4">
 						<div className="featured-post-sec v2">
 							<div className="featured-post-slider">
-								<div className="featured-post">
+                                <Carousel ref={carouselRef} {...carouselSettings}>
+                                    {_carouselsExample.map((item) => (
+								        <div className="featured-post">
 									<div className="vector-img">
 										<img src="/static/images/blog-large1.jpg" alt="" />
 									</div>
 								</div>
-								<div className="featured-post">
-									<div className="vector-img">
-										<img src="/static/images/blog-large1.jpg" alt="" />
-									</div>
-								</div>
-								<div className="featured-post">
-									<div className="vector-img">
-										<img src="/static/images/blog-large1.jpg" alt="" />
-									</div>
-								</div>
+                                    ))}
+                                </Carousel>
 							</div>
 						</div>
 					</div>

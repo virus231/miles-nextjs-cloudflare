@@ -293,7 +293,7 @@ return (
                             </li>
                             <li className="page-item active">
                                 <a className="page-link" href="#">
-                                    2 <span className="sr-only">(current)</span>
+                                     <span className="sr-only">2</span>
                                 </a>
                             </li>
                             <li className="page-item">

@@ -1,4 +1,3 @@
-import { Tab } from "react-bootstrap"
 import { _carouselsExample } from "../../../pages";
 import CarouselCenterMode from "../carousel/CarouselCenterMode";
 

@@ -105,7 +105,7 @@ function CarouselItem({ item }: { item: CarouselItemProps }) {
             className="project-slide"
             sx={{
                 width: "100%",
-                height: "325px",
+                height: "395px",
                 overflow: 'hidden',
                 position: 'relative',
                 borderRadius: "none",

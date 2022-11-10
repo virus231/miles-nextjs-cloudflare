@@ -343,13 +343,14 @@ return (
                 </div>
             </div>
         </section>
+
         <FooterVariant1/>
     </>
     )
 }
 
 AboutAgency.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="About Agency">{page}</Layout>;
 };
 
 export default AboutAgency
