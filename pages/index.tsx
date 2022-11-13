@@ -17,10 +17,6 @@ import { TabRoot } from "../app/components/Tabs/TabRoot";
 //     description: "Description",
 // }));
 
-export const APP_VERSION: number = 'v1.0.0'
-
-
-
 export const carouselsExample = [
     {
         id: "1",

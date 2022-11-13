@@ -1,11 +1,51 @@
-import { useRef } from 'react';
+import { useRef } from "react";
 
-import { alpha, useTheme } from '@mui/material/styles';
-import {Box, Paper, Link, CardContent, Typography} from '@mui/material';
+import { useTheme } from "@mui/material/styles";
+import { Box, Paper } from "@mui/material";
 import Image from "../image";
-import Carousel, { CarouselArrows, CarouselDots } from '.';
-import Iconify from '../iconify';
-import { bgGradient } from '../../utils/cssStyles';
+import Carousel, { CarouselArrows, CarouselDots } from ".";
+
+// ----------------------------------------------------------------------
+
+type CarouselItemProps = {
+    title: string;
+    description: string;
+    image: string;
+};
+
+function CarouselItem({ item }: { item: CarouselItemProps }) {
+    const { image, title } = item;
+
+    return (
+        <Paper
+            className="project-slide"
+            sx={{
+                width: "100%",
+                height: "395px",
+                overflow: "hidden",
+                position: "relative",
+                borderRadius: "none",
+            }}
+        >
+            <Image alt={title} src={image} ratio="1/1" />
+            <div className="project-slide-info">
+                <h3>
+                    <a href="17_portfolio_single_layout_1.html" title="">
+                        Taskly Dashboard
+                    </a>
+                </h3>
+                <p>
+                    BibliU is a digital platform that provides university
+                    students with personalized learning pathways..
+                </p>
+            </div>
+            <span className="category">Website SEO</span>
+            <a href="#" title="" className="share">
+                <i className="lni lni-share" />
+            </a>
+        </Paper>
+    );
+}
 
 // ----------------------------------------------------------------------
 
@@ -28,7 +68,7 @@ export default function CarouselCenterMode({ data }: Props) {
         dots: true,
         arrows: false,
         centerMode: false,
-        rtl: Boolean(theme.direction === 'rtl'),
+        rtl: Boolean(theme.direction === "rtl"),
         ...CarouselDots({
             rounded: true,
             sx: { mt: "10px" },
@@ -44,7 +84,7 @@ export default function CarouselCenterMode({ data }: Props) {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: '0' },
+                settings: { slidesToShow: 1, centerPadding: "0" },
             },
         ],
     };
@@ -60,9 +100,9 @@ export default function CarouselCenterMode({ data }: Props) {
     return (
         <Box
             sx={{
-                overflow: 'hidden',
-                position: 'relative',
-                '& .slick-list': {
+                overflow: "hidden",
+                position: "relative",
+                "& .slick-list": {
                     borderRadius: 2,
                     // boxShadow: (theme) => theme.customShadows.z16,
                 },
@@ -78,55 +118,11 @@ export default function CarouselCenterMode({ data }: Props) {
                 }}
             >
                 <Carousel ref={carouselRef} {...carouselSettings}>
-                    {data.map((item) => (
-                            <CarouselItem key={item.id} item={item} />
+                    {data.map(item => (
+                        <CarouselItem key={item.id} item={item} />
                     ))}
                 </Carousel>
             </CarouselArrows>
         </Box>
-    );
-}
-
-// ----------------------------------------------------------------------
-
-type CarouselItemProps = {
-    title: string;
-    description: string;
-    image: string;
-};
-
-function CarouselItem({ item }: { item: CarouselItemProps }) {
-    const theme = useTheme();
-
-    const { image, title } = item;
-
-    return (
-        <Paper
-            className="project-slide"
-            sx={{
-                width: "100%",
-                height: "395px",
-                overflow: 'hidden',
-                position: 'relative',
-                borderRadius: "none",
-            }}
-        >
-            <Image  alt={title} src={image} ratio="1/1" />
-            <div className="project-slide-info">
-                <h3>
-                    <a href="17_portfolio_single_layout_1.html" title="">
-                        Taskly Dashboard
-                    </a>
-                </h3>
-                <p>
-                    BibliU is a digital platform that provides university
-                    students with personalized learning pathways..
-                </p>
-            </div>
-            <span className="category">Website SEO</span>
-            <a href="#" title="" className="share">
-                <i className="lni lni-share"/>
-            </a>
-        </Paper>
     );
 }

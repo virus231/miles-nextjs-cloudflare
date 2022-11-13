@@ -1,23 +1,27 @@
-import { _carouselsExample } from "../../../pages";
+import { carouselsExample } from "../../../pages";
 import CarouselCenterMode from "../carousel/CarouselCenterMode";
 
 type Props = {
-    content: string
-}
+    content: {
+        id: string;
+        title: string;
+    };
+};
 
 export const TabContent = (props: Props) => {
-    const {content} = props
-    return <div className="tab-content" id="myTabContent">
-        <div
-            className="tab-pane fade show active"
-            id={content.toLowerCase()}
-            role="tabpanel"
-            aria-labelledby={`${content.toLowerCase()}-tab`}
-        >
-            <div className="row projects-sliders">
-                <CarouselCenterMode data={_carouselsExample} />
+    const { content } = props;
+    return (
+        <div className="tab-content" id="myTabContent">
+            <div
+                className="tab-pane fade show active"
+                id={content.title.toLowerCase()}
+                role="tabpanel"
+                aria-labelledby={`${content.title.toLowerCase()}-tab`}
+            >
+                <div className="row projects-sliders">
+                    <CarouselCenterMode data={carouselsExample} />
+                </div>
             </div>
         </div>
-    </div>
-
-}
+    );
+};
