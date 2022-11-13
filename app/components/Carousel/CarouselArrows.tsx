@@ -12,11 +12,12 @@ interface StyledIconButtonProps extends IconButtonProps {
   filled?: boolean;
   shape?: 'circular' | 'rounded';
   hasChildren?: boolean;
+  hover?: boolean;
 }
 
 const StyledIconButton = styled(IconButton, {
   shouldForwardProp: (prop) => prop !== 'filled' && prop !== 'hasChildren' && prop !== 'shape',
-})<StyledIconButtonProps>(({ filled, shape, hasChildren, theme }) => ({
+})<StyledIconButtonProps>(({ filled, shape, hasChildren, theme, hover }) => ({
   color: 'inherit',
   transition: theme.transitions.create('all', {
     duration: theme.transitions.duration.shorter,
@@ -24,7 +25,12 @@ const StyledIconButton = styled(IconButton, {
   ...(shape === 'rounded' && {
     borderRadius: Number(theme.shape.borderRadius) * 1.5,
   }),
-  ...(!filled && {
+  ...(hover && {
+    '&:hover': {
+        backgroundColor: "none",
+    }
+  }),
+  ...(!filled && hover && {
     opacity: 0.48,
     '&:hover': {
       opacity: 1,
@@ -58,6 +64,7 @@ const StyledIconButton = styled(IconButton, {
 interface Props extends StackProps {
   shape?: 'circular' | 'rounded';
   filled?: boolean;
+  hover?: boolean;
   children?: React.ReactNode;
   icon?: IconifyProps; // Right icon
   onNext?: VoidFunction;
@@ -76,6 +83,7 @@ export default function CarouselArrows({
   leftButtonProps,
   rightButtonProps,
   sx,
+  hover = false,
   ...other
 }: Props) {
   const theme = useTheme();
