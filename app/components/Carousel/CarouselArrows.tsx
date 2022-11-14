@@ -47,7 +47,7 @@ const StyledIconButton = styled(IconButton, {
   }),
   ...(hasChildren && {
     zIndex: 9,
-    top: '50%',
+    // top: '50%',
     position: 'absolute',
     transition: theme.transitions.create('all', {
       duration: theme.transitions.duration.shorter,
@@ -71,6 +71,7 @@ interface Props extends StackProps {
   onPrevious?: VoidFunction;
   leftButtonProps?: IconButtonProps;
   rightButtonProps?: IconButtonProps;
+  topSpace?: number;
 }
 
 export default function CarouselArrows({
@@ -83,6 +84,7 @@ export default function CarouselArrows({
   leftButtonProps,
   rightButtonProps,
   sx,
+  topSpace,
   hover = false,
   ...other
 }: Props) {
@@ -102,7 +104,7 @@ export default function CarouselArrows({
           onClick={onPrevious}
           {...leftButtonProps}
           sx={{
-            top: "35%",
+            top: `${topSpace}%`,
             left: 16,
             ...leftButtonProps?.sx,
           }}
@@ -119,8 +121,8 @@ export default function CarouselArrows({
           onClick={onNext}
           {...rightButtonProps}
           sx={{
-            top: "35%",
-            right: 16,
+              top: `${topSpace}%`,
+              right: 16,
             ...rightButtonProps?.sx,
           }}
         >

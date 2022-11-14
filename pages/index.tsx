@@ -81,6 +81,7 @@ const HomePage: NextPageWithLayout = () => {
     return (
         <>
             <Navigation />
+
             <section className="banner-v8">
                 <div className="container">
                     <div className="banner-v8-content">

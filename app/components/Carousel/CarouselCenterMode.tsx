@@ -13,7 +13,7 @@ type CarouselItemProps = {
     image: string;
 };
 
-function CarouselItem({ item }: { item: CarouselItemProps }) {
+export function CarouselItem({ item }: { item: CarouselItemProps }) {
     const { image, title } = item;
 
     return (
@@ -111,6 +111,7 @@ export default function CarouselCenterMode({ data }: Props) {
             <CarouselArrows
                 // icon="noto:rightwards-hand"
                 onNext={handleNext}
+                topSpace={50}
                 onPrevious={handlePrev}
                 sx={{
                     zIndex: 9,

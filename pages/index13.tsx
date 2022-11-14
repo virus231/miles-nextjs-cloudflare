@@ -1058,13 +1058,12 @@ const HomePage13: NextPageWithLayout = () => {
 				</li>
 			</ul>
 
-
 		</>
 	)
 }
 
 HomePage13.getLayout = function getLayout(page: React.ReactElement) {
-	return <Layout title="Home">{page}</Layout>;
+	return <Layout title="Home Portfolio 2">{page}</Layout>;
 };
 
 export default HomePage13
