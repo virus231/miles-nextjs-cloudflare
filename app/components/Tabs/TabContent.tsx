@@ -26,22 +26,22 @@ export const TabContent = (props: Props) => {
         rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
-            sx: { mt: '10px' },
+            sx: { mt: '10px' }
         }),
         responsive: [
             {
                 breakpoint: 1024,
-                settings: { slidesToShow: 2 },
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 600,
-                settings: { slidesToShow: 2 },
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: '0' },
-            },
-        ],
+                settings: { slidesToShow: 1, centerPadding: '0' }
+            }
+        ]
     };
 
     const handlePrev = () => {
@@ -68,11 +68,11 @@ export const TabContent = (props: Props) => {
                         onPrevious={handlePrev}
                         sx={{
                             zIndex: 9,
-                            color: '#ccc',
+                            color: '#ccc'
                         }}
                     >
                         <Carousel ref={carouselRef} {...carouselSettings}>
-                            {carouselsExample.map(item => (
+                            {carouselsExample.map((item) => (
                                 <CarouselItem key={item.id} item={item} />
                             ))}
                         </Carousel>

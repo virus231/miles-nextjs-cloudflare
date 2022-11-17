@@ -1,7 +1,6 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 
-
 const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
     return (
         <>
@@ -18,10 +17,10 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
                             <button className="nav-toggle-btn a-nav-toggle ms-auto">
                                 <span className="nav-toggle-title">Menu</span>
                                 <span className="nav-toggle nav-toggle-sm">
-                <span className="stick stick-1" />
-                <span className="stick stick-2" />
-                <span className="stick stick-3" />
-              </span>
+                                    <span className="stick stick-1" />
+                                    <span className="stick stick-2" />
+                                    <span className="stick stick-3" />
+                                </span>
                             </button>
                             <a href="#" title="" className="btn-default no-bg">
                                 Let’s talk
@@ -504,11 +503,7 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
             <section className="pf-single-layout3">
                 <div className="pf-head-v3">
                     <div className="container">
-                        <div
-                            className="pf-head-content-v3 text-center wow fadeInUp"
-                            data-wow-duration="1000ms"
-                            data-wow-delay="0ms"
-                        >
+                        <div className="pf-head-content-v3 text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <h2>Fodo Rebrand</h2>
                             <ul className="prp-list">
                                 <li>
@@ -535,17 +530,11 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
                     <img src="/static/images/pf-banner2.png" alt="" />
                 </div>
                 <div className="container">
-                    <div
-                        className="txt-content v2 text-center border-bottom wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <div className="txt-content v2 text-center border-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <p>
-                            Byzano nestled right into our wheelhouse. A dynamic co-working space
-                            attracting entrepreneurs, tinkerers, and creatives in the tech hub
-                            of Ann Arbor, Michigan, they wanted a lifestyle brand—a complete
-                            ecosystem of brand visuals and assets that could be worn, posted,
-                            shared.
+                            Byzano nestled right into our wheelhouse. A dynamic co-working space attracting entrepreneurs, tinkerers, and
+                            creatives in the tech hub of Ann Arbor, Michigan, they wanted a lifestyle brand—a complete ecosystem of brand
+                            visuals and assets that could be worn, posted, shared.
                         </p>
                     </div>
                 </div>
@@ -556,19 +545,15 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
                         <div className="col-lg-6">
                             <div className="mv-title">
                                 <span>challenge</span>
-                                <h2>
-                                    Best finance app professional &amp; friendly for all people.
-                                </h2>
+                                <h2>Best finance app professional &amp; friendly for all people.</h2>
                             </div>
                         </div>
                         <div className="col-lg-6">
                             <div className="mv-para">
                                 <p>
-                                    <strong>Miles Studio</strong> believes a team of creatives who
-                                    are excited about unique ideas and help digital and fin-tech
-                                    companies. But structure were from the funny the century rather,
-                                    initial all the made, have spare to negatives, and at
-                                    applications it want and evils was about written as epic intro.
+                                    <strong>Miles Studio</strong> believes a team of creatives who are excited about unique ideas and help
+                                    digital and fin-tech companies. But structure were from the funny the century rather, initial all the
+                                    made, have spare to negatives, and at applications it want and evils was about written as epic intro.
                                 </p>
                             </div>
                         </div>
@@ -611,15 +596,8 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
             </section>
             <section className="vd-frame-sec">
                 <div className="container">
-                    <div
-                        className="ms-title text-center wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
-                        <h2>
-                            No matter how you slice it, she likes what she´s seen so far, and
-                            she’s willing to give you a chance.
-                        </h2>
+                    <div className="ms-title text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <h2>No matter how you slice it, she likes what she´s seen so far, and she’s willing to give you a chance.</h2>
                     </div>
                     <div className="yt-frame">
                         <iframe src="https://www.youtube.com/embed/DBXH9jJRaDk?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com" />
@@ -628,11 +606,7 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
             </section>
             <section className="post-control-sec">
                 <div className="container">
-                    <h2
-                        className="text-center wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <h2 className="text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         Bdash UI Dashboard
                     </h2>
                     <div className="avl-btm">
@@ -671,9 +645,9 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
                             </div>
                             <div className="col-md-6">
                                 <div className="liked-dv">
-                <span className="liked">
-                  <i className="lni lni-heart-filled" />
-                </span>
+                                    <span className="liked">
+                                        <i className="lni lni-heart-filled" />
+                                    </span>
                                     <span>18 Liked</span>
                                 </div>
                             </div>
@@ -687,45 +661,33 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
                         <div className="footer-content">
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
-                                    <div
-                                        className="ft-text wow fadeInUp"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="ft-text wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <p>
-                                            We are a close team of creative professionals based out of
-                                            Savannah, Georgia. We are passionate about partnering &amp;
-                                            organizations to provide exceptional solutions.
+                                            We are a close team of creative professionals based out of Savannah, Georgia. We are passionate
+                                            about partnering &amp; organizations to provide exceptional solutions.
                                         </p>
                                         <div className="ft-form">
                                             <h4>Subscribe our newsletter for news update</h4>
                                             <form>
-                      <span className="input input--makiko">
-                        <input
-                            className="input__field input__field--makiko"
-                            type="email"
-                            id="input-16"
-                            placeholder="Enter email address..."
-                        />
-                        <label className="input__label input__label--makiko">
-                          <button
-                              type="submit"
-                              className="input__label-content input__label-content--makiko"
-                          >
-                            subscribe <i className="lni lni-chevron-right" />
-                          </button>
-                        </label>
-                      </span>
+                                                <span className="input input--makiko">
+                                                    <input
+                                                        className="input__field input__field--makiko"
+                                                        type="email"
+                                                        id="input-16"
+                                                        placeholder="Enter email address..."
+                                                    />
+                                                    <label className="input__label input__label--makiko">
+                                                        <button type="submit" className="input__label-content input__label-content--makiko">
+                                                            subscribe <i className="lni lni-chevron-right" />
+                                                        </button>
+                                                    </label>
+                                                </span>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
-                                    <div
-                                        className="get-touch-txt wow fadeInRight"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="get-touch-txt wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <span>get in touch</span>
                                         <h3>
                                             116 Fairground Rd, FL 32904, USA{' '}
@@ -803,7 +765,6 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
                     </div>
                 </div>
             </footer>
-
         </>
     );
 };

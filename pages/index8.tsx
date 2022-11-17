@@ -2,12 +2,9 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
-
 const HomePage8: NextPageWithLayout = () => {
-
     return (
         <>
-
             <header className="pb">
                 <div className="container-fluid">
                     <div className="header-content v1 d-flex flex-wrap align-items-center">
@@ -513,10 +510,7 @@ const HomePage8: NextPageWithLayout = () => {
                         <div className="promo-primary-content">
                             <span>miles studio</span>
                             <h2>Boost your business up to high level</h2>
-                            <p>
-                                Like any great agency, we are only as good as the result we
-                                deliver of our recent work 😎
-                            </p>
+                            <p>Like any great agency, we are only as good as the result we deliver of our recent work 😎</p>
                             <a href="#" className="btn-default">
                                 Get Started
                             </a>
@@ -532,17 +526,10 @@ const HomePage8: NextPageWithLayout = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 offset-lg-6">
-                            <div
-                                className="banner-text wow fadeInUp"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="0ms"
-                            >
+                            <div className="banner-text wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <span>miles studio</span>
                                 <h2>Boost your business up to high level</h2>
-                                <p>
-                                    Like any great agency, we are only as good as the result we
-                                    deliver of our recent work
-                                </p>
+                                <p>Like any great agency, we are only as good as the result we deliver of our recent work</p>
                                 <a href="#" title="" className="btn-default">
                                     Get Started
                                 </a>
@@ -608,9 +595,8 @@ const HomePage8: NextPageWithLayout = () => {
                                     <h2>Trusted solutions for business</h2>
                                     <h3>We know that good design mean that good business.</h3>
                                     <p>
-                                        We help our client suceed by creating identities, digital
-                                        experiences, and printmaterials that communicate clearly,
-                                        achieve marketing goals &amp; look fantastic
+                                        We help our client suceed by creating identities, digital experiences, and printmaterials that
+                                        communicate clearly, achieve marketing goals &amp; look fantastic
                                     </p>
                                     <a href="#" title="" className="btn-default no-bg">
                                         Learn More
@@ -619,52 +605,31 @@ const HomePage8: NextPageWithLayout = () => {
                             </div>
                             <div className="col-lg-6">
                                 <div className="services-card-list">
-                                    <div
-                                        className="service-card clr1 wow fadeInUp"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="service-card clr1 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <div className="service-icon">
                                             <img src="/static/images/icon1.png" alt="" />
                                         </div>
                                         <div className="service-info">
                                             <h3>Branding</h3>
-                                            <p>
-                                                We build and activate brands throung cultural insigh
-                                                &amp;, strategic vision.
-                                            </p>
+                                            <p>We build and activate brands throung cultural insigh &amp;, strategic vision.</p>
                                         </div>
                                     </div>
-                                    <div
-                                        className="service-card clr2 wow fadeInRight"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="300ms"
-                                    >
+                                    <div className="service-card clr2 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
                                         <div className="service-icon">
                                             <img src="/static/images/icon2.png" alt="" />
                                         </div>
                                         <div className="service-info">
                                             <h3>Interaction</h3>
-                                            <p>
-                                                We build and activate brands throung cultural insigh
-                                                &amp;, strategic vision.
-                                            </p>
+                                            <p>We build and activate brands throung cultural insigh &amp;, strategic vision.</p>
                                         </div>
                                     </div>
-                                    <div
-                                        className="service-card clr3 wow fadeInLeft"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="500ms"
-                                    >
+                                    <div className="service-card clr3 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
                                         <div className="service-icon">
                                             <img src="/static/images/icon3.png" alt="" />
                                         </div>
                                         <div className="service-info">
                                             <h3>Motion</h3>
-                                            <p>
-                                                We build and activate brands throung cultural insigh
-                                                &amp;, strategic vision.
-                                            </p>
+                                            <p>We build and activate brands throung cultural insigh &amp;, strategic vision.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -680,15 +645,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-lg-6 col-md-6">
                                 <div className="mile-projects v1">
                                     <div className="mile-project">
-                                        <div
-                                            className="project-thumb"
-                                            style={{ backgroundColor: '#78901b' }}
-                                        >
-                                            <img
-                                                src="/static/images/pic21.png"
-                                                alt=""
-                                                className="w-100"
-                                            />
+                                        <div className="project-thumb" style={{ backgroundColor: '#78901b' }}>
+                                            <img src="/static/images/pic21.png" alt="" className="w-100" />
                                         </div>
                                         <div className="project-info">
                                             <span>Branding</span>
@@ -700,15 +658,8 @@ const HomePage8: NextPageWithLayout = () => {
                                         </div>
                                     </div>
                                     <div className="mile-project">
-                                        <div
-                                            className="project-thumb"
-                                            style={{ backgroundColor: '#5169fb' }}
-                                        >
-                                            <img
-                                                src="/static/images/pic22.png"
-                                                alt=""
-                                                className="w-100"
-                                            />
+                                        <div className="project-thumb" style={{ backgroundColor: '#5169fb' }}>
+                                            <img src="/static/images/pic22.png" alt="" className="w-100" />
                                         </div>
                                         <div className="project-info">
                                             <span>Interaction - Motion</span>
@@ -723,23 +674,13 @@ const HomePage8: NextPageWithLayout = () => {
                             </div>
                             <div className="col-lg-6 col-md-6">
                                 <div className="mile-projects v2">
-                                    <div
-                                        className="section-title wow fadeInUp"
-                                        data-wow-duration="1000ms"
-                                    >
+                                    <div className="section-title wow fadeInUp" data-wow-duration="1000ms">
                                         <span>featured projects</span>
                                         <h2>Bigger, Bolder &amp; Better</h2>
                                     </div>
                                     <div className="mile-project">
-                                        <div
-                                            className="project-thumb"
-                                            style={{ backgroundColor: '#f1445a' }}
-                                        >
-                                            <img
-                                                src="/static/images/pic23.png"
-                                                alt=""
-                                                className="w-100"
-                                            />
+                                        <div className="project-thumb" style={{ backgroundColor: '#f1445a' }}>
+                                            <img src="/static/images/pic23.png" alt="" className="w-100" />
                                         </div>
                                         <div className="project-info">
                                             <span>Interaction - Motion</span>
@@ -750,11 +691,7 @@ const HomePage8: NextPageWithLayout = () => {
                                             </h2>
                                         </div>
                                     </div>
-                                    <a
-                                        href="15_portfolio_horizontal_scroll.html"
-                                        title=""
-                                        className="btn-default no-bg"
-                                    >
+                                    <a href="15_portfolio_horizontal_scroll.html" title="" className="btn-default no-bg">
                                         See More Projects <i className="lni lni-chevron-right" />
                                     </a>
                                 </div>
@@ -774,9 +711,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-12 col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “Originally, creative and with an innate understanding of
-                                        their customer’s need. The team at Miles are always a pleasure
-                                        to work with. Recommended.”
+                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
+                                        are always a pleasure to work with. Recommended.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -794,9 +730,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-12 col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “I don’t know what else to say, this is something that you
-                                        haven’t seen before. Unique design, lightweight, and
-                                        outstanding support.”
+                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
+                                        lightweight, and outstanding support.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -814,9 +749,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-12 col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “Extremly impressed with the Miles release. This is the best
-                                        WP theme ever. Launch your website look amazing in fie
-                                        minutes. Greated!!!
+                                        “Extremly impressed with the Miles release. This is the best WP theme ever. Launch your website look
+                                        amazing in fie minutes. Greated!!!
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -834,9 +768,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-12 col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “Originally, creative and with an innate understanding of
-                                        their customer’s need. The team at Miles are always a pleasure
-                                        to work with. Recommended.”
+                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
+                                        are always a pleasure to work with. Recommended.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -854,9 +787,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-12 col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “I don’t know what else to say, this is something that you
-                                        haven’t seen before. Unique design, lightweight, and
-                                        outstanding support.”
+                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
+                                        lightweight, and outstanding support.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -874,9 +806,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-12 col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “Extremly impressed with the Miles release. This is the best
-                                        WP theme ever. Launch your website look amazing in fie
-                                        minutes. Greated!!!
+                                        “Extremly impressed with the Miles release. This is the best WP theme ever. Launch your website look
+                                        amazing in fie minutes. Greated!!!
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -894,9 +825,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-12 col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “Originally, creative and with an innate understanding of
-                                        their customer’s need. The team at Miles are always a pleasure
-                                        to work with. Recommended.”
+                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
+                                        are always a pleasure to work with. Recommended.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -914,9 +844,8 @@ const HomePage8: NextPageWithLayout = () => {
                             <div className="col-12 col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “I don’t know what else to say, this is something that you
-                                        haven’t seen before. Unique design, lightweight, and
-                                        outstanding support.”
+                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
+                                        lightweight, and outstanding support.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -951,9 +880,8 @@ const HomePage8: NextPageWithLayout = () => {
                                         <h2>Creative and Funny</h2>
                                     </div>
                                     <p>
-                                        Meet our talented team of creatives, fun-lovers, and magic
-                                        makers. Shall seas yielding a he, moveth said gathering under
-                                        all cattle were years fruit whose isn’t.{' '}
+                                        Meet our talented team of creatives, fun-lovers, and magic makers. Shall seas yielding a he, moveth
+                                        said gathering under all cattle were years fruit whose isn’t.{' '}
                                     </p>
                                     <a href="32_team.html" title="" className="btn-default no-bg">
                                         Meet Our Team
@@ -973,15 +901,10 @@ const HomePage8: NextPageWithLayout = () => {
                                     <span>Featured Post</span>
                                     <h2>Brief Guide into Social Media Marketing Trends 2020</h2>
                                     <p>
-                                        These days, the Internet permeates every single facet of our
-                                        lives on a daily basis. Indeed, there is rarely a thing that
-                                        anyone.
+                                        These days, the Internet permeates every single facet of our lives on a daily basis. Indeed, there
+                                        is rarely a thing that anyone.
                                     </p>
-                                    <a
-                                        href="blog-single-layout1.html"
-                                        title=""
-                                        className="btn-default"
-                                    >
+                                    <a href="blog-single-layout1.html" title="" className="btn-default">
                                         Continue Reading <i className="lni lni-chevron-right" />
                                     </a>
                                 </div>
@@ -995,11 +918,7 @@ const HomePage8: NextPageWithLayout = () => {
                     </div>
                     <div className="row">
                         <div className="col-lg-6">
-                            <div
-                                className="mile-post wow fadeIn"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="0ms"
-                            >
+                            <div className="mile-post wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <div className="mile-thumb">
                                     <img src="/static/images/post1.jpg" alt="" />
                                 </div>
@@ -1012,11 +931,7 @@ const HomePage8: NextPageWithLayout = () => {
                                     </h2>
                                 </div>
                             </div>
-                            <div
-                                className="mile-post wow fadeIn"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="200ms"
-                            >
+                            <div className="mile-post wow fadeIn" data-wow-duration="1000ms" data-wow-delay="200ms">
                                 <div className="mile-thumb">
                                     <img src="/static/images/post2.jpg" alt="" />
                                 </div>
@@ -1031,11 +946,7 @@ const HomePage8: NextPageWithLayout = () => {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div
-                                className="mile-post wow fadeIn"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="400ms"
-                            >
+                            <div className="mile-post wow fadeIn" data-wow-duration="1000ms" data-wow-delay="400ms">
                                 <div className="mile-thumb">
                                     <img src="/static/images/post3.jpg" alt="" />
                                 </div>
@@ -1048,11 +959,7 @@ const HomePage8: NextPageWithLayout = () => {
                                     </h2>
                                 </div>
                             </div>
-                            <div
-                                className="mile-post wow fadeIn"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="600ms"
-                            >
+                            <div className="mile-post wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                                 <div className="mile-thumb">
                                     <img src="/static/images/post4.jpg" alt="" />
                                 </div>
@@ -1071,11 +978,7 @@ const HomePage8: NextPageWithLayout = () => {
             </section>
             <section className="contact-sec">
                 <div className="container">
-                    <div
-                        className="sec-title text-center wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <div className="sec-title text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <h2>Ready to get started</h2>
                         <span>Ask away! we will response within 24 hours</span>
                     </div>
@@ -1083,25 +986,13 @@ const HomePage8: NextPageWithLayout = () => {
                         <div className="row">
                             <div className="col-md-4">
                                 <div className="form-group">
-                                    <input
-                                        type="text"
-                                        className="form--control"
-                                        id="name"
-                                        name="name"
-                                        placeholder=""
-                                    />
+                                    <input type="text" className="form--control" id="name" name="name" placeholder="" />
                                     <label htmlFor="name">Full Name</label>
                                 </div>
                             </div>
                             <div className="col-md-4">
                                 <div className="form-group">
-                                    <input
-                                        type="text"
-                                        className="form--control"
-                                        id="email"
-                                        name="email"
-                                        placeholder=""
-                                    />
+                                    <input type="text" className="form--control" id="email" name="email" placeholder="" />
                                     <label htmlFor="email">
                                         Email Address <span>*</span>
                                     </label>
@@ -1109,23 +1000,13 @@ const HomePage8: NextPageWithLayout = () => {
                             </div>
                             <div className="col-md-4">
                                 <div className="form-group">
-                                    <input
-                                        type="text"
-                                        className="form--control"
-                                        id="subject"
-                                        name="subject"
-                                        placeholder=""
-                                    />
+                                    <input type="text" className="form--control" id="subject" name="subject" placeholder="" />
                                     <label htmlFor="subject">Subject</label>
                                 </div>
                             </div>
                             <div className="col-md-12">
                                 <div className="form-group">
-                                    <textarea
-                                        className="form--control"
-                                        id="message"
-                                        defaultValue={''}
-                                    />
+                                    <textarea className="form--control" id="message" defaultValue={''} />
                                     <label htmlFor="message">Your message here</label>
                                 </div>
                             </div>
@@ -1140,8 +1021,7 @@ const HomePage8: NextPageWithLayout = () => {
                     </form>
                 </div>
             </section>
-            <FooterVariant1/>
-
+            <FooterVariant1 />
         </>
     );
 };

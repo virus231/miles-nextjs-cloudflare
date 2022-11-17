@@ -3,15 +3,13 @@ import { NextLink } from '../app/components/BaseNextLink';
 import styles from '../styles/Home.module.scss';
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {FooterVariant1} from '../app/components/Footer/FooterVariant1';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
-
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 
 const PortfolioMasonry: NextPageWithLayout = () => {
     return (
         <>
-
-            <HeaderV1/>
+            <HeaderV1 />
 
             <section className="portfolio-ms-page">
                 <div className="container-fluid">
@@ -21,11 +19,7 @@ const PortfolioMasonry: NextPageWithLayout = () => {
                     </div>
                     <div className="options">
                         <div className="option-isotop">
-                            <ul
-                                id="filter"
-                                className="option-set filters-nav text-center"
-                                data-option-key="filter"
-                            >
+                            <ul id="filter" className="option-set filters-nav text-center" data-option-key="filter">
                                 <li>
                                     <a data-option-value="*" className="selected">
                                         All Projects{' '}
@@ -115,7 +109,7 @@ const PortfolioMasonry: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant1/>
+            <FooterVariant1 />
         </>
     );
 };

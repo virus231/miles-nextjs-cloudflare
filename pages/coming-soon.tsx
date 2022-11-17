@@ -1,11 +1,9 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 
-
 const ComingSoon: NextPageWithLayout = () => {
     return (
         <>
-
             <header className="pb">
                 <div className="container-fluid">
                     <div className="header-content d-flex flex-wrap align-items-center">
@@ -15,11 +13,7 @@ const ComingSoon: NextPageWithLayout = () => {
                             </a>
                         </div>
                         <div className="mile-right ms-auto">
-                            <a
-                                href="#"
-                                title=""
-                                className="btn-default white-bg box-shadow-none"
-                            >
+                            <a href="#" title="" className="btn-default white-bg box-shadow-none">
                                 Let’s talk
                                 <i className="lni lni-comments" />
                             </a>
@@ -78,7 +72,6 @@ const ComingSoon: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-
         </>
     );
 };

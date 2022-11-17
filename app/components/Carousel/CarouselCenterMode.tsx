@@ -24,7 +24,7 @@ export function CarouselItem({ item }: { item: CarouselItemProps }) {
                 height: '395px',
                 overflow: 'hidden',
                 position: 'relative',
-                borderRadius: 'none',
+                borderRadius: 'none'
             }}
         >
             <Image alt={title} src={image} ratio="1/1" />
@@ -34,10 +34,7 @@ export function CarouselItem({ item }: { item: CarouselItemProps }) {
                         Taskly Dashboard
                     </a>
                 </h3>
-                <p>
-                    BibliU is a digital platform that provides university
-                    students with personalized learning pathways..
-                </p>
+                <p>BibliU is a digital platform that provides university students with personalized learning pathways..</p>
             </div>
             <span className="category">Website SEO</span>
             <a href="#" title="" className="share">
@@ -71,22 +68,22 @@ export default function CarouselCenterMode({ data }: Props) {
         rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
-            sx: { mt: '10px' },
+            sx: { mt: '10px' }
         }),
         responsive: [
             {
                 breakpoint: 1024,
-                settings: { slidesToShow: 2 },
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 600,
-                settings: { slidesToShow: 2 },
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: '0' },
-            },
-        ],
+                settings: { slidesToShow: 1, centerPadding: '0' }
+            }
+        ]
     };
 
     const handlePrev = () => {
@@ -103,9 +100,9 @@ export default function CarouselCenterMode({ data }: Props) {
                 overflow: 'hidden',
                 position: 'relative',
                 '& .slick-list': {
-                    borderRadius: 2,
+                    borderRadius: 2
                     // boxShadow: (theme) => theme.customShadows.z16,
-                },
+                }
             }}
         >
             <CarouselArrows
@@ -115,11 +112,11 @@ export default function CarouselCenterMode({ data }: Props) {
                 onPrevious={handlePrev}
                 sx={{
                     zIndex: 9,
-                    color: '#ccc',
+                    color: '#ccc'
                 }}
             >
                 <Carousel ref={carouselRef} {...carouselSettings}>
-                    {data.map(item => (
+                    {data.map((item) => (
                         <CarouselItem key={item.id} item={item} />
                     ))}
                 </Carousel>

@@ -1,11 +1,10 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {FooterVariant1} from '../app/components/Footer/FooterVariant1';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import Carousel from '../app/components/carousel';
 import { useRef } from 'react';
-import {_carouselsExample} from './index';
-
+import { _carouselsExample } from './index';
 
 const BlogSingleLayoutOne: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
@@ -15,11 +14,11 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
         arrows: false,
         autoplay: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 1
     };
     return (
         <>
-            <HeaderV1/>
+            <HeaderV1 />
             <section className="page-content bb-0">
                 <div className="container v2">
                     <div className="featured-post-sec">
@@ -63,85 +62,65 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                                 Brief Guide into Social <br /> Media Marketing Trends 2020
                                             </h2>
                                             <p>
-                                                <strong>N</strong>ever ever think of giving up. Winners
-                                                never quit and quitters never win. Take all negative words
-                                                out of your mental dictionary and focus on the solutions
-                                                with utmost conviction and patience. The battle is never
-                                                lost until you’ve abandon your vision.
+                                                <strong>N</strong>ever ever think of giving up. Winners never quit and quitters never win.
+                                                Take all negative words out of your mental dictionary and focus on the solutions with utmost
+                                                conviction and patience. The battle is never lost until you’ve abandon your vision.
                                             </p>
                                             <p>
-                                                utmost conviction and patience. The battle is never lost
-                                                until you’ve abandon your vision. But what if you’re
-                                                really exhausted physically, mentally, and most of all
-                                                emotionally? Here are some sources of motivation to prompt
-                                                you in reaching the peak of accomplishment.
+                                                utmost conviction and patience. The battle is never lost until you’ve abandon your vision.
+                                                But what if you’re really exhausted physically, mentally, and most of all emotionally? Here
+                                                are some sources of motivation to prompt you in reaching the peak of accomplishment.
                                             </p>
                                             <div className="row pst-large">
                                                 <div className="col-12">
-                                                    <img
-                                                        src="/static/images/post-large1.jpg"
-                                                        alt=""
-                                                        className="w-100"
-                                                    />
+                                                    <img src="/static/images/post-large1.jpg" alt="" className="w-100" />
                                                     <span>Pablo Illustration via Icon8</span>
                                                 </div>
                                             </div>
                                             <h3>Challenge</h3>
                                             <p>
-                                                Success needs hard work. Don’t listen to these ‘get rich
-                                                quick’ schemes. You need to build your character and work
-                                                hard on yourself and your business to achieve greatness.
-                                                Work hard and work smart. Do the right things and do them
-                                                in the right way. Don’t procrastinate. Take bold actions.
-                                                Work long hours and craft your legacy.
+                                                Success needs hard work. Don’t listen to these ‘get rich quick’ schemes. You need to build
+                                                your character and work hard on yourself and your business to achieve greatness. Work hard
+                                                and work smart. Do the right things and do them in the right way. Don’t procrastinate. Take
+                                                bold actions. Work long hours and craft your legacy.
                                             </p>
                                             <h3>Methods for Everyone</h3>
                                             <p>
-                                                Successful people do not see failures as failures. They
-                                                see them as important learning lessons. Lessons that are
-                                                capable of giving them insights to prevent such mistakes
-                                                from happening again. By adopting this mindset of turning
-                                                each failure into a learning lesson or opportunity, you
-                                                can never fail until you yourself quit.
+                                                Successful people do not see failures as failures. They see them as important learning
+                                                lessons. Lessons that are capable of giving them insights to prevent such mistakes from
+                                                happening again. By adopting this mindset of turning each failure into a learning lesson or
+                                                opportunity, you can never fail until you yourself quit.
                                             </p>
                                             <p>
-                                                You should be able to find several indispensable facts
-                                                about motivation in the following paragraphs. If there’s
-                                                at least one fact you didn’t know before, imagine the
-                                                difference it might make. It’s so difficult to go on when
-                                                everything seems to fail, isn’t it? Are there times in
-                                                your life when you really want to call it “quits” because
-                                                you just can’t see any good results from all the hard work
-                                                you’ve done?
+                                                You should be able to find several indispensable facts about motivation in the following
+                                                paragraphs. If there’s at least one fact you didn’t know before, imagine the difference it
+                                                might make. It’s so difficult to go on when everything seems to fail, isn’t it? Are there
+                                                times in your life when you really want to call it “quits” because you just can’t see any
+                                                good results from all the hard work you’ve done?
                                             </p>
                                             <blockquote>
                                                 <p>
-                                                    To make these eternity bands more specially, you can use
-                                                    your birthstone into the band or your luck stone .
+                                                    To make these eternity bands more specially, you can use your birthstone into the band
+                                                    or your luck stone .
                                                 </p>
                                                 <span>
-                                <strong>Daniel Bagneto</strong>, Invisionapp Inc
-                              </span>
+                                                    <strong>Daniel Bagneto</strong>, Invisionapp Inc
+                                                </span>
                                             </blockquote>
                                             <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                                             <h3>Highlight on the Worldwide</h3>
                                             <p>
-                                                Just set something gratifying to indulge in after
-                                                completing a certain undertaking. The best time to learn
-                                                about motivation is before you’re in the thick of things.
-                                                Wise readers will keep reading to earn some valuable
-                                                motivation experience while it’s still free.
+                                                Just set something gratifying to indulge in after completing a certain undertaking. The best
+                                                time to learn about motivation is before you’re in the thick of things. Wise readers will
+                                                keep reading to earn some valuable motivation experience while it’s still free.
                                             </p>
                                             <h3>So Result</h3>
                                             <p>
-                                                If you want to succeed, surround yourself with the right
-                                                kind of people who will support and encourage you all the
-                                                way. Be with people who have the same beliefs and
-                                                aspirations as yours. Positive aura is generated by this
-                                                fusion of collective energy from people of “like minds.”
-                                                On the contrary, being with people who oppose your ways of
-                                                thinking may trigger a negative, yet very powerful, kind
-                                                of motivation.
+                                                If you want to succeed, surround yourself with the right kind of people who will support and
+                                                encourage you all the way. Be with people who have the same beliefs and aspirations as
+                                                yours. Positive aura is generated by this fusion of collective energy from people of “like
+                                                minds.” On the contrary, being with people who oppose your ways of thinking may trigger a
+                                                negative, yet very powerful, kind of motivation.
                                             </p>
                                             <div className="row post-cont align-items-center">
                                                 <div className="col-lg-6 col-md-6">
@@ -210,9 +189,8 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                             </h3>
                                             <span>Content Editor</span>
                                             <p>
-                                                Excepteur sint occaecat cupidatat non proident, sunt in
-                                                culpa qui officia deserunt mollit anim id est laborum sed
-                                                ut perspiciatis unde.
+                                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                                anim id est laborum sed ut perspiciatis unde.
                                             </p>
                                         </div>
                                     </div>
@@ -222,11 +200,7 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                             <div className="col-lg-6 col-md-6 col-sm-6">
                                                 <div className="post-v10">
                                                     <div className="post-thumb">
-                                                        <img
-                                                            src="/static/images/blog-post1.jpg"
-                                                            alt=""
-                                                            className="w-100"
-                                                        />
+                                                        <img src="/static/images/blog-post1.jpg" alt="" className="w-100" />
                                                     </div>
                                                     <div className="post-info">
                                                         <span className="category">discuss</span>
@@ -236,26 +210,22 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                                             </a>
                                                         </h2>
                                                         <p>
-                                                            Handshake scrum project learning curve termsheet
-                                                            buzz bandwidth alpha pivot analytics supply.
+                                                            Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot
+                                                            analytics supply.
                                                         </p>
                                                         <span className="posted-on">
-                                    May 3rd, 2020, by{' '}
+                                                            May 3rd, 2020, by{' '}
                                                             <a href="#" title="">
-                                      Admin
-                                    </a>
-                                  </span>
+                                                                Admin
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 col-md-6 col-sm-6">
                                                 <div className="post-v10">
                                                     <div className="post-thumb">
-                                                        <img
-                                                            src="/static/images/blog-post2.jpg"
-                                                            alt=""
-                                                            className="w-100"
-                                                        />
+                                                        <img src="/static/images/blog-post2.jpg" alt="" className="w-100" />
                                                     </div>
                                                     <div className="post-info">
                                                         <span className="category">discuss</span>
@@ -265,15 +235,15 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                                             </a>
                                                         </h2>
                                                         <p>
-                                                            Handshake scrum project learning curve termsheet
-                                                            buzz bandwidth alpha pivot analytics supply.
+                                                            Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot
+                                                            analytics supply.
                                                         </p>
                                                         <span className="posted-on">
-                                    April 24th, 2020, by{' '}
+                                                            April 24th, 2020, by{' '}
                                                             <a href="#" title="">
-                                      Admin
-                                    </a>
-                                  </span>
+                                                                Admin
+                                                            </a>
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -285,11 +255,7 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                 <div className="sidebar blog-sidebar">
                                     <div className="widget widget-search">
                                         <form>
-                                            <input
-                                                type="text"
-                                                name="name"
-                                                placeholder="Search anything..."
-                                            />
+                                            <input type="text" name="name" placeholder="Search anything..." />
                                             <button type="submit">
                                                 <i className="lni lni-search" />
                                             </button>
@@ -422,11 +388,7 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                         </ul>
                                     </div>
                                     <div className="widget widget-adver">
-                                        <img
-                                            src="/static/images/ad-img2.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/ad-img2.jpg" alt="" className="w-100" />
                                     </div>
                                 </div>
                             </div>
@@ -448,9 +410,8 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                         <h3>David Bowie</h3>
                                         <span>3 hours ago</span>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                         <a href="#" title="" className="reply-btn">
                                             Reply
@@ -467,9 +428,8 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                                 <h3>Sam Susana</h3>
                                                 <span>25 minutes ago</span>
                                                 <p>
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et
-                                                    dolore magna aliqua.
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua.
                                                 </p>
                                                 <a href="#" title="" className="reply-btn">
                                                     Reply
@@ -488,9 +448,8 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                         <h3>Antony Bredan</h3>
                                         <span>May 22, 2020</span>
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua.
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                                            labore et dolore magna aliqua.
                                         </p>
                                         <a href="#" title="" className="reply-btn">
                                             Reply
@@ -516,20 +475,12 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                 </div>
                                 <div className="col-lg-4">
                                     <div className="form-group">
-                                        <input
-                                            type="text"
-                                            name="subject"
-                                            placeholder="Subject (optional)"
-                                        />
+                                        <input type="text" name="subject" placeholder="Subject (optional)" />
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="form-group">
-                          <textarea
-                              name="message"
-                              placeholder="Message"
-                              defaultValue={''}
-                          />
+                                        <textarea name="message" placeholder="Message" defaultValue={''} />
                                     </div>
                                 </div>
                                 <div className="col-lg-12">
@@ -544,8 +495,7 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant1/>
-
+            <FooterVariant1 />
         </>
     );
 };

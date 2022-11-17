@@ -1,21 +1,16 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-
 
 const Pricing: NextPageWithLayout = () => {
     return (
         <>
-            <HeaderV1/>
+            <HeaderV1 />
 
             <section className="pricing-v10 clr-default">
                 <div className="container">
-                    <div
-                        className="title-v10 text-center wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <div className="title-v10 text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <span className="gray-color">Plan &amp; pricing</span>
                         <h2>Start With An Affordable </h2>
                     </div>
@@ -162,11 +157,7 @@ const Pricing: NextPageWithLayout = () => {
             </section>
             <section className="testimonial-sec v10 clr-default">
                 <div className="container">
-                    <div
-                        className="title-v10 wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <div className="title-v10 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <span className="gray-color">testimonials</span>
                         <h2>Why Clients Love Us</h2>
                     </div>
@@ -175,9 +166,8 @@ const Pricing: NextPageWithLayout = () => {
                             <div className="col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “Originally, creative and with an innate understanding of
-                                        their customer’s need. The team at Miles are always a pleasure
-                                        to work with. Recommended.”
+                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
+                                        are always a pleasure to work with. Recommended.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -186,8 +176,8 @@ const Pricing: NextPageWithLayout = () => {
                                         <div className="thmb-info">
                                             <h3>Bobby Hanesto</h3>
                                             <span>
-                      Director of <em>Inivisionapp</em>
-                    </span>
+                                                Director of <em>Inivisionapp</em>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -195,9 +185,8 @@ const Pricing: NextPageWithLayout = () => {
                             <div className="col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “I don’t know what else to say, this is something that you
-                                        haven’t seen before. Unique design, lightweight, and
-                                        outstanding support.”
+                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
+                                        lightweight, and outstanding support.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -206,8 +195,8 @@ const Pricing: NextPageWithLayout = () => {
                                         <div className="thmb-info">
                                             <h3>Jeans Grey</h3>
                                             <span>
-                      CEO of <em>BraveBred</em>
-                    </span>
+                                                CEO of <em>BraveBred</em>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -215,9 +204,8 @@ const Pricing: NextPageWithLayout = () => {
                             <div className="col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “Originally, creative and with an innate understanding of
-                                        their customer’s need. The team at Miles are always a pleasure
-                                        to work with. Recommended.”
+                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
+                                        are always a pleasure to work with. Recommended.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -226,8 +214,8 @@ const Pricing: NextPageWithLayout = () => {
                                         <div className="thmb-info">
                                             <h3>Bobby Hanesto</h3>
                                             <span>
-                      Director of <em>Inivisionapp</em>
-                    </span>
+                                                Director of <em>Inivisionapp</em>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -235,9 +223,8 @@ const Pricing: NextPageWithLayout = () => {
                             <div className="col-lg-6">
                                 <div className="testimonial-slide">
                                     <p>
-                                        “I don’t know what else to say, this is something that you
-                                        haven’t seen before. Unique design, lightweight, and
-                                        outstanding support.”
+                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
+                                        lightweight, and outstanding support.”
                                     </p>
                                     <div className="thmb-row">
                                         <div className="thmb-img">
@@ -246,8 +233,8 @@ const Pricing: NextPageWithLayout = () => {
                                         <div className="thmb-info">
                                             <h3>Jeans Grey</h3>
                                             <span>
-                      CEO of <em>BraveBred</em>
-                    </span>
+                                                CEO of <em>BraveBred</em>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -285,7 +272,7 @@ const Pricing: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant1/>
+            <FooterVariant1 />
         </>
     );
 };

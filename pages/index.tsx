@@ -22,32 +22,32 @@ export const carouselsExample = [
         id: '1',
         title: '123',
         image: '/static/images/project1.jpg',
-        description: 'Description',
+        description: 'Description'
     },
     {
         id: '2',
         title: '123',
         image: '/static/images/project2.jpg',
-        description: 'Description',
+        description: 'Description'
     },
     {
         id: '3',
         title: '123',
         image: '/static/images/project3.jpg',
-        description: 'Description',
+        description: 'Description'
     },
     {
         id: '18',
         title: '123',
         image: '/static/images/project3.jpg',
-        description: 'Description',
+        description: 'Description'
     },
     {
         id: '19',
         title: '123',
         image: '/static/images/project1.jpg',
-        description: 'Description',
-    },
+        description: 'Description'
+    }
     // {
     //     id: "99",
     //     title: "123",
@@ -65,28 +65,28 @@ export const carouselsExample = [
 const tabItems = [
     {
         id: '1',
-        title: 'all',
+        title: 'all'
     },
     {
         id: '2',
-        title: 'Website seo',
+        title: 'Website seo'
     },
     {
         id: '3',
-        title: 'fb/gg ads',
+        title: 'fb/gg ads'
     },
     {
         id: '4',
-        title: 'email marketing',
+        title: 'email marketing'
     },
     {
         id: '5',
-        title: 'web design',
+        title: 'web design'
     },
     {
         id: '6',
-        title: 'video viral',
-    },
+        title: 'video viral'
+    }
 ];
 
 const HomePage: NextPageWithLayout = () => {
@@ -99,33 +99,18 @@ const HomePage: NextPageWithLayout = () => {
                     <div className="banner-v8-content">
                         <div className="row">
                             <div className="col-lg-5">
-                                <div
-                                    className="banner-txt-v8 wow fadeInUp"
-                                    data-wow-duration="1000ms"
-                                    data-wow-delay="0ms"
-                                >
-                                    <h2>
-                                        Boost your business up to high level
-                                    </h2>
+                                <div className="banner-txt-v8 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                                    <h2>Boost your business up to high level</h2>
                                     <p>
-                                        Like any great agency, we are only as
-                                        good as the result we deliver of our
-                                        deliver of our recent work
+                                        Like any great agency, we are only as good as the result we deliver of our deliver of our recent
+                                        work
                                     </p>
-                                    <NextLink
-                                        href="/"
-                                        title=""
-                                        className="btn-default-v8"
-                                    >
+                                    <NextLink href="/" title="" className="btn-default-v8">
                                         Get Started
                                     </NextLink>
                                 </div>
                                 <div className="banner-wid">
-                                    <p>
-                                        If you are hurry, quick call for us. Our
-                                        supporters alway 24/7 and will help you
-                                        asap
-                                    </p>
+                                    <p>If you are hurry, quick call for us. Our supporters alway 24/7 and will help you asap</p>
                                     <div className="wd-inz">
                                         <span className="cinon">
                                             <i className="lni lni-phone" />
@@ -138,15 +123,8 @@ const HomePage: NextPageWithLayout = () => {
                                 </div>
                             </div>
                             <div className="col-lg-7">
-                                <div
-                                    className="banner-img-v8 wow zoomIn"
-                                    data-wow-duration="1000ms"
-                                    data-wow-delay="0ms"
-                                >
-                                    <img
-                                        src="/static/images/banner-v8.png"
-                                        alt=""
-                                    />
+                                <div className="banner-img-v8 wow zoomIn" data-wow-duration="1000ms" data-wow-delay="0ms">
+                                    <img src="/static/images/banner-v8.png" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -159,11 +137,7 @@ const HomePage: NextPageWithLayout = () => {
                     <div className="mission-sec">
                         <div className="row">
                             <div className="col-xl-6">
-                                <div
-                                    className="crlce-misz wow zoomIn"
-                                    data-wow-duration="1000ms"
-                                    data-wow-delay="0ms"
-                                >
+                                <div className="crlce-misz wow zoomIn" data-wow-duration="1000ms" data-wow-delay="0ms">
                                     <ul className="crlce-list">
                                         <li className="v1">
                                             <div className="crlce-info">
@@ -171,10 +145,7 @@ const HomePage: NextPageWithLayout = () => {
                                                 <h3>Website Optimization</h3>
                                             </div>
                                             <div className="crlce-img">
-                                                <img
-                                                    src="/static/images/crcle-img1.png"
-                                                    alt=""
-                                                />
+                                                <img src="/static/images/crcle-img1.png" alt="" />
                                             </div>
                                         </li>
                                         <li className="v2">
@@ -183,10 +154,7 @@ const HomePage: NextPageWithLayout = () => {
                                                 <h3>Email Marketing</h3>
                                             </div>
                                             <div className="crlce-img">
-                                                <img
-                                                    src="/static/images/crcle-img2.png"
-                                                    alt=""
-                                                />
+                                                <img src="/static/images/crcle-img2.png" alt="" />
                                             </div>
                                         </li>
                                         <li className="v3">
@@ -195,10 +163,7 @@ const HomePage: NextPageWithLayout = () => {
                                                 <h3>Marketing Strategy</h3>
                                             </div>
                                             <div className="crlce-img">
-                                                <img
-                                                    src="/static/images/crcle-img3.png"
-                                                    alt=""
-                                                />
+                                                <img src="/static/images/crcle-img3.png" alt="" />
                                             </div>
                                         </li>
                                     </ul>
@@ -206,30 +171,15 @@ const HomePage: NextPageWithLayout = () => {
                             </div>
                             <div className="col-xl-6">
                                 <div className="vlm-text">
-                                    <h2>
-                                        We help you increase sales by improving
-                                        SEO
-                                    </h2>
-                                    <span>
-                                        “We know good design meant that good
-                                        business.”
-                                    </span>
+                                    <h2>We help you increase sales by improving SEO</h2>
+                                    <span>“We know good design meant that good business.”</span>
                                     <p>
-                                        Andy has dedicated his life to learning
-                                        what makes humans tick. He studies,
-                                        researches and reads everything hecan,
-                                        and shares his findings with his
-                                        clients. His philosophy is to learn,
-                                        test, analyse, improve and re-test. His
-                                        motto is stay agile, so you are best
-                                        positioned to respond quickly and
-                                        effectively to market forces.
+                                        Andy has dedicated his life to learning what makes humans tick. He studies, researches and reads
+                                        everything hecan, and shares his findings with his clients. His philosophy is to learn, test,
+                                        analyse, improve and re-test. His motto is stay agile, so you are best positioned to respond quickly
+                                        and effectively to market forces.
                                     </p>
-                                    <NextLink
-                                        href="24_about_agency.html"
-                                        title=""
-                                        className="btn-default-v8 v2"
-                                    >
+                                    <NextLink href="24_about_agency.html" title="" className="btn-default-v8 v2">
                                         Learn More
                                     </NextLink>
                                 </div>
@@ -244,32 +194,15 @@ const HomePage: NextPageWithLayout = () => {
                     <div className="grw-content-v8">
                         <div className="row align-items-center">
                             <div className="col-lg-5">
-                                <div
-                                    className="gr-text wow fadeInUp"
-                                    data-wow-duration="1000ms"
-                                    data-wow-delay="0ms"
-                                >
-                                    <h2>
-                                        Grow Your Business with Our SEO Agency
-                                    </h2>
-                                    <h4>
-                                        Over 10 years Onum helping companies
-                                        reach their financial and branding goals
-                                    </h4>
+                                <div className="gr-text wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                                    <h2>Grow Your Business with Our SEO Agency</h2>
+                                    <h4>Over 10 years Onum helping companies reach their financial and branding goals</h4>
                                     <p>
-                                        Over the years, we have worked with
-                                        Fortune 500s and brand-new startups.. We
-                                        help ambitious businesses like yours
-                                        generate more profits by building
-                                        awareness, driving web traffic,
-                                        connecting with customers, and growing
-                                        overall sales. Give us a call.
+                                        Over the years, we have worked with Fortune 500s and brand-new startups.. We help ambitious
+                                        businesses like yours generate more profits by building awareness, driving web traffic, connecting
+                                        with customers, and growing overall sales. Give us a call.
                                     </p>
-                                    <NextLink
-                                        href="24_about_agency.html"
-                                        title=""
-                                        className="btn-default-v8 v2"
-                                    >
+                                    <NextLink href="24_about_agency.html" title="" className="btn-default-v8 v2">
                                         Learn More
                                     </NextLink>
                                     <NextLink
@@ -280,9 +213,7 @@ const HomePage: NextPageWithLayout = () => {
                                         <span className="pl-btn">
                                             <i className="lni lni-play" />
                                         </span>
-                                        <span className="vt">
-                                            view our story
-                                        </span>
+                                        <span className="vt">view our story</span>
                                     </NextLink>
                                 </div>
                             </div>
@@ -296,40 +227,18 @@ const HomePage: NextPageWithLayout = () => {
                                             of <br />
                                             experience
                                         </h2>
-                                        <h3>
-                                            The Leading In Digital Marketing
-                                            Industrial
-                                        </h3>
+                                        <h3>The Leading In Digital Marketing Industrial</h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <ul
-                        className="counter-sec-v6 wow fadeInUp"
-                        id="counter"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <li>
                             <div className="counter-cont">
-                                <VisibilitySensor
-                                    scrollCheck
-                                    partialVisibility
-                                    offset={{ bottom: 10 }}
-                                >
-                                    {({
-                                        isVisible,
-                                    }: {
-                                        isVisible: boolean;
-                                    }) => (
-                                        <h2 className="clr1 count">
-                                            {isVisible ? (
-                                                <CountUp end={100} />
-                                            ) : (
-                                                '0'
-                                            )}
-                                        </h2>
+                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                    {({ isVisible }: { isVisible: boolean }) => (
+                                        <h2 className="clr1 count">{isVisible ? <CountUp end={100} /> : '0'}</h2>
                                     )}
                                 </VisibilitySensor>
                                 <span>
@@ -340,23 +249,9 @@ const HomePage: NextPageWithLayout = () => {
                         </li>
                         <li>
                             <div className="counter-cont">
-                                <VisibilitySensor
-                                    scrollCheck
-                                    partialVisibility
-                                    offset={{ bottom: 10 }}
-                                >
-                                    {({
-                                        isVisible,
-                                    }: {
-                                        isVisible: boolean;
-                                    }) => (
-                                        <h2 className="clr2 count">
-                                            {isVisible ? (
-                                                <CountUp end={250} />
-                                            ) : (
-                                                '0'
-                                            )}
-                                        </h2>
+                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                    {({ isVisible }: { isVisible: boolean }) => (
+                                        <h2 className="clr2 count">{isVisible ? <CountUp end={250} /> : '0'}</h2>
                                     )}
                                 </VisibilitySensor>
                                 <span>employees on worldwide</span>
@@ -364,23 +259,9 @@ const HomePage: NextPageWithLayout = () => {
                         </li>
                         <li>
                             <div className="counter-cont">
-                                <VisibilitySensor
-                                    scrollCheck
-                                    partialVisibility
-                                    offset={{ bottom: 10 }}
-                                >
-                                    {({
-                                        isVisible,
-                                    }: {
-                                        isVisible: boolean;
-                                    }) => (
-                                        <h2 className="clr2 count">
-                                            {isVisible ? (
-                                                <CountUp end={3875} />
-                                            ) : (
-                                                '0'
-                                            )}
-                                        </h2>
+                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                    {({ isVisible }: { isVisible: boolean }) => (
+                                        <h2 className="clr2 count">{isVisible ? <CountUp end={3875} /> : '0'}</h2>
                                     )}
                                 </VisibilitySensor>
                                 <span>Project Completed on 60 countries</span>
@@ -403,32 +284,19 @@ const HomePage: NextPageWithLayout = () => {
 
             <section className="why-us-v8">
                 <div className="container">
-                    <div
-                        className="title-v8 text-center wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <div className="title-v8 text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <h2>Why choose Milseo</h2>
-                        <p>
-                            Our strategy includes consistently evolving, to
-                            ensure we’re producing exceptional SEO for business.
-                        </p>
+                        <p>Our strategy includes consistently evolving, to ensure we’re producing exceptional SEO for business.</p>
                     </div>
                     <div className="row fzt-row">
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="our-fzt">
                                 <h3>
-                                    <NextLink
-                                        href="28_services_2.html"
-                                        title=""
-                                    >
+                                    <NextLink href="28_services_2.html" title="">
                                         Competitor Research
                                     </NextLink>
                                 </h3>
-                                <p>
-                                    Help business with their brading identity
-                                    system better
-                                </p>
+                                <p>Help business with their brading identity system better</p>
                                 <span className="fzt-icon v1">
                                     <i className="lni lni-users" />
                                 </span>
@@ -437,17 +305,11 @@ const HomePage: NextPageWithLayout = () => {
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="our-fzt">
                                 <h3>
-                                    <NextLink
-                                        href="28_services_2.html"
-                                        title=""
-                                    >
+                                    <NextLink href="28_services_2.html" title="">
                                         Innovatives Ideas &amp; Strategy
                                     </NextLink>
                                 </h3>
-                                <p>
-                                    Reach out your clients better through
-                                    website &amp; mobile app
-                                </p>
+                                <p>Reach out your clients better through website &amp; mobile app</p>
                                 <span className="fzt-icon v2">
                                     <i className="lni lni-invention" />
                                 </span>
@@ -456,17 +318,11 @@ const HomePage: NextPageWithLayout = () => {
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="our-fzt">
                                 <h3>
-                                    <NextLink
-                                        href="28_services_2.html"
-                                        title=""
-                                    >
+                                    <NextLink href="28_services_2.html" title="">
                                         Affordable Cost
                                     </NextLink>
                                 </h3>
-                                <p>
-                                    Building plan &amp; strategy for your
-                                    business by social marketing
-                                </p>
+                                <p>Building plan &amp; strategy for your business by social marketing</p>
                                 <span className="fzt-icon v3">
                                     <i className="lni lni-money-protection" />
                                 </span>
@@ -475,17 +331,11 @@ const HomePage: NextPageWithLayout = () => {
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="our-fzt">
                                 <h3>
-                                    <NextLink
-                                        href="28_services_2.html"
-                                        title=""
-                                    >
+                                    <NextLink href="28_services_2.html" title="">
                                         Dedicated Support &amp; 24/7
                                     </NextLink>
                                 </h3>
-                                <p>
-                                    Improve quality of product with high
-                                    resolution photos
-                                </p>
+                                <p>Improve quality of product with high resolution photos</p>
                                 <span className="fzt-icon v4">
                                     <i className="lni lni-headphone" />
                                 </span>
@@ -502,16 +352,9 @@ const HomePage: NextPageWithLayout = () => {
             </section>
             <section className="partners-v8-sec">
                 <div className="container">
-                    <div
-                        className="title-v8 text-center wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <div className="title-v8 text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <h2>Our Partners</h2>
-                        <p className="mw-100">
-                            Your succesful, our reputation! We are proaud to
-                            accompany more than 30 major brands
-                        </p>
+                        <p className="mw-100">Your succesful, our reputation! We are proaud to accompany more than 30 major brands</p>
                     </div>
                     <div className="pt-logos-v8 row">
                         <div className="col-lg-2">
@@ -594,11 +437,7 @@ const HomePage: NextPageWithLayout = () => {
             </section>
             <section className="blog-section-v7 v8">
                 <div className="container">
-                    <div
-                        className="title-v8 text-center wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <div className="title-v8 text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <h2>Latest Articles</h2>
                     </div>
                     <div className="blog-posts-v7">
@@ -606,11 +445,7 @@ const HomePage: NextPageWithLayout = () => {
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="blog-post-v7">
                                     <div className="blog-thumbnail">
-                                        <img
-                                            src="/static/images/blog4.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/blog4.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="blog-info">
                                         <ul className="meta">
@@ -626,22 +461,16 @@ const HomePage: NextPageWithLayout = () => {
                                             </li>
                                         </ul>
                                         <h2>
-                                            <NextLink
-                                                href="blog-single-layout2.html"
-                                                title=""
-                                            >
-                                                How to optimization cost for GG
-                                                Ads?
+                                            <NextLink href="blog-single-layout2.html" title="">
+                                                How to optimization cost for GG Ads?
                                             </NextLink>
                                         </h2>
                                         <ul className="meta2">
                                             <li>
-                                                <i className="lni lni-comments" />{' '}
-                                                25
+                                                <i className="lni lni-comments" /> 25
                                             </li>
                                             <li>
-                                                <i className="lni lni-eye" />{' '}
-                                                32.6K
+                                                <i className="lni lni-eye" /> 32.6K
                                             </li>
                                         </ul>
                                     </div>
@@ -650,11 +479,7 @@ const HomePage: NextPageWithLayout = () => {
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="blog-post-v7">
                                     <div className="blog-thumbnail">
-                                        <img
-                                            src="/static/images/blog5.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/blog5.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="blog-info">
                                         <ul className="meta">
@@ -670,21 +495,16 @@ const HomePage: NextPageWithLayout = () => {
                                             </li>
                                         </ul>
                                         <h2>
-                                            <NextLink
-                                                href="blog-single-layout2.html"
-                                                title=""
-                                            >
+                                            <NextLink href="blog-single-layout2.html" title="">
                                                 Workflow Strategy
                                             </NextLink>
                                         </h2>
                                         <ul className="meta2">
                                             <li>
-                                                <i className="lni lni-comments" />{' '}
-                                                4
+                                                <i className="lni lni-comments" /> 4
                                             </li>
                                             <li>
-                                                <i className="lni lni-eye" />{' '}
-                                                7.2K
+                                                <i className="lni lni-eye" /> 7.2K
                                             </li>
                                         </ul>
                                     </div>
@@ -693,11 +513,7 @@ const HomePage: NextPageWithLayout = () => {
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="blog-post-v7">
                                     <div className="blog-thumbnail">
-                                        <img
-                                            src="/static/images/blog6.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/blog6.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="blog-info">
                                         <ul className="meta">
@@ -713,22 +529,16 @@ const HomePage: NextPageWithLayout = () => {
                                             </li>
                                         </ul>
                                         <h2>
-                                            <NextLink
-                                                href="blog-single-layout2.html"
-                                                title=""
-                                            >
-                                                Elena Holson Shared: Marketing
-                                                Vision 2020
+                                            <NextLink href="blog-single-layout2.html" title="">
+                                                Elena Holson Shared: Marketing Vision 2020
                                             </NextLink>
                                         </h2>
                                         <ul className="meta2">
                                             <li>
-                                                <i className="lni lni-comments" />{' '}
-                                                18
+                                                <i className="lni lni-comments" /> 18
                                             </li>
                                             <li>
-                                                <i className="lni lni-eye" />{' '}
-                                                57.4K
+                                                <i className="lni lni-eye" /> 57.4K
                                             </li>
                                         </ul>
                                     </div>

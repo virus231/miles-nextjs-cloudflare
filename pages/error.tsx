@@ -1,13 +1,12 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-
 
 const ErrorPage: NextPageWithLayout = () => {
     return (
         <>
-            <HeaderV1/>
+            <HeaderV1 />
             <section className="error-page">
                 <div className="container">
                     <div className="error-content">
@@ -20,7 +19,7 @@ const ErrorPage: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant1/>
+            <FooterVariant1 />
         </>
     );
 };

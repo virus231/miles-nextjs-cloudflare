@@ -1,6 +1,6 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
@@ -8,7 +8,6 @@ import Carousel, { CarouselArrowIndex } from '../app/components/carousel';
 import { carouselsExample } from './index';
 import { useTheme } from '@mui/material/styles';
 import { useRef, useState } from 'react';
-
 
 const ServiceThree: NextPageWithLayout = () => {
     const theme = useTheme();
@@ -22,17 +21,17 @@ const ServiceThree: NextPageWithLayout = () => {
         responsive: [
             {
                 breakpoint: 1024,
-                settings: { slidesToShow: 2 },
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 600,
-                settings: { slidesToShow: 2 },
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: '0' },
-            },
-        ],
+                settings: { slidesToShow: 1, centerPadding: '0' }
+            }
+        ]
     };
 
     const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? carouselsExample.length - 1 : 0);
@@ -46,33 +45,22 @@ const ServiceThree: NextPageWithLayout = () => {
     };
     return (
         <>
-            <HeaderV1/>
+            <HeaderV1 />
 
             <section className="service-page-banner">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
-                            <div
-                                className="sv-title wow fadeInUp"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="0ms"
-                            >
+                            <div className="sv-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <span>our services</span>
                                 <h2>
                                     Best solutions <br /> to help your business growth better
                                 </h2>
-                                <p>
-                                    The difference lies in quality, reputation and responsibility of
-                                    creation.{' '}
-                                </p>
+                                <p>The difference lies in quality, reputation and responsibility of creation. </p>
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div
-                                className="svss-img wow zoomIn"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="0ms"
-                            >
+                            <div className="svss-img wow zoomIn" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <img src="/static/images/svs1.png" alt="" />
                             </div>
                         </div>
@@ -92,8 +80,8 @@ const ServiceThree: NextPageWithLayout = () => {
                                     </h3>
                                     <p>Help business with their brading identity system better</p>
                                     <span className="fzt-icon v1">
-                  <i className="lni lni-users" />
-                </span>
+                                        <i className="lni lni-users" />
+                                    </span>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
@@ -103,12 +91,10 @@ const ServiceThree: NextPageWithLayout = () => {
                                             Innovatives Ideas &amp; Strategy
                                         </a>
                                     </h3>
-                                    <p>
-                                        Reach out your clients better through website &amp; mobile app
-                                    </p>
+                                    <p>Reach out your clients better through website &amp; mobile app</p>
                                     <span className="fzt-icon v2">
-                  <i className="lni lni-invention" />
-                </span>
+                                        <i className="lni lni-invention" />
+                                    </span>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
@@ -118,13 +104,10 @@ const ServiceThree: NextPageWithLayout = () => {
                                             Affordable Cost
                                         </a>
                                     </h3>
-                                    <p>
-                                        Building plan &amp; strategy for your business by social
-                                        marketing
-                                    </p>
+                                    <p>Building plan &amp; strategy for your business by social marketing</p>
                                     <span className="fzt-icon v3">
-                  <i className="lni lni-money-protection" />
-                </span>
+                                        <i className="lni lni-money-protection" />
+                                    </span>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
@@ -136,114 +119,92 @@ const ServiceThree: NextPageWithLayout = () => {
                                     </h3>
                                     <p>Improve quality of product with high resolution photos</p>
                                     <span className="fzt-icon v4">
-                  <i className="lni lni-headphone" />
-                </span>
+                                        <i className="lni lni-headphone" />
+                                    </span>
                                 </div>
                             </div>
                         </div>
                         <div className="services-v9">
-                            <div
-                                className="title-v9 wow fadeInUp"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="0ms"
-                            >
+                            <div className="title-v9 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <h2>Our Services</h2>
                             </div>
                             <div className="row services_v9">
                                 <div className="col-lg-4 col-md-6">
                                     <div className="service-v9">
-                  <span className="s-icon clr-1">
-                    <i className="lni lni-graduation" />
-                  </span>
+                                        <span className="s-icon clr-1">
+                                            <i className="lni lni-graduation" />
+                                        </span>
                                         <h3>
                                             <a href="#" title="">
                                                 Solicitory
                                             </a>
                                         </h3>
-                                        <p>
-                                            Nanotechnology immersion along the information highway will
-                                            close the loop on focusing solely
-                                        </p>
+                                        <p>Nanotechnology immersion along the information highway will close the loop on focusing solely</p>
                                         <span className="s-category">case study</span>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="service-v9">
-                  <span className="s-icon clr-2">
-                    <i className="lni lni-empty-file" />
-                  </span>
+                                        <span className="s-icon clr-2">
+                                            <i className="lni lni-empty-file" />
+                                        </span>
                                         <h3>
                                             <a href="#" title="">
                                                 Business Planning
                                             </a>
                                         </h3>
-                                        <p>
-                                            Podcasting operational change management inside of workflows
-                                            to establish a framework.
-                                        </p>
+                                        <p>Podcasting operational change management inside of workflows to establish a framework.</p>
                                         <span className="s-category">case study</span>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="service-v9">
-                  <span className="s-icon clr-3">
-                    <i className="lni lni-crown" />
-                  </span>
+                                        <span className="s-icon clr-3">
+                                            <i className="lni lni-crown" />
+                                        </span>
                                         <h3>
                                             <a href="#" title="">
                                                 Strategy
                                             </a>
                                         </h3>
                                         <p>
-                                            Dynamically innovate resource-leveling customer service for
-                                            state of the art customer service.
+                                            Dynamically innovate resource-leveling customer service for state of the art customer service.
                                         </p>
                                         <span className="s-category">case study</span>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="service-v9">
-                  <span className="s-icon clr-4">
-                    <i className="lni lni-users" />
-                  </span>
+                                        <span className="s-icon clr-4">
+                                            <i className="lni lni-users" />
+                                        </span>
                                         <h3>
                                             <a href="#" title="">
                                                 Human Resources
                                             </a>
                                         </h3>
-                                        <p>
-                                            Nanotechnology immersion along the information highway will
-                                            close the loop on focusing solely
-                                        </p>
+                                        <p>Nanotechnology immersion along the information highway will close the loop on focusing solely</p>
                                         <span className="s-category">case study</span>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="service-v9">
-                  <span className="s-icon clr-5">
-                    <i className="lni lni-rocket" />
-                  </span>
+                                        <span className="s-icon clr-5">
+                                            <i className="lni lni-rocket" />
+                                        </span>
                                         <h3>
                                             <a href="#" title="">
                                                 Startup
                                             </a>
                                         </h3>
-                                        <p>
-                                            Nanotechnology immersion along the information highway will
-                                            close the loop on focusing solely
-                                        </p>
+                                        <p>Nanotechnology immersion along the information highway will close the loop on focusing solely</p>
                                         <span className="s-category">case study</span>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
-                                    <div
-                                        className="sv-text-v9 wow zoomIn"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="sv-text-v9 wow zoomIn" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <h2 className="black-clr">
-                                            “Our Avantage can help you with picking out the best people
-                                            for your company.”
+                                            “Our Avantage can help you with picking out the best people for your company.”
                                         </h2>
                                         <img src="/static/images/sign2.png" alt="" />
                                         <span>Founder at Misulting</span>
@@ -258,50 +219,22 @@ const ServiceThree: NextPageWithLayout = () => {
                             >
                                 <li>
                                     <div className="counter-cont">
-                                        <VisibilitySensor
-                                            scrollCheck
-                                            partialVisibility
-                                            offset={{ bottom: 10 }}
-                                        >
-                                            {({
-                                                  isVisible,
-                                              }: {
-                                                isVisible: boolean;
-                                            }) => (
-                                                <h2 className=" count">
-                                                    {isVisible ? (
-                                                        <CountUp end={100} />
-                                                    ) : (
-                                                        '0'
-                                                    )}
-                                                </h2>
+                                        <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                            {({ isVisible }: { isVisible: boolean }) => (
+                                                <h2 className=" count">{isVisible ? <CountUp end={100} /> : '0'}</h2>
                                             )}
                                         </VisibilitySensor>
                                         {/*<h2 className="count">100</h2>*/}
                                         <span>
                                             satisfaction <br /> clients
-                                      </span>
+                                        </span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <VisibilitySensor
-                                            scrollCheck
-                                            partialVisibility
-                                            offset={{ bottom: 10 }}
-                                        >
-                                            {({
-                                                  isVisible,
-                                              }: {
-                                                isVisible: boolean;
-                                            }) => (
-                                                <h2 className="clr2 count">
-                                                    {isVisible ? (
-                                                        <CountUp end={158} />
-                                                    ) : (
-                                                        '0'
-                                                    )}
-                                                </h2>
+                                        <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                            {({ isVisible }: { isVisible: boolean }) => (
+                                                <h2 className="clr2 count">{isVisible ? <CountUp end={158} /> : '0'}</h2>
                                             )}
                                         </VisibilitySensor>
                                         {/*<h2 className="count">158</h2>*/}
@@ -310,23 +243,9 @@ const ServiceThree: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <VisibilitySensor
-                                            scrollCheck
-                                            partialVisibility
-                                            offset={{ bottom: 10 }}
-                                        >
-                                            {({
-                                                  isVisible,
-                                              }: {
-                                                isVisible: boolean;
-                                            }) => (
-                                                <h2 className="clr2 count">
-                                                    {isVisible ? (
-                                                        <CountUp end={3875} />
-                                                    ) : (
-                                                        '0'
-                                                    )}
-                                                </h2>
+                                        <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                            {({ isVisible }: { isVisible: boolean }) => (
+                                                <h2 className="clr2 count">{isVisible ? <CountUp end={3875} /> : '0'}</h2>
                                             )}
                                         </VisibilitySensor>
                                         {/*<h2 className="count">3875</h2>*/}
@@ -347,7 +266,7 @@ const ServiceThree: NextPageWithLayout = () => {
                         <div>
                             <CarouselArrowIndex
                                 sx={{
-                                    position: 'initial',
+                                    position: 'initial'
                                 }}
                                 index={currentIndex}
                                 total={carouselsExample.length}
@@ -359,13 +278,12 @@ const ServiceThree: NextPageWithLayout = () => {
                     <div className="testimonial-slider">
                         <div className="row testimo-slider">
                             <Carousel ref={carouselRef} {...carouselSettings}>
-                                {carouselsExample.map(item => (
+                                {carouselsExample.map((item) => (
                                     <div key={item.id} className="col-lg-6">
                                         <div className="testimonial-slide">
                                             <p>
-                                                “Originally, creative and with an innate understanding of
-                                                their customer’s need. The team at Miles are always a pleasure
-                                                to work with. Recommended.”
+                                                “Originally, creative and with an innate understanding of their customer’s need. The team at
+                                                Miles are always a pleasure to work with. Recommended.”
                                             </p>
                                             <div className="thmb-row">
                                                 <div className="thmb-img">
@@ -374,8 +292,8 @@ const ServiceThree: NextPageWithLayout = () => {
                                                 <div className="thmb-info">
                                                     <h3>Bobby Hanesto</h3>
                                                     <span>
-                      Director of <em>Inivisionapp</em>
-                    </span>
+                                                        Director of <em>Inivisionapp</em>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -414,11 +332,7 @@ const ServiceThree: NextPageWithLayout = () => {
                         </div>
                     </div>
                     <div className="price-section-v">
-                        <div
-                            className="title-v10 text-center wow fadeInUp"
-                            data-wow-duration="1000ms"
-                            data-wow-delay="0ms"
-                        >
+                        <div className="title-v10 text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <h2>Start With An Affordable </h2>
                         </div>
                         <div className="row prices-v10">
@@ -491,8 +405,7 @@ const ServiceThree: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant1/>
-
+            <FooterVariant1 />
         </>
     );
 };

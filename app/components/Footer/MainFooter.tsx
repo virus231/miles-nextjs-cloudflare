@@ -9,10 +9,7 @@ export const MainFooter = () => {
                             <h2>
                                 Make your own website <br /> &amp; be proud of
                             </h2>
-                            <p>
-                                Save your time on design and development of your website &amp;
-                                launch faster
-                            </p>
+                            <p>Save your time on design and development of your website &amp; launch faster</p>
                             <button>purchase now</button>
                         </div>
                     </div>
@@ -20,15 +17,10 @@ export const MainFooter = () => {
                 <div className="row text-center">
                     <div className="col-12">
                         <p className="copyright">
-                            Copyright @2022
-                            {' '}
-                            <a
-                                href="https://themeforest.net/user/tortoiz"
-                                className="text-info"
-                            >
+                            Copyright @2022{' '}
+                            <a href="https://themeforest.net/user/tortoiz" className="text-info">
                                 Tortoiz
-                            </a>
-                            {' '}
+                            </a>{' '}
                             All Rights Reserved
                         </p>
                     </div>

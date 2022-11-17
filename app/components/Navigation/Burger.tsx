@@ -1,18 +1,18 @@
 import classNames from 'classnames';
 import styles from './Navigation.module.scss';
 
-
 type Props = {
-    setOpen: () => void
-    isTitleMenu?: boolean
-}
+    setOpen: () => void;
+    isTitleMenu?: boolean;
+};
 
-export const Burger = ({setOpen, isTitleMenu = false}: Props) => {
+export const Burger = ({ setOpen, isTitleMenu = false }: Props) => {
     return (
-        <button type="button"
+        <button
+            type="button"
             className={classNames(styles.navToggleBtn, 'ms-auto')}
             onClick={setOpen}
-        // className="nav-toggle-btn a-nav-toggle ms-auto"
+            // className="nav-toggle-btn a-nav-toggle ms-auto"
         >
             {isTitleMenu && <span className="nav-toggle-title">Menu</span>}
             <span className={classNames(styles.navToggle, 'nav-toggle-sm')}>

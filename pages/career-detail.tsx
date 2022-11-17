@@ -1,13 +1,12 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-
 
 const CareerDetailPage: NextPageWithLayout = () => {
     return (
         <>
-            <HeaderV1/>
+            <HeaderV1 />
 
             <section className="career-page">
                 <div className="container">
@@ -22,68 +21,42 @@ const CareerDetailPage: NextPageWithLayout = () => {
                         </div>
                         <div className="cr-single-content">
                             <p>
-                                First and foremost, you’re a leader. You see what others don’t and
-                                know what it takes to turn a vision into a real world execution
+                                First and foremost, you’re a leader. You see what others don’t and know what it takes to turn a vision into
+                                a real world execution
                             </p>
                             <p>
-                                You love positioning brands to matter in culture, and you’ve
-                                dedicated your career to creating game changing experiences for
-                                the world’s most renowned brands. When it comes to this position
-                                and our embedded team in Mountain View, you see this as your
-                                opportunity to do the best work of your life.
+                                You love positioning brands to matter in culture, and you’ve dedicated your career to creating game changing
+                                experiences for the world’s most renowned brands. When it comes to this position and our embedded team in
+                                Mountain View, you see this as your opportunity to do the best work of your life.
                             </p>
                             <h3>What you’ll do:</h3>
                             <ul>
                                 <li>Work with a team of 40+ people on-site in Mountain View.</li>
                                 <li>Leading the creative staff.</li>
                                 <li>
-                                    Collaborate with the team to drive several large-scale digital
-                                    projects to completion including websites, branding, content,
-                                    and more.
+                                    Collaborate with the team to drive several large-scale digital projects to completion including
+                                    websites, branding, content, and more.
                                 </li>
-                                <li>
-                                    Inspire the client, as well as your team through collaborative
-                                    concepts.
-                                </li>
-                                <li>
-                                    Bring business strategy to creative execution to drive results.
-                                </li>
-                                <li>
-                                    Be a leader, putting the client and your team before yourself.
-                                </li>
-                                <li>
-                                    Work with little process in place, solving problems through
-                                    proactive problem solving.
-                                </li>
+                                <li>Inspire the client, as well as your team through collaborative concepts.</li>
+                                <li>Bring business strategy to creative execution to drive results.</li>
+                                <li>Be a leader, putting the client and your team before yourself.</li>
+                                <li>Work with little process in place, solving problems through proactive problem solving.</li>
                                 <li>You hustle your ass off..</li>
                             </ul>
                             <h3>What you’ll bring:</h3>
                             <ul>
                                 <li> 7+ years of design and interactive work.</li>
-                                <li>
-                                    Confidence and talent when it comes to presenting to
-                                    stakeholders at all levels.
-                                </li>
+                                <li>Confidence and talent when it comes to presenting to stakeholders at all levels.</li>
                                 <li>
                                     {' '}
-                                    Strong knowledge of visual design, user-centered experience
-                                    design, interaction design, brand development, and the creative
-                                    process.
+                                    Strong knowledge of visual design, user-centered experience design, interaction design, brand
+                                    development, and the creative process.
                                 </li>
-                                <li>
-                                    Ability to lead internal teams with strategic vision and
-                                    creative inspiration.
-                                </li>
+                                <li>Ability to lead internal teams with strategic vision and creative inspiration.</li>
                                 <li>A solid point-of-view and a collaborative nature.</li>
                                 <li>An entrepreneurial and independent spirit.</li>
-                                <li>
-                                    {' '}
-                                    A diverse sense of taste with the knowledge necessary to apply
-                                    to various challenges.
-                                </li>
-                                <li>
-                                    Real passion for our craft: design, creativity, technology.
-                                </li>
+                                <li> A diverse sense of taste with the knowledge necessary to apply to various challenges.</li>
+                                <li>Real passion for our craft: design, creativity, technology.</li>
                             </ul>
                             <h3>What you’ll get:</h3>
                             <ul>
@@ -95,19 +68,14 @@ const CareerDetailPage: NextPageWithLayout = () => {
                                 <li>Dogs to pet and things to drink.</li>
                                 <li>A team that works hard, has fun and loves a challenge.</li>
                             </ul>
-                            <a
-                                href="#"
-                                title=""
-                                className="btn-default box-shadow-none w-100 text-center"
-                            >
+                            <a href="#" title="" className="btn-default box-shadow-none w-100 text-center">
                                 Send Your CV/Resume
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <FooterVariant1/>
-
+            <FooterVariant1 />
         </>
     );
 };

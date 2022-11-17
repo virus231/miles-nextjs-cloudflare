@@ -1,4 +1,4 @@
-import {useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useScrollPosition = () => {
     if (typeof window === 'undefined') return 500;
@@ -23,4 +23,3 @@ export const useScrollPosition = () => {
 
     return scrollPos;
 };
-

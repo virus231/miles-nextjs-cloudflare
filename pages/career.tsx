@@ -1,12 +1,11 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
-
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 
 const Career: NextPageWithLayout = () => {
     return (
         <>
-            <HeaderV1/>
+            <HeaderV1 />
 
             <section className="career-page">
                 <div className="container">
@@ -16,11 +15,7 @@ const Career: NextPageWithLayout = () => {
                     </div>
                     <div className="options">
                         <div className="option-isotop">
-                            <ul
-                                id="filter"
-                                className="option-set filters-nav text-center"
-                                data-option-key="filter"
-                            >
+                            <ul id="filter" className="option-set filters-nav text-center" data-option-key="filter">
                                 <li>
                                     <a data-option-value="*" className="selected">
                                         All Jobs{' '}
@@ -55,8 +50,8 @@ const Career: NextPageWithLayout = () => {
                                         </a>
                                     </h2>
                                     <p>
-                                        First and foremost, you’re a leader. You see what others don’t
-                                        and know what it takes to turn a vision...
+                                        First and foremost, you’re a leader. You see what others don’t and know what it takes to turn a
+                                        vision...
                                     </p>
                                     <span>Sanfrancisco / Full Time</span>
                                 </div>
@@ -74,8 +69,8 @@ const Career: NextPageWithLayout = () => {
                                         </a>
                                     </h2>
                                     <p>
-                                        You’ve got grit and a deep desire to design and contribute to
-                                        the creation of amazing digital experiences...
+                                        You’ve got grit and a deep desire to design and contribute to the creation of amazing digital
+                                        experiences...
                                     </p>
                                     <span>Sanfrancisco / Full Time</span>
                                 </div>
@@ -93,8 +88,8 @@ const Career: NextPageWithLayout = () => {
                                         </a>
                                     </h2>
                                     <p>
-                                        First and foremost, you’re a leader. You see what others don’t
-                                        and know what it takes to turn a vision...
+                                        First and foremost, you’re a leader. You see what others don’t and know what it takes to turn a
+                                        vision...
                                     </p>
                                     <span>Sanfrancisco / Full Time</span>
                                 </div>
@@ -112,8 +107,8 @@ const Career: NextPageWithLayout = () => {
                                         </a>
                                     </h2>
                                     <p>
-                                        You’ve got grit and a deep desire to design and contribute to
-                                        the creation of amazing digital experiences...
+                                        You’ve got grit and a deep desire to design and contribute to the creation of amazing digital
+                                        experiences...
                                     </p>
                                     <span>Los Angeles / intership</span>
                                 </div>
@@ -131,8 +126,8 @@ const Career: NextPageWithLayout = () => {
                                         </a>
                                     </h2>
                                     <p>
-                                        First and foremost, you’re a leader. You see what others don’t
-                                        and know what it takes to turn a vision...
+                                        First and foremost, you’re a leader. You see what others don’t and know what it takes to turn a
+                                        vision...
                                     </p>
                                     <span>Mahattan / Full Time</span>
                                 </div>
@@ -150,8 +145,8 @@ const Career: NextPageWithLayout = () => {
                                         </a>
                                     </h2>
                                     <p>
-                                        You’ve got grit and a deep desire to design and contribute to
-                                        the creation of amazing digital experiences...
+                                        You’ve got grit and a deep desire to design and contribute to the creation of amazing digital
+                                        experiences...
                                     </p>
                                     <span>remote</span>
                                 </div>
@@ -167,48 +162,39 @@ const Career: NextPageWithLayout = () => {
                         <div className="footer-content">
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
-                                    <div
-                                        className="ft-text wow fadeInUp"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="ft-text wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <p>
-                                            We are a close team of creative professionals based out of
-                                            Savannah, Georgia. We are passionate about partnering &amp;
-                                            organizations to provide exceptional solutions.
+                                            We are a close team of creative professionals based out of Savannah, Georgia. We are passionate
+                                            about partnering &amp; organizations to provide exceptional solutions.
                                         </p>
                                         <div className="ft-form">
                                             <h4>Subscribe our newsletter for news update</h4>
                                             <form>
-                      <span className="input input--makiko">
-                        <input
-                            className="input__field input__field--makiko"
-                            type="email"
-                            id="input-16"
-                            placeholder="Enter email address..."
-                        />
-                        <label className="input__label input__label--makiko">
-                          <button
-                              type="submit"
-                              className="
+                                                <span className="input input--makiko">
+                                                    <input
+                                                        className="input__field input__field--makiko"
+                                                        type="email"
+                                                        id="input-16"
+                                                        placeholder="Enter email address..."
+                                                    />
+                                                    <label className="input__label input__label--makiko">
+                                                        <button
+                                                            type="submit"
+                                                            className="
                                   input__label-content
                                   input__label-content--makiko
                                 "
-                          >
-                            subscribe <i className="lni lni-chevron-right" />
-                          </button>
-                        </label>
-                      </span>
+                                                        >
+                                                            subscribe <i className="lni lni-chevron-right" />
+                                                        </button>
+                                                    </label>
+                                                </span>
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col-lg-6 col-md-6">
-                                    <div
-                                        className="get-touch-txt wow fadeInRight"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="get-touch-txt wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <span>get in touch</span>
                                         <h3>
                                             116 Fairground Rd, FL 32904, USA

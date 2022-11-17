@@ -1,47 +1,32 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-
 
 const ServiceOne: NextPageWithLayout = () => {
     return (
         <>
-            <HeaderV1/>
+            <HeaderV1 />
 
             <section className="service_v1_page">
                 <div className="container">
                     <div className="row service_v1_content">
                         <div className="col-lg-6">
-                            <div
-                                className="sv-title wow fadeInUp"
-                                data-wow-duration="1000ms"
-                                data-wow-delay="0ms"
-                            >
+                            <div className="sv-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <span>our services</span>
-                                <h2>
-                                    We create progress by design &amp; development craft digital
-                                    experiences.
-                                </h2>
-                                <p>
-                                    The difference lies in quality, reputation and responsibility of
-                                    creation.{' '}
-                                </p>
+                                <h2>We create progress by design &amp; development craft digital experiences.</h2>
+                                <p>The difference lies in quality, reputation and responsibility of creation. </p>
                             </div>
                             <div className="services_items">
                                 <div className="service-item">
                                     <div className="service-thumb">
-                                        <img
-                                            src="/static/images/service1.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/service1.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="service-info">
                                         <h3>Interaction</h3>
                                         <p>
-                                            Reach out your clients better through website &amp; mobile
-                                            app. Boots converastion rate for your business faster
+                                            Reach out your clients better through website &amp; mobile app. Boots converastion rate for your
+                                            business faster
                                         </p>
                                         <div className="row">
                                             <div className="col-md-6">
@@ -128,18 +113,11 @@ const ServiceOne: NextPageWithLayout = () => {
                                 </div>
                                 <div className="service-item">
                                     <div className="service-thumb">
-                                        <img
-                                            src="/static/images/service2.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/service2.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="service-info">
                                         <h3>Marketing &amp; SEO</h3>
-                                        <p>
-                                            Impressive and communicate with your clients better throung
-                                            animation &amp; motion video
-                                        </p>
+                                        <p>Impressive and communicate with your clients better throung animation &amp; motion video</p>
                                         <div className="row">
                                             <div className="col-md-6">
                                                 <div className="sk-col">
@@ -194,17 +172,13 @@ const ServiceOne: NextPageWithLayout = () => {
                             <div className="services_items style2">
                                 <div className="service-item ms-auto">
                                     <div className="service-thumb">
-                                        <img
-                                            src="/static/images/service3.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/service3.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="service-info">
                                         <h3>Branding</h3>
                                         <p>
-                                            We build and activate brands throung cultural insigh and
-                                            strategic vision to help business growth beter more and more
+                                            We build and activate brands throung cultural insigh and strategic vision to help business
+                                            growth beter more and more
                                         </p>
                                         <div className="row">
                                             <div className="col-md-6">
@@ -291,17 +265,13 @@ const ServiceOne: NextPageWithLayout = () => {
                                 </div>
                                 <div className="service-item ms-auto">
                                     <div className="service-thumb">
-                                        <img
-                                            src="/static/images/service4.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/service4.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="service-info">
                                         <h3>Motion</h3>
                                         <p>
-                                            Video &amp; Motion create the fast connect with eveyone,
-                                            easy to interactive and help increase high converastion rate
+                                            Video &amp; Motion create the fast connect with eveyone, easy to interactive and help increase
+                                            high converastion rate
                                         </p>
                                         <div className="row">
                                             <div className="col-md-6">
@@ -358,11 +328,7 @@ const ServiceOne: NextPageWithLayout = () => {
             </section>
             <section className="pricing-v10 service-v">
                 <div className="container">
-                    <div
-                        className="title-v10 text-center wow fadeInUp"
-                        data-wow-duration="1000ms"
-                        data-wow-delay="0ms"
-                    >
+                    <div className="title-v10 text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <h2>Plan suit for everyone </h2>
                     </div>
                     <div className="row prices-v10">
@@ -428,7 +394,7 @@ const ServiceOne: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant1/>
+            <FooterVariant1 />
         </>
     );
 };

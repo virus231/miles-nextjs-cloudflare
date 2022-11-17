@@ -1,14 +1,12 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import {FooterVariant1} from '../app/components/Footer/FooterVariant1';
-import {HeaderV1} from '../app/components/Navigation/HeaderV1';
-import {_carouselsExample} from './index';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+import { _carouselsExample } from './index';
 import Carousel from '../app/components/carousel';
-import {useRef } from 'react';
-
+import { useRef } from 'react';
 
 const BlogLayoutTwo: NextPageWithLayout = () => {
-
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
@@ -16,12 +14,12 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
         arrows: false,
         autoplay: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 1
     };
 
     return (
         <>
-            <HeaderV1/>
+            <HeaderV1 />
             <section className="page-content">
                 <div className="container v-3">
                     <div className="featured-post-sec">
@@ -35,15 +33,10 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                     <span>Featured Post</span>
                                                     <h2>Brief Guide into Social Media Marketing Trends 2020</h2>
                                                     <p>
-                                                        These days, the Internet permeates every single facet of
-                                                        our lives on a daily basis. Indeed, there is rarely a
-                                                        thing that anyone.
+                                                        These days, the Internet permeates every single facet of our lives on a daily basis.
+                                                        Indeed, there is rarely a thing that anyone.
                                                     </p>
-                                                    <a
-                                                        href="blog-single-layout2.html"
-                                                        title=""
-                                                        className="btn-default"
-                                                    >
+                                                    <a href="blog-single-layout2.html" title="" className="btn-default">
                                                         Continue Reading <i className="lni lni-chevron-right" />
                                                     </a>
                                                 </div>
@@ -69,11 +62,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="post-v10">
                                     <div className="post-thumb">
-                                        <img
-                                            src="/static/images/blog-post4.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/blog-post4.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="post-info">
                                         <span className="category">discuss</span>
@@ -83,22 +72,18 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                             </a>
                                         </h2>
                                         <span className="posted-on">
-                        May 3rd, 2020, by{' '}
+                                            May 3rd, 2020, by{' '}
                                             <a href="#" title="">
-                          Admin
-                        </a>
-                      </span>
+                                                Admin
+                                            </a>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="post-v10">
                                     <div className="post-thumb">
-                                        <img
-                                            src="/static/images/blog-post5.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/blog-post5.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="post-info">
                                         <span className="category">discuss</span>
@@ -108,22 +93,18 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                             </a>
                                         </h2>
                                         <span className="posted-on">
-                        April 24th, 2020, by{' '}
+                                            April 24th, 2020, by{' '}
                                             <a href="#" title="">
-                          Admin
-                        </a>
-                      </span>
+                                                Admin
+                                            </a>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 col-sm-6">
                                 <div className="post-v10">
                                     <div className="post-thumb">
-                                        <img
-                                            src="/static/images/blog-post6.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/blog-post6.jpg" alt="" className="w-100" />
                                     </div>
                                     <div className="post-info">
                                         <span className="category">resources</span>
@@ -135,9 +116,9 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                         <span className="posted-on">
                                             April 22th, 2020, by{' '}
                                             <a href="#" title="">
-                                              Admin
+                                                Admin
                                             </a>
-                                          </span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -172,8 +153,8 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                 </a>
                                             </h2>
                                             <p>
-                                                Handshake scrum project learning curve termsheet buzz
-                                                bandwidth alpha pivot analytics supply...
+                                                Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot analytics
+                                                supply...
                                             </p>
                                         </div>
                                     </div>
@@ -202,8 +183,8 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                 </a>
                                             </h2>
                                             <p>
-                                                Handshake scrum project learning curve termsheet buzz
-                                                bandwidth alpha pivot analytics supply...
+                                                Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot analytics
+                                                supply...
                                             </p>
                                         </div>
                                     </div>
@@ -232,8 +213,8 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                 </a>
                                             </h2>
                                             <p>
-                                                Handshake scrum project learning curve termsheet buzz
-                                                bandwidth alpha pivot analytics supply...
+                                                Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot analytics
+                                                supply...
                                             </p>
                                         </div>
                                     </div>
@@ -262,8 +243,8 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                 </a>
                                             </h2>
                                             <p>
-                                                Handshake scrum project learning curve termsheet buzz
-                                                bandwidth alpha pivot analytics supply...
+                                                Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot analytics
+                                                supply...
                                             </p>
                                         </div>
                                     </div>
@@ -292,8 +273,8 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                 </a>
                                             </h2>
                                             <p>
-                                                Handshake scrum project learning curve termsheet buzz
-                                                bandwidth alpha pivot analytics supply...
+                                                Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot analytics
+                                                supply...
                                             </p>
                                         </div>
                                     </div>
@@ -318,13 +299,12 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                             </ul>
                                             <h2>
                                                 <a href="blog-single-layout2.html" title="">
-                                                    How To Create Animation &amp; Make Your Illustration
-                                                    Perfect More
+                                                    How To Create Animation &amp; Make Your Illustration Perfect More
                                                 </a>
                                             </h2>
                                             <p>
-                                                Handshake scrum project learning curve termsheet buzz
-                                                bandwidth alpha pivot analytics supply...
+                                                Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot analytics
+                                                supply...
                                             </p>
                                         </div>
                                     </div>
@@ -349,13 +329,12 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                             </ul>
                                             <h2>
                                                 <a href="blog-single-layout2.html" title="">
-                                                    Create A Customize Illustration In A Few Minutes With
-                                                    Illustrator Dobby
+                                                    Create A Customize Illustration In A Few Minutes With Illustrator Dobby
                                                 </a>
                                             </h2>
                                             <p>
-                                                Handshake scrum project learning curve termsheet buzz
-                                                bandwidth alpha pivot analytics supply...
+                                                Handshake scrum project learning curve termsheet buzz bandwidth alpha pivot analytics
+                                                supply...
                                             </p>
                                         </div>
                                     </div>
@@ -396,11 +375,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                 <div className="sidebar blog-sidebar">
                                     <div className="widget widget-search">
                                         <form>
-                                            <input
-                                                type="text"
-                                                name="name"
-                                                placeholder="Search anything..."
-                                            />
+                                            <input type="text" name="name" placeholder="Search anything..." />
                                             <button type="submit">
                                                 <i className="lni lni-search" />
                                             </button>
@@ -533,11 +508,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                         </ul>
                                     </div>
                                     <div className="widget widget-adver">
-                                        <img
-                                            src="/static/images/ad-img2.jpg"
-                                            alt=""
-                                            className="w-100"
-                                        />
+                                        <img src="/static/images/ad-img2.jpg" alt="" className="w-100" />
                                     </div>
                                 </div>
                             </div>
@@ -545,14 +516,13 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <FooterVariant1/>
-
+            <FooterVariant1 />
         </>
     );
 };
 
 BlogLayoutTwo.getLayout = function getLayout(page: React.ReactElement) {
-        return <Layout title="Home">{page}</Layout>;
-    };
+    return <Layout title="Home">{page}</Layout>;
+};
 
 export default BlogLayoutTwo;

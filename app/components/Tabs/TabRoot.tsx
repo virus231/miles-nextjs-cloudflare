@@ -15,20 +15,10 @@ export const TabRoot = (props: Props) => {
     const { tabItems } = props;
 
     return (
-        <Tabs
-            activeKey={key}
-            onSelect={k => setKey(k || '')}
-            className="nav nav-tabs"
-            id="myTab"
-        >
+        <Tabs activeKey={key} onSelect={(k) => setKey(k || '')} className="nav nav-tabs" id="myTab">
             {tabItems.map((item: { id: string; title: string }) => {
                 return (
-                    <Tab
-                        key={`tab-${item.title}`}
-                        className="nav-item"
-                        eventKey={item.title}
-                        title={item.title.toUpperCase()}
-                    >
+                    <Tab key={`tab-${item.title}`} className="nav-item" eventKey={item.title} title={item.title.toUpperCase()}>
                         <TabContent content={item} />
                     </Tab>
                 );
