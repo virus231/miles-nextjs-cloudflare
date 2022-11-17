@@ -776,7 +776,7 @@ const HomePage11: NextPageWithLayout = () => {
                         >
                             <Carousel ref={carouselRef} {...carouselSettings2}>
                                 {carouselsExample.map(item => (
-                                    <div className="col-lg-3">
+                                    <div key={item.id} className="col-lg-3">
                                         <div className="team-cl">
                                             <img src="/static/images/team2.jpg" alt="" />
                                             <div className="team-fig	">

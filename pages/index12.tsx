@@ -6,12 +6,55 @@ import { Layout } from '../app/components/Layout'
 import { Navigation } from '../app/components/Navigation'
 import { Footer } from '../app/components/Footer'
 import { RightMenu } from "../app/components/RightMenu";
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { Burger } from "../app/components/Navigation/Burger";
+import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
+import { carouselsExample } from "./index";
+import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
+import { useTheme } from "@mui/material/styles";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 
 const HomePage12: NextPageWithLayout = () => {
     const [open, setOpen] = useState<boolean>(false);
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const theme = useTheme();
+
+    const carouselSettings = {
+        slidesToShow: 5,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        rtl: Boolean(theme.direction === "rtl"),
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: "10px" },
+        }),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: "0" },
+            },
+        ],
+    };
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
 
 	return (
 		<>
@@ -359,73 +402,98 @@ const HomePage12: NextPageWithLayout = () => {
 									</span>
 								</div>
 								<div className="client-works client-slider">
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl1.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl2.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl3.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl4.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl5.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl1.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl2.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl3.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl4.png" alt="" />
-										</div>
-									</div>
-									<div className="col-m-2">
-										<div className="cl-imag">
-											<img src="/static/images/cl5.png" alt="" />
-										</div>
-									</div>
+                                    <CarouselArrows
+                                        icon="teenyicons:right-small-outline"
+                                        onNext={handleNext}
+                                        topSpace={50}
+                                        onPrevious={handlePrev}
+                                        sx={{
+                                            zIndex: 9,
+                                            color: "#ccc",
+                                        }}
+                                    >
+                                        <Carousel ref={carouselRef} {...carouselSettings}>
+                                            {carouselsExample.map(item => (
+                                                <div key={item.id} className="col-m-2">
+                                                    <div className="cl-imag">
+                                                        <img src="/static/images/cl1.png" alt="" />
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </Carousel>
+                                    </CarouselArrows>
 								</div>
 								<ul className="counter-sec border-bottom" id="counter">
 									<li>
 										<div className="count-dv">
-											<h2 className="count">10</h2>
+                                            <VisibilitySensor
+                                                scrollCheck
+                                                partialVisibility
+                                                offset={{ bottom: 10 }}
+                                            >
+                                                {({
+                                                      isVisible,
+                                                  }: {
+                                                    isVisible: boolean;
+                                                }) => (
+                                                    <h2 className="count">
+                                                        {isVisible ? (
+                                                            <CountUp end={10} />
+                                                        ) : (
+                                                            "0"
+                                                        )}
+                                                    </h2>
+                                                )}
+                                            </VisibilitySensor>
+											{/*<h2 className="count">10</h2>*/}
 											<span>Years Experience</span>
 										</div>
 									</li>
 									<li>
 										<div className="count-dv">
-											<h2 className="count">102</h2>
+                                            <VisibilitySensor
+                                                scrollCheck
+                                                partialVisibility
+                                                offset={{ bottom: 10 }}
+                                            >
+                                                {({
+                                                      isVisible,
+                                                  }: {
+                                                    isVisible: boolean;
+                                                }) => (
+                                                    <h2 className="count">
+                                                        {isVisible ? (
+                                                            <CountUp end={102} />
+                                                        ) : (
+                                                            "0"
+                                                        )}
+                                                    </h2>
+                                                )}
+                                            </VisibilitySensor>
 											<span>Satisfaction Clients</span>
 										</div>
 									</li>
 									<li>
 										<div className="count-dv">
-											<h2 className="count">285</h2>
+                                            <VisibilitySensor
+                                                scrollCheck
+                                                partialVisibility
+                                                offset={{ bottom: 10 }}
+                                            >
+                                                {({
+                                                      isVisible,
+                                                  }: {
+                                                    isVisible: boolean;
+                                                }) => (
+                                                    <h2 className="count">
+                                                        {isVisible ? (
+                                                            <CountUp end={285} />
+                                                        ) : (
+                                                            "0"
+                                                        )}
+                                                    </h2>
+                                                )}
+                                            </VisibilitySensor>
 											<span>
 												Projects Completed On <br /> 34 Countries
 											</span>

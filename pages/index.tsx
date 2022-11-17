@@ -48,6 +48,18 @@ export const carouselsExample = [
         image: "/static/images/project1.jpg",
         description: "Description",
     },
+    // {
+    //     id: "99",
+    //     title: "123",
+    //     image: "/static/images/project3.jpg",
+    //     description: "Description",
+    // },
+    // {
+    //     id: "100",
+    //     title: "123",
+    //     image: "/static/images/project1.jpg",
+    //     description: "Description",
+    // },
 ];
 
 const tabItems = [

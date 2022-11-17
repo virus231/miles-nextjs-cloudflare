@@ -1,15 +1,64 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
-import { Navigation } from '../app/components/Navigation'
-import { Footer } from '../app/components/Footer'
+import { RightMenu } from "../app/components/RightMenu";
+import { Burger } from "../app/components/Navigation/Burger";
+import { useRef, useState } from 'react';
+import { carouselsExample } from "./index";
+import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
+import Carousel, { CarouselArrowIndex, CarouselArrows, CarouselDots } from "../app/components/carousel";
+import { useTheme } from "@mui/material/styles";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 
 const HomePage6: NextPageWithLayout = () => {
+    const [open, setOpen] = useState<boolean>(false);
+    const theme = useTheme();
+    const carouselRef = useRef<Carousel | null>(null);
 
-	return (
+    const carouselSettings = {
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: "0" },
+            },
+        ],
+    };
+
+
+    const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? carouselsExample.length - 1 : 0);
+
+    const carouselSettings2 = {
+        dots: false,
+        arrows: false,
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        rtl: Boolean(theme.direction === 'rtl'),
+        beforeChange: (current: number, next: number) => setCurrentIndex(next),
+    };
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
+
+    return (
 		<>
 			<header className="header-v6">
 				<div className="container">
@@ -129,487 +178,13 @@ const HomePage6: NextPageWithLayout = () => {
 						<a href="#" title="" className="hd-btn">
 							Let’s chat! <i className="lni lni-comments-reply" />
 						</a>
-						<button className="nav-toggle-btn a-nav-toggle desktop-hide mobile-show ms-auto">
-							<span className="nav-toggle nav-toggle-sm">
-								<span className="stick stick-1" />
-								<span className="stick stick-2" />
-								<span className="stick stick-3" />
-							</span>
-						</button>
-					</div>
+                        <Burger setOpen={() => setOpen(!open)} />
+                    </div>
 				</div>
 			</header>
-			<div className="responsive-menu">
-				<div className="rep-header">
-					<div className="rep-logo">
-						<img src="/static/images/logo2.png" alt="" />
-					</div>
-					<a href="#" title="" className="close-menu">
-						<i className="lni lni-close" />
-					</a>
-				</div>
-				<div className="search-box">
-					<form>
-						<input type="text" name="search" placeholder="Search" />
-						<button type="submit">
-							<i className="lni lni-search-alt" />
-						</button>
-					</form>
-				</div>
-				<ul className="mobile-menu">
-					<li>
-						<a className="active" href="#" title="">
-							Home
-						</a>
-						<ul>
-							<li>
-								<a
-									href="index.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Agency"
-								>
-									Home Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index2.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Studio"
-								>
-									Home Studio
-								</a>
-							</li>
-							<li>
-								<a
-									href="index3.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Freelancer"
-								>
-									Home Freelancer
-								</a>
-							</li>
-							<li>
-								<a
-									href="index4.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Developer"
-								>
-									Home Developer
-								</a>
-							</li>
-							<li>
-								<a
-									href="index5.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Blogger"
-								>
-									Home Blogger
-								</a>
-							</li>
-							<li>
-								<a
-									href="index7.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Coach"
-								>
-									Home Coach
-								</a>
-							</li>
-							<li>
-								<a
-									href="index6.html"
-									className="animsition-link active"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Business Startup"
-								>
-									Business Startup
-								</a>
-							</li>
-							<li>
-								<a
-									href="index8.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Marketing Agency"
-								>
-									Marketing Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index9.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Business Consulting"
-								>
-									Business Consulting
-								</a>
-							</li>
-							<li>
-								<a
-									href="index10.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Creative Agency"
-								>
-									Creative Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index11.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Creative Agency 2"
-								>
-									Creative Agency 2
-								</a>
-							</li>
-							<li>
-								<a
-									href="index12.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Portfolio 1"
-								>
-									Home Portfolio 1
-								</a>
-							</li>
-							<li>
-								<a
-									href="index13.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Portfolio 2"
-								>
-									Home Portfolio 2
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							About
-						</a>
-						<ul>
-							<li>
-								<a
-									href="about-agency.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Agency"
-								>
-									About Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="about-business.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Business"
-								>
-									About Business
-								</a>
-							</li>
-							<li>
-								<a
-									href="about-me.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Me"
-								>
-									About Me
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Portfolio
-						</a>
-						<ul>
-							<li>
-								<a
-									href="14_portfolio_parallax.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Parallax"
-								>
-									Porfolio Parallax
-								</a>
-							</li>
-							<li>
-								<a
-									href="15_portfolio_horizontal_scroll.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Horizontal Scroll"
-								>
-									Porfolio Horizontal Scroll
-								</a>
-							</li>
-							<li>
-								<a href="16_portfolio_masonry.html" title="">
-									Porfolio Masonary
-								</a>
-							</li>
-							<li>
-								<a
-									href="17_portfolio_single_layout_1.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V1"
-								>
-									Porfolio Single V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="portfolio-single-layout-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V2"
-								>
-									Porfolio Single V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="portfolio-single-layout-three.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V3"
-								>
-									Porfolio Single V3
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Service
-						</a>
-						<ul>
-							<li>
-								<a
-									href="service-one.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V1"
-								>
-									Service V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="service-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V2"
-								>
-									Service V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="service-three.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V3"
-								>
-									Service V3
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Pages
-						</a>
-						<ul>
-							<li>
-								<a
-									href="32_team.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Team"
-								>
-									Team
-								</a>
-							</li>
-							<li>
-								<a
-									href="career.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Career"
-								>
-									Career
-								</a>
-							</li>
-							<li>
-								<a
-									href="career-detail.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Career Details"
-								>
-									Career Details
-								</a>
-							</li>
-							<li>
-								<a
-									href="pricing.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Pricing"
-								>
-									Pricing
-								</a>
-							</li>
-							<li>
-								<a
-									href="error.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text={404}
-								>
-									404
-								</a>
-							</li>
-							<li>
-								<a
-									href="coming-soon.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Coming Soon"
-								>
-									Coming Soon
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Blogs
-						</a>
-						<ul>
-							<li>
-								<a
-									href="blog-layout-one.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Layout V1"
-								>
-									Blog Layout V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-layout-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Layout V2"
-								>
-									Blog Layout V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-single-layout1.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Single Layout V1"
-								>
-									Blog Single Layout V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-single-layout2.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Single Layout V2"
-								>
-									Blog Single Layout V2
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Contact
-						</a>
-						<ul>
-							<li>
-								<a
-									href="contact.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Contact V1"
-								>
-									Contact V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="contact-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Contact V2"
-								>
-									Contact V2
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<section className="main-banner-v6">
+            <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
+
+            <section className="main-banner-v6">
 				<div className="container">
 					<div className="main-banner-content">
 						<div className="row">
@@ -723,79 +298,47 @@ const HomePage6: NextPageWithLayout = () => {
 			</section>
 			<section className="our-services-sec">
 				<div className="container">
-					<div className="mile-title">
-						<h3>our services</h3>
-					</div>
+                    <div className="d-flex align-items-stretch justify-content-between">
+                        <div className="mile-title">
+                            <h3>our services</h3>
+                        </div>
+                        <div>
+                            <CarouselArrowIndex
+                                sx={{
+                                    position: "initial",
+                                }}
+                                index={currentIndex}
+                                total={carouselsExample.length}
+                                onNext={handleNext}
+                                onPrevious={handlePrev}
+                            />
+                        </div>
+                    </div>
+
 					<div className="our-services-content">
 						<div className="row svs-slider">
-							<div className="col-lg-5">
-								<div className="service-card-mile">
-									<img src="/static/images/icon1.png" alt="" />
-									<h2>
-										<a href="service-one.tsx" title="">
-											Branding
-										</a>
-									</h2>
-									<p>
-										We build and activate brands throung cultural insigh &amp;,
-										strategic vision.
-									</p>
-									<a href="#" title="" className="cat-up">
-										case study
-									</a>
-								</div>
-							</div>
-							<div className="col-lg-5">
-								<div className="service-card-mile">
-									<img src="/static/images/icon2.png" alt="" />
-									<h2>
-										<a href="service-one.tsx" title="">
-											Interaction
-										</a>
-									</h2>
-									<p>
-										We build and activate brands throung cultural insigh &amp;,
-										strategic vision.
-									</p>
-									<a href="#" title="" className="cat-up">
-										case study
-									</a>
-								</div>
-							</div>
-							<div className="col-lg-5">
-								<div className="service-card-mile">
-									<img src="/static/images/icon3.png" alt="" />
-									<h2>
-										<a href="service-one.tsx" title="">
-											Motion
-										</a>
-									</h2>
-									<p>
-										We build and activate brands throung cultural insigh &amp;,
-										strategic vision.
-									</p>
-									<a href="#" title="" className="cat-up">
-										case study
-									</a>
-								</div>
-							</div>
-							<div className="col-lg-5">
-								<div className="service-card-mile">
-									<img src="/static/images/icon1.png" alt="" />
-									<h2>
-										<a href="service-one.tsx" title="">
-											Branding
-										</a>
-									</h2>
-									<p>
-										We build and activate brands throung cultural insigh &amp;,
-										strategic vision.
-									</p>
-									<a href="#" title="" className="cat-up">
-										case study
-									</a>
-								</div>
-							</div>
+                                <Carousel ref={carouselRef} {...carouselSettings}>
+                                    {carouselsExample.map(item => (
+                                        <div className="col-lg-5">
+                                            <div className="service-card-mile">
+                                                <img src="/static/images/icon1.png" alt="" />
+                                                <h2>
+                                                    <a href="service-one.tsx" title="">
+                                                        Branding
+                                                    </a>
+                                                </h2>
+                                                <p>
+                                                    We build and activate brands throung cultural insigh &amp;,
+                                                    strategic vision.
+                                                </p>
+                                                <a href="#" title="" className="cat-up">
+                                                    case study
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    ))}
+                                </Carousel>
 						</div>
 						<ul
 							className="counter-sec-v6 wow fadeInUp"
@@ -805,7 +348,26 @@ const HomePage6: NextPageWithLayout = () => {
 						>
 							<li>
 								<div className="counter-cont">
-									<h2 className="count">820</h2>
+                                    <VisibilitySensor
+                                        scrollCheck
+                                        partialVisibility
+                                        offset={{ bottom: 10 }}
+                                    >
+                                        {({
+                                              isVisible,
+                                          }: {
+                                            isVisible: boolean;
+                                        }) => (
+                                            <h2 className="clr2 count">
+                                                {isVisible ? (
+                                                    <CountUp end={820} />
+                                                ) : (
+                                                    "0"
+                                                )}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+									{/*<h2 className="count">820</h2>*/}
 									<span>
 										satisfaction <br /> clients
 									</span>
@@ -813,13 +375,51 @@ const HomePage6: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<div className="counter-cont">
-									<h2 className="count">643</h2>
+                                    <VisibilitySensor
+                                        scrollCheck
+                                        partialVisibility
+                                        offset={{ bottom: 10 }}
+                                    >
+                                        {({
+                                              isVisible,
+                                          }: {
+                                            isVisible: boolean;
+                                        }) => (
+                                            <h2 className="clr2 count">
+                                                {isVisible ? (
+                                                    <CountUp end={643} />
+                                                ) : (
+                                                    "0"
+                                                )}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+									{/*<h2 className="count">643</h2>*/}
 									<span>employees on worldwide</span>
 								</div>
 							</li>
 							<li>
 								<div className="counter-cont">
-									<h2 className="count">1875</h2>
+                                    <VisibilitySensor
+                                        scrollCheck
+                                        partialVisibility
+                                        offset={{ bottom: 10 }}
+                                    >
+                                        {({
+                                              isVisible,
+                                          }: {
+                                            isVisible: boolean;
+                                        }) => (
+                                            <h2 className="clr2 count">
+                                                {isVisible ? (
+                                                    <CountUp end={1875} />
+                                                ) : (
+                                                    "0"
+                                                )}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+									{/*<h2 className="count">1875</h2>*/}
 									<span>projects completed on 60 countries</span>
 								</div>
 							</li>
@@ -1095,42 +695,26 @@ const HomePage6: NextPageWithLayout = () => {
 					</div>
 					<div className="testi-sec-v6">
 						<div className="testi-slider-v6">
-							<div className="testi-slide-v6">
-								<h3>Edison Cavani</h3>
-								<span>Product Management at Spotify</span>
-								<p>
-									I don’t know what else to say, this is something that you
-									haven’t seen before. Unique design, lightweight, and outstanding
-									support. Milbase are always a pleasure to work!”
-								</p>
-							</div>
-							<div className="testi-slide-v6">
-								<h3>Edison Cavani</h3>
-								<span>Product Management at Spotify</span>
-								<p>
-									I don’t know what else to say, this is something that you
-									haven’t seen before. Unique design, lightweight, and outstanding
-									support. Milbase are always a pleasure to work!”
-								</p>
-							</div>
-							<div className="testi-slide-v6">
-								<h3>Edison Cavani</h3>
-								<span>Product Management at Spotify</span>
-								<p>
-									I don’t know what else to say, this is something that you
-									haven’t seen before. Unique design, lightweight, and outstanding
-									support. Milbase are always a pleasure to work!”
-								</p>
-							</div>
-							<div className="testi-slide-v6">
-								<h3>Edison Cavani</h3>
-								<span>Product Management at Spotify</span>
-								<p>
-									I don’t know what else to say, this is something that you
-									haven’t seen before. Unique design, lightweight, and outstanding
-									support. Milbase are always a pleasure to work!”
-								</p>
-							</div>
+                            <Carousel ref={carouselRef} {...carouselSettings2}>
+                                {carouselsExample.map((item) => (
+                                    <div key={item.id} className="testi-slide-v6">
+                                        <h3>Edison Cavani</h3>
+                                        <span>Product Management at Spotify</span>
+                                        <p>
+                                            I don’t know what else to say, this is something that you
+                                            haven’t seen before. Unique design, lightweight, and outstanding
+                                            support. Milbase are always a pleasure to work!”
+                                        </p>
+                                    </div>
+                                ))}
+                            </Carousel>
+
+                            <CarouselArrowIndex
+                                index={currentIndex}
+                                total={carouselsExample.length}
+                                onNext={handleNext}
+                                onPrevious={handlePrev}
+                            />
 						</div>
 						<ul className="slider-thumb">
 							<li>

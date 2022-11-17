@@ -2,9 +2,36 @@ import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import {Testi} from "../app/components/Testi";
 import {KeepConnected} from "../app/components/KeepConnected";
+import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
+import { carouselsExample } from "./index";
+import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
+import { useRef } from "react";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 
 const HomePage7: NextPageWithLayout = () => {
+    const carouselSettings = {
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: "0" },
+            },
+        ],
+    };
+    const carouselRef = useRef<Carousel | null>(null);
 
 	return (
 		<>
@@ -180,6 +207,7 @@ const HomePage7: NextPageWithLayout = () => {
 					</div>
 				</div>
 			</header>
+
 			<div className="responsive-menu">
 				<div className="rep-header">
 					<div className="rep-logo">
@@ -650,6 +678,7 @@ const HomePage7: NextPageWithLayout = () => {
 					</li>
 				</ul>
 			</div>
+
 			<section className="main-banner-v7">
 				<div className="container">
 					<div className="banner-content-v7">
@@ -850,74 +879,27 @@ const HomePage7: NextPageWithLayout = () => {
 					</div>
 					<div className="our-services-content">
 						<div className="row svs-slider">
-							<div className="col-lg-5">
-								<div className="service-card-mile">
-									<img src="/static/images/icon1.png" alt="" />
-									<h2>
-										<a href="service-one.tsx" title="">
-											Branding
-										</a>
-									</h2>
-									<p>
-										We build and activate brands throung cultural insigh &amp;,
-										strategic vision.
-									</p>
-									<a href="#" title="" className="cat-up">
-										case study
-									</a>
-								</div>
-							</div>
-							<div className="col-lg-5">
-								<div className="service-card-mile">
-									<img src="/static/images/icon2.png" alt="" />
-									<h2>
-										<a href="service-one.tsx" title="">
-											Interaction
-										</a>
-									</h2>
-									<p>
-										We build and activate brands throung cultural insigh &amp;,
-										strategic vision.
-									</p>
-									<a href="#" title="" className="cat-up">
-										case study
-									</a>
-								</div>
-							</div>
-							<div className="col-lg-5">
-								<div className="service-card-mile">
-									<img src="/static/images/icon3.png" alt="" />
-									<h2>
-										<a href="service-one.tsx" title="">
-											Motion
-										</a>
-									</h2>
-									<p>
-										We build and activate brands throung cultural insigh &amp;,
-										strategic vision.
-									</p>
-									<a href="#" title="" className="cat-up">
-										case study
-									</a>
-								</div>
-							</div>
-							<div className="col-lg-5">
-								<div className="service-card-mile">
-									<img src="/static/images/icon1.png" alt="" />
-									<h2>
-										<a href="service-one.tsx" title="">
-											Branding
-										</a>
-									</h2>
-									<p>
-										We build and activate brands throung cultural insigh &amp;,
-										strategic vision.
-									</p>
-									<a href="#" title="" className="cat-up">
-										case study
-									</a>
-								</div>
-							</div>
+                            <Carousel ref={carouselRef} {...carouselSettings}>
+                                {carouselsExample.map(item => (
+                                    <div className="col-lg-5">
+                                        <div className="service-card-mile">
+                                            <img src="/static/images/icon1.png" alt="" />
+                                            <h2>
+                                                <a href="service-one.tsx" title="">
+                                                    Branding
+                                                </a>
+                                            </h2>
+                                            <p>
+                                                We build and activate brands throung cultural insigh &amp;,
+                                                strategic vision.
+                                            </p>
+                                            <a href="#" title="" className="cat-up">
+                                                case study
+                                            </a>
+                                        </div>
+                                    </div>
+                                ))}
+                            </Carousel>
 						</div>
 						<ul
 							className="counter-sec-v6 wow fadeInUp"
@@ -927,7 +909,26 @@ const HomePage7: NextPageWithLayout = () => {
 						>
 							<li>
 								<div className="counter-cont">
-									<h2 className="count">100</h2>
+                                    <VisibilitySensor
+                                        scrollCheck
+                                        partialVisibility
+                                        offset={{ bottom: 10 }}
+                                    >
+                                        {({
+                                              isVisible,
+                                          }: {
+                                            isVisible: boolean;
+                                        }) => (
+                                            <h2 className=" count">
+                                                {isVisible ? (
+                                                    <CountUp end={100} />
+                                                ) : (
+                                                    "0"
+                                                )}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+									{/*<h2 className="count">100</h2>*/}
 									<span>
 										satisfaction <br /> clients
 									</span>
@@ -935,13 +936,51 @@ const HomePage7: NextPageWithLayout = () => {
 							</li>
 							<li>
 								<div className="counter-cont">
-									<h2 className="count">158</h2>
+                                    <VisibilitySensor
+                                        scrollCheck
+                                        partialVisibility
+                                        offset={{ bottom: 10 }}
+                                    >
+                                        {({
+                                              isVisible,
+                                          }: {
+                                            isVisible: boolean;
+                                        }) => (
+                                            <h2 className="count">
+                                                {isVisible ? (
+                                                    <CountUp end={158} />
+                                                ) : (
+                                                    "0"
+                                                )}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+									{/*<h2 className="count">158</h2>*/}
 									<span>event &amp; oline courses</span>
 								</div>
 							</li>
 							<li>
 								<div className="counter-cont">
-									<h2 className="count">3875</h2>
+                                    <VisibilitySensor
+                                        scrollCheck
+                                        partialVisibility
+                                        offset={{ bottom: 10 }}
+                                    >
+                                        {({
+                                              isVisible,
+                                          }: {
+                                            isVisible: boolean;
+                                        }) => (
+                                            <h2 className="clr1 count">
+                                                {isVisible ? (
+                                                    <CountUp end={3875} />
+                                                ) : (
+                                                    "0"
+                                                )}
+                                            </h2>
+                                        )}
+                                    </VisibilitySensor>
+									{/*<h2 className="count">3875</h2>*/}
 									<span>successful students on 60 countries</span>
 								</div>
 							</li>

@@ -3,6 +3,8 @@ import { Layout } from '../app/components/Layout'
 import {HeaderV1} from "../app/components/Navigation/HeaderV1";
 import {Testi} from "../app/components/Testi";
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 
 const ServiceTwo: NextPageWithLayout = () => {
@@ -144,19 +146,76 @@ return (
                 >
                     <li>
                         <div className="count-dv">
-                            <h2 className="count">10</h2>
+                            <VisibilitySensor
+                                scrollCheck
+                                partialVisibility
+                                offset={{ bottom: 10 }}
+                            >
+                                {({
+                                      isVisible,
+                                  }: {
+                                    isVisible: boolean;
+                                }) => (
+                                    <h2 className="count">
+                                        {isVisible ? (
+                                            <CountUp end={10} />
+                                        ) : (
+                                            "0"
+                                        )}
+                                    </h2>
+                                )}
+                            </VisibilitySensor>
+                            {/*<h2 className="count">10</h2>*/}
                             <span>Years Experience</span>
                         </div>
                     </li>
                     <li>
                         <div className="count-dv">
-                            <h2 className="count">102</h2>
+                            <VisibilitySensor
+                                scrollCheck
+                                partialVisibility
+                                offset={{ bottom: 10 }}
+                            >
+                                {({
+                                      isVisible,
+                                  }: {
+                                    isVisible: boolean;
+                                }) => (
+                                    <h2 className="clr2 count">
+                                        {isVisible ? (
+                                            <CountUp end={102} />
+                                        ) : (
+                                            "0"
+                                        )}
+                                    </h2>
+                                )}
+                            </VisibilitySensor>
+                            {/*<h2 className="count">102</h2>*/}
                             <span>Satisfaction Clients</span>
                         </div>
                     </li>
                     <li>
                         <div className="count-dv">
-                            <h2 className="count">285</h2>
+                            <VisibilitySensor
+                                scrollCheck
+                                partialVisibility
+                                offset={{ bottom: 10 }}
+                            >
+                                {({
+                                      isVisible,
+                                  }: {
+                                    isVisible: boolean;
+                                }) => (
+                                    <h2 className="clr2 count">
+                                        {isVisible ? (
+                                            <CountUp end={285} />
+                                        ) : (
+                                            "0"
+                                        )}
+                                    </h2>
+                                )}
+                            </VisibilitySensor>
+                            {/*<h2 className="count">285</h2>*/}
                             <span>
                 Projects Completed On <br /> 34 Countries
               </span>

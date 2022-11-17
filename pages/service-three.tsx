@@ -2,9 +2,48 @@ import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import {HeaderV1} from "../app/components/Navigation/HeaderV1";
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
+import Carousel, { CarouselArrowIndex } from "../app/components/carousel";
+import { carouselsExample } from "./index";
+import { useTheme } from "@mui/material/styles";
+import { useRef, useState } from 'react';
 
 
 const ServiceThree: NextPageWithLayout = () => {
+    const theme = useTheme();
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: "0" },
+            },
+        ],
+    };
+
+    const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? carouselsExample.length - 1 : 0);
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
     return (
         <>
             <HeaderV1/>
@@ -219,21 +258,78 @@ const ServiceThree: NextPageWithLayout = () => {
                             >
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 className="count">100</h2>
+                                        <VisibilitySensor
+                                            scrollCheck
+                                            partialVisibility
+                                            offset={{ bottom: 10 }}
+                                        >
+                                            {({
+                                                  isVisible,
+                                              }: {
+                                                isVisible: boolean;
+                                            }) => (
+                                                <h2 className=" count">
+                                                    {isVisible ? (
+                                                        <CountUp end={100} />
+                                                    ) : (
+                                                        "0"
+                                                    )}
+                                                </h2>
+                                            )}
+                                        </VisibilitySensor>
+                                        {/*<h2 className="count">100</h2>*/}
                                         <span>
-                    satisfaction <br /> clients
-                  </span>
+                                            satisfaction <br /> clients
+                                      </span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 className="count">158</h2>
+                                        <VisibilitySensor
+                                            scrollCheck
+                                            partialVisibility
+                                            offset={{ bottom: 10 }}
+                                        >
+                                            {({
+                                                  isVisible,
+                                              }: {
+                                                isVisible: boolean;
+                                            }) => (
+                                                <h2 className="clr2 count">
+                                                    {isVisible ? (
+                                                        <CountUp end={158} />
+                                                    ) : (
+                                                        "0"
+                                                    )}
+                                                </h2>
+                                            )}
+                                        </VisibilitySensor>
+                                        {/*<h2 className="count">158</h2>*/}
                                         <span>event &amp; oline courses</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 className="count">3875</h2>
+                                        <VisibilitySensor
+                                            scrollCheck
+                                            partialVisibility
+                                            offset={{ bottom: 10 }}
+                                        >
+                                            {({
+                                                  isVisible,
+                                              }: {
+                                                isVisible: boolean;
+                                            }) => (
+                                                <h2 className="clr2 count">
+                                                    {isVisible ? (
+                                                        <CountUp end={3875} />
+                                                    ) : (
+                                                        "0"
+                                                    )}
+                                                </h2>
+                                            )}
+                                        </VisibilitySensor>
+                                        {/*<h2 className="count">3875</h2>*/}
                                         <span>successful students on 60 countries</span>
                                     </div>
                                 </li>
@@ -244,91 +340,48 @@ const ServiceThree: NextPageWithLayout = () => {
             </section>
             <section className="testimonial-sec v10 svs-page">
                 <div className="container">
-                    <div className="title-v10">
-                        <h2>Why Clients Love Us</h2>
+                    <div className="d-flex align-items-stretch justify-content-between">
+                        <div className="title-v10">
+                            <h2>Why Clients Love Us</h2>
+                        </div>
+                        <div>
+                            <CarouselArrowIndex
+                                sx={{
+                                    position: "initial",
+                                }}
+                                index={currentIndex}
+                                total={carouselsExample.length}
+                                onNext={handleNext}
+                                onPrevious={handlePrev}
+                            />
+                        </div>
                     </div>
                     <div className="testimonial-slider">
                         <div className="row testimo-slider">
-                            <div className="col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Originally, creative and with an innate understanding of
-                                        their customer’s need. The team at Miles are always a pleasure
-                                        to work with. Recommended.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb1.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Bobby Hanesto</h3>
-                                            <span>
+                            <Carousel ref={carouselRef} {...carouselSettings}>
+                                {carouselsExample.map(item => (
+                                    <div key={item.id} className="col-lg-6">
+                                        <div className="testimonial-slide">
+                                            <p>
+                                                “Originally, creative and with an innate understanding of
+                                                their customer’s need. The team at Miles are always a pleasure
+                                                to work with. Recommended.”
+                                            </p>
+                                            <div className="thmb-row">
+                                                <div className="thmb-img">
+                                                    <img src="/static/images/thumb1.png" alt="" />
+                                                </div>
+                                                <div className="thmb-info">
+                                                    <h3>Bobby Hanesto</h3>
+                                                    <span>
                       Director of <em>Inivisionapp</em>
                     </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “I don’t know what else to say, this is something that you
-                                        haven’t seen before. Unique design, lightweight, and
-                                        outstanding support.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb2.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Jeans Grey</h3>
-                                            <span>
-                      CEO of <em>BraveBred</em>
-                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Originally, creative and with an innate understanding of
-                                        their customer’s need. The team at Miles are always a pleasure
-                                        to work with. Recommended.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb1.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Bobby Hanesto</h3>
-                                            <span>
-                      Director of <em>Inivisionapp</em>
-                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “I don’t know what else to say, this is something that you
-                                        haven’t seen before. Unique design, lightweight, and
-                                        outstanding support.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb2.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Jeans Grey</h3>
-                                            <span>
-                      CEO of <em>BraveBred</em>
-                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                ))}
+                            </Carousel>
                         </div>
                     </div>
                     <div className="partners-section v10">

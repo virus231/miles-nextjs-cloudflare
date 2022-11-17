@@ -2,35 +2,39 @@
 import { useTheme, styled, Theme } from '@mui/material/styles';
 import { Typography, Box, IconButton, SxProps } from '@mui/material';
 // utils
-import { bgBlur } from '../../utils/cssStyles';
 //
 import { IconifyProps } from '../iconify';
 //
 import { LeftIcon, RightIcon } from './Icon';
+import { bgBlur } from '../../utils/cssStyles';
 
 // ----------------------------------------------------------------------
 
 const StyledRoot = styled(Box)(({ theme }) => ({
-  ...bgBlur({
-    opacity: 0.48,
-    color: theme.palette.grey[900],
-  }),
+  // ...bgBlur({
+  //   opacity: 0.48,
+  //   color: theme.palette.grey[100],
+  // }),
+  backgroundColor: "#fff",
   zIndex: 9,
   display: 'inline-flex',
   alignItems: 'center',
-  position: 'absolute',
-  bottom: theme.spacing(2),
-  right: theme.spacing(2),
-  padding: theme.spacing(0.25),
+  position: 'relative',
+  bottom: theme.spacing(-15),
+  right: theme.spacing(-115),
+  padding: theme.spacing(1),
   color: theme.palette.common.white,
-  borderRadius: theme.shape.borderRadius,
+  borderRadius: "6px",
+  border: "1px solid #e5e5e5"
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   width: 28,
   height: 28,
   padding: 0,
+  color: "#ccc",
   opacity: 0.48,
+  // content: '"ea62"',
   '&:hover': { opacity: 1 },
 }));
 
@@ -64,9 +68,9 @@ export default function CarouselArrowIndex({
         <LeftIcon icon={icon} isRTL={isRTL} />
       </StyledIconButton>
 
-      <Typography variant="subtitle2" component="span" sx={{ mx: 0.25 }}>
-        {index + 1}/{total}
-      </Typography>
+      {/*<Typography variant="subtitle2" component="span" sx={{ mx: 0.25 }}>*/}
+      {/*  {index + 1}/{total}*/}
+      {/*</Typography>*/}
 
       <StyledIconButton color="inherit" onClick={onNext}>
         <RightIcon icon={icon} isRTL={isRTL} />

@@ -1,17 +1,79 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
 import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
-import { Navigation } from '../app/components/Navigation'
-import { Footer } from '../app/components/Footer'
+import { carouselsExample } from "./index";
+import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
+import { RightMenu } from "../app/components/RightMenu";
+import { Burger } from "../app/components/Navigation/Burger";
+import { useRef, useState } from 'react'
+import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
 
 
 const HomePage10: NextPageWithLayout = () => {
+    const [open, setOpen] = useState<boolean>(false);
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: "10px" },
+        }),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: "0" },
+            },
+        ],
+    };
+
+    const carouselSettings2 = {
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: "10px" },
+        }),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: "0" },
+            },
+        ],
+    };
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
 
 	return (
 		<>
-
 			<header className="header-v6 v10">
 				<div className="container">
 					<div className="header-content-v6">
@@ -157,487 +219,15 @@ const HomePage10: NextPageWithLayout = () => {
 						<a href="#" title="" className="hd-btn">
 							Let’s chat! <i className="lni lni-comments-reply" />
 						</a>
-						<button className="nav-toggle-btn a-nav-toggle desktop-hide mobile-show ms-auto">
-							<span className="nav-toggle nav-toggle-sm">
-								<span className="stick stick-1" />
-								<span className="stick stick-2" />
-								<span className="stick stick-3" />
-							</span>
-						</button>
-					</div>
+                        <Burger setOpen={() => setOpen(!open)} />
+
+                    </div>
 				</div>
 			</header>
-			<div className="responsive-menu">
-				<div className="rep-header">
-					<div className="rep-logo">
-						<img src="/static/images/logo2.png" alt="" />
-					</div>
-					<a href="#" title="" className="close-menu">
-						<i className="lni lni-close" />
-					</a>
-				</div>
-				<div className="search-box">
-					<form>
-						<input type="text" name="search" placeholder="Search" />
-						<button type="submit">
-							<i className="lni lni-search-alt" />
-						</button>
-					</form>
-				</div>
-				<ul className="mobile-menu">
-					<li>
-						<a className="active" href="#" title="">
-							Home
-						</a>
-						<ul>
-							<li>
-								<a
-									href="index.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Agency"
-								>
-									Home Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index2.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Studio"
-								>
-									Home Studio
-								</a>
-							</li>
-							<li>
-								<a
-									href="index3.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Freelancer"
-								>
-									Home Freelancer
-								</a>
-							</li>
-							<li>
-								<a
-									href="index4.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Developer"
-								>
-									Home Developer
-								</a>
-							</li>
-							<li>
-								<a
-									href="index5.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Blogger"
-								>
-									Home Blogger
-								</a>
-							</li>
-							<li>
-								<a
-									href="index7.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Coach"
-								>
-									Home Coach
-								</a>
-							</li>
-							<li>
-								<a
-									href="index6.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Business Startup"
-								>
-									Business Startup
-								</a>
-							</li>
-							<li>
-								<a
-									href="index8.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Marketing Agency"
-								>
-									Marketing Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index9.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Business Consulting"
-								>
-									Business Consulting
-								</a>
-							</li>
-							<li>
-								<a
-									href="index10.html"
-									className="animsition-link active"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Creative Agency"
-								>
-									Creative Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index11.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Creative Agency 2"
-								>
-									Creative Agency 2
-								</a>
-							</li>
-							<li>
-								<a
-									href="index12.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Portfolio 1"
-								>
-									Home Portfolio 1
-								</a>
-							</li>
-							<li>
-								<a
-									href="index13.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Portfolio 2"
-								>
-									Home Portfolio 2
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							About
-						</a>
-						<ul>
-							<li>
-								<a
-									href="about-agency.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Agency"
-								>
-									About Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="about-business.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Business"
-								>
-									About Business
-								</a>
-							</li>
-							<li>
-								<a
-									href="about-me.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Me"
-								>
-									About Me
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Portfolio
-						</a>
-						<ul>
-							<li>
-								<a
-									href="14_portfolio_parallax.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Parallax"
-								>
-									Porfolio Parallax
-								</a>
-							</li>
-							<li>
-								<a
-									href="15_portfolio_horizontal_scroll.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Horizontal Scroll"
-								>
-									Porfolio Horizontal Scroll
-								</a>
-							</li>
-							<li>
-								<a href="16_portfolio_masonry.html" title="">
-									Porfolio Masonary
-								</a>
-							</li>
-							<li>
-								<a
-									href="17_portfolio_single_layout_1.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V1"
-								>
-									Porfolio Single V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="portfolio-single-layout-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V2"
-								>
-									Porfolio Single V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="portfolio-single-layout-three.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V3"
-								>
-									Porfolio Single V3
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Service
-						</a>
-						<ul>
-							<li>
-								<a
-									href="service-one.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V1"
-								>
-									Service V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="service-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V2"
-								>
-									Service V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="service-three.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V3"
-								>
-									Service V3
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Pages
-						</a>
-						<ul>
-							<li>
-								<a
-									href="32_team.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Team"
-								>
-									Team
-								</a>
-							</li>
-							<li>
-								<a
-									href="career.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Career"
-								>
-									Career
-								</a>
-							</li>
-							<li>
-								<a
-									href="career-detail.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Career Details"
-								>
-									Career Details
-								</a>
-							</li>
-							<li>
-								<a
-									href="pricing.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Pricing"
-								>
-									Pricing
-								</a>
-							</li>
-							<li>
-								<a
-									href="error.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text={404}
-								>
-									404
-								</a>
-							</li>
-							<li>
-								<a
-									href="coming-soon.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Coming Soon"
-								>
-									Coming Soon
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Blogs
-						</a>
-						<ul>
-							<li>
-								<a
-									href="blog-layout-one.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Layout V1"
-								>
-									Blog Layout V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-layout-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Layout V2"
-								>
-									Blog Layout V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-single-layout1.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Single Layout V1"
-								>
-									Blog Single Layout V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-single-layout2.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Single Layout V2"
-								>
-									Blog Single Layout V2
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Contact
-						</a>
-						<ul>
-							<li>
-								<a
-									href="contact.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Contact V1"
-								>
-									Contact V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="contact-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Contact V2"
-								>
-									Contact V2
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-			<section className="banner-v10">
+
+            <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
+
+            <section className="banner-v10">
 				<div className="container">
 					<div className="banner-content-v10">
 						<div
@@ -793,7 +383,26 @@ const HomePage10: NextPageWithLayout = () => {
 					>
 						<li>
 							<div className="counter-cont">
-								<h2 className="count">100</h2>
+                                <VisibilitySensor
+                                    scrollCheck
+                                    partialVisibility
+                                    offset={{ bottom: 10 }}
+                                >
+                                    {({
+                                          isVisible,
+                                      }: {
+                                        isVisible: boolean;
+                                    }) => (
+                                        <h2 className="clr1 count">
+                                            {isVisible ? (
+                                                <CountUp end={100} />
+                                            ) : (
+                                                "0"
+                                            )}
+                                        </h2>
+                                    )}
+                                </VisibilitySensor>
+								{/*<h2 className="count">100</h2>*/}
 								<span>
 									satisfaction <br /> clients
 								</span>
@@ -801,13 +410,51 @@ const HomePage10: NextPageWithLayout = () => {
 						</li>
 						<li>
 							<div className="counter-cont">
-								<h2 className="count">158</h2>
+                                <VisibilitySensor
+                                    scrollCheck
+                                    partialVisibility
+                                    offset={{ bottom: 10 }}
+                                >
+                                    {({
+                                          isVisible,
+                                      }: {
+                                        isVisible: boolean;
+                                    }) => (
+                                        <h2 className="clr2 count">
+                                            {isVisible ? (
+                                                <CountUp end={158} />
+                                            ) : (
+                                                "0"
+                                            )}
+                                        </h2>
+                                    )}
+                                </VisibilitySensor>
+								{/*<h2 className="count">158</h2>*/}
 								<span>event &amp; oline courses</span>
 							</div>
 						</li>
 						<li>
 							<div className="counter-cont">
-								<h2 className="count">3875</h2>
+                                <VisibilitySensor
+                                    scrollCheck
+                                    partialVisibility
+                                    offset={{ bottom: 10 }}
+                                >
+                                    {({
+                                          isVisible,
+                                      }: {
+                                        isVisible: boolean;
+                                    }) => (
+                                        <h2 className="clr2 count">
+                                            {isVisible ? (
+                                                <CountUp end={3875} />
+                                            ) : (
+                                                "0"
+                                            )}
+                                        </h2>
+                                    )}
+                                </VisibilitySensor>
+								{/*<h2 className="count">3875</h2>*/}
 								<span>successful students on 60 countries</span>
 							</div>
 						</li>
@@ -824,58 +471,24 @@ const HomePage10: NextPageWithLayout = () => {
 				<div className="work-projects">
 					<div className="container">
 						<div className="row work-slider">
-							<div className="col-lg-6">
-								<div className="work-slide">
-									<img src="/static/images/pic2.jpg" alt="" />
-									<div className="wkr-txt">
-										<h3>
-											<a href="17_portfolio_single_layout_1.html" title="">
-												Faye Fo
-											</a>
-										</h3>
-										<span>Interaction, Illustration</span>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6">
-								<div className="work-slide">
-									<img src="/static/images/pic3.jpg" alt="" />
-									<div className="wkr-txt">
-										<h3>
-											<a href="17_portfolio_single_layout_1.html" title="">
-												Taskly
-											</a>
-										</h3>
-										<span>Branding, Illustration, Interaction</span>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6">
-								<div className="work-slide">
-									<img src="/static/images/pic2.jpg" alt="" />
-									<div className="wkr-txt">
-										<h3>
-											<a href="17_portfolio_single_layout_1.html" title="">
-												Faye Fo
-											</a>
-										</h3>
-										<span>Interaction, Illustration</span>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6">
-								<div className="work-slide">
-									<img src="/static/images/pic3.jpg" alt="" />
-									<div className="wkr-txt">
-										<h3>
-											<a href="17_portfolio_single_layout_1.html" title="">
-												Taskly
-											</a>
-										</h3>
-										<span>Branding, Illustration, Interaction</span>
-									</div>
-								</div>
-							</div>
+                            <Carousel ref={carouselRef} {...carouselSettings}>
+                                {carouselsExample.map(item => (
+                                    <div className="col-lg-6">
+                                        <div className="work-slide">
+                                            <img src="/static/images/pic2.jpg" alt="" />
+                                            <div className="wkr-txt">
+                                                <h3>
+                                                    <a href="17_portfolio_single_layout_1.html" title="">
+                                                        Faye Fo
+                                                    </a>
+                                                </h3>
+                                                <span>Interaction, Illustration</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                ))}
+                            </Carousel>
 						</div>
 					</div>
 				</div>
@@ -971,86 +584,69 @@ const HomePage10: NextPageWithLayout = () => {
 					</div>
 					<div className="testimonial-slider">
 						<div className="row testimo-slider">
-							<div className="col-lg-6">
-								<div className="testimonial-slide">
-									<p>
-										“Originally, creative and with an innate understanding of
-										their customer’s need. The team at Miles are always a pleasure
-										to work with. Recommended.”
-									</p>
-									<div className="thmb-row">
-										<div className="thmb-img">
-											<img src="/static/images/thumb1.png" alt="" />
-										</div>
-										<div className="thmb-info">
-											<h3>Bobby Hanesto</h3>
-											<span>
+                            <CarouselArrows
+                                icon="teenyicons:right-small-outline"
+                                onNext={handleNext}
+                                topSpace={50}
+                                onPrevious={handlePrev}
+                                sx={{
+                                    zIndex: 9,
+                                    color: "#ccc",
+                                }}
+                                leftButtonProps={{
+                                    sx: {
+                                        width: "3.5rem",
+                                        height: "3.5rem",
+                                        borderRadius: "10px",
+                                        "&:hover": {
+                                            "svg": {
+                                                color: "#fff"
+                                            },
+                                            borderRadius: "10px",
+                                            backgroundColor: "#4c0ee9"
+                                        }
+                                    }
+                                }}
+                                rightButtonProps={{
+                                    sx: {
+                                        width: "3.5rem",
+                                        height: "3.5rem",
+                                        borderRadius: "10px",
+                                        "&:hover": {
+                                            "svg": {
+                                                color: "#fff"
+                                            },
+                                            borderRadius: "10px",
+                                            backgroundColor: "#4c0ee9"
+                                        }
+                                    }
+                                }}
+                            >
+                                <Carousel ref={carouselRef} {...carouselSettings2}>
+                                    {carouselsExample.map(item => (
+                                        <div className="col-lg-6">
+                                            <div className="testimonial-slide">
+                                                <p>
+                                                    “Originally, creative and with an innate understanding of
+                                                    their customer’s need. The team at Miles are always a pleasure
+                                                    to work with. Recommended.”
+                                                </p>
+                                                <div className="thmb-row">
+                                                    <div className="thmb-img">
+                                                        <img src="/static/images/thumb1.png" alt="" />
+                                                    </div>
+                                                    <div className="thmb-info">
+                                                        <h3>Bobby Hanesto</h3>
+                                                        <span>
 												Director of <em>Inivisionapp</em>
 											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6">
-								<div className="testimonial-slide">
-									<p>
-										“I don’t know what else to say, this is something that you
-										haven’t seen before. Unique design, lightweight, and
-										outstanding support.”
-									</p>
-									<div className="thmb-row">
-										<div className="thmb-img">
-											<img src="/static/images/thumb2.png" alt="" />
-										</div>
-										<div className="thmb-info">
-											<h3>Jeans Grey</h3>
-											<span>
-												CEO of <em>BraveBred</em>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6">
-								<div className="testimonial-slide">
-									<p>
-										“Originally, creative and with an innate understanding of
-										their customer’s need. The team at Miles are always a pleasure
-										to work with. Recommended.”
-									</p>
-									<div className="thmb-row">
-										<div className="thmb-img">
-											<img src="/static/images/thumb1.png" alt="" />
-										</div>
-										<div className="thmb-info">
-											<h3>Bobby Hanesto</h3>
-											<span>
-												Director of <em>Inivisionapp</em>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6">
-								<div className="testimonial-slide">
-									<p>
-										“I don’t know what else to say, this is something that you
-										haven’t seen before. Unique design, lightweight, and
-										outstanding support.”
-									</p>
-									<div className="thmb-row">
-										<div className="thmb-img">
-											<img src="/static/images/thumb2.png" alt="" />
-										</div>
-										<div className="thmb-info">
-											<h3>Jeans Grey</h3>
-											<span>
-												CEO of <em>BraveBred</em>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </Carousel>
+                            </CarouselArrows>
 						</div>
 					</div>
 					<div className="partners-section v10">
