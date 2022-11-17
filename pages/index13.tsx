@@ -5,13 +5,78 @@ import { NextPageWithLayout } from './_app'
 import { Layout } from '../app/components/Layout'
 import { Navigation } from '../app/components/Navigation'
 import { Footer } from '../app/components/Footer'
+import { RightMenu } from "../app/components/RightMenu";
+import { Burger } from "../app/components/Navigation/Burger";
+import { useRef, useState } from 'react'
+import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
+import { carouselsExample } from "./index";
+import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
 
 
 const HomePage13: NextPageWithLayout = () => {
+    const [open, setOpen] = useState<boolean>(false);
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
+        centerMode: false,
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: "10px" },
+        }),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: "0" },
+            },
+        ],
+    };
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
+
+    const carouselSettings2 = {
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: "10px" },
+        }),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 },
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: "0" },
+            },
+        ],
+    };
 
 	return (
 		<>
-
 			<header className="header-v12 v13 pb active">
 				<div className="container">
 					<div className="header-content">
@@ -23,487 +88,12 @@ const HomePage13: NextPageWithLayout = () => {
 								<img src="/static/images/logo14.png" alt="" />
 							</a>
 						</div>
-						<button className="nav-toggle-btn a-nav-toggle ms-auto white">
-							<span className="nav-toggle-title">Menu</span>
-							<span className="nav-toggle nav-toggle-sm">
-								<span className="stick stick-1" />
-								<span className="stick stick-2" />
-								<span className="stick stick-3" />
-							</span>
-						</button>
-					</div>
+                        <Burger setOpen={() => setOpen(!open)} />
+                    </div>
 				</div>
 			</header>
-			<div className="responsive-menu">
-				<div className="rep-header">
-					<div className="rep-logo">
-						<img src="/static/images/logo2.png" alt="" />
-					</div>
-					<a href="#" title="" className="close-menu">
-						<i className="lni lni-close" />
-					</a>
-				</div>
-				<div className="search-box">
-					<form>
-						<input type="text" name="search" placeholder="Search" />
-						<button type="submit">
-							<i className="lni lni-search-alt" />
-						</button>
-					</form>
-				</div>
-				<ul className="mobile-menu">
-					<li>
-						<a className="active" href="#" title="">
-							Home
-						</a>
-						<ul>
-							<li>
-								<a
-									href="index.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Agency"
-								>
-									Home Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index2.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Studio"
-								>
-									Home Studio
-								</a>
-							</li>
-							<li>
-								<a
-									href="index3.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Freelancer"
-								>
-									Home Freelancer
-								</a>
-							</li>
-							<li>
-								<a
-									href="index4.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Developer"
-								>
-									Home Developer
-								</a>
-							</li>
-							<li>
-								<a
-									href="index5.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Blogger"
-								>
-									Home Blogger
-								</a>
-							</li>
-							<li>
-								<a
-									href="index7.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Coach"
-								>
-									Home Coach
-								</a>
-							</li>
-							<li>
-								<a
-									href="index6.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Business Startup"
-								>
-									Business Startup
-								</a>
-							</li>
-							<li>
-								<a
-									href="index8.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Marketing Agency"
-								>
-									Marketing Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index9.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Business Consulting"
-								>
-									Business Consulting
-								</a>
-							</li>
-							<li>
-								<a
-									href="index10.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Creative Agency"
-								>
-									Creative Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="index11.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Creative Agency 2"
-								>
-									Creative Agency 2
-								</a>
-							</li>
-							<li>
-								<a
-									href="index12.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Portfolio 1"
-								>
-									Home Portfolio 1
-								</a>
-							</li>
-							<li>
-								<a
-									href="index13.html"
-									className="animsition-link active"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Home Portfolio 2"
-								>
-									Home Portfolio 2
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							About
-						</a>
-						<ul>
-							<li>
-								<a
-									href="about-agency.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Agency"
-								>
-									About Agency
-								</a>
-							</li>
-							<li>
-								<a
-									href="about-business.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Business"
-								>
-									About Business
-								</a>
-							</li>
-							<li>
-								<a
-									href="about-me.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="About Me"
-								>
-									About Me
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Portfolio
-						</a>
-						<ul>
-							<li>
-								<a
-									href="14_portfolio_parallax.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Parallax"
-								>
-									Porfolio Parallax
-								</a>
-							</li>
-							<li>
-								<a
-									href="15_portfolio_horizontal_scroll.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Horizontal Scroll"
-								>
-									Porfolio Horizontal Scroll
-								</a>
-							</li>
-							<li>
-								<a href="16_portfolio_masonry.html" title="">
-									Porfolio Masonary
-								</a>
-							</li>
-							<li>
-								<a
-									href="17_portfolio_single_layout_1.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V1"
-								>
-									Porfolio Single V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="portfolio-single-layout-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V2"
-								>
-									Porfolio Single V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="portfolio-single-layout-three.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Porfolio Single V3"
-								>
-									Porfolio Single V3
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Service
-						</a>
-						<ul>
-							<li>
-								<a
-									href="service-one.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V1"
-								>
-									Service V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="service-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V2"
-								>
-									Service V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="service-three.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Service V3"
-								>
-									Service V3
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Pages
-						</a>
-						<ul>
-							<li>
-								<a
-									href="32_team.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Team"
-								>
-									Team
-								</a>
-							</li>
-							<li>
-								<a
-									href="career.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Career"
-								>
-									Career
-								</a>
-							</li>
-							<li>
-								<a
-									href="career-detail.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Career Details"
-								>
-									Career Details
-								</a>
-							</li>
-							<li>
-								<a
-									href="pricing.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Pricing"
-								>
-									Pricing
-								</a>
-							</li>
-							<li>
-								<a
-									href="error.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text={404}
-								>
-									404
-								</a>
-							</li>
-							<li>
-								<a
-									href="coming-soon.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Coming Soon"
-								>
-									Coming Soon
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Blogs
-						</a>
-						<ul>
-							<li>
-								<a
-									href="blog-layout-one.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Layout V1"
-								>
-									Blog Layout V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-layout-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Layout V2"
-								>
-									Blog Layout V2
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-single-layout1.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Single Layout V1"
-								>
-									Blog Single Layout V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="blog-single-layout2.html"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Blog Single Layout V2"
-								>
-									Blog Single Layout V2
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" title="">
-							Contact
-						</a>
-						<ul>
-							<li>
-								<a
-									href="contact.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Contact V1"
-								>
-									Contact V1
-								</a>
-							</li>
-							<li>
-								<a
-									href="contact-two.tsx"
-									className="animsition-link"
-									data-animsition-out-class="fade-out"
-									title=""
-									data-text="Contact V2"
-								>
-									Contact V2
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+            <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
+
 			<div className="list-menu active">
 				<ul id="menuMain">
 					<li data-menuanchor="contact">
@@ -750,93 +340,40 @@ const HomePage13: NextPageWithLayout = () => {
 						<div className="task-section">
 							<div className="container">
 								<div className="task-slider">
-									<div className="task-slide">
-										<div className="row align-items-center">
-											<div className="col-lg-6">
-												<div className="tsk-text">
-													<h2>Taskly Dashboard Redesign</h2>
-													<span>Interaction</span>
-													<p>
-														Lewis nestled right into our wheelhouse. A dynamic
-														co-working space attracting entrepreneurs, tinkerers,
-														and creatives in the tech hub of Ann Arbor, Michigan,
-														they wanted a lifestyle brand—a complete ecosystem of
-														brand visuals and assets.
-													</p>
-													<a
-														href="17_portfolio_single_layout_1.html"
-														title=""
-														className="btn-default v13"
-													>
-														View Project
-													</a>
-												</div>
-											</div>
-											<div className="col-lg-6">
-												<div className="tsk-img">
-													<img src="/static/images/tsk-img1.jpg" alt="" />
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="task-slide">
-										<div className="row align-items-center">
-											<div className="col-lg-6">
-												<div className="tsk-text">
-													<h2>Taskly Dashboard Redesign</h2>
-													<span>Interaction</span>
-													<p>
-														Lewis nestled right into our wheelhouse. A dynamic
-														co-working space attracting entrepreneurs, tinkerers,
-														and creatives in the tech hub of Ann Arbor, Michigan,
-														they wanted a lifestyle brand—a complete ecosystem of
-														brand visuals and assets.
-													</p>
-													<a
-														href="17_portfolio_single_layout_1.html"
-														title=""
-														className="btn-default v13"
-													>
-														View Project
-													</a>
-												</div>
-											</div>
-											<div className="col-lg-6">
-												<div className="tsk-img">
-													<img src="/static/images/tsk-img1.jpg" alt="" />
-												</div>
-											</div>
-										</div>
-									</div>
-									<div className="task-slide">
-										<div className="row align-items-center">
-											<div className="col-lg-6">
-												<div className="tsk-text">
-													<h2>Taskly Dashboard Redesign</h2>
-													<span>Interaction</span>
-													<p>
-														Lewis nestled right into our wheelhouse. A dynamic
-														co-working space attracting entrepreneurs, tinkerers,
-														and creatives in the tech hub of Ann Arbor, Michigan,
-														they wanted a lifestyle brand—a complete ecosystem of
-														brand visuals and assets.
-													</p>
-													<a
-														href="17_portfolio_single_layout_1.html"
-														title=""
-														className="btn-default v13"
-													>
-														View Project
-													</a>
-												</div>
-											</div>
-											<div className="col-lg-6">
-												<div className="tsk-img">
-													<img src="/static/images/tsk-img1.jpg" alt="" />
-												</div>
-											</div>
-										</div>
-									</div>
+                                    <Carousel ref={carouselRef} {...carouselSettings}>
+                                        {carouselsExample.map(item => (
+                                            <div className="task-slide">
+                                                <div className="row align-items-center">
+                                                    <div className="col-lg-6">
+                                                        <div className="tsk-text">
+                                                            <h2>Taskly Dashboard Redesign</h2>
+                                                            <span>Interaction</span>
+                                                            <p>
+                                                                Lewis nestled right into our wheelhouse. A dynamic
+                                                                co-working space attracting entrepreneurs, tinkerers,
+                                                                and creatives in the tech hub of Ann Arbor, Michigan,
+                                                                they wanted a lifestyle brand—a complete ecosystem of
+                                                                brand visuals and assets.
+                                                            </p>
+                                                            <a
+                                                                href="17_portfolio_single_layout_1.html"
+                                                                title=""
+                                                                className="btn-default v13"
+                                                            >
+                                                                View Project
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-lg-6">
+                                                        <div className="tsk-img">
+                                                            <img src="/static/images/tsk-img1.jpg" alt="" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        ))}
+                                    </Carousel>
 								</div>
 							</div>
 						</div>
@@ -853,86 +390,41 @@ const HomePage13: NextPageWithLayout = () => {
 								</div>
 								<div className="testimonial-slider">
 									<div className="row testimo-slider">
-										<div className="col-lg-6">
-											<div className="testimonial-slide">
-												<p>
-													“Originally, creative and with an innate understanding
-													of their customer’s need. The team at Miles are always a
-													pleasure to work with. Recommended.”
-												</p>
-												<div className="thmb-row">
-													<div className="thmb-img">
-														<img src="/static/images/thumb1.png" alt="" />
-													</div>
-													<div className="thmb-info">
-														<h3>Bobby Hanesto</h3>
-														<span>
+                                        <CarouselArrows
+                                            icon="teenyicons:right-small-outline"
+                                            onNext={handleNext}
+                                            topSpace={50}
+                                            onPrevious={handlePrev}
+                                            sx={{
+                                                zIndex: 9,
+                                                color: "#ccc",
+                                            }}
+                                        >
+                                            <Carousel ref={carouselRef} {...carouselSettings2}>
+                                                {carouselsExample.map(item => (
+                                                    <div className="col-lg-6">
+                                                        <div className="testimonial-slide">
+                                                            <p>
+                                                                “Originally, creative and with an innate understanding
+                                                                of their customer’s need. The team at Miles are always a
+                                                                pleasure to work with. Recommended.”
+                                                            </p>
+                                                            <div className="thmb-row">
+                                                                <div className="thmb-img">
+                                                                    <img src="/static/images/thumb1.png" alt="" />
+                                                                </div>
+                                                                <div className="thmb-info">
+                                                                    <h3>Bobby Hanesto</h3>
+                                                                    <span>
 															Director of <em>Inivisionapp</em>
 														</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6">
-											<div className="testimonial-slide">
-												<p>
-													“I don’t know what else to say, this is something that
-													you haven’t seen before. Unique design, lightweight, and
-													outstanding support.”
-												</p>
-												<div className="thmb-row">
-													<div className="thmb-img">
-														<img src="/static/images/thumb2.png" alt="" />
-													</div>
-													<div className="thmb-info">
-														<h3>Jeans Grey</h3>
-														<span>
-															CEO of <em>BraveBred</em>
-														</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6">
-											<div className="testimonial-slide">
-												<p>
-													“Originally, creative and with an innate understanding
-													of their customer’s need. The team at Miles are always a
-													pleasure to work with. Recommended.”
-												</p>
-												<div className="thmb-row">
-													<div className="thmb-img">
-														<img src="/static/images/thumb1.png" alt="" />
-													</div>
-													<div className="thmb-info">
-														<h3>Bobby Hanesto</h3>
-														<span>
-															Director of <em>Inivisionapp</em>
-														</span>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div className="col-lg-6">
-											<div className="testimonial-slide">
-												<p>
-													“I don’t know what else to say, this is something that
-													you haven’t seen before. Unique design, lightweight, and
-													outstanding support.”
-												</p>
-												<div className="thmb-row">
-													<div className="thmb-img">
-														<img src="/static/images/thumb2.png" alt="" />
-													</div>
-													<div className="thmb-info">
-														<h3>Jeans Grey</h3>
-														<span>
-															CEO of <em>BraveBred</em>
-														</span>
-													</div>
-												</div>
-											</div>
-										</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </Carousel>
+                                        </CarouselArrows>
 									</div>
 								</div>
 								<div className="partners-section v10">
