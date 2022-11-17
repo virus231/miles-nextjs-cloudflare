@@ -1,7 +1,7 @@
-import { navigationItems } from "../../_mock/menu-config"
-import { NextLink } from "../BaseNextLink"
-import styles from "./Navigation.module.scss"
-import classNames from "classnames"
+import { navigationItems } from '../../_mock/menu-config';
+import { NextLink } from '../BaseNextLink';
+import styles from './Navigation.module.scss';
+import classNames from 'classnames';
 
 
 export const Links = () => {
@@ -28,7 +28,7 @@ export const Links = () => {
             <li>
                 <div>Elements</div>
                 <ul className={classNames(styles.hoverMenu)} style={{
-                    width: "300px"
+                    width: '300px'
                 }}>
                     <div className="container">
                         <div className="row">
@@ -68,5 +68,5 @@ export const Links = () => {
                 </ul>
             </li>
         </>
-    )
-}
+    );
+};

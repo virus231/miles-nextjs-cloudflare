@@ -1,12 +1,12 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
-import Carousel, { CarouselArrowIndex } from "../app/components/carousel";
-import { carouselsExample } from "./index";
-import { useTheme } from "@mui/material/styles";
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+import Carousel, { CarouselArrowIndex } from '../app/components/carousel';
+import { carouselsExample } from './index';
+import { useTheme } from '@mui/material/styles';
 import { useRef, useState } from 'react';
 
 
@@ -30,7 +30,7 @@ const ServiceThree: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -63,7 +63,7 @@ const ServiceThree: NextPageWithLayout = () => {
                                 </h2>
                                 <p>
                                     The difference lies in quality, reputation and responsibility of
-                                    creation.{" "}
+                                    creation.{' '}
                                 </p>
                             </div>
                         </div>
@@ -272,7 +272,7 @@ const ServiceThree: NextPageWithLayout = () => {
                                                     {isVisible ? (
                                                         <CountUp end={100} />
                                                     ) : (
-                                                        "0"
+                                                        '0'
                                                     )}
                                                 </h2>
                                             )}
@@ -299,7 +299,7 @@ const ServiceThree: NextPageWithLayout = () => {
                                                     {isVisible ? (
                                                         <CountUp end={158} />
                                                     ) : (
-                                                        "0"
+                                                        '0'
                                                     )}
                                                 </h2>
                                             )}
@@ -324,7 +324,7 @@ const ServiceThree: NextPageWithLayout = () => {
                                                     {isVisible ? (
                                                         <CountUp end={3875} />
                                                     ) : (
-                                                        "0"
+                                                        '0'
                                                     )}
                                                 </h2>
                                             )}
@@ -347,7 +347,7 @@ const ServiceThree: NextPageWithLayout = () => {
                         <div>
                             <CarouselArrowIndex
                                 sx={{
-                                    position: "initial",
+                                    position: 'initial',
                                 }}
                                 index={currentIndex}
                                 total={carouselsExample.length}
@@ -481,10 +481,10 @@ const ServiceThree: NextPageWithLayout = () => {
                         </div>
                         <div className="text-center pl-btm">
                             <p>
-                                You have a large team?{" "}
+                                You have a large team?{' '}
                                 <a href="#" title="">
                                     Contact us
-                                </a>{" "}
+                                </a>{' '}
                                 for information about more enterprise options
                             </p>
                         </div>
@@ -494,11 +494,11 @@ const ServiceThree: NextPageWithLayout = () => {
             <FooterVariant1/>
 
         </>
-    )
-}
+    );
+};
 
 ServiceThree.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Service Three">{page}</Layout>;
 };
 
-export default ServiceThree
+export default ServiceThree;

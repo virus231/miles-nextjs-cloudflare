@@ -17,19 +17,19 @@ export default function TestPage() {
         slidesPerView={3}
         navigation
         style={{
-            "height": "100vh",
+            'height': '100vh',
         }}
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
     >
-        <SwiperSlide style={{backgroundColor: "red"}}>Slide 1</SwiperSlide>
-        <SwiperSlide style={{backgroundColor: "blue"}}>Slide 2</SwiperSlide>
-        <SwiperSlide style={{backgroundColor: "green"}}>Slide 3</SwiperSlide>
-        <SwiperSlide style={{backgroundColor: "yellow"}}>Slide 4</SwiperSlide>
-        <SwiperSlide style={{backgroundColor: "orange"}}>Slide 5</SwiperSlide>
-        <SwiperSlide style={{backgroundColor: "aliceblue"}}>Slide 6</SwiperSlide>
-    </Swiper>
+        <SwiperSlide style={{backgroundColor: 'red'}}>Slide 1</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: 'blue'}}>Slide 2</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: 'green'}}>Slide 3</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: 'yellow'}}>Slide 4</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: 'orange'}}>Slide 5</SwiperSlide>
+        <SwiperSlide style={{backgroundColor: 'aliceblue'}}>Slide 6</SwiperSlide>
+    </Swiper>;
 
 }

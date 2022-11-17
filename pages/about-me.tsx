@@ -1,7 +1,7 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { HeaderV2 } from '../app/components/Navigation/HeaderV2';
 
 
@@ -54,7 +54,7 @@ const AboutMe: NextPageWithLayout = () => {
                 <div className="container">
                     <div className="about_v1_content">
                         <p>
-                            <span>Miles Raymond</span> is a designer from Toronto, Canada.{" "}
+                            <span>Miles Raymond</span> is a designer from Toronto, Canada.{' '}
                             <br />
                             He works in his little studio-home for galleries around the world.
                             His work has been featured in the most important galleries in the
@@ -241,9 +241,9 @@ const AboutMe: NextPageWithLayout = () => {
                             data-wow-delay="0ms"
                         >
                             <h2>
-                                Let’s make something amazing together{" "}
+                                Let’s make something amazing together{' '}
                                 <strong>
-                                    Start by{" "}
+                                    Start by{' '}
                                     <a href="contact.tsx" title="">
                                         saying hi
                                     </a>
@@ -255,11 +255,11 @@ const AboutMe: NextPageWithLayout = () => {
             </section>
             <FooterVariant1/>
         </>
-    )
-}
+    );
+};
 
 AboutMe.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Home">{page}</Layout>;
 };
 
-export default AboutMe
+export default AboutMe;

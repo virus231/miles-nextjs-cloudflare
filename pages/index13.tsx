@@ -1,16 +1,16 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import { Navigation } from '../app/components/Navigation'
-import { Footer } from '../app/components/Footer'
-import { RightMenu } from "../app/components/RightMenu";
-import { Burger } from "../app/components/Navigation/Burger";
-import { useRef, useState } from 'react'
-import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
-import { carouselsExample } from "./index";
-import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
+import classNames from 'classnames';
+import { NextLink } from '../app/components/BaseNextLink';
+import styles from '../styles/Home.module.scss';
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import { Navigation } from '../app/components/Navigation';
+import { Footer } from '../app/components/Footer';
+import { RightMenu } from '../app/components/RightMenu';
+import { Burger } from '../app/components/Navigation/Burger';
+import { useRef, useState } from 'react';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { carouselsExample } from './index';
+import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
 
 
 const HomePage13: NextPageWithLayout = () => {
@@ -24,7 +24,7 @@ const HomePage13: NextPageWithLayout = () => {
         centerMode: false,
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -37,7 +37,7 @@ const HomePage13: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -57,7 +57,7 @@ const HomePage13: NextPageWithLayout = () => {
         centerMode: false,
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -70,7 +70,7 @@ const HomePage13: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -143,7 +143,7 @@ const HomePage13: NextPageWithLayout = () => {
 								<h2>Digital innovation companay that creates progress</h2>
 								<p>
 									Like any great agency, we are only as good as the result we
-									deliver of our recent work{" "}
+									deliver of our recent work{' '}
 								</p>
 								<a href="#" title="" className="btn-default v13">
 									Get Started
@@ -397,7 +397,7 @@ const HomePage13: NextPageWithLayout = () => {
                                             onPrevious={handlePrev}
                                             sx={{
                                                 zIndex: 9,
-                                                color: "#ccc",
+                                                color: '#ccc',
                                             }}
                                         >
                                             <Carousel ref={carouselRef} {...carouselSettings2}>
@@ -551,11 +551,11 @@ const HomePage13: NextPageWithLayout = () => {
 			</ul>
 
 		</>
-	)
-}
+	);
+};
 
 HomePage13.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home Portfolio 2">{page}</Layout>;
 };
 
-export default HomePage13
+export default HomePage13;

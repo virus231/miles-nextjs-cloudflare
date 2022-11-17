@@ -1,5 +1,5 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
 
 
 const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
@@ -728,7 +728,7 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
                                     >
                                         <span>get in touch</span>
                                         <h3>
-                                            116 Fairground Rd, FL 32904, USA{" "}
+                                            116 Fairground Rd, FL 32904, USA{' '}
                                             <a href="#" title="">
                                                 hello@miles.co
                                             </a>
@@ -805,11 +805,11 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
             </footer>
 
         </>
-    )
-}
+    );
+};
 
 PortfolioSingleLayoutThree.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Portfolio Single Layout Three">{page}</Layout>;
 };
 
-export default PortfolioSingleLayoutThree
+export default PortfolioSingleLayoutThree;

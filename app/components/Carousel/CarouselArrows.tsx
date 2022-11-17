@@ -27,7 +27,7 @@ const StyledIconButton = styled(IconButton, {
   }),
   ...(hover && {
     '&:hover': {
-        backgroundColor: "none",
+        backgroundColor: 'none',
     }
   }),
   ...(!filled && hover && {
@@ -54,7 +54,7 @@ const StyledIconButton = styled(IconButton, {
     }),
     marginTop: theme.spacing(-2.5),
       '&:hover': {
-          color: "#ff4800",
+          color: '#ff4800',
       },
   }),
 }));

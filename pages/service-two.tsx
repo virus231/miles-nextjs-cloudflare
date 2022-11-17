@@ -1,10 +1,10 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
-import {Testi} from "../app/components/Testi";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import {Testi} from '../app/components/Testi';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 const ServiceTwo: NextPageWithLayout = () => {
@@ -26,7 +26,7 @@ return (
                     </h2>
                     <p className="mw-100">
                         The difference lies in quality, reputation and responsibility of
-                        creation.{" "}
+                        creation.{' '}
                     </p>
                 </div>
             </div>
@@ -160,7 +160,7 @@ return (
                                         {isVisible ? (
                                             <CountUp end={10} />
                                         ) : (
-                                            "0"
+                                            '0'
                                         )}
                                     </h2>
                                 )}
@@ -185,7 +185,7 @@ return (
                                         {isVisible ? (
                                             <CountUp end={102} />
                                         ) : (
-                                            "0"
+                                            '0'
                                         )}
                                     </h2>
                                 )}
@@ -210,7 +210,7 @@ return (
                                         {isVisible ? (
                                             <CountUp end={285} />
                                         ) : (
-                                            "0"
+                                            '0'
                                         )}
                                     </h2>
                                 )}
@@ -284,7 +284,7 @@ return (
                 <textarea
                     className="form--control"
                     id="message"
-                    defaultValue={""}
+                    defaultValue={''}
                 />
                                 <label htmlFor="message">Your message here</label>
                             </div>
@@ -302,11 +302,11 @@ return (
         </section>
         <FooterVariant1/>
     </>
-    )
-}
+    );
+};
 
 ServiceTwo.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Home">{page}</Layout>;
 };
 
-export default ServiceTwo
+export default ServiceTwo;

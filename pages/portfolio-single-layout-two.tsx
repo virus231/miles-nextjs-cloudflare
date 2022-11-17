@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {FooterVariant1} from "../app/components/Footer/FooterVariant1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {FooterVariant1} from '../app/components/Footer/FooterVariant1';
 
 
 const PortfolioSingleLayoutTwo: NextPageWithLayout = () => {
@@ -736,7 +736,7 @@ return (
                 <textarea
                     className="form--control"
                     id="message"
-                    defaultValue={""}
+                    defaultValue={''}
                 />
                                 <label htmlFor="message">Your message here</label>
                             </div>
@@ -755,11 +755,11 @@ return (
         <FooterVariant1/>
 
     </>
-    )
-}
+    );
+};
 
 PortfolioSingleLayoutTwo.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Portfolio Single Layout Two">{page}</Layout>;
 };
 
-export default PortfolioSingleLayoutTwo
+export default PortfolioSingleLayoutTwo;

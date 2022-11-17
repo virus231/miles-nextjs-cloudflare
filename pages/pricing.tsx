@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
@@ -21,7 +21,7 @@ const Pricing: NextPageWithLayout = () => {
                     </div>
                     <ul className="tab-btns">
                         <li data-tab="monthly" className="tab-btn active-btn">
-                            Billed monthly{" "}
+                            Billed monthly{' '}
                         </li>
                         <li data-tab="annually" className="tab-btn">
                             Billed annually
@@ -151,10 +151,10 @@ const Pricing: NextPageWithLayout = () => {
                     </div>
                     <div className="text-center pl-btm">
                         <p>
-                            You have a large team?{" "}
+                            You have a large team?{' '}
                             <a href="#" title="">
                                 Contact us
-                            </a>{" "}
+                            </a>{' '}
                             for information about more enterprise options
                         </p>
                     </div>
@@ -287,11 +287,11 @@ const Pricing: NextPageWithLayout = () => {
             </section>
             <FooterVariant1/>
         </>
-    )
-}
+    );
+};
 
 Pricing.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Pricing">{page}</Layout>;
 };
 
-export default Pricing
+export default Pricing;

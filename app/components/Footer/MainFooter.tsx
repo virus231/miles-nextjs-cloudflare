@@ -21,19 +21,19 @@ export const MainFooter = () => {
                     <div className="col-12">
                         <p className="copyright">
                             Copyright @2022
-                            {" "}
+                            {' '}
                             <a
                                 href="https://themeforest.net/user/tortoiz"
                                 className="text-info"
                             >
                                 Tortoiz
                             </a>
-                            {" "}
+                            {' '}
                             All Rights Reserved
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
-    )
-}
+    );
+};

@@ -1,6 +1,5 @@
 import { alpha } from '@mui/material/styles';
 
-
 type BgGradientProps = {
     direction?: string;
     color?: string;
@@ -36,15 +35,15 @@ export function bgBlur(props?: BgBlurProps) {
                 height: '100%',
                 backdropFilter: `blur(${blur}px)`,
                 WebkitBackdropFilter: `blur(${blur}px)`,
-                backgroundColor: alpha(color, opacity),
-            },
+                backgroundColor: alpha(color, opacity)
+            }
         } as const;
     }
 
     return {
         backdropFilter: `blur(${blur}px)`,
         WebkitBackdropFilter: `blur(${blur}px)`,
-        backgroundColor: alpha(color, opacity),
+        backgroundColor: alpha(color, opacity)
     };
 }
 
@@ -57,16 +56,14 @@ export function bgGradient(props?: BgGradientProps) {
 
     if (imgUrl) {
         return {
-            background: `linear-gradient(${direction}, ${startColor || color}, ${
-                endColor || color
-            }), url(${imgUrl})`,
+            background: `linear-gradient(${direction}, ${startColor || color}, ${endColor || color}), url(${imgUrl})`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center center',
+            backgroundPosition: 'center center'
         };
     }
 
     return {
-        background: `linear-gradient(${direction}, ${startColor}, ${endColor})`,
+        background: `linear-gradient(${direction}, ${startColor}, ${endColor})`
     };
 }

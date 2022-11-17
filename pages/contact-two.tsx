@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
@@ -39,7 +39,7 @@ const ContactTwo: NextPageWithLayout = () => {
                                         United State.
                                     </p>
                                     <span className="mail">
-                  Email:{" "}
+                  Email:{' '}
                                         <a href="mailto:example@example.com" title="">
                     info@milesstudio.co
                   </a>
@@ -148,7 +148,7 @@ const ContactTwo: NextPageWithLayout = () => {
                 <textarea
                     className="form--control"
                     id="message"
-                    defaultValue={""}
+                    defaultValue={''}
                 />
                                     <label htmlFor="message">Your message here</label>
                                 </div>
@@ -167,11 +167,11 @@ const ContactTwo: NextPageWithLayout = () => {
             <FooterVariant1/>
 
         </>
-    )
-}
+    );
+};
 
 ContactTwo.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Contact Two">{page}</Layout>;
 };
 
-export default ContactTwo
+export default ContactTwo;

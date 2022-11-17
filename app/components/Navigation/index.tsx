@@ -1,10 +1,10 @@
-import classNames from "classnames"
-import {useEffect, useRef, useState} from "react"
-import { NextLink } from "../BaseNextLink"
-import { RightMenu } from "../RightMenu"
-import { Burger } from "./Burger"
-import { Links } from "./Links"
-import styles from "./Navigation.module.scss"
+import classNames from 'classnames';
+import {useEffect, useRef, useState} from 'react';
+import { NextLink } from '../BaseNextLink';
+import { RightMenu } from '../RightMenu';
+import { Burger } from './Burger';
+import { Links } from './Links';
+import styles from './Navigation.module.scss';
 
 
 export const Navigation = () => {
@@ -38,5 +38,5 @@ export const Navigation = () => {
 
         <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
     </>
-    )
-}
+    );
+};

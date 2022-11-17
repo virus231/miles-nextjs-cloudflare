@@ -1,12 +1,12 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import { MainNavigation } from '../app/components/Navigation/MainNavigation'
-import { MainFooter } from '../app/components/Footer/MainFooter'
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import classNames from 'classnames';
+import { NextLink } from '../app/components/BaseNextLink';
+import styles from '../styles/Home.module.scss';
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import { MainNavigation } from '../app/components/Navigation/MainNavigation';
+import { MainFooter } from '../app/components/Footer/MainFooter';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 
 
 const TeamPage: NextPageWithLayout = () => {
@@ -343,11 +343,11 @@ const TeamPage: NextPageWithLayout = () => {
 			</section>
             <FooterVariant1/>
 		</>
-	)
-}
+	);
+};
 
 TeamPage.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default TeamPage
+export default TeamPage;

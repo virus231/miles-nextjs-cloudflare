@@ -6,8 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "lint:fix": "eslint --fix --ext .ts,.tsx ."
+    "lint:check": "eslint --ext .ts,.tsx . ",
+    "lint:fix": "eslint --ext .ts,.tsx . --fix",
+    "prettier:check": "prettier --check 'app/**/*.{ts, tsx}' ",
+    "prettier:fix": "prettier --write 'app/**/*.{ts, json}' "
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",

@@ -1,13 +1,13 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {Testi} from "../app/components/Testi";
-import {KeepConnected} from "../app/components/KeepConnected";
-import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
-import { carouselsExample } from "./index";
-import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
-import { useRef } from "react";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {Testi} from '../app/components/Testi';
+import {KeepConnected} from '../app/components/KeepConnected';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { carouselsExample } from './index';
+import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
+import { useRef } from 'react';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 const HomePage7: NextPageWithLayout = () => {
@@ -27,7 +27,7 @@ const HomePage7: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -193,7 +193,7 @@ const HomePage7: NextPageWithLayout = () => {
 							<li>
 								<a href="#" title="">
 									<i className="lni lni-cart" />
-								</a>{" "}
+								</a>{' '}
 								<span className="cart-count">2</span>
 							</li>
 						</ul>
@@ -755,7 +755,7 @@ const HomePage7: NextPageWithLayout = () => {
 							students to senior executives – discover the tools they need to
 							realise their full potential, whatever their aspirations. Andy will
 							help you open up lines of communication and enable people of all
-							levels to work together with{" "}
+							levels to work together with{' '}
 							<span>
 								genuine passion, enthusiasm and a shared vision for the future
 							</span>
@@ -923,7 +923,7 @@ const HomePage7: NextPageWithLayout = () => {
                                                 {isVisible ? (
                                                     <CountUp end={100} />
                                                 ) : (
-                                                    "0"
+                                                    '0'
                                                 )}
                                             </h2>
                                         )}
@@ -950,7 +950,7 @@ const HomePage7: NextPageWithLayout = () => {
                                                 {isVisible ? (
                                                     <CountUp end={158} />
                                                 ) : (
-                                                    "0"
+                                                    '0'
                                                 )}
                                             </h2>
                                         )}
@@ -975,7 +975,7 @@ const HomePage7: NextPageWithLayout = () => {
                                                 {isVisible ? (
                                                     <CountUp end={3875} />
                                                 ) : (
-                                                    "0"
+                                                    '0'
                                                 )}
                                             </h2>
                                         )}
@@ -1106,7 +1106,7 @@ const HomePage7: NextPageWithLayout = () => {
 					</ul>
 					<div className="text-center all-events">
 						<p>
-							Excited about our event?{" "}
+							Excited about our event?{' '}
 							<a href="#" title="">
 								View all events
 							</a>
@@ -1336,7 +1336,7 @@ const HomePage7: NextPageWithLayout = () => {
 							</div>
 						</div>
 						<p className="text-center copy-tzt">
-							© 2020{" "}
+							© 2020{' '}
 							<a href="#" title="">
 								Andy Grammer
 							</a>
@@ -1348,11 +1348,11 @@ const HomePage7: NextPageWithLayout = () => {
 
 
 		</>
-	)
-}
+	);
+};
 
 HomePage7.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage7
+export default HomePage7;

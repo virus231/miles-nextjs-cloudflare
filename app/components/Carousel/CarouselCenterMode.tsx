@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import { useRef } from 'react';
 
-import { useTheme } from "@mui/material/styles";
-import { Box, Paper } from "@mui/material";
-import Image from "../image";
-import Carousel, { CarouselArrows, CarouselDots } from ".";
+import { useTheme } from '@mui/material/styles';
+import { Box, Paper } from '@mui/material';
+import Image from '../image';
+import Carousel, { CarouselArrows, CarouselDots } from '.';
 
 // ----------------------------------------------------------------------
 
@@ -20,11 +20,11 @@ export function CarouselItem({ item }: { item: CarouselItemProps }) {
         <Paper
             className="project-slide"
             sx={{
-                width: "100%",
-                height: "395px",
-                overflow: "hidden",
-                position: "relative",
-                borderRadius: "none",
+                width: '100%',
+                height: '395px',
+                overflow: 'hidden',
+                position: 'relative',
+                borderRadius: 'none',
             }}
         >
             <Image alt={title} src={image} ratio="1/1" />
@@ -68,10 +68,10 @@ export default function CarouselCenterMode({ data }: Props) {
         dots: true,
         arrows: false,
         centerMode: false,
-        rtl: Boolean(theme.direction === "rtl"),
+        rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -84,7 +84,7 @@ export default function CarouselCenterMode({ data }: Props) {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -100,9 +100,9 @@ export default function CarouselCenterMode({ data }: Props) {
     return (
         <Box
             sx={{
-                overflow: "hidden",
-                position: "relative",
-                "& .slick-list": {
+                overflow: 'hidden',
+                position: 'relative',
+                '& .slick-list': {
                     borderRadius: 2,
                     // boxShadow: (theme) => theme.customShadows.z16,
                 },
@@ -115,7 +115,7 @@ export default function CarouselCenterMode({ data }: Props) {
                 onPrevious={handlePrev}
                 sx={{
                     zIndex: 9,
-                    color: "#ccc",
+                    color: '#ccc',
                 }}
             >
                 <Carousel ref={carouselRef} {...carouselSettings}>

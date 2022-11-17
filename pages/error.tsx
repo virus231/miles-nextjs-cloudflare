@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
@@ -22,11 +22,11 @@ const ErrorPage: NextPageWithLayout = () => {
             </section>
             <FooterVariant1/>
         </>
-    )
-}
+    );
+};
 
 ErrorPage.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Error">{page}</Layout>;
 };
 
-export default ErrorPage
+export default ErrorPage;

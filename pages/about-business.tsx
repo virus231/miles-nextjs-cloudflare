@@ -1,13 +1,13 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import {HeaderV2} from "../app/components/Navigation/HeaderV2";
-import {_carouselsExample} from "./index";
-import CarouselCenterMode from "../app/components/carousel/CarouselCenterMode";
-import Carousel, {CarouselArrows, CarouselDots} from "../app/components/carousel";
-import {Box} from "@mui/material";
-import {useTheme} from "@mui/material/styles";
+import {HeaderV2} from '../app/components/Navigation/HeaderV2';
+import {_carouselsExample} from './index';
+import CarouselCenterMode from '../app/components/carousel/CarouselCenterMode';
+import Carousel, {CarouselArrows, CarouselDots} from '../app/components/carousel';
+import {Box} from '@mui/material';
+import {useTheme} from '@mui/material/styles';
 import { useRef } from 'react';
 
 
@@ -24,7 +24,7 @@ const AboutBusiness: NextPageWithLayout = () => {
         rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -67,7 +67,7 @@ const AboutBusiness: NextPageWithLayout = () => {
                         </h2>
                         <p>
                             Like any great agency, we are only as good as the result we deliver
-                            of our recent work{" "}
+                            of our recent work{' '}
                         </p>
                         <a href="#" title="" className="btn-default">
                             Learn more
@@ -272,7 +272,7 @@ const AboutBusiness: NextPageWithLayout = () => {
                                 <div className="title-v9">
                                     <span className="gray-color">why choose us</span>
                                     <h2 className="black-clr">
-                                        <span className="clr-yeloow d-block">Different Value</span>{" "}
+                                        <span className="clr-yeloow d-block">Different Value</span>{' '}
                                         Created Us
                                     </h2>
                                 </div>
@@ -575,7 +575,7 @@ const AboutBusiness: NextPageWithLayout = () => {
                                         onPrevious={handlePrev}
                                         sx={{
                                             zIndex: 9,
-                                            color: "#ccc",
+                                            color: '#ccc',
                                         }}
                                     >
                                         <Carousel ref={carouselRef} {...carouselSettings}>
@@ -692,11 +692,11 @@ const AboutBusiness: NextPageWithLayout = () => {
             </section>
             <FooterVariant1/>
         </>
-    )
-}
+    );
+};
 
 AboutBusiness.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="About Business">{page}</Layout>;
 };
 
-export default AboutBusiness
+export default AboutBusiness;

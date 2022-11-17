@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
@@ -65,7 +65,7 @@ const CareerDetailPage: NextPageWithLayout = () => {
                                     stakeholders at all levels.
                                 </li>
                                 <li>
-                                    {" "}
+                                    {' '}
                                     Strong knowledge of visual design, user-centered experience
                                     design, interaction design, brand development, and the creative
                                     process.
@@ -77,7 +77,7 @@ const CareerDetailPage: NextPageWithLayout = () => {
                                 <li>A solid point-of-view and a collaborative nature.</li>
                                 <li>An entrepreneurial and independent spirit.</li>
                                 <li>
-                                    {" "}
+                                    {' '}
                                     A diverse sense of taste with the knowledge necessary to apply
                                     to various challenges.
                                 </li>
@@ -109,11 +109,11 @@ const CareerDetailPage: NextPageWithLayout = () => {
             <FooterVariant1/>
 
         </>
-    )
-}
+    );
+};
 
 CareerDetailPage.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Career Detail">{page}</Layout>;
 };
 
-export default CareerDetailPage
+export default CareerDetailPage;

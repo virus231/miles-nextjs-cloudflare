@@ -15,7 +15,7 @@ const StyledRoot = styled(Box)(({ theme }) => ({
   //   opacity: 0.48,
   //   color: theme.palette.grey[100],
   // }),
-  backgroundColor: "#fff",
+  backgroundColor: '#fff',
   zIndex: 9,
   display: 'inline-flex',
   alignItems: 'center',
@@ -24,15 +24,15 @@ const StyledRoot = styled(Box)(({ theme }) => ({
   right: theme.spacing(-115),
   padding: theme.spacing(1),
   color: theme.palette.common.white,
-  borderRadius: "6px",
-  border: "1px solid #e5e5e5"
+  borderRadius: '6px',
+  border: '1px solid #e5e5e5'
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   width: 28,
   height: 28,
   padding: 0,
-  color: "#ccc",
+  color: '#ccc',
   opacity: 0.48,
   // content: '"ea62"',
   '&:hover': { opacity: 1 },

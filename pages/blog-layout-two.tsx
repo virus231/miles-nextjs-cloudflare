@@ -1,8 +1,8 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {FooterVariant1} from "../app/components/Footer/FooterVariant1";
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
-import {_carouselsExample} from "./index";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {FooterVariant1} from '../app/components/Footer/FooterVariant1';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import {_carouselsExample} from './index';
 import Carousel from '../app/components/carousel';
 import {useRef } from 'react';
 
@@ -83,7 +83,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                             </a>
                                         </h2>
                                         <span className="posted-on">
-                        May 3rd, 2020, by{" "}
+                        May 3rd, 2020, by{' '}
                                             <a href="#" title="">
                           Admin
                         </a>
@@ -104,11 +104,11 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                         <span className="category">discuss</span>
                                         <h2>
                                             <a href="blog-single-layout2.html" title="">
-                                                Times &amp; The Focus - How to Control Its Smart{" "}
+                                                Times &amp; The Focus - How to Control Its Smart{' '}
                                             </a>
                                         </h2>
                                         <span className="posted-on">
-                        April 24th, 2020, by{" "}
+                        April 24th, 2020, by{' '}
                                             <a href="#" title="">
                           Admin
                         </a>
@@ -133,7 +133,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                             </a>
                                         </h2>
                                         <span className="posted-on">
-                                            April 22th, 2020, by{" "}
+                                            April 22th, 2020, by{' '}
                                             <a href="#" title="">
                                               Admin
                                             </a>
@@ -159,7 +159,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <span>by</span>{" "}
+                                                    <span>by</span>{' '}
                                                     <a href="#" title="">
                                                         Admin
                                                     </a>
@@ -189,7 +189,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <span>by</span>{" "}
+                                                    <span>by</span>{' '}
                                                     <a href="#" title="">
                                                         Admin
                                                     </a>
@@ -219,9 +219,9 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <span>by</span>{" "}
+                                                    <span>by</span>{' '}
                                                     <a href="#" title="">
-                                                        Andrew Robertson{" "}
+                                                        Andrew Robertson{' '}
                                                     </a>
                                                 </li>
                                                 <li>posted June 25th, 2020</li>
@@ -249,7 +249,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <span>by</span>{" "}
+                                                    <span>by</span>{' '}
                                                     <a href="#" title="">
                                                         Admin
                                                     </a>
@@ -258,7 +258,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                             </ul>
                                             <h2>
                                                 <a href="blog-single-layout2.html" title="">
-                                                    UI Inspiration: 20+ Creative Tab Bar Animations{" "}
+                                                    UI Inspiration: 20+ Creative Tab Bar Animations{' '}
                                                 </a>
                                             </h2>
                                             <p>
@@ -279,7 +279,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <span>by</span>{" "}
+                                                    <span>by</span>{' '}
                                                     <a href="#" title="">
                                                         Andrew Robertson
                                                     </a>
@@ -309,7 +309,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <span>by</span>{" "}
+                                                    <span>by</span>{' '}
                                                     <a href="#" title="">
                                                         Admin
                                                     </a>
@@ -340,7 +340,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <span>by</span>{" "}
+                                                    <span>by</span>{' '}
                                                     <a href="#" title="">
                                                         Admin
                                                     </a>
@@ -548,11 +548,11 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
             <FooterVariant1/>
 
         </>
-    )
-}
+    );
+};
 
 BlogLayoutTwo.getLayout = function getLayout(page: React.ReactElement) {
         return <Layout title="Home">{page}</Layout>;
     };
 
-export default BlogLayoutTwo
+export default BlogLayoutTwo;

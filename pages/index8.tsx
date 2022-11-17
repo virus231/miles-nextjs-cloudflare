@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1'
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
 const HomePage8: NextPageWithLayout = () => {
@@ -525,7 +525,7 @@ const HomePage8: NextPageWithLayout = () => {
                     <div className="square" />
                 </div>
             </div>
-            <section className="banner-sec" style={{ display: "none" }}>
+            <section className="banner-sec" style={{ display: 'none' }}>
                 <div className="section-bg promo-primary-bg">
                     <div className="inside" />
                 </div>
@@ -682,7 +682,7 @@ const HomePage8: NextPageWithLayout = () => {
                                     <div className="mile-project">
                                         <div
                                             className="project-thumb"
-                                            style={{ backgroundColor: "#78901b" }}
+                                            style={{ backgroundColor: '#78901b' }}
                                         >
                                             <img
                                                 src="/static/images/pic21.png"
@@ -702,7 +702,7 @@ const HomePage8: NextPageWithLayout = () => {
                                     <div className="mile-project">
                                         <div
                                             className="project-thumb"
-                                            style={{ backgroundColor: "#5169fb" }}
+                                            style={{ backgroundColor: '#5169fb' }}
                                         >
                                             <img
                                                 src="/static/images/pic22.png"
@@ -733,7 +733,7 @@ const HomePage8: NextPageWithLayout = () => {
                                     <div className="mile-project">
                                         <div
                                             className="project-thumb"
-                                            style={{ backgroundColor: "#f1445a" }}
+                                            style={{ backgroundColor: '#f1445a' }}
                                         >
                                             <img
                                                 src="/static/images/pic23.png"
@@ -953,7 +953,7 @@ const HomePage8: NextPageWithLayout = () => {
                                     <p>
                                         Meet our talented team of creatives, fun-lovers, and magic
                                         makers. Shall seas yielding a he, moveth said gathering under
-                                        all cattle were years fruit whose isn’t.{" "}
+                                        all cattle were years fruit whose isn’t.{' '}
                                     </p>
                                     <a href="32_team.html" title="" className="btn-default no-bg">
                                         Meet Our Team
@@ -1124,7 +1124,7 @@ const HomePage8: NextPageWithLayout = () => {
                                     <textarea
                                         className="form--control"
                                         id="message"
-                                        defaultValue={""}
+                                        defaultValue={''}
                                     />
                                     <label htmlFor="message">Your message here</label>
                                 </div>
@@ -1143,11 +1143,11 @@ const HomePage8: NextPageWithLayout = () => {
             <FooterVariant1/>
 
         </>
-    )
-}
+    );
+};
 
 HomePage8.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage8
+export default HomePage8;

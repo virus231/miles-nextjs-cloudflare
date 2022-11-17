@@ -1,5 +1,5 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
 
 
 const ComingSoon: NextPageWithLayout = () => {
@@ -80,11 +80,11 @@ const ComingSoon: NextPageWithLayout = () => {
             </section>
 
         </>
-    )
-}
+    );
+};
 
 ComingSoon.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Coming Soon">{page}</Layout>;
 };
 
-export default ComingSoon
+export default ComingSoon;

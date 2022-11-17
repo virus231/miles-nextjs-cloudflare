@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {FooterVariant1} from "../app/components/Footer/FooterVariant1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {FooterVariant1} from '../app/components/Footer/FooterVariant1';
 
 
 const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
@@ -536,7 +536,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
 											<div className="col-md-6 col-sm-6">
 												<div className="dd-tinfo">
 													<h3>team</h3>
-													<span>Daniel Tan - Designer</span>{" "}
+													<span>Daniel Tan - Designer</span>{' '}
 													<span>Naby Keita - Mobile Developer</span>
 												</div>
 											</div>
@@ -573,7 +573,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
 											<div className="pp-dt">
 												<h3>Enesto Valverde</h3>
 												<span>
-													Director of{" "}
+													Director of{' '}
 													<a href="#" title="">
 														byzano.co
 													</a>
@@ -627,7 +627,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
 											<div className="col-md-6 col-sm-6">
 												<div className="dd-tinfo">
 													<h3>team</h3>
-													<span>Daniel Tan - Designer</span>{" "}
+													<span>Daniel Tan - Designer</span>{' '}
 													<span>Naby Keita - Mobile Developer</span>
 												</div>
 											</div>
@@ -664,7 +664,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
 											<div className="pp-dt">
 												<h3>Enesto Valverde</h3>
 												<span>
-													Director of{" "}
+													Director of{' '}
 													<a href="#" title="">
 														byzano.co
 													</a>
@@ -718,7 +718,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
 											<div className="col-md-6 col-sm-6">
 												<div className="dd-tinfo">
 													<h3>team</h3>
-													<span>Daniel Tan - Designer</span>{" "}
+													<span>Daniel Tan - Designer</span>{' '}
 													<span>Naby Keita - Mobile Developer</span>
 												</div>
 											</div>
@@ -755,7 +755,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
 											<div className="pp-dt">
 												<h3>Enesto Valverde</h3>
 												<span>
-													Director of{" "}
+													Director of{' '}
 													<a href="#" title="">
 														byzano.co
 													</a>
@@ -901,7 +901,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
 											aria-controls="strategy-tab"
 											aria-selected="true"
 										>
-											Strategy{" "}
+											Strategy{' '}
 										</a>
 									</li>
 									<li className="nav-item">
@@ -1093,11 +1093,11 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
 			<FooterVariant1/>
 
 		</>
-	)
-}
+	);
+};
 
 PortfolioSingleLayoutOnePage.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Portfolio Single Layout">{page}</Layout>;
 };
 
-export default PortfolioSingleLayoutOnePage
+export default PortfolioSingleLayoutOnePage;

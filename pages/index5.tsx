@@ -1,5 +1,5 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
 
 
 const HomePage5: NextPageWithLayout = () => {
@@ -724,7 +724,7 @@ const HomePage5: NextPageWithLayout = () => {
 							data-wow-delay="0ms"
 						>
 							<h2>
-								I’m Justina Carmo I love <b>travel</b>, <span>photography</span> and{" "}
+								I’m Justina Carmo I love <b>travel</b>, <span>photography</span> and{' '}
 								<b>writting</b>
 							</h2>
 							<p>
@@ -1069,31 +1069,31 @@ const HomePage5: NextPageWithLayout = () => {
 												<ul>
 													<li>
 														<a href="#" title="">
-															all{" "}
+															all{' '}
 														</a>
 														<span>(98)</span>
 													</li>
 													<li>
 														<a href="#" title="">
-															Travel{" "}
+															Travel{' '}
 														</a>
 														<span>(54)</span>
 													</li>
 													<li>
 														<a href="#" title="">
-															lifestyle{" "}
+															lifestyle{' '}
 														</a>
 														<span>(9)</span>
 													</li>
 													<li>
 														<a href="#" title="">
-															design{" "}
+															design{' '}
 														</a>
 														<span>(34)</span>
 													</li>
 													<li>
 														<a href="#" title="">
-															other{" "}
+															other{' '}
 														</a>
 														<span>(12)</span>
 													</li>
@@ -1222,7 +1222,7 @@ const HomePage5: NextPageWithLayout = () => {
 									<ul>
 										<li>
 											<a href="#" title="">
-												#wordpress{" "}
+												#wordpress{' '}
 											</a>
 										</li>
 										<li>
@@ -1242,22 +1242,22 @@ const HomePage5: NextPageWithLayout = () => {
 										</li>
 										<li>
 											<a href="#" title="">
-												#inspiration{" "}
+												#inspiration{' '}
 											</a>
 										</li>
 										<li>
 											<a href="#" title="">
-												#trending{" "}
+												#trending{' '}
 											</a>
 										</li>
 										<li>
 											<a href="#" title="">
-												#lifestyle{" "}
+												#lifestyle{' '}
 											</a>
 										</li>
 										<li>
 											<a href="#" title="">
-												#design{" "}
+												#design{' '}
 											</a>
 										</li>
 									</ul>
@@ -1267,7 +1267,7 @@ const HomePage5: NextPageWithLayout = () => {
 								<div className="widget widget-contact">
 									<h3 className="widget-title">get in touch</h3>
 									<h2>
-										116 Fairground Rd, FL 32904, USA{" "}
+										116 Fairground Rd, FL 32904, USA{' '}
 										<a href="mailto:example@example.com" title="">
 											hello@justina.com
 										</a>
@@ -1345,11 +1345,11 @@ const HomePage5: NextPageWithLayout = () => {
 				</div>
 			</footer>
 		</>
-	)
-}
+	);
+};
 
 HomePage5.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage5
+export default HomePage5;

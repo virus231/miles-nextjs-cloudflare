@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 
 
 const ContactPage: NextPageWithLayout = () => {
@@ -30,7 +30,7 @@ const ContactPage: NextPageWithLayout = () => {
                                 State.
                             </p>
                             <span className="mail">
-              Email:{" "}
+              Email:{' '}
                                 <a href="mailto:example@example.com" title="">
                 info@milesstudio.co
               </a>
@@ -134,7 +134,7 @@ const ContactPage: NextPageWithLayout = () => {
                 <textarea
                     className="form--control"
                     id="message"
-                    defaultValue={""}
+                    defaultValue={''}
                 />
                                     <label htmlFor="message">Your message here</label>
                                 </div>
@@ -197,7 +197,7 @@ const ContactPage: NextPageWithLayout = () => {
                                     >
                                         <span>get in touch</span>
                                         <h3>
-                                            116 Fairground Rd, FL 32904, USA{" "}
+                                            116 Fairground Rd, FL 32904, USA{' '}
                                             <a href="#" title="">
                                                 hello@miles.co
                                             </a>
@@ -274,11 +274,11 @@ const ContactPage: NextPageWithLayout = () => {
             </footer>
 
         </>
-    )
-}
+    );
+};
 
 ContactPage.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Contact">{page}</Layout>;
 };
 
-export default ContactPage
+export default ContactPage;

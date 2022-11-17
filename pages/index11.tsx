@@ -1,13 +1,13 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {BlogPosts} from "../app/components/BlogPosts";
-import { RightMenu } from "../app/components/RightMenu";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {BlogPosts} from '../app/components/BlogPosts';
+import { RightMenu } from '../app/components/RightMenu';
 import { useRef, useState } from 'react';
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
-import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
-import { useTheme } from "@mui/material/styles";
-import { carouselsExample } from "./index";
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { useTheme } from '@mui/material/styles';
+import { carouselsExample } from './index';
 import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
 
 
@@ -23,7 +23,7 @@ const HomePage11: NextPageWithLayout = () => {
         centerMode: false,
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -36,7 +36,7 @@ const HomePage11: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -58,7 +58,7 @@ const HomePage11: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -80,7 +80,7 @@ const HomePage11: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -507,7 +507,7 @@ const HomePage11: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={820} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -534,7 +534,7 @@ const HomePage11: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={643} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -559,7 +559,7 @@ const HomePage11: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={1875} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -747,31 +747,31 @@ const HomePage11: NextPageWithLayout = () => {
                             topSpace={50}
                             leftButtonProps={{
                                 sx: {
-                                    width: "3.5rem",
-                                    height: "3.5rem",
-                                    "&:hover": {
-                                        "svg": {
-                                            color: "#fff"
+                                    width: '3.5rem',
+                                    height: '3.5rem',
+                                    '&:hover': {
+                                        'svg': {
+                                            color: '#fff'
                                         },
-                                        backgroundColor: "#4c0ee9"
+                                        backgroundColor: '#4c0ee9'
                                     }
                                 }
                             }}
                             rightButtonProps={{
                                 sx: {
-                                    width: "3.5rem",
-                                    height: "3.5rem",
-                                    "&:hover": {
-                                        "svg": {
-                                            color: "#fff"
+                                    width: '3.5rem',
+                                    height: '3.5rem',
+                                    '&:hover': {
+                                        'svg': {
+                                            color: '#fff'
                                         },
-                                        backgroundColor: "#4c0ee9"
+                                        backgroundColor: '#4c0ee9'
                                     }
                                 }
                             }}
                             sx={{
                                 zIndex: 9,
-                                color: "#ccc",
+                                color: '#ccc',
                             }}
                         >
                             <Carousel ref={carouselRef} {...carouselSettings2}>
@@ -841,34 +841,34 @@ const HomePage11: NextPageWithLayout = () => {
                                 onPrevious={handlePrev}
                                 sx={{
                                     zIndex: 9,
-                                    color: "#ccc",
+                                    color: '#ccc',
                                 }}
                                 topSpace={60}
                                 leftButtonProps={{
                                     sx: {
-                                        width: "3.5rem",
-                                        height: "3.5rem",
-                                        borderRadius: "10px",
-                                        "&:hover": {
-                                            "svg": {
-                                                color: "#fff"
+                                        width: '3.5rem',
+                                        height: '3.5rem',
+                                        borderRadius: '10px',
+                                        '&:hover': {
+                                            'svg': {
+                                                color: '#fff'
                                             },
-                                            borderRadius: "10px",
-                                            backgroundColor: "#4c0ee9"
+                                            borderRadius: '10px',
+                                            backgroundColor: '#4c0ee9'
                                         }
                                     }
                                 }}
                                 rightButtonProps={{
                                     sx: {
-                                        width: "3.5rem",
-                                        height: "3.5rem",
-                                        borderRadius: "10px",
-                                        "&:hover": {
-                                            "svg": {
-                                                color: "#fff"
+                                        width: '3.5rem',
+                                        height: '3.5rem',
+                                        borderRadius: '10px',
+                                        '&:hover': {
+                                            'svg': {
+                                                color: '#fff'
                                             },
-                                            borderRadius: "10px",
-                                            backgroundColor: "#4c0ee9"
+                                            borderRadius: '10px',
+                                            backgroundColor: '#4c0ee9'
                                         }
                                     }
                                 }}
@@ -925,7 +925,7 @@ const HomePage11: NextPageWithLayout = () => {
 											placeholder=""
 										/>
 										<label htmlFor="name">
-											Full Name <span>*</span>{" "}
+											Full Name <span>*</span>{' '}
 										</label>
 									</div>
 								</div>
@@ -960,7 +960,7 @@ const HomePage11: NextPageWithLayout = () => {
 										<textarea
 											className="form--control"
 											id="message"
-											defaultValue={""}
+											defaultValue={''}
 										/>
 										<label htmlFor="message">Your message here</label>
 									</div>
@@ -1176,11 +1176,11 @@ const HomePage11: NextPageWithLayout = () => {
 			</footer>
 
 		</>
-	)
-}
+	);
+};
 
 HomePage11.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage11
+export default HomePage11;

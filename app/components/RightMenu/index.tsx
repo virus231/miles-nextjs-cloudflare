@@ -1,10 +1,10 @@
-import {NextLink} from "../BaseNextLink";
-import styles from "./RightMenu.module.scss"
-import classNames from "classnames";
-import { rightMenu } from "../../_mock/menu-config";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import { activeLink } from "../../utils/functions";
+import {NextLink} from '../BaseNextLink';
+import styles from './RightMenu.module.scss';
+import classNames from 'classnames';
+import { rightMenu } from '../../_mock/menu-config';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { activeLink } from '../../utils/functions';
 
 
 type Props = {
@@ -18,7 +18,7 @@ export const RightMenu = ({isOpen = false, closeMenu}: Props) => {
 
 
     const [openCollapse, setOpenCollapse] = useState({
-        name: "",
+        name: '',
         isOpen: false
     });
 
@@ -26,16 +26,16 @@ export const RightMenu = ({isOpen = false, closeMenu}: Props) => {
         setOpenCollapse({
             name: menu.name,
             isOpen: !openCollapse.isOpen
-        })
-    } 
+        });
+    }; 
 
     const clickOnItem = () => {
         closeMenu();
         setOpenCollapse({
-            name: "",
+            name: '',
             isOpen: false
-        })
-    }
+        });
+    };
 
 
     return <div className={classNames(styles.responsiveMenu, {
@@ -65,7 +65,7 @@ export const RightMenu = ({isOpen = false, closeMenu}: Props) => {
                             {menu.name}
                         </div>
                         <ul style={{
-                            display: openCollapse.name === menu.name && openCollapse.isOpen ? "block" : "none",
+                            display: openCollapse.name === menu.name && openCollapse.isOpen ? 'block' : 'none',
                             // transform: "translateY(-3rem)",
                             // transition: "all 0.5s ease-in-out",
                             // transitionDelay: "0.4s",
@@ -73,7 +73,7 @@ export const RightMenu = ({isOpen = false, closeMenu}: Props) => {
                             {menu.children.map((child, index) => (
                                 <li key={child.name} onClick={clickOnItem}>
                                     <NextLink href={child.href} style={{
-                                        color: activeLink(pathname, child.href) ? "#f59e31" : ""
+                                        color: activeLink(pathname, child.href) ? '#f59e31' : ''
                                     }}>
                                         {child.name}
                                     </NextLink>
@@ -84,6 +84,6 @@ export const RightMenu = ({isOpen = false, closeMenu}: Props) => {
                 ))
             }
         </ul>
-    </div>
+    </div>;
 
-}
+};

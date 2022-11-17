@@ -1,14 +1,14 @@
-import { Layout } from "../app/components/Layout"
-import { Testi } from "../app/components/Testi";
-import { NextPageWithLayout } from "./_app"
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
-import { carouselsExample } from "./index";
-import Carousel, { CarouselArrows } from "../app/components/carousel";
-import { useEffect, useRef, useState } from "react";
-import Box from "@mui/material/Box/Box";
-import { RightMenu } from "../app/components/RightMenu";
-import { Burger } from "../app/components/Navigation/Burger";
+import { Layout } from '../app/components/Layout';
+import { Testi } from '../app/components/Testi';
+import { NextPageWithLayout } from './_app';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+import { carouselsExample } from './index';
+import Carousel, { CarouselArrows } from '../app/components/carousel';
+import { useEffect, useRef, useState } from 'react';
+import Box from '@mui/material/Box/Box';
+import { RightMenu } from '../app/components/RightMenu';
+import { Burger } from '../app/components/Navigation/Burger';
 
 const HomePage3: NextPageWithLayout = () => {
     const [open, setOpen] = useState<boolean>(false);
@@ -17,8 +17,8 @@ const HomePage3: NextPageWithLayout = () => {
 
 
     useEffect(() => {
-        console.log(window.scrollY)
-    }, [])
+        console.log(window.scrollY);
+    }, []);
 
     const carouselSettings = {
         slidesToShow: 2,
@@ -258,7 +258,7 @@ const HomePage3: NextPageWithLayout = () => {
                                     <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}>
                                         {({isVisible}: { isVisible: boolean }) => (
                                             <h2 className="count">
-                                                {isVisible ? <CountUp end={10}/> : "0"}
+                                                {isVisible ? <CountUp end={10}/> : '0'}
                                             </h2>
                                         )}
                                     </VisibilitySensor>
@@ -271,7 +271,7 @@ const HomePage3: NextPageWithLayout = () => {
                                     <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}>
                                         {({isVisible}: { isVisible: boolean }) => (
                                             <h2 className="count">
-                                                {isVisible ? <CountUp end={102}/> : "0"}
+                                                {isVisible ? <CountUp end={102}/> : '0'}
                                             </h2>
                                         )}
                                     </VisibilitySensor>
@@ -284,7 +284,7 @@ const HomePage3: NextPageWithLayout = () => {
                                     <VisibilitySensor scrollCheck partialVisibility offset={{bottom: 10}}>
                                         {({isVisible}: { isVisible: boolean }) => (
                                             <h2 className="count">
-                                                {isVisible ? <CountUp end={285}/> : "0"}
+                                                {isVisible ? <CountUp end={285}/> : '0'}
                                             </h2>
                                         )}
                                     </VisibilitySensor>
@@ -310,21 +310,21 @@ const HomePage3: NextPageWithLayout = () => {
                             <div className="col-6 d-flex justify-content-end">
                                 <CarouselArrows
                                     sx={{
-                                        color: "#ccc",
+                                        color: '#ccc',
                                     }}
                                     leftButtonProps={{
                                         sx: {
-                                            "svg": {
-                                                width: "32px",
-                                                height: "32px",
+                                            'svg': {
+                                                width: '32px',
+                                                height: '32px',
                                             }
                                         }
                                     }}
                                     rightButtonProps={{
                                         sx: {
-                                            "svg": {
-                                                width: "32px",
-                                                height: "32px",
+                                            'svg': {
+                                                width: '32px',
+                                                height: '32px',
                                             }
                                         }
                                     }}
@@ -470,8 +470,8 @@ const HomePage3: NextPageWithLayout = () => {
                     </div>
                 </footer>
             </>
-    )
-}
+    );
+};
 
 HomePage3.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout title="Home">{page}</Layout>;

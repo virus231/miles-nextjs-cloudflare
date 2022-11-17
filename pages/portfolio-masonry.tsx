@@ -1,10 +1,10 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {FooterVariant1} from "../app/components/Footer/FooterVariant1";
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import classNames from 'classnames';
+import { NextLink } from '../app/components/BaseNextLink';
+import styles from '../styles/Home.module.scss';
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {FooterVariant1} from '../app/components/Footer/FooterVariant1';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 
 
 const PortfolioMasonry: NextPageWithLayout = () => {
@@ -28,7 +28,7 @@ const PortfolioMasonry: NextPageWithLayout = () => {
                             >
                                 <li>
                                     <a data-option-value="*" className="selected">
-                                        All Projects{" "}
+                                        All Projects{' '}
                                     </a>
                                 </li>
                                 <li>
@@ -117,8 +117,8 @@ const PortfolioMasonry: NextPageWithLayout = () => {
             </section>
             <FooterVariant1/>
         </>
-    )
-}
+    );
+};
 
 PortfolioMasonry.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Home">{page}</Layout>;

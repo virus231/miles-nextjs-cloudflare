@@ -1,19 +1,19 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import { Navigation } from '../app/components/Navigation'
-import { Footer } from '../app/components/Footer'
-import { RightMenu } from "../app/components/RightMenu";
-import { useRef, useState } from 'react'
-import { Burger } from "../app/components/Navigation/Burger";
-import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
-import { carouselsExample } from "./index";
-import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
-import { useTheme } from "@mui/material/styles";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import classNames from 'classnames';
+import { NextLink } from '../app/components/BaseNextLink';
+import styles from '../styles/Home.module.scss';
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import { Navigation } from '../app/components/Navigation';
+import { Footer } from '../app/components/Footer';
+import { RightMenu } from '../app/components/RightMenu';
+import { useRef, useState } from 'react';
+import { Burger } from '../app/components/Navigation/Burger';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { carouselsExample } from './index';
+import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
+import { useTheme } from '@mui/material/styles';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 const HomePage12: NextPageWithLayout = () => {
@@ -27,10 +27,10 @@ const HomePage12: NextPageWithLayout = () => {
         dots: false,
         arrows: false,
         centerMode: false,
-        rtl: Boolean(theme.direction === "rtl"),
+        rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -43,7 +43,7 @@ const HomePage12: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -300,7 +300,7 @@ const HomePage12: NextPageWithLayout = () => {
 												</a>
 												<span className="ps-txt">
 													If you're hurry, quick call for us. Our supporters alway
-													24/7{" "}
+													24/7{' '}
 												</span>
 												<div className="wd-inz">
 													<span className="cinon">
@@ -409,7 +409,7 @@ const HomePage12: NextPageWithLayout = () => {
                                         onPrevious={handlePrev}
                                         sx={{
                                             zIndex: 9,
-                                            color: "#ccc",
+                                            color: '#ccc',
                                         }}
                                     >
                                         <Carousel ref={carouselRef} {...carouselSettings}>
@@ -440,7 +440,7 @@ const HomePage12: NextPageWithLayout = () => {
                                                         {isVisible ? (
                                                             <CountUp end={10} />
                                                         ) : (
-                                                            "0"
+                                                            '0'
                                                         )}
                                                     </h2>
                                                 )}
@@ -465,7 +465,7 @@ const HomePage12: NextPageWithLayout = () => {
                                                         {isVisible ? (
                                                             <CountUp end={102} />
                                                         ) : (
-                                                            "0"
+                                                            '0'
                                                         )}
                                                     </h2>
                                                 )}
@@ -489,7 +489,7 @@ const HomePage12: NextPageWithLayout = () => {
                                                         {isVisible ? (
                                                             <CountUp end={285} />
                                                         ) : (
-                                                            "0"
+                                                            '0'
                                                         )}
                                                     </h2>
                                                 )}
@@ -749,7 +749,7 @@ const HomePage12: NextPageWithLayout = () => {
 												United State.
 											</p>
 											<span className="mail">
-												Email:{" "}
+												Email:{' '}
 												<a href="mailto:example@example.com" title="">
 													info@milesstudio.co
 												</a>
@@ -811,7 +811,7 @@ const HomePage12: NextPageWithLayout = () => {
 												<textarea
 													name="message"
 													placeholder="Your Message"
-													defaultValue={""}
+													defaultValue={''}
 												/>
 												<button type="submit" className="btn-default-v12">
 													Send Message
@@ -849,11 +849,11 @@ const HomePage12: NextPageWithLayout = () => {
 			</div>
 
 		</>
-	)
-}
+	);
+};
 
 HomePage12.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage12
+export default HomePage12;

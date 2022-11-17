@@ -1,6 +1,6 @@
-import classNames from "classnames"
-import { NextLink } from "../BaseNextLink"
-import styles from "./Footer.module.scss"
+import classNames from 'classnames';
+import { NextLink } from '../BaseNextLink';
+import styles from './Footer.module.scss';
 
 export const Footer = () => {
 
@@ -33,7 +33,7 @@ export const Footer = () => {
                         </div>
                     </div>
                     <div className="col-lg-4">
-                        <div className={classNames(styles.getTouchTxt, "mw-100 wow fadeInRight")}
+                        <div className={classNames(styles.getTouchTxt, 'mw-100 wow fadeInRight')}
                              data-wow-duration="1000ms"
                              data-wow-delay="0ms">
                             <h5>Contact</h5>
@@ -81,5 +81,5 @@ export const Footer = () => {
                 </div>
             </div>
         </div>
-    </footer>
-}
+    </footer>;
+};

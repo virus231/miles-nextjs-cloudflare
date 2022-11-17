@@ -1,14 +1,14 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import { RightMenu } from "../app/components/RightMenu";
-import { Burger } from "../app/components/Navigation/Burger";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import { RightMenu } from '../app/components/RightMenu';
+import { Burger } from '../app/components/Navigation/Burger';
 import { useRef, useState } from 'react';
-import { carouselsExample } from "./index";
-import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
-import Carousel, { CarouselArrowIndex, CarouselArrows, CarouselDots } from "../app/components/carousel";
-import { useTheme } from "@mui/material/styles";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import { carouselsExample } from './index';
+import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
+import Carousel, { CarouselArrowIndex, CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { useTheme } from '@mui/material/styles';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 const HomePage6: NextPageWithLayout = () => {
@@ -32,7 +32,7 @@ const HomePage6: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -219,7 +219,7 @@ const HomePage6: NextPageWithLayout = () => {
 								<div className="banner-btm-info">
 									<p>
 										If you are hurry, quick call for us. Our supporters alway 24/7
-										and will help you asap{" "}
+										and will help you asap{' '}
 									</p>
 									<div className="btm-hd-info">
 										<span className="bt-icon">
@@ -305,7 +305,7 @@ const HomePage6: NextPageWithLayout = () => {
                         <div>
                             <CarouselArrowIndex
                                 sx={{
-                                    position: "initial",
+                                    position: 'initial',
                                 }}
                                 index={currentIndex}
                                 total={carouselsExample.length}
@@ -362,7 +362,7 @@ const HomePage6: NextPageWithLayout = () => {
                                                 {isVisible ? (
                                                     <CountUp end={820} />
                                                 ) : (
-                                                    "0"
+                                                    '0'
                                                 )}
                                             </h2>
                                         )}
@@ -389,7 +389,7 @@ const HomePage6: NextPageWithLayout = () => {
                                                 {isVisible ? (
                                                     <CountUp end={643} />
                                                 ) : (
-                                                    "0"
+                                                    '0'
                                                 )}
                                             </h2>
                                         )}
@@ -414,7 +414,7 @@ const HomePage6: NextPageWithLayout = () => {
                                                 {isVisible ? (
                                                     <CountUp end={1875} />
                                                 ) : (
-                                                    "0"
+                                                    '0'
                                                 )}
                                             </h2>
                                         )}
@@ -786,7 +786,7 @@ const HomePage6: NextPageWithLayout = () => {
 									<h2>
 										Start by
 										<a href="#" title="">
-											{" "}
+											{' '}
 											saying hi
 										</a>
 									</h2>
@@ -871,11 +871,11 @@ const HomePage6: NextPageWithLayout = () => {
 				</div>
 			</footer>
 		</>
-	)
-}
+	);
+};
 
 HomePage6.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage6
+export default HomePage6;

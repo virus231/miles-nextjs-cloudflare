@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Tab, Tabs } from "react-bootstrap";
-import { TabContent } from "./TabContent";
+import { useState } from 'react';
+import { Tab, Tabs } from 'react-bootstrap';
+import { TabContent } from './TabContent';
 
 type Props = {
     tabItems: {
@@ -10,14 +10,14 @@ type Props = {
 };
 
 export const TabRoot = (props: Props) => {
-    const [key, setKey] = useState<string>("all");
+    const [key, setKey] = useState<string>('all');
 
     const { tabItems } = props;
 
     return (
         <Tabs
             activeKey={key}
-            onSelect={k => setKey(k || "")}
+            onSelect={k => setKey(k || '')}
             className="nav nav-tabs"
             id="myTab"
         >

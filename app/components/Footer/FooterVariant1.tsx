@@ -38,7 +38,7 @@ export const FooterVariant1 = () => {
                             <div className="get-touch-txt">
                                 <span>get in touch</span>
                                 <h3>
-                                    116 Fairground Rd, FL 32904, USA{" "}
+                                    116 Fairground Rd, FL 32904, USA{' '}
                                     <a href="#" title="">
                                         hello@miles.co
                                     </a>
@@ -112,5 +112,5 @@ export const FooterVariant1 = () => {
                 </div>
             </div>
         </div>
-    </footer>
-}
+    </footer>;
+};

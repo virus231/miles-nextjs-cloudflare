@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { NextLink } from "../BaseNextLink";
-import { RightMenu } from "../RightMenu"
-import { Burger } from "./Burger";
+import { useState } from 'react';
+import { NextLink } from '../BaseNextLink';
+import { RightMenu } from '../RightMenu';
+import { Burger } from './Burger';
 
 export const MainNavigation = () => {
     const [open, setOpen] = useState<boolean>(false);
@@ -28,5 +28,5 @@ export const MainNavigation = () => {
 
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
         </>
-    )
-}
+    );
+};

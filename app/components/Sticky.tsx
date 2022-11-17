@@ -42,4 +42,4 @@ const  Sticky: React.FunctionComponent<StickyProps> = (child, top) => {
   );
 };
 
-export default Sticky
+export default Sticky;

@@ -1,13 +1,13 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import { carouselsExample } from "./index";
-import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
-import { RightMenu } from "../app/components/RightMenu";
-import { Burger } from "../app/components/Navigation/Burger";
-import { useRef, useState } from 'react'
-import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import { carouselsExample } from './index';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { RightMenu } from '../app/components/RightMenu';
+import { Burger } from '../app/components/Navigation/Burger';
+import { useRef, useState } from 'react';
+import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 const HomePage10: NextPageWithLayout = () => {
@@ -21,7 +21,7 @@ const HomePage10: NextPageWithLayout = () => {
         centerMode: false,
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -34,7 +34,7 @@ const HomePage10: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -46,7 +46,7 @@ const HomePage10: NextPageWithLayout = () => {
         centerMode: false,
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -59,7 +59,7 @@ const HomePage10: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -397,7 +397,7 @@ const HomePage10: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={100} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -424,7 +424,7 @@ const HomePage10: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={158} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -449,7 +449,7 @@ const HomePage10: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={3875} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -563,10 +563,10 @@ const HomePage10: NextPageWithLayout = () => {
 					</div>
 					<div className="text-center pl-btm">
 						<p>
-							You have a large team?{" "}
+							You have a large team?{' '}
 							<a href="#" title="">
 								Contact us
-							</a>{" "}
+							</a>{' '}
 							for information about more enterprise options
 						</p>
 					</div>
@@ -591,33 +591,33 @@ const HomePage10: NextPageWithLayout = () => {
                                 onPrevious={handlePrev}
                                 sx={{
                                     zIndex: 9,
-                                    color: "#ccc",
+                                    color: '#ccc',
                                 }}
                                 leftButtonProps={{
                                     sx: {
-                                        width: "3.5rem",
-                                        height: "3.5rem",
-                                        borderRadius: "10px",
-                                        "&:hover": {
-                                            "svg": {
-                                                color: "#fff"
+                                        width: '3.5rem',
+                                        height: '3.5rem',
+                                        borderRadius: '10px',
+                                        '&:hover': {
+                                            'svg': {
+                                                color: '#fff'
                                             },
-                                            borderRadius: "10px",
-                                            backgroundColor: "#4c0ee9"
+                                            borderRadius: '10px',
+                                            backgroundColor: '#4c0ee9'
                                         }
                                     }
                                 }}
                                 rightButtonProps={{
                                     sx: {
-                                        width: "3.5rem",
-                                        height: "3.5rem",
-                                        borderRadius: "10px",
-                                        "&:hover": {
-                                            "svg": {
-                                                color: "#fff"
+                                        width: '3.5rem',
+                                        height: '3.5rem',
+                                        borderRadius: '10px',
+                                        '&:hover': {
+                                            'svg': {
+                                                color: '#fff'
                                             },
-                                            borderRadius: "10px",
-                                            backgroundColor: "#4c0ee9"
+                                            borderRadius: '10px',
+                                            backgroundColor: '#4c0ee9'
                                         }
                                     }
                                 }}
@@ -712,7 +712,7 @@ const HomePage10: NextPageWithLayout = () => {
 										bandwidth alpha pivot analytics supply.
 									</p>
 									<span className="posted-on">
-										May 3rd, 2020, by{" "}
+										May 3rd, 2020, by{' '}
 										<a href="#" title="">
 											Admin
 										</a>
@@ -733,7 +733,7 @@ const HomePage10: NextPageWithLayout = () => {
 									<span className="category">discuss</span>
 									<h2>
 										<a href="single-layout1.html" title="">
-											Times &amp; The Focus - How to Control Its Smart{" "}
+											Times &amp; The Focus - How to Control Its Smart{' '}
 										</a>
 									</h2>
 									<p>
@@ -741,7 +741,7 @@ const HomePage10: NextPageWithLayout = () => {
 										bandwidth alpha pivot analytics supply.
 									</p>
 									<span className="posted-on">
-										April 24th, 2020, by{" "}
+										April 24th, 2020, by{' '}
 										<a href="#" title="">
 											Admin
 										</a>
@@ -770,7 +770,7 @@ const HomePage10: NextPageWithLayout = () => {
 										bandwidth alpha pivot analytics supply.
 									</p>
 									<span className="posted-on">
-										April 22th, 2020, by{" "}
+										April 22th, 2020, by{' '}
 										<a href="#" title="">
 											Admin
 										</a>
@@ -795,7 +795,7 @@ const HomePage10: NextPageWithLayout = () => {
 									<h2>
 										Start by
 										<a href="#" title="">
-											{" "}
+											{' '}
 											saying hi
 										</a>
 									</h2>
@@ -881,11 +881,11 @@ const HomePage10: NextPageWithLayout = () => {
 			</footer>
 
 		</>
-	)
-}
+	);
+};
 
 HomePage10.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage10
+export default HomePage10;

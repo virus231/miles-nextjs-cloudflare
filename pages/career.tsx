@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 
 
 const Career: NextPageWithLayout = () => {
@@ -23,7 +23,7 @@ const Career: NextPageWithLayout = () => {
                             >
                                 <li>
                                     <a data-option-value="*" className="selected">
-                                        All Jobs{" "}
+                                        All Jobs{' '}
                                     </a>
                                 </li>
                                 <li>
@@ -287,11 +287,11 @@ const Career: NextPageWithLayout = () => {
                 </div>
             </footer>
         </>
-    )
-}
+    );
+};
 
 Career.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Career">{page}</Layout>;
 };
 
-export default Career
+export default Career;

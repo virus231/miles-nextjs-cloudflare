@@ -1,9 +1,9 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {BlogPosts} from "../app/components/BlogPosts";
+import classNames from 'classnames';
+import { NextLink } from '../app/components/BaseNextLink';
+import styles from '../styles/Home.module.scss';
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {BlogPosts} from '../app/components/BlogPosts';
 
 
 const HomePage9: NextPageWithLayout = () => {
@@ -1281,11 +1281,11 @@ const HomePage9: NextPageWithLayout = () => {
 			</footer>
 
 		</>
-	)
-}
+	);
+};
 
 HomePage9.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage9
+export default HomePage9;

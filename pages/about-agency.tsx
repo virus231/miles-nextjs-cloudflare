@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
@@ -173,7 +173,7 @@ return (
                     <p>
                         Meet our talented team of creatives, fun-lovers, and magic makers.
                         Shall seas yielding a he, moveth said gathering under all cattle
-                        were years fruit whose isn’t.{" "}
+                        were years fruit whose isn’t.{' '}
                     </p>
                 </div>
                 <div className="row ag-teams">
@@ -332,9 +332,9 @@ return (
                     data-wow-delay="0ms"
                 >
                     <h2>
-                        Let’s make something amazing together{" "}
+                        Let’s make something amazing together{' '}
                         <strong>
-                            Start by{" "}
+                            Start by{' '}
                             <a href="contact.tsx" title="">
                                 saying hi
                             </a>
@@ -346,11 +346,11 @@ return (
 
         <FooterVariant1/>
     </>
-    )
-}
+    );
+};
 
 AboutAgency.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="About Agency">{page}</Layout>;
 };
 
-export default AboutAgency
+export default AboutAgency;

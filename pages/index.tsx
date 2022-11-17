@@ -1,14 +1,14 @@
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
-import { ReactElement } from "react";
-import { NextPageWithLayout } from "./_app";
-import { Layout } from "../app/components/Layout";
-import { Navigation } from "../app/components/Navigation";
-import { Footer } from "../app/components/Footer";
-import { Testi } from "../app/components/Testi";
-import { KeepConnected } from "../app/components/KeepConnected";
-import { NextLink } from "../app/components/BaseNextLink";
-import { TabRoot } from "../app/components/Tabs/TabRoot";
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
+import { ReactElement } from 'react';
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import { Navigation } from '../app/components/Navigation';
+import { Footer } from '../app/components/Footer';
+import { Testi } from '../app/components/Testi';
+import { KeepConnected } from '../app/components/KeepConnected';
+import { NextLink } from '../app/components/BaseNextLink';
+import { TabRoot } from '../app/components/Tabs/TabRoot';
 
 // const _carouselsExample = [...Array(5)].map((_, index) => ({
 //     id: index.toString(),
@@ -19,34 +19,34 @@ import { TabRoot } from "../app/components/Tabs/TabRoot";
 
 export const carouselsExample = [
     {
-        id: "1",
-        title: "123",
-        image: "/static/images/project1.jpg",
-        description: "Description",
+        id: '1',
+        title: '123',
+        image: '/static/images/project1.jpg',
+        description: 'Description',
     },
     {
-        id: "2",
-        title: "123",
-        image: "/static/images/project2.jpg",
-        description: "Description",
+        id: '2',
+        title: '123',
+        image: '/static/images/project2.jpg',
+        description: 'Description',
     },
     {
-        id: "3",
-        title: "123",
-        image: "/static/images/project3.jpg",
-        description: "Description",
+        id: '3',
+        title: '123',
+        image: '/static/images/project3.jpg',
+        description: 'Description',
     },
     {
-        id: "18",
-        title: "123",
-        image: "/static/images/project3.jpg",
-        description: "Description",
+        id: '18',
+        title: '123',
+        image: '/static/images/project3.jpg',
+        description: 'Description',
     },
     {
-        id: "19",
-        title: "123",
-        image: "/static/images/project1.jpg",
-        description: "Description",
+        id: '19',
+        title: '123',
+        image: '/static/images/project1.jpg',
+        description: 'Description',
     },
     // {
     //     id: "99",
@@ -64,28 +64,28 @@ export const carouselsExample = [
 
 const tabItems = [
     {
-        id: "1",
-        title: "all",
+        id: '1',
+        title: 'all',
     },
     {
-        id: "2",
-        title: "Website seo",
+        id: '2',
+        title: 'Website seo',
     },
     {
-        id: "3",
-        title: "fb/gg ads",
+        id: '3',
+        title: 'fb/gg ads',
     },
     {
-        id: "4",
-        title: "email marketing",
+        id: '4',
+        title: 'email marketing',
     },
     {
-        id: "5",
-        title: "web design",
+        id: '5',
+        title: 'web design',
     },
     {
-        id: "6",
-        title: "video viral",
+        id: '6',
+        title: 'video viral',
     },
 ];
 
@@ -327,7 +327,7 @@ const HomePage: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={100} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -354,7 +354,7 @@ const HomePage: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={250} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -378,7 +378,7 @@ const HomePage: NextPageWithLayout = () => {
                                             {isVisible ? (
                                                 <CountUp end={3875} />
                                             ) : (
-                                                "0"
+                                                '0'
                                             )}
                                         </h2>
                                     )}
@@ -636,11 +636,11 @@ const HomePage: NextPageWithLayout = () => {
                                         </h2>
                                         <ul className="meta2">
                                             <li>
-                                                <i className="lni lni-comments" />{" "}
+                                                <i className="lni lni-comments" />{' '}
                                                 25
                                             </li>
                                             <li>
-                                                <i className="lni lni-eye" />{" "}
+                                                <i className="lni lni-eye" />{' '}
                                                 32.6K
                                             </li>
                                         </ul>
@@ -660,7 +660,7 @@ const HomePage: NextPageWithLayout = () => {
                                         <ul className="meta">
                                             <li>
                                                 <NextLink href="#" title="">
-                                                    community{" "}
+                                                    community{' '}
                                                 </NextLink>
                                             </li>
                                             <li>
@@ -679,11 +679,11 @@ const HomePage: NextPageWithLayout = () => {
                                         </h2>
                                         <ul className="meta2">
                                             <li>
-                                                <i className="lni lni-comments" />{" "}
+                                                <i className="lni lni-comments" />{' '}
                                                 4
                                             </li>
                                             <li>
-                                                <i className="lni lni-eye" />{" "}
+                                                <i className="lni lni-eye" />{' '}
                                                 7.2K
                                             </li>
                                         </ul>
@@ -723,11 +723,11 @@ const HomePage: NextPageWithLayout = () => {
                                         </h2>
                                         <ul className="meta2">
                                             <li>
-                                                <i className="lni lni-comments" />{" "}
+                                                <i className="lni lni-comments" />{' '}
                                                 18
                                             </li>
                                             <li>
-                                                <i className="lni lni-eye" />{" "}
+                                                <i className="lni lni-eye" />{' '}
                                                 57.4K
                                             </li>
                                         </ul>

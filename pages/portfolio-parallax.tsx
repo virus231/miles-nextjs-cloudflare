@@ -1,5 +1,5 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
 
 
 const PortfolioParallax: NextPageWithLayout = () => {
@@ -590,11 +590,11 @@ const PortfolioParallax: NextPageWithLayout = () => {
 			</div>
 
 		</>
-	)
-}
+	);
+};
 
 PortfolioParallax.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default PortfolioParallax
+export default PortfolioParallax;

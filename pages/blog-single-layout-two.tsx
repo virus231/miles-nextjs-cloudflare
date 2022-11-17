@@ -1,10 +1,10 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {FooterVariant1} from "../app/components/Footer/FooterVariant1";
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
-import {_carouselsExample} from "./index";
-import Carousel from '../app/components/carousel'
-import { useRef } from 'react'
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {FooterVariant1} from '../app/components/Footer/FooterVariant1';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
+import {_carouselsExample} from './index';
+import Carousel from '../app/components/carousel';
+import { useRef } from 'react';
 
 
 const BlogSingleLayoutTwo: NextPageWithLayout = () => {
@@ -33,7 +33,7 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 							</a>
 						</li>
 						<li>
-							<span>by</span>{" "}
+							<span>by</span>{' '}
 							<a href="#" title="">
 								Andrew Robertson
 							</a>
@@ -267,7 +267,7 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 															buzz bandwidth alpha pivot analytics supply.
 														</p>
 														<span className="posted-on">
-															May 3rd, 2020, by{" "}
+															May 3rd, 2020, by{' '}
 															<a href="#" title="">
 																Admin
 															</a>
@@ -288,7 +288,7 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 														<span className="category">discuss</span>
 														<h2>
 															<a href="#" title="">
-																Times &amp; The Focus - How to Control Its Smart{" "}
+																Times &amp; The Focus - How to Control Its Smart{' '}
 															</a>
 														</h2>
 														<p>
@@ -296,7 +296,7 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 															buzz bandwidth alpha pivot analytics supply.
 														</p>
 														<span className="posted-on">
-															April 24th, 2020, by{" "}
+															April 24th, 2020, by{' '}
 															<a href="#" title="">
 																Admin
 															</a>
@@ -412,7 +412,7 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 												<textarea
 													name="message"
 													placeholder="Message"
-													defaultValue={""}
+													defaultValue={''}
 												/>
 											</div>
 										</div>
@@ -436,11 +436,11 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 			<FooterVariant1/>
 
 		</>
-	)
-}
+	);
+};
 
 BlogSingleLayoutTwo.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default BlogSingleLayoutTwo
+export default BlogSingleLayoutTwo;

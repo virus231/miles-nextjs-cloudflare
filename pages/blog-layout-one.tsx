@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 const BlogLayoutOne: NextPageWithLayout = () => {
@@ -37,7 +37,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  May 3rd, 2020, by{" "}
+                  May 3rd, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -58,7 +58,7 @@ return (
                                 <span className="category">discuss</span>
                                 <h2>
                                     <a href="blog-single-layout1.html" title="">
-                                        Times &amp; The Focus - How to Control Its Smart{" "}
+                                        Times &amp; The Focus - How to Control Its Smart{' '}
                                     </a>
                                 </h2>
                                 <p>
@@ -66,7 +66,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  April 24th, 2020, by{" "}
+                  April 24th, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -95,7 +95,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  April 22th, 2020, by{" "}
+                  April 22th, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -124,7 +124,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  May 3rd, 2020, by{" "}
+                  May 3rd, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -145,7 +145,7 @@ return (
                                 <span className="category">discuss</span>
                                 <h2>
                                     <a href="blog-single-layout1.html" title="">
-                                        Times &amp; The Focus - How to Control Its Smart{" "}
+                                        Times &amp; The Focus - How to Control Its Smart{' '}
                                     </a>
                                 </h2>
                                 <p>
@@ -153,7 +153,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  April 24th, 2020, by{" "}
+                  April 24th, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -182,7 +182,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  April 22th, 2020, by{" "}
+                  April 22th, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -211,7 +211,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  May 3rd, 2020, by{" "}
+                  May 3rd, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -232,7 +232,7 @@ return (
                                 <span className="category">discuss</span>
                                 <h2>
                                     <a href="blog-single-layout1.html" title="">
-                                        Times &amp; The Focus - How to Control Its Smart{" "}
+                                        Times &amp; The Focus - How to Control Its Smart{' '}
                                     </a>
                                 </h2>
                                 <p>
@@ -240,7 +240,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  April 24th, 2020, by{" "}
+                  April 24th, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -269,7 +269,7 @@ return (
                                     bandwidth alpha pivot analytics supply.
                                 </p>
                                 <span className="posted-on">
-                  April 22th, 2020, by{" "}
+                  April 22th, 2020, by{' '}
                                     <a href="#" title="">
                     Admin
                   </a>
@@ -313,11 +313,11 @@ return (
         </section>
         <FooterVariant1/>
     </>
-    )
-}
+    );
+};
 
 BlogLayoutOne.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Blog Layout One">{page}</Layout>;
 };
 
-export default BlogLayoutOne
+export default BlogLayoutOne;

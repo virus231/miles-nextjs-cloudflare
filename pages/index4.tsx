@@ -1,5 +1,5 @@
-import { Layout } from "../app/components/Layout";
-import { NextPageWithLayout } from "./_app";
+import { Layout } from '../app/components/Layout';
+import { NextPageWithLayout } from './_app';
 
 const HomePage4: NextPageWithLayout = () => {
 	return (
@@ -767,7 +767,7 @@ const HomePage4: NextPageWithLayout = () => {
 											</a>
 											<p>
 												* Some projects not allow publish by NDA, if you want to see
-												more,{" "}
+												more,{' '}
 												<a href="contact.tsx" title="">
 													contact
 												</a>
@@ -949,7 +949,7 @@ const HomePage4: NextPageWithLayout = () => {
 													<li>
 														<h4>Awwwards</h4>
 														<span>
-															Site Of The Years for{" "}
+															Site Of The Years for{' '}
 															<a href="17_portfolio_single_layout_1.html" title="">
 																Lewis
 															</a>
@@ -958,7 +958,7 @@ const HomePage4: NextPageWithLayout = () => {
 													<li>
 														<h4>Css Design Awards</h4>
 														<span>
-															Honorable Mention for{" "}
+															Honorable Mention for{' '}
 															<a href="17_portfolio_single_layout_1.html" title="">
 																Bauhaus
 															</a>
@@ -967,7 +967,7 @@ const HomePage4: NextPageWithLayout = () => {
 													<li>
 														<h4>Product Hunt Maker</h4>
 														<span>
-															Gold In Digital Craft for{" "}
+															Gold In Digital Craft for{' '}
 															<a href="17_portfolio_single_layout_1.html" title="">
 																Biforde
 															</a>
@@ -987,7 +987,7 @@ const HomePage4: NextPageWithLayout = () => {
 													<li>
 														<h4>Fwa</h4>
 														<span>
-															Coporate Social Responsiblity for{" "}
+															Coporate Social Responsiblity for{' '}
 															<a href="17_portfolio_single_layout_1.html" title="">
 																Arquito
 															</a>
@@ -996,7 +996,7 @@ const HomePage4: NextPageWithLayout = () => {
 													<li>
 														<h4>Semplice</h4>
 														<span>
-															Best Showcase for{" "}
+															Best Showcase for{' '}
 															<a href="17_portfolio_single_layout_1.html" title="">
 																Focus
 															</a>
@@ -1027,7 +1027,7 @@ const HomePage4: NextPageWithLayout = () => {
 												<h2>
 													Start by
 													<a href="#" title="">
-														{" "}
+														{' '}
 														saying hi
 													</a>
 												</h2>
@@ -1116,11 +1116,11 @@ const HomePage4: NextPageWithLayout = () => {
 			</div>
 
 		</>
-	)
-}
+	);
+};
 
 HomePage4.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage4
+export default HomePage4;

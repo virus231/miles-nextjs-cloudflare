@@ -1,7 +1,7 @@
-import {useEffect, useState } from "react";
+import {useEffect, useState } from 'react';
 
 export const useScrollPosition = () => {
-    if (typeof window === "undefined") return 500;
+    if (typeof window === 'undefined') return 500;
 
     // Store the state
     // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -15,9 +15,9 @@ export const useScrollPosition = () => {
     // Add and remove the window listener
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-        window.addEventListener("scroll", onScroll);
+        window.addEventListener('scroll', onScroll);
         return () => {
-            window.removeEventListener("scroll", onScroll);
+            window.removeEventListener('scroll', onScroll);
         };
     });
 

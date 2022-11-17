@@ -19,5 +19,5 @@ export const KeepConnected = () => {
                 </form>
             </div>
         </div>
-    </div>
-}
+    </div>;
+};

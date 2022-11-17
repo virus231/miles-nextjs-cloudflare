@@ -1,6 +1,6 @@
-import { NextLink } from "../app/components/BaseNextLink";
-import { Layout } from "../app/components/Layout";
-import { NextPageWithLayout } from "./_app"
+import { NextLink } from '../app/components/BaseNextLink';
+import { Layout } from '../app/components/Layout';
+import { NextPageWithLayout } from './_app';
 
 
 const HomePage2: NextPageWithLayout = () => {
@@ -173,7 +173,7 @@ const HomePage2: NextPageWithLayout = () => {
         </div>
 
 		<section className="main-banner-style2" style={{
-			display: "none"
+			display: 'none'
 		}}>
 			<div className="fixed-bg bg2"></div>
 			<div className="ban-capz">
@@ -568,11 +568,11 @@ const HomePage2: NextPageWithLayout = () => {
 			</div>
 		</footer>	
 	</>
-	)
-}
+	);
+};
 
 HomePage2.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout title="Home">{page}</Layout>;
 };
 
-export default HomePage2
+export default HomePage2;

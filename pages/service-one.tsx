@@ -1,6 +1,6 @@
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import {HeaderV1} from "../app/components/Navigation/HeaderV1";
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import {HeaderV1} from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 
 
@@ -25,7 +25,7 @@ const ServiceOne: NextPageWithLayout = () => {
                                 </h2>
                                 <p>
                                     The difference lies in quality, reputation and responsibility of
-                                    creation.{" "}
+                                    creation.{' '}
                                 </p>
                             </div>
                             <div className="services_items">
@@ -332,7 +332,7 @@ const ServiceOne: NextPageWithLayout = () => {
                                                     <ul>
                                                         <li>
                                                             <a href="#" title="">
-                                                                BBC Magazine,{" "}
+                                                                BBC Magazine,{' '}
                                                             </a>
                                                         </li>
                                                         <li>
@@ -420,21 +420,21 @@ const ServiceOne: NextPageWithLayout = () => {
                     </div>
                     <div className="text-center pl-btm">
                         <p>
-                            Know more about pricing details.{" "}
+                            Know more about pricing details.{' '}
                             <a href="#" title="">
                                 Check it now
-                            </a>{" "}
+                            </a>{' '}
                         </p>
                     </div>
                 </div>
             </section>
             <FooterVariant1/>
         </>
-    )
-}
+    );
+};
 
 ServiceOne.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Home">{page}</Layout>;
 };
 
-export default ServiceOne
+export default ServiceOne;

@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { RightMenu } from "../RightMenu";
-import { Burger } from "./Burger";
-import {NextLink} from "../BaseNextLink";
+import { useState } from 'react';
+import { RightMenu } from '../RightMenu';
+import { Burger } from './Burger';
+import {NextLink} from '../BaseNextLink';
 
 export const HeaderV2 = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -31,5 +31,5 @@ export const HeaderV2 = () => {
         </header>
         <RightMenu isOpen={open} closeMenu={() => setOpen(!open)}/>
 
-  </>
+  </>;
 };

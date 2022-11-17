@@ -1,10 +1,10 @@
-import classNames from 'classnames'
-import { NextLink } from '../app/components/BaseNextLink'
-import styles from '../styles/Home.module.scss'
-import { NextPageWithLayout } from './_app'
-import { Layout } from '../app/components/Layout'
-import { MainNavigation } from '../app/components/Navigation/MainNavigation'
-import { MainFooter } from '../app/components/Footer/MainFooter'
+import classNames from 'classnames';
+import { NextLink } from '../app/components/BaseNextLink';
+import styles from '../styles/Home.module.scss';
+import { NextPageWithLayout } from './_app';
+import { Layout } from '../app/components/Layout';
+import { MainNavigation } from '../app/components/Navigation/MainNavigation';
+import { MainFooter } from '../app/components/Footer/MainFooter';
 
 
 const PortfolioHorizontalScroll: NextPageWithLayout = () => {
@@ -625,11 +625,11 @@ const PortfolioHorizontalScroll: NextPageWithLayout = () => {
 			</section>
 
 		</>
-	)
-}
+	);
+};
 
 PortfolioHorizontalScroll.getLayout = function getLayout(page: React.ReactElement) {
 	return <Layout title="Home">{page}</Layout>;
 };
 
-export default PortfolioHorizontalScroll
+export default PortfolioHorizontalScroll;

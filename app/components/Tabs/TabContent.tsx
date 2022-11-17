@@ -1,8 +1,8 @@
-import { carouselsExample } from "../../../pages";
-import CarouselCenterMode, { CarouselItem } from "../carousel/CarouselCenterMode";
-import Carousel, { CarouselArrows, CarouselDots } from "../carousel";
-import { useTheme } from "@mui/material/styles";
-import { useRef } from "react";
+import { carouselsExample } from '../../../pages';
+import CarouselCenterMode, { CarouselItem } from '../carousel/CarouselCenterMode';
+import Carousel, { CarouselArrows, CarouselDots } from '../carousel';
+import { useTheme } from '@mui/material/styles';
+import { useRef } from 'react';
 
 type Props = {
     content: {
@@ -23,10 +23,10 @@ export const TabContent = (props: Props) => {
         dots: true,
         arrows: false,
         centerMode: false,
-        rtl: Boolean(theme.direction === "rtl"),
+        rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
-            sx: { mt: "10px" },
+            sx: { mt: '10px' },
         }),
         responsive: [
             {
@@ -39,7 +39,7 @@ export const TabContent = (props: Props) => {
             },
             {
                 breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: "0" },
+                settings: { slidesToShow: 1, centerPadding: '0' },
             },
         ],
     };
@@ -68,7 +68,7 @@ export const TabContent = (props: Props) => {
                         onPrevious={handlePrev}
                         sx={{
                             zIndex: 9,
-                            color: "#ccc",
+                            color: '#ccc',
                         }}
                     >
                         <Carousel ref={carouselRef} {...carouselSettings}>
