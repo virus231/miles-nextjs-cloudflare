@@ -4,7 +4,7 @@ import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import Carousel from '../app/components/carousel';
 import { useRef } from 'react';
-import { _carouselsExample } from './index';
+import { carouselsExample } from './index';
 
 const BlogSingleLayoutOne: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
@@ -16,6 +16,7 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+
     return (
         <>
             <HeaderV1 />
@@ -24,8 +25,8 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                     <div className="featured-post-sec">
                         <div className="featured-post-slider">
                             <Carousel ref={carouselRef} {...carouselSettings}>
-                                {_carouselsExample.map((item) => (
-                                    <div className="featured-post">
+                                {carouselsExample.map((item) => (
+                                    <div key={item.id} className="featured-post">
                                         <div className="row justify-content-center">
                                             <div className="col-lg-6">
                                                 <div className="vector-img">

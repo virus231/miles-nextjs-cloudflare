@@ -1,17 +1,14 @@
-import classNames from 'classnames';
-import { NextLink } from '../app/components/BaseNextLink';
-import styles from '../styles/Home.module.scss';
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import { MainNavigation } from '../app/components/Navigation/MainNavigation';
-import { MainFooter } from '../app/components/Footer/MainFooter';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+
 
 const TeamPage: NextPageWithLayout = () => {
     return (
         <>
             <HeaderV1 />
+
             <section className="team-page">
                 <div className="container">
                     <div className="sv-title text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
@@ -338,7 +335,7 @@ const TeamPage: NextPageWithLayout = () => {
 };
 
 TeamPage.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Team">{page}</Layout>;
 };
 
 export default TeamPage;

@@ -81,11 +81,11 @@ export const rightMenu = [
                 name: 'Porfolio Parallax'
             },
             {
-                href: '/portfolio-horizontal-sccroll',
+                href: '/portfolio-horizontal-scroll',
                 name: 'Porfolio Horizontal Scroll'
             },
             {
-                href: '/portfolio-masonry',
+                href: '/portfolio-masonary',
                 name: 'Porfolio Masonary'
             },
             {
@@ -120,7 +120,7 @@ export const rightMenu = [
         ]
     },
     {
-        name: 'Team',
+        name: 'Pages',
         children: [
             {
                 href: '/team',
@@ -143,7 +143,7 @@ export const rightMenu = [
                 name: '404'
             },
             {
-                href: '/',
+                href: '/coming-soon',
                 name: 'Coming Soon'
             }
         ]

@@ -2,7 +2,7 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import { _carouselsExample } from './index';
+import { carouselsExample } from './index';
 import Carousel from '../app/components/carousel';
 import { useRef } from 'react';
 
@@ -25,7 +25,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                     <div className="featured-post-sec">
                         <div className="featured-post-slider">
                             <Carousel ref={carouselRef} {...carouselSettings}>
-                                {_carouselsExample.map((item) => (
+                                {carouselsExample.map((item) => (
                                     <div key={item.id} className="featured-post">
                                         <div className="row align-items-center">
                                             <div className="col-lg-6">

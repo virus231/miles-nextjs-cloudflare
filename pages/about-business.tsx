@@ -1,10 +1,8 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { HeaderV2 } from '../app/components/Navigation/HeaderV2';
-import { _carouselsExample } from './index';
-import CarouselCenterMode from '../app/components/carousel/CarouselCenterMode';
+import { carouselsExample } from './index';
 import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
 import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
@@ -515,7 +513,7 @@ const AboutBusiness: NextPageWithLayout = () => {
                                         }}
                                     >
                                         <Carousel ref={carouselRef} {...carouselSettings}>
-                                            {_carouselsExample.map((item) => (
+                                            {carouselsExample.map((item) => (
                                                 <div key={item.id} className="col-lg-6">
                                                     <div className="testimonial-slide">
                                                         <p>

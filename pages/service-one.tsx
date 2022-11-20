@@ -394,13 +394,14 @@ const ServiceOne: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
+
             <FooterVariant1 />
         </>
     );
 };
 
 ServiceOne.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Service One">{page}</Layout>;
 };
 
 export default ServiceOne;

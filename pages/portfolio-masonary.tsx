@@ -6,7 +6,7 @@ import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 
-const PortfolioMasonry: NextPageWithLayout = () => {
+const PortfolioMasonary: NextPageWithLayout = () => {
     return (
         <>
             <HeaderV1 />
@@ -114,8 +114,8 @@ const PortfolioMasonry: NextPageWithLayout = () => {
     );
 };
 
-PortfolioMasonry.getLayout = function getLayout(page: React.ReactElement) {
+PortfolioMasonary.getLayout = function getLayout(page: React.ReactElement) {
     return <Layout title="Home">{page}</Layout>;
 };
 
-export default PortfolioMasonry;
+export default PortfolioMasonary;
