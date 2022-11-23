@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { RightMenu } from '../RightMenu';
 import { NextLink } from '../BaseNextLink';
 import { Burger } from './Burger';
 
 export const HeaderV1 = () => {
     const [open, setOpen] = useState<boolean>(false);
+
 
     return (
         <>

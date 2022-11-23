@@ -1,4 +1,4 @@
-import { navigationItems } from '../../_mock/menu-config';
+import { navigationItems } from '../../config/menu-config';
 import { NextLink } from '../BaseNextLink';
 import styles from './Navigation.module.scss';
 import classNames from 'classnames';

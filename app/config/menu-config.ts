@@ -153,19 +153,19 @@ export const rightMenu = [
         children: [
             {
                 href: '/blog-layout-one',
-                name: 'Blog V1'
+                name: 'Blog Layout V1'
             },
             {
                 href: '/blog-layout-two',
-                name: 'Blog V2'
+                name: 'Blog Layout V2'
             },
             {
                 href: '/blog-single-layout-one',
-                name: 'Blog Single V1'
+                name: 'Blog Single Layout V1'
             },
             {
                 href: '/blog-single-layout-two',
-                name: 'Blog Single V2'
+                name: 'Blog Single Layout V2'
             }
         ]
     },
@@ -313,7 +313,7 @@ export const navigationItems = [
         ]
     },
     {
-        name: 'News',
+        name: 'Blog',
         children: [
             {
                 href: '/blog-layout-one',
@@ -325,11 +325,11 @@ export const navigationItems = [
             },
             {
                 href: '/blog-single-layout-one',
-                name: 'Blog Single V1'
+                name: 'Blog Single Layout V1'
             },
             {
                 href: '/blog-single-layout-two',
-                name: 'Blog Single V2'
+                name: 'Blog Single Layout V2'
             }
         ]
     },

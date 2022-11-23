@@ -1,7 +1,7 @@
 import { NextLink } from '../BaseNextLink';
 import styles from './RightMenu.module.scss';
 import classNames from 'classnames';
-import { rightMenu } from '../../_mock/menu-config';
+import { rightMenu } from '../../config/menu-config';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { activeLink } from '../../utils/functions';

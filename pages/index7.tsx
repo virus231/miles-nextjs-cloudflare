@@ -10,7 +10,8 @@ import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
 const HomePage7: NextPageWithLayout = () => {
-    const carouselSettings = {
+
+  const carouselSettings = {
         slidesToShow: 2,
         dots: false,
         arrows: false,

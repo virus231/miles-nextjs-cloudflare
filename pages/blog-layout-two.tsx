@@ -3,7 +3,7 @@ import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { carouselsExample } from './index';
-import Carousel from '../app/components/carousel';
+import Carousel, { CarouselDots } from "../app/components/carousel";
 import { useRef } from 'react';
 
 const BlogLayoutTwo: NextPageWithLayout = () => {
@@ -14,7 +14,11 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
         arrows: false,
         autoplay: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        ...CarouselDots({
+          rounded: true,
+          sx: { mt: '10px', color: "#f59e31" }
+        }),
     };
 
     return (

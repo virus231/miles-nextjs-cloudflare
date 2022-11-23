@@ -1,7 +1,6 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { HeaderV2 } from '../app/components/Navigation/HeaderV2';
 
 const AboutMe: NextPageWithLayout = () => {
