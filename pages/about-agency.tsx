@@ -2,33 +2,32 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import Carousel from "../app/components/carousel";
-import { carouselsExample } from "./index";
-import VisibilitySensor from "react-visibility-sensor";
-import CountUp from "react-countup";
+import Carousel from '../app/components/carousel';
+import { carouselsExample } from './index';
+import VisibilitySensor from 'react-visibility-sensor';
+import CountUp from 'react-countup';
 import { useRef } from 'react';
 
 const AboutAgency: NextPageWithLayout = () => {
-
     const carouselSettings = {
-      slidesToShow: 2,
-      dots: false,
-      arrows: false,
-      centerMode: false,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: { slidesToShow: 2 }
-        },
-        {
-          breakpoint: 600,
-          settings: { slidesToShow: 2 }
-        },
-        {
-          breakpoint: 480,
-          settings: { slidesToShow: 1, centerPadding: '0' }
-        }
-      ]
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: '0' }
+            }
+        ]
     };
     const carouselRef = useRef<Carousel | null>(null);
 
@@ -63,67 +62,67 @@ const AboutAgency: NextPageWithLayout = () => {
                 </div>
             </section>
             <section className="our-services-sec v2 pt-5">
-                  <div className="container">
+                <div className="container">
                     <div className="mile-title">
-                    <h3>our services</h3>
-                  </div>
-                  <div className="our-services-content">
-                    <div className="row svs-slider">
-                      <Carousel ref={carouselRef} {...carouselSettings}>
-                        {carouselsExample.map((item) => (
-                          <div className="col-lg-5">
-                            <div className="service-card-mile">
-                              <img src="/static/images/icon1.png" alt="" />
-                              <h2>
-                                <a href="service-one.tsx" title="">
-                                  Branding
-                                </a>
-                              </h2>
-                              <p>We build and activate brands throung cultural insigh &amp;, strategic vision.</p>
-                              <a href="#" title="" className="cat-up">
-                                case study
-                              </a>
-                            </div>
-                          </div>
-                        ))}
-                      </Carousel>
+                        <h3>our services</h3>
                     </div>
-                    <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
-                      <li>
-                        <div className="counter-cont">
-                          <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                            {({ isVisible }: { isVisible: boolean }) => (
-                              <h2 className=" count">{isVisible ? <CountUp end={820} /> : '0'}</h2>
-                            )}
-                          </VisibilitySensor>
-                          <span>
-                              satisfaction <br /> clients
-                          </span>
+                    <div className="our-services-content">
+                        <div className="row svs-slider">
+                            <Carousel ref={carouselRef} {...carouselSettings}>
+                                {carouselsExample.map((item) => (
+                                    <div className="col-lg-5">
+                                        <div className="service-card-mile">
+                                            <img src="/static/images/icon1.png" alt="" />
+                                            <h2>
+                                                <a href="service-one.tsx" title="">
+                                                    Branding
+                                                </a>
+                                            </h2>
+                                            <p>We build and activate brands throung cultural insigh &amp;, strategic vision.</p>
+                                            <a href="#" title="" className="cat-up">
+                                                case study
+                                            </a>
+                                        </div>
+                                    </div>
+                                ))}
+                            </Carousel>
                         </div>
-                      </li>
-                      <li>
-                        <div className="counter-cont">
-                          <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                            {({ isVisible }: { isVisible: boolean }) => (
-                              <h2 className="count">{isVisible ? <CountUp end={643} /> : '0'}</h2>
-                            )}
-                          </VisibilitySensor>
-                          <span>event &amp; oline courses</span>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="counter-cont">
-                          <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                            {({ isVisible }: { isVisible: boolean }) => (
-                              <h2 className="clr1 count">{isVisible ? <CountUp end={1875} /> : '0'}</h2>
-                            )}
-                          </VisibilitySensor>
-                          <span>successful students on 60 countries</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  </div>
+                        <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
+                            <li>
+                                <div className="counter-cont">
+                                    <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                        {({ isVisible }: { isVisible: boolean }) => (
+                                            <h2 className=" count">{isVisible ? <CountUp end={820} /> : '0'}</h2>
+                                        )}
+                                    </VisibilitySensor>
+                                    <span>
+                                        satisfaction <br /> clients
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="counter-cont">
+                                    <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                        {({ isVisible }: { isVisible: boolean }) => (
+                                            <h2 className="count">{isVisible ? <CountUp end={643} /> : '0'}</h2>
+                                        )}
+                                    </VisibilitySensor>
+                                    <span>event &amp; oline courses</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="counter-cont">
+                                    <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
+                                        {({ isVisible }: { isVisible: boolean }) => (
+                                            <h2 className="clr1 count">{isVisible ? <CountUp end={1875} /> : '0'}</h2>
+                                        )}
+                                    </VisibilitySensor>
+                                    <span>successful students on 60 countries</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section className="agy-team-sec">

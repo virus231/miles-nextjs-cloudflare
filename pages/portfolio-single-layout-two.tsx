@@ -1,30 +1,29 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import Carousel, { CarouselArrows, CarouselDots } from "../app/components/carousel";
-import { carouselsExample } from "./index";
-import { CarouselItem } from "../app/components/carousel/CarouselCenterMode";
-import { useTheme } from "@mui/material/styles";
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { carouselsExample } from './index';
+import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
+import { useTheme } from '@mui/material/styles';
 import { useRef } from 'react';
 
 const PortfolioSingleLayoutTwo: NextPageWithLayout = () => {
-  const carouselRef = useRef<Carousel | null>(null);
+    const carouselRef = useRef<Carousel | null>(null);
 
-  const carouselSettings = {
-    slidesToShow: 1,
-    dots: false,
-    arrows: false,
-    centerMode: false,
-  };
+    const carouselSettings = {
+        slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        centerMode: false
+    };
 
-  const handlePrev = () => {
-    carouselRef.current?.slickPrev();
-  };
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
 
-  const handleNext = () => {
-    carouselRef.current?.slickNext();
-  };
-
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
 
     return (
         <>
@@ -527,123 +526,123 @@ const PortfolioSingleLayoutTwo: NextPageWithLayout = () => {
             <section className="pf-single-layout-2">
                 <div className="container-fluid p-0">
                     <div className="pft-slider">
-                      <CarouselArrows
-                        textLeftArrow="Previous"
-                        textRightArrow="Next"
-                        leftButtonProps={{
-                          sx: {
-                            fontSize: "14px",
-                            color: "#000",
-                            fontWeight: "700",
-                            textTransform: "uppercase",
-                            backgroundColor: "#fff",
-                            border: "0",
-                            width: "auto",
-                            height: "42px",
-                            lineHeight: "42px",
-                            top: "50%",
-                            padding: "0 24px",
-                            letterSpacing: "2 px",
-                            borderRadius: "0",
-                            transform: 'rotate(-90deg)',
-                            "&:hover": {
-                              boxShadow: "inherit",
-                              backgroundColor: "#f93",
-                              color: "#fff",
-                            }
-                          }
-                        }}
-                        rightButtonProps={{
-                          sx: {
-                            fontSize: "14px",
-                            color: "#000",
-                            fontWeight: "700",
-                            textTransform: "uppercase",
-                            backgroundColor: "#fff",
-                            border: "0",
-                            width: "auto",
-                            height: "42px",
-                            lineHeight: "42px",
-                            top: "50%",
-                            padding: "0 24px",
-                            letterSpacing: "2 px",
-                            borderRadius: "0",
-                            transform: 'rotate(90deg)',
-                            "&:hover": {
-                              boxShadow: "inherit",
-                              backgroundColor: "#f93",
-                              color: "#fff",
-                            },
-                          }
-                        }}
-                        onNext={handleNext}
-                        topSpace={50}
-                        onPrevious={handlePrev}
-                        sx={{
-                          zIndex: 9,
-                          color: '#ccc'
-                        }}
-                      >
-                        <Carousel ref={carouselRef} {...carouselSettings}>
-                          {carouselsExample.map((item) => (
-                            <div key={item.id} className="pft-slide">
-                              <div className="row">
-                                <div className="col-lg-6">
-                                  <div className="pft-details">
-                                    <div className="pft-txt">
-                                      <h2>Bamboo Soap</h2>
-                                      <p>A dynamic co-working space attracting entrepreneurs, tinkerers, and creatives</p>
-                                      <div className="pft-task">
-                                        <h3>task</h3>
-                                        <p>
-                                          Rebuild a unified visual system for the advertising agency, made of steel which can
-                                          change the world in a while.
-                                        </p>
-                                      </div>
-                                      <ul className="pp-list">
-                                        <li>
-                                          <h3>client</h3>
-                                          <span>P&amp;G Singapore Ltd</span>
-                                        </li>
-                                        <li>
-                                          <h3>category</h3>
-                                          <span>Branding, Motion</span>
-                                        </li>
-                                        <li>
-                                          <h3>site</h3>
-                                          <span>www.bamboosoap.com</span>
-                                        </li>
-                                      </ul>
-                                      <ul className="scl-links">
-                                        <li>
-                                          <a href="#" title="">
-                                            <i className="fab fa-twitter" />
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="#" title="">
-                                            <i className="fab fa-facebook-f" />
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a href="#" title="">
-                                            <i className="fab fa-google-plus-g" />
-                                          </a>
-                                        </li>
-                                      </ul>
+                        <CarouselArrows
+                            textLeftArrow="Previous"
+                            textRightArrow="Next"
+                            leftButtonProps={{
+                                sx: {
+                                    fontSize: '14px',
+                                    color: '#000',
+                                    fontWeight: '700',
+                                    textTransform: 'uppercase',
+                                    backgroundColor: '#fff',
+                                    border: '0',
+                                    width: 'auto',
+                                    height: '42px',
+                                    lineHeight: '42px',
+                                    top: '50%',
+                                    padding: '0 24px',
+                                    letterSpacing: '2 px',
+                                    borderRadius: '0',
+                                    transform: 'rotate(-90deg)',
+                                    '&:hover': {
+                                        boxShadow: 'inherit',
+                                        backgroundColor: '#f93',
+                                        color: '#fff'
+                                    }
+                                }
+                            }}
+                            rightButtonProps={{
+                                sx: {
+                                    fontSize: '14px',
+                                    color: '#000',
+                                    fontWeight: '700',
+                                    textTransform: 'uppercase',
+                                    backgroundColor: '#fff',
+                                    border: '0',
+                                    width: 'auto',
+                                    height: '42px',
+                                    lineHeight: '42px',
+                                    top: '50%',
+                                    padding: '0 24px',
+                                    letterSpacing: '2 px',
+                                    borderRadius: '0',
+                                    transform: 'rotate(90deg)',
+                                    '&:hover': {
+                                        boxShadow: 'inherit',
+                                        backgroundColor: '#f93',
+                                        color: '#fff'
+                                    }
+                                }
+                            }}
+                            onNext={handleNext}
+                            topSpace={50}
+                            onPrevious={handlePrev}
+                            sx={{
+                                zIndex: 9,
+                                color: '#ccc'
+                            }}
+                        >
+                            <Carousel ref={carouselRef} {...carouselSettings}>
+                                {carouselsExample.map((item) => (
+                                    <div key={item.id} className="pft-slide">
+                                        <div className="row">
+                                            <div className="col-lg-6">
+                                                <div className="pft-details">
+                                                    <div className="pft-txt">
+                                                        <h2>Bamboo Soap</h2>
+                                                        <p>A dynamic co-working space attracting entrepreneurs, tinkerers, and creatives</p>
+                                                        <div className="pft-task">
+                                                            <h3>task</h3>
+                                                            <p>
+                                                                Rebuild a unified visual system for the advertising agency, made of steel
+                                                                which can change the world in a while.
+                                                            </p>
+                                                        </div>
+                                                        <ul className="pp-list">
+                                                            <li>
+                                                                <h3>client</h3>
+                                                                <span>P&amp;G Singapore Ltd</span>
+                                                            </li>
+                                                            <li>
+                                                                <h3>category</h3>
+                                                                <span>Branding, Motion</span>
+                                                            </li>
+                                                            <li>
+                                                                <h3>site</h3>
+                                                                <span>www.bamboosoap.com</span>
+                                                            </li>
+                                                        </ul>
+                                                        <ul className="scl-links">
+                                                            <li>
+                                                                <a href="#" title="">
+                                                                    <i className="fab fa-twitter" />
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" title="">
+                                                                    <i className="fab fa-facebook-f" />
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" title="">
+                                                                    <i className="fab fa-google-plus-g" />
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6">
+                                                <div className="pft-img">
+                                                    <img src="/static/images/pft3.jpg" alt="" className="w-100" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
-                                </div>
-                                <div className="col-lg-6">
-                                  <div className="pft-img">
-                                    <img src="/static/images/pft3.jpg" alt="" className="w-100" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
-                        </Carousel>
-                      </CarouselArrows>
+                                ))}
+                            </Carousel>
+                        </CarouselArrows>
                     </div>
                 </div>
             </section>

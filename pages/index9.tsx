@@ -2,32 +2,31 @@ import { useRef, useState } from 'react';
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { BlogPosts } from '../app/components/BlogPosts';
-import { NextLink } from "../app/components/BaseNextLink";
-import { RightMenu } from "../app/components/RightMenu";
+import { NextLink } from '../app/components/BaseNextLink';
+import { RightMenu } from '../app/components/RightMenu';
 import { Burger } from '../app/components/Navigation/Burger';
-import { carouselsExample } from "./index";
-import Carousel, { CarouselDots } from "../app/components/carousel";
-
+import { carouselsExample } from './index';
+import Carousel, { CarouselDots } from '../app/components/carousel';
 
 const HomePage9: NextPageWithLayout = () => {
-  const [open, setOpen] = useState<boolean>(false);
+    const [open, setOpen] = useState<boolean>(false);
 
-  const carouselRef = useRef<Carousel | null>(null);
+    const carouselRef = useRef<Carousel | null>(null);
 
-  const carouselSettings = {
-    slidesToShow: 1,
-    dots: true,
-    arrows: false,
-    centerMode: false,
-    ...CarouselDots({
-      rounded: true,
-      sx: { mt: '10px', color: "#f59e31" }
-    }),
-  };
+    const carouselSettings = {
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
+        centerMode: false,
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: '10px', color: '#f59e31' }
+        })
+    };
 
-  return (
+    return (
         <>
-            <header className="header-v8 v9"  >
+            <header className="header-v8 v9">
                 <div className="container">
                     <div className="header-content-v8">
                         <div className="logo-v8">
@@ -145,33 +144,30 @@ const HomePage9: NextPageWithLayout = () => {
                         <a href="#" title="" className="chat-btn">
                             Let’s chat! <i className="lni lni-comments-reply" />
                         </a>
-                      <Burger setOpen={() => setOpen(!open)} />
+                        <Burger setOpen={() => setOpen(!open)} />
                     </div>
                 </div>
             </header>
 
-          <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
+            <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
 
-          <section className="main-banner-v9">
+            <section className="main-banner-v9">
                 <div className="container">
-                    <div className="banner-slider-v9 wow fadeInUp"
-                         data-wow-duration="1000ms"
-                         data-wow-delay="0ms"
-                    >
-                      <Carousel ref={carouselRef} {...carouselSettings}>
-                        {carouselsExample.map((item) => (
-                          <div className="banner-slide-v9">
-                            <span>Rewared for your trust</span>
-                            <h2>
-                              <span>Building The Right</span> Foundations
-                            </h2>
-                            <p>Like any great agency, we are only as good as the result we deliver of our recent work</p>
-                            <a href="#" title="" className="btn-default-v9">
-                              Get Started
-                            </a>
-                          </div>
-                        ))}
-                      </Carousel>
+                    <div className="banner-slider-v9 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <Carousel ref={carouselRef} {...carouselSettings}>
+                            {carouselsExample.map((item) => (
+                                <div className="banner-slide-v9">
+                                    <span>Rewared for your trust</span>
+                                    <h2>
+                                        <span>Building The Right</span> Foundations
+                                    </h2>
+                                    <p>Like any great agency, we are only as good as the result we deliver of our recent work</p>
+                                    <a href="#" title="" className="btn-default-v9">
+                                        Get Started
+                                    </a>
+                                </div>
+                            ))}
+                        </Carousel>
                     </div>
                 </div>
             </section>

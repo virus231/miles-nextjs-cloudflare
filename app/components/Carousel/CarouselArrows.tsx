@@ -73,8 +73,8 @@ interface Props extends StackProps {
     leftButtonProps?: IconButtonProps;
     rightButtonProps?: IconButtonProps;
     topSpace?: number;
-  textLeftArrow?: string;
-  textRightArrow?: string;
+    textLeftArrow?: string;
+    textRightArrow?: string;
 }
 
 export default function CarouselArrows({
@@ -87,7 +87,9 @@ export default function CarouselArrows({
     leftButtonProps,
     rightButtonProps,
     sx,
-    topSpace, textLeftArrow = "", textRightArrow = "",
+    topSpace,
+    textLeftArrow = '',
+    textRightArrow = '',
     hover = false,
     ...other
 }: Props) {
@@ -112,10 +114,7 @@ export default function CarouselArrows({
                         ...leftButtonProps?.sx
                     }}
                 >
-                  {textLeftArrow != ""
-                    ? textLeftArrow
-                    : <LeftIcon icon={icon} isRTL={isRTL} />
-                  }
+                    {textLeftArrow != '' ? textLeftArrow : <LeftIcon icon={icon} isRTL={isRTL} />}
                 </StyledIconButton>
 
                 {children}
@@ -132,10 +131,7 @@ export default function CarouselArrows({
                         ...rightButtonProps?.sx
                     }}
                 >
-                  {textRightArrow != ""
-                    ? textRightArrow
-                    : <RightIcon icon={icon} isRTL={isRTL} />
-                  }
+                    {textRightArrow != '' ? textRightArrow : <RightIcon icon={icon} isRTL={isRTL} />}
                 </StyledIconButton>
             </Stack>
         );

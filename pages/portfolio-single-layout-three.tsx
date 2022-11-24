@@ -6,7 +6,7 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
     return (
         <>
             {/*body class - bg2*/}
-            <HeaderV1/>
+            <HeaderV1 />
 
             <section className="pf-single-layout3">
                 <div className="pf-head-v3">

@@ -6,7 +6,6 @@ import { Burger } from './Burger';
 export const HeaderV1 = () => {
     const [open, setOpen] = useState<boolean>(false);
 
-
     return (
         <>
             <header className="rel">

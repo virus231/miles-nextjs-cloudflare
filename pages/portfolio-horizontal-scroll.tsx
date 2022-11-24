@@ -1,6 +1,6 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import { HeaderV1 } from "../app/components/Navigation/HeaderV1";
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 
 const PortfolioHorizontalScroll: NextPageWithLayout = () => {
     return (

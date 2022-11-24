@@ -26,7 +26,7 @@ export const TabContent = (props: Props) => {
         rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
-            sx: { mt: '10px', color: "#f59e31" }
+            sx: { mt: '10px', color: '#f59e31' }
         }),
         responsive: [
             {

@@ -3,22 +3,22 @@ import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { carouselsExample } from './index';
-import Carousel, { CarouselDots } from "../app/components/carousel";
+import Carousel, { CarouselDots } from '../app/components/carousel';
 import { useRef } from 'react';
 
 const BlogSingleLayoutTwo: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
-      dots: true,
-      arrows: false,
-      autoplay: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      ...CarouselDots({
-        rounded: true,
-        sx: { mt: '10px', color: "#f59e31" }
-      }),
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: '10px', color: '#f59e31' }
+        })
     };
 
     return (

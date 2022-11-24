@@ -3,7 +3,6 @@ import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 
-
 const TeamPage: NextPageWithLayout = () => {
     return (
         <>

@@ -2,19 +2,17 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import { IsotopeLayout } from "../app/components/IsotopeLayout";
-
+import { IsotopeLayout } from '../app/components/IsotopeLayout';
 
 const options = [
-  {
-    id: 1,
-    title: 'All Projects',
-  }
-]
-
+    {
+        id: 1,
+        title: 'All Projects'
+    }
+];
 
 const PortfolioMasonary: NextPageWithLayout = () => {
-  const { handleFilterKeyChange } = IsotopeLayout();
+    const { handleFilterKeyChange } = IsotopeLayout();
 
     return (
         <>
@@ -30,18 +28,24 @@ const PortfolioMasonary: NextPageWithLayout = () => {
                         <div className="option-isotop">
                             <ul id="filter" className="option-set filters-nav text-center" data-option-key="filter">
                                 <li>
-                                    <a onClick={handleFilterKeyChange("*")} data-option-value="*" className="selected">
+                                    <a onClick={handleFilterKeyChange('*')} data-option-value="*" className="selected">
                                         All Projects
                                     </a>
                                 </li>
                                 <li>
-                                    <a onClick={handleFilterKeyChange("ui-ux")} data-option-value=".ui-ux">UI/UX</a>
+                                    <a onClick={handleFilterKeyChange('ui-ux')} data-option-value=".ui-ux">
+                                        UI/UX
+                                    </a>
                                 </li>
                                 <li>
-                                    <a onClick={handleFilterKeyChange("branding")} data-option-value=".branding">Branding</a>
+                                    <a onClick={handleFilterKeyChange('branding')} data-option-value=".branding">
+                                        Branding
+                                    </a>
                                 </li>
                                 <li>
-                                    <a onClick={handleFilterKeyChange("motion")} data-option-value=".motion">Motion</a>
+                                    <a onClick={handleFilterKeyChange('motion')} data-option-value=".motion">
+                                        Motion
+                                    </a>
                                 </li>
                             </ul>
                         </div>
