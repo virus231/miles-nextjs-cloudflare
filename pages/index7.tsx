@@ -10,6 +10,8 @@ import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
 const HomePage7: NextPageWithLayout = () => {
+    const carouselRef = useRef<Carousel | null>(null);
+
     const carouselSettings = {
         slidesToShow: 2,
         dots: false,
@@ -30,7 +32,14 @@ const HomePage7: NextPageWithLayout = () => {
             }
         ]
     };
-    const carouselRef = useRef<Carousel | null>(null);
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
 
     return (
         <>
@@ -835,8 +844,39 @@ const HomePage7: NextPageWithLayout = () => {
             </section>
             <section className="our-services-sec v2">
                 <div className="container">
-                    <div className="mile-title">
-                        <h3>Recent Courses</h3>
+                    <div className="row mile-title align-items-center">
+                        <div className="col-6">
+                            <div>
+                                <h3>Recent Courses</h3>
+                            </div>
+                        </div>
+                        <div className="col-6 d-flex justify-content-end">
+                            <CarouselArrows
+                                sx={{
+                                    color: '#ccc'
+                                }}
+                                leftButtonProps={{
+                                    sx: {
+                                        svg: {
+                                            width: '32px',
+                                            height: '32px'
+                                        }
+                                    }
+                                }}
+                                rightButtonProps={{
+                                    sx: {
+                                        svg: {
+                                            width: '32px',
+                                            height: '32px'
+                                        }
+                                    }
+                                }}
+                                hover
+                                icon="ic:round-keyboard-arrow-right"
+                                onNext={handleNext}
+                                onPrevious={handlePrev}
+                            />
+                        </div>
                     </div>
                     <div className="our-services-content">
                         <div className="row svs-slider">

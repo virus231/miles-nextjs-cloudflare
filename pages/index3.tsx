@@ -237,7 +237,7 @@ const HomePage3: NextPageWithLayout = () => {
 
             <section className="works-v3-sec pb-0">
                 <div className="container">
-                    <div className="row  align-items-center">
+                    <div className="row align-items-center">
                         <div className="col-6">
                             <div className="section-title-v3">
                                 <h2>Works</h2>

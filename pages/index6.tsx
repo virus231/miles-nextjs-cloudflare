@@ -4,7 +4,6 @@ import { RightMenu } from '../app/components/RightMenu';
 import { Burger } from '../app/components/Navigation/Burger';
 import { useRef, useState } from 'react';
 import { carouselsExample } from './index';
-import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
 import Carousel, { CarouselArrowIndex, CarouselArrows, CarouselDots } from '../app/components/carousel';
 import { useTheme } from '@mui/material/styles';
 import CountUp from 'react-countup';
@@ -14,6 +13,7 @@ const HomePage6: NextPageWithLayout = () => {
     const [open, setOpen] = useState<boolean>(false);
     const theme = useTheme();
     const carouselRef = useRef<Carousel | null>(null);
+    const carouselRef2 = useRef<Carousel | null>(null);
 
     const carouselSettings = {
         slidesToShow: 2,
@@ -36,16 +36,13 @@ const HomePage6: NextPageWithLayout = () => {
         ]
     };
 
-    const [currentIndex, setCurrentIndex] = useState(theme.direction === 'rtl' ? carouselsExample.length - 1 : 0);
-
     const carouselSettings2 = {
         dots: false,
         arrows: false,
         autoplay: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        rtl: Boolean(theme.direction === 'rtl'),
-        beforeChange: (current: number, next: number) => setCurrentIndex(next)
+        rtl: Boolean(theme.direction === 'rtl')
     };
 
     const handlePrev = () => {
@@ -54,6 +51,14 @@ const HomePage6: NextPageWithLayout = () => {
 
     const handleNext = () => {
         carouselRef.current?.slickNext();
+    };
+
+    const handlePrev2 = () => {
+        carouselRef2.current?.slickPrev();
+    };
+
+    const handleNext2 = () => {
+        carouselRef2.current?.slickNext();
     };
 
     return (
@@ -283,21 +288,37 @@ const HomePage6: NextPageWithLayout = () => {
                             <h3>our services</h3>
                         </div>
                         <div>
-                            <CarouselArrowIndex
+                            <CarouselArrows
                                 sx={{
-                                    position: 'initial'
+                                    color: '#ccc'
                                 }}
-                                index={currentIndex}
-                                total={carouselsExample.length}
-                                onNext={handleNext}
-                                onPrevious={handlePrev}
+                                leftButtonProps={{
+                                    sx: {
+                                        svg: {
+                                            width: '32px',
+                                            height: '32px'
+                                        }
+                                    }
+                                }}
+                                rightButtonProps={{
+                                    sx: {
+                                        svg: {
+                                            width: '32px',
+                                            height: '32px'
+                                        }
+                                    }
+                                }}
+                                hover
+                                icon="ic:round-keyboard-arrow-right"
+                                onNext={handleNext2}
+                                onPrevious={handlePrev2}
                             />
                         </div>
                     </div>
 
                     <div className="our-services-content">
                         <div className="row svs-slider">
-                            <Carousel ref={carouselRef} {...carouselSettings}>
+                            <Carousel ref={carouselRef2} {...carouselSettings}>
                                 {carouselsExample.map((item) => (
                                     <div className="col-lg-5">
                                         <div className="service-card-mile">
@@ -593,12 +614,7 @@ const HomePage6: NextPageWithLayout = () => {
                                 ))}
                             </Carousel>
 
-                            <CarouselArrowIndex
-                                index={currentIndex}
-                                total={carouselsExample.length}
-                                onNext={handleNext}
-                                onPrevious={handlePrev}
-                            />
+                            <CarouselArrowIndex index={0} total={carouselsExample.length} onNext={handleNext} onPrevious={handlePrev} />
                         </div>
                         <ul className="slider-thumb">
                             <li>

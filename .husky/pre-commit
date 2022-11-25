@@ -2,7 +2,4 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # Add the following
-pnpm lint:check
-pnpm lint:fix
-pnpm prettier:check
-pnpm prettier:fix
+pnpm lint & pnpm prettier

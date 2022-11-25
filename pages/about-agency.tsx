@@ -2,13 +2,15 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import Carousel from '../app/components/carousel';
+import Carousel, { CarouselArrows } from '../app/components/carousel';
 import { carouselsExample } from './index';
 import VisibilitySensor from 'react-visibility-sensor';
 import CountUp from 'react-countup';
 import { useRef } from 'react';
 
 const AboutAgency: NextPageWithLayout = () => {
+    const carouselRef = useRef<Carousel | null>(null);
+
     const carouselSettings = {
         slidesToShow: 2,
         dots: false,
@@ -29,7 +31,14 @@ const AboutAgency: NextPageWithLayout = () => {
             }
         ]
     };
-    const carouselRef = useRef<Carousel | null>(null);
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
 
     return (
         <>
@@ -63,9 +72,39 @@ const AboutAgency: NextPageWithLayout = () => {
             </section>
             <section className="our-services-sec v2 pt-5">
                 <div className="container">
-                    <div className="mile-title">
-                        <h3>our services</h3>
+                    <div className="row pb-3 mile-title align-items-center">
+                        <div className="col-6">
+                            <h3>our services</h3>
+                        </div>
+                        <div className="col-6 d-flex justify-content-end">
+                            <CarouselArrows
+                                sx={{
+                                    color: '#ccc'
+                                }}
+                                leftButtonProps={{
+                                    sx: {
+                                        svg: {
+                                            width: '32px',
+                                            height: '32px'
+                                        }
+                                    }
+                                }}
+                                rightButtonProps={{
+                                    sx: {
+                                        svg: {
+                                            width: '32px',
+                                            height: '32px'
+                                        }
+                                    }
+                                }}
+                                hover
+                                icon="ic:round-keyboard-arrow-right"
+                                onNext={handleNext}
+                                onPrevious={handlePrev}
+                            />
+                        </div>
                     </div>
+
                     <div className="our-services-content">
                         <div className="row svs-slider">
                             <Carousel ref={carouselRef} {...carouselSettings}>

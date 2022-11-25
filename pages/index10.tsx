@@ -5,7 +5,6 @@ import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carous
 import { RightMenu } from '../app/components/RightMenu';
 import { Burger } from '../app/components/Navigation/Burger';
 import { useRef, useState } from 'react';
-import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 
@@ -14,31 +13,6 @@ const HomePage10: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
-        slidesToShow: 2,
-        dots: false,
-        arrows: false,
-        centerMode: false,
-        ...CarouselDots({
-            rounded: true,
-            sx: { mt: '10px' }
-        }),
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: { slidesToShow: 2 }
-            },
-            {
-                breakpoint: 600,
-                settings: { slidesToShow: 2 }
-            },
-            {
-                breakpoint: 480,
-                settings: { slidesToShow: 1, centerPadding: '0' }
-            }
-        ]
-    };
-
-    const carouselSettings2 = {
         slidesToShow: 2,
         dots: false,
         arrows: false,
@@ -516,7 +490,7 @@ const HomePage10: NextPageWithLayout = () => {
                                     }
                                 }}
                             >
-                                <Carousel ref={carouselRef} {...carouselSettings2}>
+                                <Carousel ref={carouselRef} {...carouselSettings}>
                                     {carouselsExample.map((item) => (
                                         <div className="col-lg-6">
                                             <div className="testimonial-slide">

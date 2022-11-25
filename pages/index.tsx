@@ -1,6 +1,6 @@
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { Navigation } from '../app/components/Navigation';
@@ -9,6 +9,7 @@ import { Testi } from '../app/components/Testi';
 import { KeepConnected } from '../app/components/KeepConnected';
 import { NextLink } from '../app/components/BaseNextLink';
 import { TabRoot } from '../app/components/Tabs/TabRoot';
+import { useScroll } from '../hooks/useScroll';
 
 // const _carouselsExample = [...Array(5)].map((_, index) => ({
 //     id: index.toString(),
@@ -90,6 +91,14 @@ const tabItems = [
 ];
 
 const HomePage: NextPageWithLayout = () => {
+    const { scrollDistance } = useScroll();
+
+    useEffect(() => {
+        console.log(scrollDistance);
+    }, []);
+
+    console.log(scrollDistance);
+
     return (
         <>
             <Navigation />

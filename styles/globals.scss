@@ -8742,7 +8742,7 @@ body.dark-v {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    padding: 287px 0 322px;
+    padding: 250px 0 540px;
     overflow: hidden;
 
     &:before {
@@ -18471,7 +18471,7 @@ header.header-v12.v13.pb .light-logo {
     }
 
     .main-banner-v9 {
-        padding: 220px 0 140px;
+        padding: 220px 0 540px;
     }
 
     .banner-slider-v9 .slick-dots {
@@ -22571,7 +22571,8 @@ header.header-v12.v13.pb .light-logo {
     }
 
     .main-banner-v9 {
-        padding: 190px 0 140px;
+        //padding: 190px 0 140px;
+        padding: 290px 0 440px;
     }
 
     .about-v9-content .about-v9-txt > h2 {

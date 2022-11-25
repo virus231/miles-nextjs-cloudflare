@@ -11,14 +11,11 @@ import { useRef } from 'react';
 const AboutBusiness: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
 
-    const theme = useTheme();
-
     const carouselSettings = {
         slidesToShow: 2,
-        dots: true,
+        dots: false,
         arrows: false,
         centerMode: false,
-        rtl: Boolean(theme.direction === 'rtl'),
         ...CarouselDots({
             rounded: true,
             sx: { mt: '10px' }
@@ -30,7 +27,7 @@ const AboutBusiness: NextPageWithLayout = () => {
             },
             {
                 breakpoint: 600,
-                settings: { slidesToShow: 1 }
+                settings: { slidesToShow: 2 }
             },
             {
                 breakpoint: 480,
@@ -493,71 +490,68 @@ const AboutBusiness: NextPageWithLayout = () => {
                         </div>
                         <div className="testimonial-slider style2">
                             <div className="row testimo-slider">
-                                <Box
+                                <CarouselArrows
+                                    icon="teenyicons:right-small-outline"
+                                    onNext={handleNext}
+                                    topSpace={75}
+                                    onPrevious={handlePrev}
                                     sx={{
-                                        overflow: 'hidden',
-                                        position: 'relative',
-                                        '& .slick-list': {
-                                            borderRadius: 2
-                                            // boxShadow: (theme) => theme.customShadows.z16,
+                                        zIndex: 9,
+                                        color: '#ccc'
+                                    }}
+                                    leftButtonProps={{
+                                        sx: {
+                                            width: '3.5rem',
+                                            height: '3.5rem',
+                                            borderRadius: '10px',
+                                            '&:hover': {
+                                                svg: {
+                                                  color: 'none'
+                                                },
+                                                borderRadius: '10px',
+                                                backgroundColor: 'none'
+                                            }
+                                        }
+                                    }}
+                                    rightButtonProps={{
+                                        sx: {
+                                            width: '3.5rem',
+                                            height: '3.5rem',
+                                            borderRadius: '10px',
+                                            '&:hover': {
+                                                svg: {
+                                                    color: 'none'
+                                                },
+                                                borderRadius: '10px',
+                                                backgroundColor: 'none'
+                                            }
                                         }
                                     }}
                                 >
-                                    <CarouselArrows
-                                        // icon="noto:rightwards-hand"
-                                        onNext={handleNext}
-                                        onPrevious={handlePrev}
-                                        sx={{
-                                            zIndex: 9,
-                                            color: '#ccc'
-                                        }}
-                                    >
-                                        <Carousel ref={carouselRef} {...carouselSettings}>
-                                            {carouselsExample.map((item) => (
-                                                <div key={item.id} className="col-lg-6">
-                                                    <div className="testimonial-slide">
-                                                        <p>
-                                                            “Originally, creative and with an innate understanding of their customer’s need.
-                                                            The team at Miles are always a pleasure to work with. Recommended.”
-                                                        </p>
-                                                        <div className="thmb-row">
-                                                            <div className="thmb-img">
-                                                                <img src="/static/images/thumb1.png" alt="" />
-                                                            </div>
-                                                            <div className="thmb-info">
-                                                                <h3>Bobby Hanesto</h3>
-                                                                <span>
-                                                                    Director of <em>Inivisionapp</em>
-                                                                </span>
-                                                            </div>
+                                    <Carousel ref={carouselRef} {...carouselSettings}>
+                                        {carouselsExample.map((item) => (
+                                            <div key={item.id} className="col-lg-6">
+                                                <div className="testimonial-slide">
+                                                    <p>
+                                                        “Originally, creative and with an innate understanding of their customer’s need. The
+                                                        team at Miles are always a pleasure to work with. Recommended.”
+                                                    </p>
+                                                    <div className="thmb-row">
+                                                        <div className="thmb-img">
+                                                            <img src="/static/images/thumb1.png" alt="" />
+                                                        </div>
+                                                        <div className="thmb-info">
+                                                            <h3>Bobby Hanesto</h3>
+                                                            <span>
+                                                                Director of <em>Inivisionapp</em>
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            ))}
-                                        </Carousel>
-                                    </CarouselArrows>
-                                </Box>
-                                {/*<CarouselCenterMode data={_carouselsExample} />*/}
-                                {/*          <div className="col-lg-6">*/}
-                                {/*              <div className="testimonial-slide">*/}
-                                {/*                  <p>*/}
-                                {/*                      “Originally, creative and with an innate understanding of*/}
-                                {/*                      their customer’s need. The team at Miles are always a*/}
-                                {/*                      pleasure to work with. Recommended.”*/}
-                                {/*                  </p>*/}
-                                {/*                  <div className="thmb-row">*/}
-                                {/*                      <div className="thmb-img">*/}
-                                {/*                          <img src="/static/images/thumb1.png" alt="" />*/}
-                                {/*                      </div>*/}
-                                {/*                      <div className="thmb-info">*/}
-                                {/*                          <h3>Bobby Hanesto</h3>*/}
-                                {/*                          <span>*/}
-                                {/*  Director of <em>Inivisionapp</em>*/}
-                                {/*</span>*/}
-                                {/*                      </div>*/}
-                                {/*                  </div>*/}
-                                {/*              </div>*/}
-                                {/*          </div>*/}
+                                            </div>
+                                        ))}
+                                    </Carousel>
+                                </CarouselArrows>
                                 {/*          <div className="col-lg-6">*/}
                                 {/*              <div className="testimonial-slide">*/}
                                 {/*                  <p>*/}

@@ -12,6 +12,7 @@ import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
 
 const HomePage11: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
+    const carouselRef2 = useRef<Carousel | null>(null);
 
     const carouselSettings = {
         slidesToShow: 2,
@@ -89,6 +90,14 @@ const HomePage11: NextPageWithLayout = () => {
 
     const handleNext = () => {
         carouselRef.current?.slickNext();
+    };
+
+    const handlePrev2 = () => {
+        carouselRef2.current?.slickPrev();
+    };
+
+    const handleNext2 = () => {
+        carouselRef2.current?.slickNext();
     };
 
     return (
@@ -647,8 +656,8 @@ const HomePage11: NextPageWithLayout = () => {
                     <div className="row teams teams-slider">
                         <CarouselArrows
                             icon="teenyicons:right-small-outline"
-                            onNext={handleNext}
-                            onPrevious={handlePrev}
+                            onNext={handleNext2}
+                            onPrevious={handlePrev2}
                             topSpace={50}
                             leftButtonProps={{
                                 sx: {
@@ -679,7 +688,7 @@ const HomePage11: NextPageWithLayout = () => {
                                 color: '#ccc'
                             }}
                         >
-                            <Carousel ref={carouselRef} {...carouselSettings2}>
+                            <Carousel ref={carouselRef2} {...carouselSettings2}>
                                 {carouselsExample.map((item) => (
                                     <div key={item.id} className="col-lg-3">
                                         <div className="team-cl">

@@ -1,6 +1,8 @@
 import { NextLink } from '../app/components/BaseNextLink';
 import { Layout } from '../app/components/Layout';
 import { NextPageWithLayout } from './_app';
+import { useScroll } from '../hooks/useScroll';
+import { useEffect } from 'react';
 
 const HomePage2: NextPageWithLayout = () => {
     return (

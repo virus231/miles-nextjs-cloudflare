@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { BlogPosts } from '../app/components/BlogPosts';
@@ -7,9 +7,18 @@ import { RightMenu } from '../app/components/RightMenu';
 import { Burger } from '../app/components/Navigation/Burger';
 import { carouselsExample } from './index';
 import Carousel, { CarouselDots } from '../app/components/carousel';
+import { useScroll } from '../hooks/useScroll';
+import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
 
 const HomePage9: NextPageWithLayout = () => {
     const [open, setOpen] = useState<boolean>(false);
+    const { scrollDistance } = useScroll();
+
+    useEffect(() => {
+        console.log(scrollDistance);
+    }, []);
+
+    console.log(scrollDistance);
 
     const carouselRef = useRef<Carousel | null>(null);
 
@@ -24,8 +33,14 @@ const HomePage9: NextPageWithLayout = () => {
         })
     };
 
+    const anotherCarouselSettings = {
+        ...carouselSettings,
+        dots: false
+    };
+
     return (
         <>
+            {/*Need sticky*/}
             <header className="header-v8 v9">
                 <div className="container">
                     <div className="header-content-v8">
@@ -156,7 +171,7 @@ const HomePage9: NextPageWithLayout = () => {
                     <div className="banner-slider-v9 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <Carousel ref={carouselRef} {...carouselSettings}>
                             {carouselsExample.map((item) => (
-                                <div className="banner-slide-v9">
+                                <div key={item.id} className="banner-slide-v9">
                                     <span>Rewared for your trust</span>
                                     <h2>
                                         <span>Building The Right</span> Foundations
@@ -393,78 +408,34 @@ const HomePage9: NextPageWithLayout = () => {
                         </h2>
                     </div>
                     <div className="cl-slider-v4">
-                        <div className="cl-slide">
-                            <ul className="rating">
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                            </ul>
-                            <span>5.0 Rating</span>
-                            <p>
-                                Daniel was a real pleasure to work with and we look forward to working with him again. He’s definitely the
-                                kind of designer you can trust with a project from start to finish
-                            </p>
-                        </div>
-                        <div className="cl-slide">
-                            <ul className="rating">
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                            </ul>
-                            <span>5.0 Rating</span>
-                            <p>
-                                Daniel was a real pleasure to work with and we look forward to working with him again. He’s definitely the
-                                kind of designer you can trust with a project from start to finish
-                            </p>
-                        </div>
-                        <div className="cl-slide">
-                            <ul className="rating">
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                                <li>
-                                    <i className="lni lni-star-filled" />
-                                </li>
-                            </ul>
-                            <span>5.0 Rating</span>
-                            <p>
-                                Daniel was a real pleasure to work with and we look forward to working with him again. He’s definitely the
-                                kind of designer you can trust with a project from start to finish
-                            </p>
-                        </div>
+                        <Carousel ref={carouselRef} {...anotherCarouselSettings}>
+                            {carouselsExample.map((item) => (
+                                <div className="cl-slide">
+                                    <ul className="rating">
+                                        <li>
+                                            <i className="lni lni-star-filled" />
+                                        </li>
+                                        <li>
+                                            <i className="lni lni-star-filled" />
+                                        </li>
+                                        <li>
+                                            <i className="lni lni-star-filled" />
+                                        </li>
+                                        <li>
+                                            <i className="lni lni-star-filled" />
+                                        </li>
+                                        <li>
+                                            <i className="lni lni-star-filled" />
+                                        </li>
+                                    </ul>
+                                    <span>5.0 Rating</span>
+                                    <p>
+                                        Daniel was a real pleasure to work with and we look forward to working with him again. He’s
+                                        definitely the kind of designer you can trust with a project from start to finish
+                                    </p>
+                                </div>
+                            ))}
+                        </Carousel>
                     </div>
                     <div className="cl-slide-thumbs">
                         <div className="cli-thumb">
@@ -734,7 +705,7 @@ const HomePage9: NextPageWithLayout = () => {
 };
 
 HomePage9.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Business Consulting">{page}</Layout>;
 };
 
 export default HomePage9;
