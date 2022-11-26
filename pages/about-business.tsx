@@ -506,7 +506,7 @@ const AboutBusiness: NextPageWithLayout = () => {
                                             borderRadius: '10px',
                                             '&:hover': {
                                                 svg: {
-                                                  color: 'none'
+                                                    color: 'none'
                                                 },
                                                 borderRadius: '10px',
                                                 backgroundColor: 'none'

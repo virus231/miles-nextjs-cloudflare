@@ -1056,7 +1056,7 @@ const HomePage11: NextPageWithLayout = () => {
 };
 
 HomePage11.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Creative Agency">{page}</Layout>;
 };
 
 export default HomePage11;

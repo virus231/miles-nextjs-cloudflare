@@ -35,42 +35,35 @@ export const RightMenu = ({ isOpen = false, closeMenu }: Props) => {
     };
 
     return (
-        <div
-            className={classNames(styles.responsiveMenu, {
-                [styles.active]: isOpen
-            })}
-        >
-            <div className={classNames(styles.repHeader)}>
-                <div className={classNames(styles.repLogo)}>
+        <div className={`responsive-menu ${isOpen ? 'active' : ''}`}>
+            <div className="rep-header">
+                <div className="rep-logo">
                     <img src="/static/images/logo2.png" alt="" />
                 </div>
-                <div onClick={closeMenu} className={classNames(styles.closeMenu)}>
-                    <i className="lni lni-close"></i>
+                <div onClick={closeMenu} className="close-menu">
+                    <i className="lni lni-close" />
                 </div>
             </div>
-            <div className={classNames(styles.searchBox)}>
+            <div className="search-box">
                 <form>
                     <input type="text" name="search" placeholder="Search" />
                     <button type="submit">
-                        <i className="lni lni-search-alt"></i>
+                        <i className="lni lni-search-alt" />
                     </button>
                 </form>
             </div>
-            <ul className={styles.mobileMenu}>
+            <ul className="mobile-menu">
                 {rightMenu.map((menu) => (
                     <li
                         key={menu.name}
-                        className={classNames(styles.menuItemHasChildren, {
-                            [styles.active]: openCollapse.name === menu.name && openCollapse.isOpen
-                        })}
+                        className={`menu-item-has-children ${openCollapse.name === menu.name && openCollapse.isOpen ? 'active' : ''}`}
                     >
-                        <div onClick={() => onClick(menu)}>{menu.name}</div>
+                        <a style={{
+                          color: openCollapse.name === menu.name && openCollapse.isOpen ? '#f59e31' : '#343a40'
+                        }} onClick={() => onClick(menu)}>{menu.name}</a>
                         <ul
                             style={{
                                 display: openCollapse.name === menu.name && openCollapse.isOpen ? 'block' : 'none'
-                                // transform: "translateY(-3rem)",
-                                // transition: "all 0.5s ease-in-out",
-                                // transitionDelay: "0.4s",
                             }}
                         >
                             {menu.children.map((child, index) => (

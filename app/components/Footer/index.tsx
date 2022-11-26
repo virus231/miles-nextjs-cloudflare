@@ -4,106 +4,125 @@ import styles from './Footer.module.scss';
 
 export const Footer = () => {
     return (
-        <footer className={classNames(styles.footerV6, styles.v8)}>
+        <footer className="footer-v6 v8">
             <div className="container">
-                <div className={styles.footerContentV6}>
+                <div className="footer-content-v6">
                     <div className="row">
                         <div className="col-lg-6">
-                            <div className={styles.widgetAbt} data-wow-duration="1000ms" data-wow-delay="0ms">
+                            <div className="widget-abt wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <h2>Boost your business up to high level</h2>
                                 <h2>
                                     Start by
-                                    <div> saying hi</div>
+                                    <a href="#" title="">
+                                        {' '}
+                                        saying hi
+                                    </a>
                                 </h2>
                             </div>
                         </div>
                         <div className="col-lg-2">
-                            <div className={styles.widgetFtServices}>
+                            <div className="widget-ft-services">
                                 <h3>Services</h3>
                                 <ul>
                                     <li>
-                                        <NextLink href="#">SEO Marketing</NextLink>
+                                        <a href="#" title="">
+                                            SEO Marketing
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">SEO Services</NextLink>
+                                        <a href="#" title="">
+                                            SEO Services
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">Pay Per Click</NextLink>
+                                        <a href="#" title="">
+                                            Pay Per Click
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">SEO Audit</NextLink>
+                                        <a href="#" title="">
+                                            SEO Audit
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">FB/GG Ads</NextLink>
+                                        <a href="#" title="">
+                                            FB/GG Ads
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">Email Marketing</NextLink>
+                                        <a href="#" title="">
+                                            Email Marketing
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                         <div className="col-lg-4">
-                            <div
-                                className={classNames(styles.getTouchTxt, 'mw-100 wow fadeInRight')}
-                                data-wow-duration="1000ms"
-                                data-wow-delay="0ms"
-                            >
-                                <h5>Contact</h5>
+                            <div className="get-touch-txt mw-100 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
+                                <h5>contact</h5>
                                 <h4>90 Fairground Rd, FL 3290, United States</h4>
-                                <NextLink className={styles.email} href="#">
+                                <a href="#" title="">
                                     hello@milseo.co
-                                </NextLink>
-                                <ul className={styles.contactMenu}>
+                                </a>
+                                <ul>
                                     <li>
-                                        <NextLink href="15_portfolio_horizontal_scroll.html">Works</NextLink>
+                                        <a href="15_portfolio_horizontal_scroll.html" title="">
+                                            Works
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="24_about_agency.html">About</NextLink>
+                                        <a href="24_about_agency.html" title="">
+                                            About
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="blog-layout1.html">News</NextLink>
+                                        <a href="blog-layout1.html" title="">
+                                            News
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="30_contact_1.html">Contact</NextLink>
+                                        <a href="30_contact_1.html" title="">
+                                            Contact
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className={styles.mileBottomFooter}>
+                    <div className="mile-bottom-footer">
                         <div className="row align-items-center">
                             <div className="col-lg-8">
-                                <div className={styles.btmCopy}>
+                                <div className="btm-copy">
                                     <img src="/static/images/logo8.png" alt="" />
                                     <p>© 2020. All Rights Reserved</p>
                                 </div>
                             </div>
                             <div className="col-lg-4">
-                                <ul className={styles.socialHeader}>
+                                <ul className="social-header">
                                     <li>
-                                        <NextLink href="#">
-                                            <i className="lni lni-twitter-original"></i>
-                                        </NextLink>
+                                        <a href="#" title="">
+                                            <i className="lni lni-twitter-original" />
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">
-                                            <i className="lni lni-facebook-filled"></i>
-                                        </NextLink>
+                                        <a href="#" title="">
+                                            <i className="lni lni-facebook-filled" />
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">
-                                            <i className="lni lni-instagram-original"></i>
-                                        </NextLink>
+                                        <a href="#" title="">
+                                            <i className="lni lni-instagram-original" />
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">
-                                            <i className="lni lni-pinterest"></i>
-                                        </NextLink>
+                                        <a href="#" title="">
+                                            <i className="lni lni-pinterest" />
+                                        </a>
                                     </li>
                                     <li>
-                                        <NextLink href="#">
-                                            <i className="lni lni-youtube"></i>
-                                        </NextLink>
+                                        <a href="#" title="">
+                                            <i className="lni lni-youtube" />
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

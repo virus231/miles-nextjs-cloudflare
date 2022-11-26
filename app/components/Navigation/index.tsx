@@ -1,20 +1,18 @@
-import classNames from 'classnames';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { NextLink } from '../BaseNextLink';
 import { RightMenu } from '../RightMenu';
 import { Burger } from './Burger';
 import { Links } from './Links';
-import styles from './Navigation.module.scss';
 
 export const Navigation = () => {
     const [open, setOpen] = useState<boolean>(false);
 
     return (
         <>
-            <header className={styles.headerV8}>
+            <header className="header-v8">
                 <div className="container">
-                    <div className={styles.headerContentV8}>
-                        <div className={styles.logoV8}>
+                    <div className="header-content-v8">
+                        <div className="logo-v8">
                             <NextLink href="/" title="logo">
                                 <img src="/static/images/logo_8.png" alt="Logo" />
                             </NextLink>
@@ -24,12 +22,10 @@ export const Navigation = () => {
                                 <Links />
                             </ul>
                         </nav>
-
-                        <NextLink href="#" className={styles.chatBtn}>
+                        <NextLink href="#" className="chat-btn">
                             Let’s chat!
                             <i className="lni lni-comments-reply"></i>
                         </NextLink>
-
                         <Burger setOpen={() => setOpen(!open)} />
                     </div>
                 </div>

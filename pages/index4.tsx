@@ -1,7 +1,23 @@
 import { Layout } from '../app/components/Layout';
 import { NextPageWithLayout } from './_app';
+import Carousel, { CarouselDots } from "../app/components/carousel";
+import { carouselsExample } from "./index";
+import { useRef } from 'react';
 
 const HomePage4: NextPageWithLayout = () => {
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+      slidesToShow: 1,
+      dots: false,
+      arrows: false,
+      centerMode: false,
+      ...CarouselDots({
+        rounded: true,
+        sx: { mt: '10px', color: '#f59e31' }
+      })
+    };
+
     return (
         <>
             <header className="header-v4">
@@ -631,7 +647,6 @@ const HomePage4: NextPageWithLayout = () => {
                                         let’s chat!
                                     </a>
                                 </div>
-                                about-v4-sec end--&gt;
                             </div>
                         </div>
                     </div>
@@ -769,78 +784,35 @@ const HomePage4: NextPageWithLayout = () => {
                                     <span>What’s clients say about me</span>
                                 </div>
                                 <div className="cl-slider-v4">
-                                    <div className="cl-slide">
+                                  <Carousel ref={carouselRef} {...carouselSettings}>
+                                    {carouselsExample.map((item) => (
+                                      <div className="cl-slide">
                                         <ul className="rating">
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
+                                          <li>
+                                            <i className="lni lni-star-filled" />
+                                          </li>
+                                          <li>
+                                            <i className="lni lni-star-filled" />
+                                          </li>
+                                          <li>
+                                            <i className="lni lni-star-filled" />
+                                          </li>
+                                          <li>
+                                            <i className="lni lni-star-filled" />
+                                          </li>
+                                          <li>
+                                            <i className="lni lni-star-filled" />
+                                          </li>
                                         </ul>
                                         <span>5.0 Rating</span>
                                         <p>
-                                            Daniel was a real pleasure to work with and we look forward to working with him again. He’s
-                                            definitely the kind of designer you can trust with a project from start to finish
+                                          Daniel was a real pleasure to work with and we look forward to working with him again. He’s
+                                          definitely the kind of designer you can trust with a project from start to finish
                                         </p>
-                                    </div>
-                                    <div className="cl-slide">
-                                        <ul className="rating">
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                        </ul>
-                                        <span>5.0 Rating</span>
-                                        <p>
-                                            Daniel was a real pleasure to work with and we look forward to working with him again. He’s
-                                            definitely the kind of designer you can trust with a project from start to finish
-                                        </p>
-                                    </div>
-                                    <div className="cl-slide">
-                                        <ul className="rating">
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                            <li>
-                                                <i className="lni lni-star-filled" />
-                                            </li>
-                                        </ul>
-                                        <span>5.0 Rating</span>
-                                        <p>
-                                            Daniel was a real pleasure to work with and we look forward to working with him again. He’s
-                                            definitely the kind of designer you can trust with a project from start to finish
-                                        </p>
-                                    </div>
+                                      </div>
+
+                                    ))}
+                                  </Carousel>
                                 </div>
                                 <div className="cl-slide-thumbs">
                                     <div className="cli-thumb">

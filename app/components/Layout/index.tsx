@@ -1,9 +1,5 @@
-import classNames from 'classnames';
 import Head from 'next/head';
 import { ReactNode, ReactNodeArray, useState } from 'react';
-import { Footer } from '../Footer';
-import { Navigation } from '../Navigation';
-import { RightMenu } from '../RightMenu';
 import styles from './Layout.module.scss';
 
 export type LayoutProps = {
@@ -14,8 +10,6 @@ export type LayoutProps = {
 };
 
 export function Layout({ title, keywords, description, children }: LayoutProps) {
-    const [open, setOpen] = useState(false);
-
     return (
         <div className={styles.layoutWrapper}>
             <Head>

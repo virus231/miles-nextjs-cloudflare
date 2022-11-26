@@ -8,8 +8,8 @@ export const Links = () => {
         <>
             {navigationItems.map((item) => (
                 <li key={item.name}>
-                    <div>{item.name}</div>
-                    <ul className={styles.hoverMenu}>
+                    <a className="black-clr">{item.name}</a>
+                    <ul className="hover-menu">
                         {item.children.map((child) => (
                             <li key={child.name}>
                                 <NextLink href={child.href}>{child.name}</NextLink>
@@ -19,9 +19,9 @@ export const Links = () => {
                 </li>
             ))}
             <li>
-                <div>Elements</div>
+                <a className="black-clr">Elements</a>
                 <ul
-                    className={classNames(styles.hoverMenu)}
+                    className="hover-menu"
                     style={{
                         width: '300px'
                     }}

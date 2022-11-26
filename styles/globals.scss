@@ -16144,6 +16144,7 @@ body.hp13 #pp-nav {
     }
 
     .close-menu {
+        cursor: pointer;
         margin-left: auto;
         color: #000;
         font-size: 30px;
@@ -16241,6 +16242,7 @@ body.hp13 #pp-nav {
         }
 
         &.menu-item-has-children {
+            cursor: pointer;
             > a:before {
                 opacity: 1;
                 visibility: visible;
