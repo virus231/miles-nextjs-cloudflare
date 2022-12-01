@@ -785,7 +785,7 @@ const HomePage11: NextPageWithLayout = () => {
                             >
                                 <Carousel ref={carouselRef} {...carouselSettings3}>
                                     {carouselsExample.map((item) => (
-                                        <div className="col-lg-6">
+                                        <div key={item.id} className="col-lg-6">
                                             <div className="testimonial-slide">
                                                 <p>
                                                     “Originally, creative and with an innate understanding of their customer’s need. The

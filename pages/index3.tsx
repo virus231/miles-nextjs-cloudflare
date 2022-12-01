@@ -15,9 +15,9 @@ const HomePage3: NextPageWithLayout = () => {
 
     const carouselRef = useRef<Carousel | null>(null);
 
-    useEffect(() => {
-        console.log(window.scrollY);
-    }, []);
+    // useEffect(() => {
+    //     console.log(window.scrollY);
+    // }, []);
 
     const carouselSettings = {
         slidesToShow: 2,
@@ -283,8 +283,8 @@ const HomePage3: NextPageWithLayout = () => {
                                 }}
                             >
                                 <Carousel ref={carouselRef} {...carouselSettings}>
-                                    {carouselsExample.map(() => (
-                                        <div className="col-lg-6">
+                                    {carouselsExample.map((item) => (
+                                        <div key={item.id} className="col-lg-6">
                                             <div className="work-slide">
                                                 <img src="/static/images/pic2.jpg" alt="" />
                                                 <div className="wkr-txt">

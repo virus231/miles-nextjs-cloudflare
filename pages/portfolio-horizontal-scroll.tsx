@@ -35,8 +35,8 @@ const PortfolioHorizontalScroll: NextPageWithLayout = () => {
             <section className="portfolio-horizontol">
                 <div className="pf-hr-slider row">
                     <Carousel ref={carouselRef} {...carouselSettings}>
-                        {carouselsExample.map(() => (
-                            <div className="col-lg-3">
+                        {carouselsExample.map((item) => (
+                            <div key={item.id} className="col-lg-3">
                                 <div className="pf-hr-slide">
                                     <div className="pfr-thumb">
                                         <img src="/static/images/ph2.jpg" alt="" className="w-100" />
@@ -60,7 +60,7 @@ const PortfolioHorizontalScroll: NextPageWithLayout = () => {
 };
 
 PortfolioHorizontalScroll.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Portfolio Horizontal Scroll">{page}</Layout>;
 };
 
 export default PortfolioHorizontalScroll;

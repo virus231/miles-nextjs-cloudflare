@@ -350,7 +350,7 @@ const HomePage10: NextPageWithLayout = () => {
                         <div className="row work-slider">
                             <Carousel ref={carouselRef} {...carouselSettings}>
                                 {carouselsExample.map((item) => (
-                                    <div className="col-lg-6">
+                                    <div key={item.id} className="col-lg-6">
                                         <div className="work-slide">
                                             <img src="/static/images/pic2.jpg" alt="" />
                                             <div className="wkr-txt">
@@ -492,7 +492,7 @@ const HomePage10: NextPageWithLayout = () => {
                             >
                                 <Carousel ref={carouselRef} {...carouselSettings}>
                                     {carouselsExample.map((item) => (
-                                        <div className="col-lg-6">
+                                        <div key={item.id} className="col-lg-6">
                                             <div className="testimonial-slide">
                                                 <p>
                                                     “Originally, creative and with an innate understanding of their customer’s need. The

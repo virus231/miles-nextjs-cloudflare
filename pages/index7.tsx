@@ -882,7 +882,7 @@ const HomePage7: NextPageWithLayout = () => {
                         <div className="row svs-slider">
                             <Carousel ref={carouselRef} {...carouselSettings}>
                                 {carouselsExample.map((item) => (
-                                    <div className="col-lg-5">
+                                    <div key={item.id} className="col-lg-5">
                                         <div className="service-card-mile">
                                             <img src="/static/images/icon1.png" alt="" />
                                             <h2>

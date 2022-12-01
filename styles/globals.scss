@@ -4,6 +4,10 @@
 @import 'app/components/RightMenu/RightMenu.module.scss';
 @import 'styles/Home.module.scss';
 
+.fp-watermark {
+    display: none !important;
+}
+
 img {
     vertical-align: middle;
     height: auto;
@@ -8309,7 +8313,7 @@ body.dark-v {
         padding: 0;
         border: 0;
 
-        a {
+        button {
             border: 0;
             background-color: inherit;
             border-radius: 0;

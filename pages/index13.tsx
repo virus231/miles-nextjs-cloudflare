@@ -324,7 +324,7 @@ const HomePage13: NextPageWithLayout = () => {
                                 <div className="task-slider">
                                     <Carousel ref={carouselRef} {...carouselSettings}>
                                         {carouselsExample.map((item) => (
-                                            <div className="task-slide">
+                                            <div key={item.id} className="task-slide">
                                                 <div className="row align-items-center">
                                                     <div className="col-lg-6">
                                                         <div className="tsk-text">
@@ -382,7 +382,7 @@ const HomePage13: NextPageWithLayout = () => {
                                         >
                                             <Carousel ref={carouselRef} {...carouselSettings2}>
                                                 {carouselsExample.map((item) => (
-                                                    <div className="col-lg-6">
+                                                    <div key={item.id} className="col-lg-6">
                                                         <div className="testimonial-slide">
                                                             <p>
                                                                 “Originally, creative and with an innate understanding of their customer’s

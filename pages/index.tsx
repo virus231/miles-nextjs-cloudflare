@@ -11,13 +11,6 @@ import { NextLink } from '../app/components/BaseNextLink';
 import { TabRoot } from '../app/components/Tabs/TabRoot';
 import { useScroll } from '../hooks/useScroll';
 
-// const _carouselsExample = [...Array(5)].map((_, index) => ({
-//     id: index.toString(),
-//     title: "123",
-//     image: "/static/images/1.jpg",
-//     description: "Description",
-// }));
-
 export const carouselsExample = [
     {
         id: '1',
@@ -97,7 +90,6 @@ const HomePage: NextPageWithLayout = () => {
         console.log(scrollDistance);
     }, []);
 
-    console.log(scrollDistance);
 
     return (
         <>
@@ -569,7 +561,7 @@ const HomePage: NextPageWithLayout = () => {
 };
 
 HomePage.getLayout = function getLayout(page: ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Home Agency">{page}</Layout>;
 };
 
 export default HomePage;

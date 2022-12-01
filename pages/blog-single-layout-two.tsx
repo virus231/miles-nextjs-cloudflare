@@ -49,7 +49,7 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
                             <div className="featured-post-slider">
                                 <Carousel ref={carouselRef} {...carouselSettings}>
                                     {carouselsExample.map((item) => (
-                                        <div className="featured-post">
+                                        <div key={item.id} className="featured-post">
                                             <div className="vector-img">
                                                 <img src="/static/images/blog-large1.jpg" alt="" />
                                             </div>

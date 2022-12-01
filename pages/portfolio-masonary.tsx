@@ -3,6 +3,7 @@ import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { IsotopeLayout } from '../app/components/IsotopeLayout';
+import dynamic from 'next/dynamic';
 
 const options = [
     {
@@ -10,6 +11,7 @@ const options = [
         title: 'All Projects'
     }
 ];
+
 
 const PortfolioMasonary: NextPageWithLayout = () => {
     const { handleFilterKeyChange } = IsotopeLayout();
@@ -128,7 +130,7 @@ const PortfolioMasonary: NextPageWithLayout = () => {
 };
 
 PortfolioMasonary.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Portfolio Masonary">{page}</Layout>;
 };
 
 export default PortfolioMasonary;

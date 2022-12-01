@@ -62,7 +62,6 @@ export const TabContent = (props: Props) => {
             >
                 <div className="row projects-sliders">
                     <CarouselArrows
-                        // icon="noto:rightwards-hand"
                         onNext={handleNext}
                         topSpace={35}
                         onPrevious={handlePrev}

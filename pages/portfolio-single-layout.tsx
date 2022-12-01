@@ -1,8 +1,55 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { carouselsExample } from './index';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { useRef } from 'react';
 
 const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
+    const carouselRef = useRef<Carousel | null>(null);
+    const carouselRef2 = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+        slidesToShow: 4,
+        dots: true,
+        arrows: false,
+        centerMode: false,
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: '0px', color: '#f59e31' }
+        }),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: '0' }
+            }
+        ]
+    };
+
+    const carouselSettings2 = {
+        slidesToShow: 1,
+        dots: false,
+        arrows: false,
+        centerMode: false
+    };
+
+
+    const handlePrev = () => {
+        carouselRef2.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef2.current?.slickNext();
+    };
+
     return (
         <>
             <header className="pb">
@@ -506,231 +553,153 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
             </div>
 
             <div className="project-single-slider">
-                <div className="project-single-slide">
-                    <div className="pf-single-banner">
-                        <div className="container">
-                            <div className="pf-banner wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                <img src="/static/images/pf-banner.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="project-content-v1">
-                        <div className="container">
-                            <div className="row project-v1-info">
-                                <div className="col-lg-7">
-                                    <div className="project-dt">
-                                        <h2>Byzano Finance Manage App</h2>
-                                        <div className="row">
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>client</h3>
-                                                    <span>IBM Finance Center Global Inc.</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>team</h3>
-                                                    <span>Daniel Tan - Designer</span> <span>Naby Keita - Mobile Developer</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>services</h3>
-                                                    <span>UI/UX, Branding</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>date</h3>
-                                                    <span>Feburary 25th, 2020</span>
-                                                </div>
-                                            </div>
+                <CarouselArrows
+                    textLeftArrow="Previous"
+                    textRightArrow="Next"
+                    leftButtonProps={{
+                        sx: {
+                            fontSize: '14px',
+                            color: '#000',
+                            fontWeight: '700',
+                            textTransform: 'uppercase',
+                            // backgroundColor: '#fff',
+                            border: '0',
+                            width: 'auto',
+                            height: '42px',
+                            lineHeight: '42px',
+                            top: '50%',
+                            padding: '0 24px',
+                            letterSpacing: '2 px',
+                            borderRadius: '0',
+                            transform: 'rotate(-90deg)',
+                            '&:hover': {
+                                boxShadow: 'inherit',
+                                backgroundColor: '#f93',
+                                color: '#fff'
+                            }
+                        }
+                    }}
+                    rightButtonProps={{
+                        sx: {
+                            fontSize: '14px',
+                            color: '#000',
+                            fontWeight: '700',
+                            textTransform: 'uppercase',
+                            // backgroundColor: '#fff',
+                            border: '0',
+                            width: 'auto',
+                            height: '42px',
+                            lineHeight: '42px',
+                            top: '50%',
+                            padding: '0 24px',
+                            letterSpacing: '2 px',
+                            borderRadius: '0',
+                            transform: 'rotate(90deg)',
+                            '&:hover': {
+                                boxShadow: 'inherit',
+                                backgroundColor: '#f93',
+                                color: '#fff'
+                            }
+                        }
+                    }}
+                    onNext={handleNext}
+                    topSpace={50}
+                    onPrevious={handlePrev}
+                    sx={{
+                        zIndex: 9,
+                        color: '#ccc'
+                    }}
+                >
+                    <Carousel ref={carouselRef2} {...carouselSettings2}>
+                        {carouselsExample.map((item) => (
+                            <div key={item.id} className="project-single-slide">
+                                <div className="pf-single-banner">
+                                    <div className="container">
+                                        <div
+                                            className="pf-banner d-flex justify-content-center wow fadeInUp"
+                                            data-wow-duration="1000ms"
+                                            data-wow-delay="0ms"
+                                        >
+                                            <img src="/static/images/pf-banner.png" alt="" />
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-lg-5">
-                                    <div className="ppr-sldr wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                        <p>
-                                            “Originally, creative &amp; with an innate understanding of their customer’s need. The team at
-                                            Miles are always a pleasure to work !”
-                                        </p>
-                                        <div className="pp-info">
-                                            <div className="pp-img">
-                                                <img src="/static/images/thumb1.png" alt="" />
-                                            </div>
-                                            <div className="pp-dt">
-                                                <h3>Enesto Valverde</h3>
-                                                <span>
-                                                    Director of{' '}
-                                                    <a href="#" title="">
-                                                        byzano.co
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="txt-content text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                <p>
-                                    Byzano nestled right into our wheelhouse. A dynamic co-working space attracting entrepreneurs,
-                                    tinkerers, and creatives in the tech hub of Ann Arbor, Michigan, they wanted a lifestyle brand—a
-                                    complete ecosystem of brand visuals and assets that could be worn, posted, shared.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="project-single-slide">
-                    <div className="pf-single-banner">
-                        <div className="container">
-                            <div className="pf-banner wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                <img src="/static/images/pf-banner.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="project-content-v1">
-                        <div className="container">
-                            <div className="row project-v1-info">
-                                <div className="col-lg-7">
-                                    <div className="project-dt">
-                                        <h2>Byzano Finance Manage App</h2>
-                                        <div className="row">
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>client</h3>
-                                                    <span>IBM Finance Center Global Inc.</span>
+                                <div className="project-content-v1">
+                                    <div className="container">
+                                        <div className="row project-v1-info">
+                                            <div className="col-lg-7">
+                                                <div className="project-dt">
+                                                    <h2>Byzano Finance Manage App</h2>
+                                                    <div className="row">
+                                                        <div className="col-md-6 col-sm-6">
+                                                            <div className="dd-tinfo">
+                                                                <h3>client</h3>
+                                                                <span>IBM Finance Center Global Inc.</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-md-6 col-sm-6">
+                                                            <div className="dd-tinfo">
+                                                                <h3>team</h3>
+                                                                <span>Daniel Tan - Designer</span>{' '}
+                                                                <span>Naby Keita - Mobile Developer</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-md-6 col-sm-6">
+                                                            <div className="dd-tinfo">
+                                                                <h3>services</h3>
+                                                                <span>UI/UX, Branding</span>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-md-6 col-sm-6">
+                                                            <div className="dd-tinfo">
+                                                                <h3>date</h3>
+                                                                <span>Feburary 25th, 2020</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>team</h3>
-                                                    <span>Daniel Tan - Designer</span> <span>Naby Keita - Mobile Developer</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>services</h3>
-                                                    <span>UI/UX, Branding</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>date</h3>
-                                                    <span>Feburary 25th, 2020</span>
+                                            <div className="col-lg-5">
+                                                <div className="ppr-sldr wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
+                                                    <p>
+                                                        “Originally, creative &amp; with an innate understanding of their customer’s need.
+                                                        The team at Miles are always a pleasure to work !”
+                                                    </p>
+                                                    <div className="pp-info">
+                                                        <div className="pp-img">
+                                                            <img src="/static/images/thumb1.png" alt="" />
+                                                        </div>
+                                                        <div className="pp-dt">
+                                                            <h3>Enesto Valverde</h3>
+                                                            <span>
+                                                                Director of{' '}
+                                                                <a href="#" title="">
+                                                                    byzano.co
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-5">
-                                    <div className="ppr-sldr wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                        <p>
-                                            “Originally, creative &amp; with an innate understanding of their customer’s need. The team at
-                                            Miles are always a pleasure to work !”
-                                        </p>
-                                        <div className="pp-info">
-                                            <div className="pp-img">
-                                                <img src="/static/images/thumb1.png" alt="" />
-                                            </div>
-                                            <div className="pp-dt">
-                                                <h3>Enesto Valverde</h3>
-                                                <span>
-                                                    Director of{' '}
-                                                    <a href="#" title="">
-                                                        byzano.co
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="txt-content text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                <p>
-                                    Byzano nestled right into our wheelhouse. A dynamic co-working space attracting entrepreneurs,
-                                    tinkerers, and creatives in the tech hub of Ann Arbor, Michigan, they wanted a lifestyle brand—a
-                                    complete ecosystem of brand visuals and assets that could be worn, posted, shared.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="project-single-slide">
-                    <div className="pf-single-banner">
-                        <div className="container">
-                            <div className="pf-banner wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                <img src="/static/images/pf-banner.png" alt="" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="project-content-v1">
-                        <div className="container">
-                            <div className="row project-v1-info">
-                                <div className="col-lg-7">
-                                    <div className="project-dt">
-                                        <h2>Byzano Finance Manage App</h2>
-                                        <div className="row">
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>client</h3>
-                                                    <span>IBM Finance Center Global Inc.</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>team</h3>
-                                                    <span>Daniel Tan - Designer</span> <span>Naby Keita - Mobile Developer</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>services</h3>
-                                                    <span>UI/UX, Branding</span>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-6 col-sm-6">
-                                                <div className="dd-tinfo">
-                                                    <h3>date</h3>
-                                                    <span>Feburary 25th, 2020</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-5">
-                                    <div className="ppr-sldr wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                        <p>
-                                            “Originally, creative &amp; with an innate understanding of their customer’s need. The team at
-                                            Miles are always a pleasure to work !”
-                                        </p>
-                                        <div className="pp-info">
-                                            <div className="pp-img">
-                                                <img src="/static/images/thumb1.png" alt="" />
-                                            </div>
-                                            <div className="pp-dt">
-                                                <h3>Enesto Valverde</h3>
-                                                <span>
-                                                    Director of{' '}
-                                                    <a href="#" title="">
-                                                        byzano.co
-                                                    </a>
-                                                </span>
-                                            </div>
+                                        <div
+                                            className="txt-content text-center wow fadeInUp"
+                                            data-wow-duration="1000ms"
+                                            data-wow-delay="0ms"
+                                        >
+                                            <p>
+                                                Byzano nestled right into our wheelhouse. A dynamic co-working space attracting
+                                                entrepreneurs, tinkerers, and creatives in the tech hub of Ann Arbor, Michigan, they wanted
+                                                a lifestyle brand—a complete ecosystem of brand visuals and assets that could be worn,
+                                                posted, shared.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="txt-content text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                <p>
-                                    Byzano nestled right into our wheelhouse. A dynamic co-working space attracting entrepreneurs,
-                                    tinkerers, and creatives in the tech hub of Ann Arbor, Michigan, they wanted a lifestyle brand—a
-                                    complete ecosystem of brand visuals and assets that could be worn, posted, shared.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        ))}
+                    </Carousel>
+                </CarouselArrows>
             </div>
 
             <section className="challenge-sec">
@@ -887,46 +856,15 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
                 </div>
                 <div className="container-fluid">
                     <div className="row showcase-slider">
-                        <div className="col-lg-3">
-                            <div className="screen-slide">
-                                <img src="/static/images/screen1.jpg" alt="" className="w-100" />
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="screen-slide">
-                                <img src="/static/images/screen2.jpg" alt="" className="w-100" />
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="screen-slide">
-                                <img src="/static/images/screen3.jpg" alt="" className="w-100" />
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="screen-slide">
-                                <img src="/static/images/screen4.jpg" alt="" className="w-100" />
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="screen-slide">
-                                <img src="/static/images/screen1.jpg" alt="" className="w-100" />
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="screen-slide">
-                                <img src="/static/images/screen2.jpg" alt="" className="w-100" />
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="screen-slide">
-                                <img src="/static/images/screen3.jpg" alt="" className="w-100" />
-                            </div>
-                        </div>
-                        <div className="col-lg-3">
-                            <div className="screen-slide">
-                                <img src="/static/images/screen4.jpg" alt="" className="w-100" />
-                            </div>
-                        </div>
+                        <Carousel ref={carouselRef} {...carouselSettings}>
+                            {carouselsExample.map((item) => (
+                                <div key={item.id} className="col-lg-3">
+                                    <div className="screen-slide">
+                                        <img src="/static/images/screen1.jpg" alt="" className="w-100" />
+                                    </div>
+                                </div>
+                            ))}
+                        </Carousel>
                     </div>
                 </div>
             </section>

@@ -786,7 +786,7 @@ const HomePage4: NextPageWithLayout = () => {
                                 <div className="cl-slider-v4">
                                   <Carousel ref={carouselRef} {...carouselSettings}>
                                     {carouselsExample.map((item) => (
-                                      <div className="cl-slide">
+                                      <div key={item.id} className="cl-slide">
                                         <ul className="rating">
                                           <li>
                                             <i className="lni lni-star-filled" />

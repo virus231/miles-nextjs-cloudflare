@@ -1,7 +1,33 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
+import ReactFullpage, { Item } from '@fullpage/react-fullpage';
+import { useState } from 'react';
+
+
+const originalPages = [{
+    id: 'about',
+    text: 'Section 1',
+    category: 'ui/ux',
+    bg: 'gb-1',
+},
+{
+    id: 'services',
+    text: 'Section 2',
+    category: 'branding',
+    bg: 'gb-2',
+},
+{
+    id: 'why-choose-us',
+    text: 'Section 3',
+    category: 'motion',
+    bg: 'gb-3',
+}];
 
 const PortfolioParallax: NextPageWithLayout = () => {
+    const onLeave = (origin: Item, destination: Item, direction: string) => {
+        console.log('onLeave', { origin, destination, direction });
+    };
+
     return (
         <>
             <header className="header-v12 v13 pb active">
@@ -515,7 +541,56 @@ const PortfolioParallax: NextPageWithLayout = () => {
                 </ul>
             </div>
 
-            <div id="pagepiling" className="dots-hidden">
+            <ReactFullpage
+                navigation
+                onLeave={onLeave}
+                scrollingSpeed={1000}
+                menu="#menuMain"
+                // fixedElements={'.header-v12'}
+                // slidesNavigation
+                parallax="slides"
+                loopTop={false}
+                loopBottom={false}
+                // navigationPosition="right"
+                anchors={['about', 'services', 'why-choose-us', 'cases', 'clients', 'contact']}
+                render={() => (
+                    <ReactFullpage.Wrapper>
+                        {originalPages.map(({ text, id, category, bg }, index) => (
+                            <div key={text}
+                                id={id}
+                                className={`section pp-scrollable ${index == 0 ? 'sc-slide1' : ''}`}>
+                                <div className="slide-container">
+                                    <div className={`fixed-bg ${bg}`} />
+                                    <div className="enter-btn">
+                                        <a href="17_portfolio_single_layout_1.html" title="">
+                                            Enter
+                                        </a>
+                                    </div>
+                                    <div className="container">
+                                        <div className="gb-content">
+                                            <div className="gb-title">
+                                                <h2>
+                                                    <a href="17_portfolio_single_layout_1.html" title="">
+                                                        {category}
+                                                    </a>
+                                                </h2>
+                                            </div>
+                                            <div className="gb-img">
+                                                 {id === "about" ? <img src="/static/images/gb1.png" alt="" /> : null}
+                                                {/*<img src="/static/images/gb1.png" alt="" />*/}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span className="pager-count">1/3</span>
+                                </div>
+                            </div>
+                        ))}
+                    </ReactFullpage.Wrapper>
+                )
+                }
+            />
+
+            {/* <div id="pagepiling" className="dots-hidden">
                 <div className="section pp-scrollable sc-slide1" id="about">
                     <div className="slide-container">
                         <div className="fixed-bg gb-1" />
@@ -585,13 +660,13 @@ const PortfolioParallax: NextPageWithLayout = () => {
                         <span className="pager-count">3/3</span>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     );
 };
 
 PortfolioParallax.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Portfolio Parallax">{page}</Layout>;
 };
 
 export default PortfolioParallax;

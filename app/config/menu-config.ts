@@ -291,11 +291,11 @@ export const navigationItems = [
                 name: 'Porfolio Parallax'
             },
             {
-                href: '/portfolio-horizontal-sccroll',
+                href: '/portfolio-horizontal-scroll',
                 name: 'Porfolio Horizontal Scroll'
             },
             {
-                href: '/portfolio-masonry',
+                href: '/portfolio-masonary',
                 name: 'Porfolio Masonary'
             },
             {
