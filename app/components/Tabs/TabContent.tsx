@@ -63,7 +63,7 @@ export const TabContent = (props: Props) => {
                 <div className="row projects-sliders">
                     <CarouselArrows
                         onNext={handleNext}
-                        topSpace={35}
+                        topSpace={50}
                         onPrevious={handlePrev}
                         sx={{
                             zIndex: 9,
