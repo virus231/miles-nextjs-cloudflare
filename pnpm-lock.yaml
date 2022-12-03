@@ -8,6 +8,7 @@ specifiers:
   '@mui/material': ^5.10.12
   '@popperjs/core': ^2.11.6
   '@types/isotope-layout': ^3.0.9
+  '@types/jquery': ^3.5.14
   '@types/node': 18.11.0
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -30,6 +31,7 @@ specifiers:
   eslint-plugin-sonarjs: 0.12.0
   husky: ^8.0.2
   isotope-layout: ^3.0.6
+  jquery: ^3.6.1
   lint-staged: ^13.0.3
   next: 12.3.1
   prettier: 2.5.1
@@ -55,6 +57,7 @@ dependencies:
   '@popperjs/core': 2.11.6
   bootstrap: 5.2.2_@popperjs+core@2.11.6
   classnames: 2.3.2
+  jquery: 3.6.1
   next: 12.3.1_2mygebwfgdyopr3fy2qddu2eli
   react: 18.2.0
   react-bootstrap: 2.5.0_rj7ozvcq3uehdlnj3cbwzbi5ce
@@ -63,11 +66,12 @@ dependencies:
   react-lazy-load-image-component: 1.5.5_biqbaboplfbrettd7655fr4n2y
   react-slick: 0.29.0_biqbaboplfbrettd7655fr4n2y
   react-visibility-sensor: 5.1.1_biqbaboplfbrettd7655fr4n2y
-  slick-carousel: 1.8.1
+  slick-carousel: 1.8.1_jquery@3.6.1
   swiper: 8.4.4
 
 devDependencies:
   '@types/isotope-layout': 3.0.9
+  '@types/jquery': 3.5.14
   '@types/node': 18.11.0
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -712,6 +716,12 @@ packages:
     resolution: {integrity: sha512-tLvSxfQu10f0M0YFIODdqtFz2Gr3NgEhkH6wTY4Gda9fPtLG4/60GWphHZj4PuxuGTjzaF4MMUog+a347gzzTw==}
     dev: true
 
+  /@types/jquery/3.5.14:
+    resolution: {integrity: sha512-X1gtMRMbziVQkErhTQmSe2jFwwENA/Zr+PprCkF63vFq+Yt5PZ4AlKqgmeNlwgn7dhsXEK888eIW2520EpC+xg==}
+    dependencies:
+      '@types/sizzle': 2.3.3
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
@@ -774,6 +784,10 @@ packages:
 
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
+    dev: true
+
+  /@types/sizzle/2.3.3:
+    resolution: {integrity: sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==}
     dev: true
 
   /@types/warning/3.0.0:
@@ -2306,6 +2320,10 @@ packages:
       outlayer: 2.1.1
     dev: true
 
+  /jquery/3.6.1:
+    resolution: {integrity: sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==}
+    dev: false
+
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -3129,10 +3147,12 @@ packages:
       is-fullwidth-code-point: 4.0.0
     dev: true
 
-  /slick-carousel/1.8.1:
+  /slick-carousel/1.8.1_jquery@3.6.1:
     resolution: {integrity: sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==}
     peerDependencies:
       jquery: '>=1.8.0'
+    dependencies:
+      jquery: 3.6.1
     dev: false
 
   /source-map-js/1.0.2:

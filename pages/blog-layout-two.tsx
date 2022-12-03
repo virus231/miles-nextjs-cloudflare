@@ -358,7 +358,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
                                             </li>
                                             <li className="page-item active">
                                                 <a className="page-link" href="#">
-                                                    <span className="sr-only">2</span>
+                                                    2
                                                 </a>
                                             </li>
                                             <li className="page-item">

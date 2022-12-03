@@ -1,8 +1,9 @@
 import { Layout } from '../app/components/Layout';
 import { NextPageWithLayout } from './_app';
-import Carousel, { CarouselDots } from "../app/components/carousel";
-import { carouselsExample } from "./index";
+import Carousel, { CarouselDots } from '../app/components/carousel';
+import { carouselsExample } from './index';
 import { useRef } from 'react';
+
 
 const HomePage4: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);

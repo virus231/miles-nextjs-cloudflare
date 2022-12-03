@@ -24686,3 +24686,29 @@ header.header-v12.v13.pb .light-logo {
         }
     }
 }
+
+.pp-section {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.pp-scrollable {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.pp-easing {
+    -webkit-transition: 1s cubic-bezier(.55,.085,0,.99);
+    -o-transition: 1s cubic-bezier(.55,.085,0,.99);
+    transition: 1s cubic-bezier(.55,.085,0,.99);
+    -webkit-transition-timing-function: cubic-bezier(.55,.085,0,.99);
+    -o-transition-timing-function: cubic-bezier(.55,.085,0,.99);
+    transition-timing-function: cubic-bezier(.55,.085,0,.99);
+}
+
+.fp-overflow {
+    height: 100%;
+}

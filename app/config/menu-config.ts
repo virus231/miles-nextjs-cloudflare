@@ -149,7 +149,7 @@ export const rightMenu = [
         ]
     },
     {
-        name: 'Blog',
+        name: 'Blogs',
         children: [
             {
                 href: '/blog-layout-one',
