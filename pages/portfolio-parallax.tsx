@@ -2,33 +2,31 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import ReactFullpage, { Item } from '@fullpage/react-fullpage';
 import { useEffect, useState } from 'react';
+import PageScroller from 'react-page-scroller';
 
-const originalPages = [{
-    id: 'about',
-    text: 'Section 1',
-    category: 'ui/ux',
-    bg: 'gb-1',
-    count: 1,
-    img: '/static/images/gb1.png'
+
+const originalLinks = [{
+    id: 0,
+    text: 'Byzano App',
 },
 {
-    id: 'services',
-    text: 'Section 2',
-    category: 'branding',
-    count: 2,
-    bg: 'gb-2',
+    id: 1,
+    text: 'Lewis',
 },
 {
-    id: 'why-choose-us',
-    text: 'Section 3',
-    category: 'motion',
-    count: 3,
-    bg: 'gb-3',
+    id: 2,
+    text: 'Ethant Hunt',
 }];
 
 const PortfolioParallax: NextPageWithLayout = () => {
-    const onLeave = (origin: Item, destination: Item, direction: string) => {
-        console.log('onLeave', { origin, destination, direction });
+    const [currentPage, setCurrentPage] = useState<number | null>(null);
+
+    const handlePageChange = (value: number | null) => {
+        setCurrentPage(value);
+    };
+
+    const handleBeforePageChange = (value: number) => {
+        console.log(value);
     };
 
     return (
@@ -526,7 +524,16 @@ const PortfolioParallax: NextPageWithLayout = () => {
 
             <div className="pt-linkss">
                 <ul id="menuMain">
-                    <li data-menuanchor="about" className="active">
+                    {
+                        originalLinks.map((link) => <li data-menuanchor="about" 
+                                                        className={`${link.id === currentPage ? 'active' : ''}` }>
+                                <a href="#about" title="">
+                                    {link.text}
+                                </a>
+                            </li>
+                        )
+                    }
+                    {/* <li data-menuanchor="about" className="active">
                         <a href="#about" title="">
                             Byzano App
                         </a>
@@ -540,83 +547,39 @@ const PortfolioParallax: NextPageWithLayout = () => {
                         <a href="#why-choose-us" title="">
                             Ethant Hunt
                         </a>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
-
-            <ReactFullpage
-                navigation
-                onLeave={onLeave}
-                scrollingSpeed={1000}
-                menu="#menuMain"
-                // fixedElements={'.header-v12'}
-                // slidesNavigation
-                parallax="sections"
-                loopTop={false}
-                loopBottom={false}
-                // navigationPosition="right"
-                anchors={['about', 'services', 'why-choose-us', 'cases', 'clients', 'contact']}
-                render={() => (
-                    <ReactFullpage.Wrapper>
-                        {originalPages.map(({ text, id, category, bg, img, count }, index) => (
-                            <div key={text}
-                                id={id}
-                                className={`section pp-easing pp-section pp-scrollable ${index == 0 ? 'sc-slide1' : ''}`}>
-                                <div className="slide-container">
-                                    <div className={`fixed-bg ${bg}`} />
-                                    <div className="enter-btn">
-                                        <a href="17_portfolio_single_layout_1.html" title="">
-                                            Enter
-                                        </a>
-                                    </div>
-                                    <div className="container">
-                                        <div className="gb-content">
-                                            <div className="gb-title">
-                                                <h2>
-                                                    <a href="17_portfolio_single_layout_1.html" title="">
-                                                        {category}
-                                                    </a>
-                                                </h2>
-                                            </div>
-                                            <div className="gb-img">
-                                                <img src={img} alt="" />
-                                            </div>
+        
+            <PageScroller
+                    pageOnChange={handlePageChange}
+                    onBeforePageScroll={handleBeforePageChange}
+                    customPageNumber={currentPage ?? 0}
+            >
+                <div className="section pp-scrollable sc-slide1" id="about">
+                            <div className="slide-container">
+                                <div className="fixed-bg gb-1" />
+                                <div className="enter-btn">
+                                    <a href="17_portfolio_single_layout_1.html" title="">
+                                        Enter
+                                    </a>
+                                </div>
+                                <div className="container">
+                                    <div className="gb-content">
+                                        <div className="gb-title">
+                                            <h2>
+                                                <a href="17_portfolio_single_layout_1.html" title="">
+                                                    ui/ux
+                                                </a>
+                                            </h2>
+                                        </div>
+                                        <div className="gb-img">
+                                            <img src="/static/images/gb1.png" alt="" />
                                         </div>
                                     </div>
-                                    <span className="pager-count">{count}/3</span>
                                 </div>
+                                <span className="pager-count">1/3</span>
                             </div>
-                        ))}
-                    </ReactFullpage.Wrapper>
-                )
-                }
-            />
-
-            {/* <div id="pagepiling" className="dots-hidden">
-                <div className="section pp-scrollable sc-slide1" id="about">
-                    <div className="slide-container">
-                        <div className="fixed-bg gb-1" />
-                        <div className="enter-btn">
-                            <a href="17_portfolio_single_layout_1.html" title="">
-                                Enter
-                            </a>
-                        </div>
-                        <div className="container">
-                            <div className="gb-content">
-                                <div className="gb-title">
-                                    <h2>
-                                        <a href="17_portfolio_single_layout_1.html" title="">
-                                            ui/ux
-                                        </a>
-                                    </h2>
-                                </div>
-                                <div className="gb-img">
-                                    <img src="/static/images/gb1.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <span className="pager-count">1/3</span>
-                    </div>
                 </div>
                 <div className="section pp-scrollable" id="services">
                     <div className="slide-container">
@@ -662,7 +625,9 @@ const PortfolioParallax: NextPageWithLayout = () => {
                         <span className="pager-count">3/3</span>
                     </div>
                 </div>
-            </div> */}
+            </PageScroller>
+
+
         </>
     );
 };

@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@emotion/react': ^11.10.5
   '@emotion/styled': ^11.10.5
-  '@fullpage/react-fullpage': ^0.1.31
   '@iconify/react': ^4.0.0
   '@mui/material': ^5.10.12
   '@popperjs/core': ^2.11.6
@@ -31,7 +30,6 @@ specifiers:
   eslint-plugin-sonarjs: 0.12.0
   husky: ^8.0.2
   isotope-layout: ^3.0.6
-  jquery: ^3.6.1
   lint-staged: ^13.0.3
   next: 12.3.1
   prettier: 2.5.1
@@ -40,6 +38,7 @@ specifiers:
   react-countup: ^6.3.2
   react-dom: 18.2.0
   react-lazy-load-image-component: ^1.5.5
+  react-page-scroller: ^2.3.1
   react-slick: ^0.29.0
   react-sticky-header: ^0.2.0
   react-visibility-sensor: ^5.1.1
@@ -51,22 +50,21 @@ specifiers:
 dependencies:
   '@emotion/react': 11.10.5_iapumuv4e6jcjznwuxpf4tt22e
   '@emotion/styled': 11.10.5_avbifwq3am6trntrguk62pydsi
-  '@fullpage/react-fullpage': 0.1.31
   '@iconify/react': 4.0.0_react@18.2.0
   '@mui/material': 5.10.12_rrrb7hooev7eucxoqykubwnawy
   '@popperjs/core': 2.11.6
   bootstrap: 5.2.2_@popperjs+core@2.11.6
   classnames: 2.3.2
-  jquery: 3.6.1
   next: 12.3.1_2mygebwfgdyopr3fy2qddu2eli
   react: 18.2.0
   react-bootstrap: 2.5.0_rj7ozvcq3uehdlnj3cbwzbi5ce
   react-countup: 6.3.2_react@18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-lazy-load-image-component: 1.5.5_biqbaboplfbrettd7655fr4n2y
+  react-page-scroller: 2.3.1_biqbaboplfbrettd7655fr4n2y
   react-slick: 0.29.0_biqbaboplfbrettd7655fr4n2y
   react-visibility-sensor: 5.1.1_biqbaboplfbrettd7655fr4n2y
-  slick-carousel: 1.8.1_jquery@3.6.1
+  slick-carousel: 1.8.1
   swiper: 8.4.4
 
 devDependencies:
@@ -145,14 +143,6 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/helper-plugin-utils': 7.19.0
-    dev: false
-
-  /@babel/polyfill/7.12.1:
-    resolution: {integrity: sha512-X0pi0V6gxLi6lFZpGmeNa4zxtwEmCs42isWLNjZZDE0Y8yVfgu0T2OAHlzBbdYlqbW/YXVvoBHpATEM+goCj8g==}
-    deprecated: 🚨 This package has been deprecated in favor of separate inclusion of a polyfill and regenerator-runtime (when needed). See the @babel/polyfill docs (https://babeljs.io/docs/en/babel-polyfill) for more information.
-    dependencies:
-      core-js: 2.6.12
-      regenerator-runtime: 0.13.10
     dev: false
 
   /@babel/runtime-corejs3/7.19.4:
@@ -319,13 +309,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@fullpage/react-fullpage/0.1.31:
-    resolution: {integrity: sha512-pHjH6zj7E0oz8ziGGF9BR3fKN5E+mHtlrdaRC9Zgnj16NUEWe6PMn0os6bsjIaz3Y2EiBRBknAbWeUrxLuR+wg==}
-    dependencies:
-      '@babel/polyfill': 7.12.1
-      fullpage.js: 4.0.15
-    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}
@@ -1074,6 +1057,21 @@ packages:
       '@babel/runtime': 7.19.4
       cosmiconfig: 7.0.1
       resolve: 1.22.1
+    dev: false
+
+  /babel-polyfill/6.26.0:
+    resolution: {integrity: sha512-F2rZGQnAdaHWQ8YAoeRbukc7HS9QgdgeyJ0rQDd485v9opwuPvjpPFcOOT/WmkKTdgy9ESgSPXDcTNpzrGr6iQ==}
+    dependencies:
+      babel-runtime: 6.26.0
+      core-js: 2.6.12
+      regenerator-runtime: 0.10.5
+    dev: false
+
+  /babel-runtime/6.26.0:
+    resolution: {integrity: sha512-ITKNuq2wKlW1fJg9sSW52eepoYgZBggvOAHC0u/CYu/qxQ9EVzThCgR69BnSXLHjy2f7SY5zaQ4yt7H9ZVxY2g==}
+    dependencies:
+      core-js: 2.6.12
+      regenerator-runtime: 0.11.1
     dev: false
 
   /balanced-match/1.0.2:
@@ -1961,10 +1959,6 @@ packages:
     requiresBuild: true
     optional: true
 
-  /fullpage.js/4.0.15:
-    resolution: {integrity: sha512-OKyGyIY4Qlz47AmnYoJ9Kn2XzOyAufTSgkQqa+K2RENeTbmUoctFDX/Ox1LOdacsUNsYKvnty1lrKKYJNEB2Pw==}
-    dev: false
-
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
 
@@ -2319,10 +2313,6 @@ packages:
       masonry-layout: 4.2.2
       outlayer: 2.1.1
     dev: true
-
-  /jquery/3.6.1:
-    resolution: {integrity: sha512-opJeO4nCucVnsjiXOE+/PcCgYw9Gwpvs/a6B1LL/lQhwWwpbVEVYDZ1FokFr8PRc7ghYlrFPuyHuiiDNTQxmcw==}
-    dev: false
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -2889,6 +2879,19 @@ packages:
     resolution: {integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==}
     dev: false
 
+  /react-page-scroller/2.3.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-ioRvgU3Zj/Zx1997RMeoLJU+ZImYVlZzsMRGjjrlGRM9ocNaKiuYmkZJx6hjIyWQGYPU6BCvoUmAV2/0fc4rFg==}
+    peerDependencies:
+      prop-types: ^15.6.2
+      react: ^17.0.0
+      react-dom: ^17.0.0
+      react-router-dom: ^4.3.1
+    dependencies:
+      babel-polyfill: 6.26.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /react-slick/0.29.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-TGdOKE+ZkJHHeC4aaoH85m8RnFyWqdqRfAGkhd6dirmATXMZWAxOpTLmw2Ll/jPTQ3eEG7ercFr/sbzdeYCJXA==}
     peerDependencies:
@@ -2958,6 +2961,14 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+
+  /regenerator-runtime/0.10.5:
+    resolution: {integrity: sha512-02YopEIhAgiBHWeoTiA8aitHDt8z6w+rQqNuIftlM+ZtvSl/brTouaU7DW6GO/cHtvxJvS4Hwv2ibKdxIRi24w==}
+    dev: false
+
+  /regenerator-runtime/0.11.1:
+    resolution: {integrity: sha512-MguG95oij0fC3QV3URf4V2SDYGJhJnJGqvIIgdECeODCT98wSWDAJ94SSuVpYQUoTcGUIL6L4yNB7j1DFFHSBg==}
+    dev: false
 
   /regenerator-runtime/0.13.10:
     resolution: {integrity: sha512-KepLsg4dU12hryUO7bp/axHAKvwGOCV0sGloQtpagJ12ai+ojVDqkeGSiRX1zlq+kjIMZ1t7gpze+26QqtdGqw==}
@@ -3147,12 +3158,10 @@ packages:
       is-fullwidth-code-point: 4.0.0
     dev: true
 
-  /slick-carousel/1.8.1_jquery@3.6.1:
+  /slick-carousel/1.8.1:
     resolution: {integrity: sha512-XB9Ftrf2EEKfzoQXt3Nitrt/IPbT+f1fgqBdoxO3W/+JYvtEOW6EgxnWfr9GH6nmULv7Y2tPmEX3koxThVmebA==}
     peerDependencies:
       jquery: '>=1.8.0'
-    dependencies:
-      jquery: 3.6.1
     dev: false
 
   /source-map-js/1.0.2:
