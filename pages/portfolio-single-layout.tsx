@@ -3,11 +3,33 @@ import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { carouselsExample } from './index';
 import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { Tab, Tabs } from 'react-bootstrap';
+
+
+const tabItems = [
+    {
+        id: '1',
+        title: 'strategy'
+    },
+    {
+        id: '2',
+        title: 'ui-ux'
+    },
+    {
+        id: '3',
+        title: 'testing'
+    },
+    {
+        id: '4',
+        title: 'showcase'
+    },
+];  
 
 const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
     const carouselRef2 = useRef<Carousel | null>(null);
+    const [key, setKey] = useState<string>('strategy');
 
     const carouselSettings = {
         slidesToShow: 4,
@@ -752,8 +774,8 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div className="pp-tabs-sec wow zoomIn" data-wow-duration="1000ms" data-wow-delay="0ms">
-                                <div className="tab-content" id="myTabContent">
+                            <div className="pp-tabs-sec wow zoomIn d-flex flex-column-reverse" data-wow-duration="1000ms" data-wow-delay="0ms">
+                                {/* <div className="tab-content" id="myTabContent">
                                     <div className="tab-pane fade show active" id="strategy" role="tabpanel" aria-labelledby="strategy-tab">
                                         <div className="vl-img">
                                             <img src="/static/images/vl-img1.png" alt="" />
@@ -774,9 +796,27 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
                                             <img src="/static/images/vl-img4.png" alt="" />
                                         </div>
                                     </div>
-                                </div>
-                                <ul className="nav nav-tabs" id="myTab" role="tablist">
-                                    <li className="nav-item">
+                                </div> */}
+                                {/* <ul className="nav nav-tabs" id="myTab" role="tablist"> */}
+                                    <Tabs  activeKey={key} onSelect={(k) => setKey(k || '')} id="myTab">
+                                        {tabItems.map((item: { id: string; title: string }) => {
+                                            return (
+                                                <Tab as="div" key={`tab-${item.title}`} className="nav-item" eventKey={item.title} title={item.title.toUpperCase()}>
+                                                    <div className="tab-content" id="myTabContent">
+                                                        <div className="tab-pane fade show active" 
+                                                            id={item.title.toLowerCase()} 
+                                                            role="tabpanel" 
+                                                            aria-labelledby={`${item.title.toLowerCase()}-tab`}>
+                                                            <div className="vl-img">
+                                                                <img src={`/static/images/vl-img${item.id}.png`} alt="" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </Tab>
+                                            );
+                                        })}
+                                    </Tabs>
+                                    {/* <li className="nav-item">
                                         <a
                                             className="nav-link active"
                                             id="strategy-tab"
@@ -786,7 +826,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
                                             aria-controls="strategy-tab"
                                             aria-selected="true"
                                         >
-                                            Strategy{' '}
+                                            Strategy
                                         </a>
                                     </li>
                                     <li className="nav-item">
@@ -827,8 +867,8 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
                                         >
                                             Showcase
                                         </a>
-                                    </li>
-                                </ul>
+                                    </li> */}
+                                {/* </ul> */}
                             </div>
                         </div>
                     </div>

@@ -152,10 +152,10 @@ const Career: NextPageWithLayout = () => {
                                 </div>
                             </div>
                         </div>
-                        --&gt;
                     </div>
                 </div>
             </section>
+            
             <footer>
                 <div className="top-footer">
                     <div className="container">

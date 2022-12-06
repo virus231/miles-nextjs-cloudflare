@@ -2,8 +2,46 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import { useRef } from 'react';
+import { carouselsExample } from '.';
 
 const Pricing: NextPageWithLayout = () => {
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        ...CarouselDots({
+            rounded: true,
+            sx: { mt: '10px' }
+        }),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: '0' }
+            }
+        ]
+    };
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
+
     return (
         <>
             <HeaderV1 />
@@ -163,82 +201,68 @@ const Pricing: NextPageWithLayout = () => {
                     </div>
                     <div className="testimonial-slider">
                         <div className="row testimo-slider">
-                            <div className="col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
-                                        are always a pleasure to work with. Recommended.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb1.png" alt="" />
+                        <CarouselArrows
+                                icon="teenyicons:right-small-outline"
+                                onNext={handleNext}
+                                topSpace={50}
+                                onPrevious={handlePrev}
+                                sx={{
+                                    zIndex: 9,
+                                    color: '#ccc'
+                                }}
+                                leftButtonProps={{
+                                    sx: {
+                                        width: '3.5rem',
+                                        height: '3.5rem',
+                                        borderRadius: '10px',
+                                        '&:hover': {
+                                            svg: {
+                                                color: '#fff'
+                                            },
+                                            borderRadius: '10px',
+                                            backgroundColor: '#4c0ee9'
+                                        }
+                                    }
+                                }}
+                                rightButtonProps={{
+                                    sx: {
+                                        width: '3.5rem',
+                                        height: '3.5rem',
+                                        borderRadius: '10px',
+                                        '&:hover': {
+                                            svg: {
+                                                color: '#fff'
+                                            },
+                                            borderRadius: '10px',
+                                            backgroundColor: '#4c0ee9'
+                                        }
+                                    }
+                                }}
+                            >
+                                <Carousel ref={carouselRef} {...carouselSettings}>
+                                    {carouselsExample.map((item) => (
+                                        <div key={item.id} className="col-lg-6">
+                                            <div className="testimonial-slide">
+                                                <p>
+                                                    “Originally, creative and with an innate understanding of their customer’s need. The
+                                                    team at Miles are always a pleasure to work with. Recommended.”
+                                                </p>
+                                                <div className="thmb-row">
+                                                    <div className="thmb-img">
+                                                        <img src="/static/images/thumb1.png" alt="" />
+                                                    </div>
+                                                    <div className="thmb-info">
+                                                        <h3>Bobby Hanesto</h3>
+                                                        <span>
+                                                            Director of <em>Inivisionapp</em>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="thmb-info">
-                                            <h3>Bobby Hanesto</h3>
-                                            <span>
-                                                Director of <em>Inivisionapp</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
-                                        lightweight, and outstanding support.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb2.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Jeans Grey</h3>
-                                            <span>
-                                                CEO of <em>BraveBred</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
-                                        are always a pleasure to work with. Recommended.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb1.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Bobby Hanesto</h3>
-                                            <span>
-                                                Director of <em>Inivisionapp</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
-                                        lightweight, and outstanding support.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb2.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Jeans Grey</h3>
-                                            <span>
-                                                CEO of <em>BraveBred</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    ))}
+                                </Carousel>
+                            </CarouselArrows>
                         </div>
                     </div>
                     <div className="partners-section v10">
