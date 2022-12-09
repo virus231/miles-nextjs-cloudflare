@@ -31,7 +31,43 @@ export const carouselsExample = [
         description: 'Description'
     },
     {
-        id: '18',
+        id: '4',
+        title: '123',
+        image: '/static/images/project1.jpg',
+        description: 'Description'
+    },
+    {
+        id: '5',
+        title: '123',
+        image: '/static/images/project2.jpg',
+        description: 'Description'
+    },
+    {
+        id: '1',
+        title: '123',
+        image: '/static/images/project3.jpg',
+        description: 'Description'
+    },
+    {
+        id: '2',
+        title: '123',
+        image: '/static/images/project1.jpg',
+        description: 'Description'
+    },
+    {
+        id: '3',
+        title: '123',
+        image: '/static/images/project2.jpg',
+        description: 'Description'
+    },
+    {
+        id: '4',
+        title: '123',
+        image: '/static/images/project3.jpg',
+        description: 'Description'
+    },
+    {
+        id: '5',
         title: '123',
         image: '/static/images/project3.jpg',
         description: 'Description'

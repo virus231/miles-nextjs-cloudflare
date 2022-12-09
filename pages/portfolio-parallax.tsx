@@ -1,7 +1,6 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import ReactFullpage, { Item } from '@fullpage/react-fullpage';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PageScroller from 'react-page-scroller';
 
 
@@ -23,10 +22,6 @@ const PortfolioParallax: NextPageWithLayout = () => {
 
     const handlePageChange = (value: number | null) => {
         setCurrentPage(value);
-    };
-
-    const handleBeforePageChange = (value: number) => {
-        console.log(value);
     };
 
     return (
@@ -533,27 +528,11 @@ const PortfolioParallax: NextPageWithLayout = () => {
                             </li>
                         )
                     }
-                    {/* <li data-menuanchor="about" className="active">
-                        <a href="#about" title="">
-                            Byzano App
-                        </a>
-                    </li>
-                    <li data-menuanchor="services">
-                        <a href="#services" title="">
-                            Lewis
-                        </a>
-                    </li>
-                    <li data-menuanchor="why-choose-us">
-                        <a href="#why-choose-us" title="">
-                            Ethant Hunt
-                        </a>
-                    </li> */}
                 </ul>
             </div>
         
             <PageScroller
                     pageOnChange={handlePageChange}
-                    onBeforePageScroll={handleBeforePageChange}
                     customPageNumber={currentPage ?? 0}
             >
                 <div className="section pp-scrollable sc-slide1" id="about">

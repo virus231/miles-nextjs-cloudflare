@@ -1,36 +1,29 @@
-import classNames from 'classnames';
-import { NextLink } from '../app/components/BaseNextLink';
-import styles from '../styles/Home.module.scss';
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
-import { Navigation } from '../app/components/Navigation';
-import { Footer } from '../app/components/Footer';
 import { RightMenu } from '../app/components/RightMenu';
 import { useRef, useState } from 'react';
 import { Burger } from '../app/components/Navigation/Burger';
 import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
 import { carouselsExample } from './index';
-import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
-import { useTheme } from '@mui/material/styles';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+import ReactPageScroller from 'react-page-scroller';
 
 const HomePage12: NextPageWithLayout = () => {
     const [open, setOpen] = useState<boolean>(false);
     const carouselRef = useRef<Carousel | null>(null);
+    const [currentPage, setCurrentPage] = useState<number | null>(null);
 
-    const theme = useTheme();
+    const handlePageChange = (value: number | null) => {
+        setCurrentPage(value);
+    };
 
     const carouselSettings = {
         slidesToShow: 5,
         dots: false,
         arrows: false,
         centerMode: false,
-        rtl: Boolean(theme.direction === 'rtl'),
-        ...CarouselDots({
-            rounded: true,
-            sx: { mt: '10px' }
-        }),
+        centerPadding: '20px',
         responsive: [
             {
                 breakpoint: 1024,
@@ -45,14 +38,6 @@ const HomePage12: NextPageWithLayout = () => {
                 settings: { slidesToShow: 1, centerPadding: '0' }
             }
         ]
-    };
-
-    const handlePrev = () => {
-        carouselRef.current?.slickPrev();
-    };
-
-    const handleNext = () => {
-        carouselRef.current?.slickNext();
     };
 
     return (
@@ -179,7 +164,7 @@ const HomePage12: NextPageWithLayout = () => {
 
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
 
-            <div id="pagepiling">
+            <ReactPageScroller renderAllPagesOnFirstRender pageOnChange={handlePageChange}customPageNumber={currentPage ?? 0}>
                 <div className="section pp-scrollable">
                     <div className="slide-container">
                         <h2 className="page-num">Hello</h2>
@@ -375,28 +360,15 @@ const HomePage12: NextPageWithLayout = () => {
                                     <h2>The trust from client make our value</h2>
                                     <span>Work with many big brands, brings for me great experience.</span>
                                 </div>
-                                <div className="client-works client-slider">
-                                    <CarouselArrows
-                                        icon="teenyicons:right-small-outline"
-                                        onNext={handleNext}
-                                        topSpace={50}
-                                        onPrevious={handlePrev}
-                                        sx={{
-                                            zIndex: 9,
-                                            color: '#ccc'
-                                        }}
-                                    >
-                                        <Carousel ref={carouselRef} {...carouselSettings}>
-                                            {carouselsExample.map((item) => (
-                                                <div key={item.id} className="col-m-2">
-                                                    <div className="cl-imag">
-                                                        <img src="/static/images/cl1.png" alt="" />
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </Carousel>
-                                    </CarouselArrows>
-                                </div>
+                                <Carousel className='client-works client-slider' ref={carouselRef} {...carouselSettings}>
+                                    {carouselsExample.map((item) => (
+                                        <div key={item.id} className="col-md-2">
+                                            <div className="cl-imag">
+                                                <img src={`/static/images/cl${item.id}.png`} alt="" />
+                                            </div>
+                                        </div>
+                                    ))}
+                                </Carousel>
                                 <ul className="counter-sec border-bottom" id="counter">
                                     <li>
                                         <div className="count-dv">
@@ -405,7 +377,6 @@ const HomePage12: NextPageWithLayout = () => {
                                                     <h2 className="count">{isVisible ? <CountUp end={10} /> : '0'}</h2>
                                                 )}
                                             </VisibilitySensor>
-                                            {/*<h2 className="count">10</h2>*/}
                                             <span>Years Experience</span>
                                         </div>
                                     </li>
@@ -739,7 +710,8 @@ const HomePage12: NextPageWithLayout = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </ReactPageScroller>
+
             <ul className="social-vertical v12">
                 <li>
                     <a href="#" title="">

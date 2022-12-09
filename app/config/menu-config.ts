@@ -48,7 +48,7 @@ export const rightMenu = [
             },
             {
                 href: '/index12',
-                name: 'Home Developer'
+                name: 'Home Portfolio 1'
             },
             {
                 href: '/index13',
