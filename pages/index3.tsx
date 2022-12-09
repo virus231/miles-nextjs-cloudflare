@@ -15,9 +15,6 @@ const HomePage3: NextPageWithLayout = () => {
 
     const carouselRef = useRef<Carousel | null>(null);
 
-    // useEffect(() => {
-    //     console.log(window.scrollY);
-    // }, []);
 
     const carouselSettings = {
         slidesToShow: 2,
