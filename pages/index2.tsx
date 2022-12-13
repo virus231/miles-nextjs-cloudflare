@@ -2,9 +2,34 @@ import { NextLink } from '../app/components/BaseNextLink';
 import { Layout } from '../app/components/Layout';
 import { NextPageWithLayout } from './_app';
 import { useScroll } from '../hooks/useScroll';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
+import Carousel from '../app/components/carousel';
+import { carouselsExample } from '.';
+import { Controller, Scene } from 'react-scrollmagic';
 
 const HomePage2: NextPageWithLayout = () => {
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+        slidesToShow: 1,
+        centerMode: false,
+        centerPadding: '20px',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 1 }
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 1 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: '0' }
+            }
+        ]
+    };
+
     return (
         <>
             <header className="v2">
@@ -132,6 +157,7 @@ const HomePage2: NextPageWithLayout = () => {
                     </div>
                 </div>
             </header>
+
             <section className="responsive-menu">
                 <div className="rep-header">
                     <div className="rep-logo">
@@ -602,43 +628,58 @@ const HomePage2: NextPageWithLayout = () => {
                     </li>
                 </ul>
             </section>
-            <div className="promo promo-studio-container">
-                <div className="step-animate-nav"></div>
-                <div className="step-animate-nav-hidden"></div>
-                <div className="step-animate-opacity"></div>
-                <div className="promo-studio">
-                    <div className="promo-studio-bg"></div>
-                    <div className="promo-studio-man"></div>
-                    <div className="promo-studio-content">
-                        <div className="vertical-text-left">
-                            Crafting Digital <span className="text-muted vertical-text-block">Studio</span>
-                        </div>
-                        <div className="container">
-                            <div className="row wow fadeInUp">
-                                <div className="col-lg-6 col-md-6">
-                                    <h1 className="title-studio">
-                                        Say Hi!!
-                                        <br /> from miles studio
-                                    </h1>
+
+            <Controller>
+
+                <div className="promo promo-studio-container">
+                    <div className="step-animate-nav"></div>
+                    <div className="step-animate-nav-hidden"></div>
+                    <div className="step-animate-opacity"></div>
+                    <div className="promo-studio">
+                        <Scene duration={800} triggerHook={0}>
+                            <div className="promo-studio-bg"></div>
+                        </Scene>
+
+                        <Scene duration={800} triggerHook={0}>
+                            <div className="promo-studio-man"></div>
+                        </Scene>
+                        <Scene duration={800} triggerHook={0}> 
+                            <div className="promo-studio-content">
+                                <div className="vertical-text-left">
+                                    Crafting Digital <span className="text-muted vertical-text-block">Studio</span>
                                 </div>
-                                <div className="col-lg-2 dis-none"></div>
-                                <div className="col-lg-4 col-md-6">
-                                    <div className="banner-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                        <h3>An innovative & technology partner of trend setting business.</h3>
-                                        <p>
-                                            Create value and optimize the influence power of each product, we construct a creative thinking,
-                                            a rational processes and meaningful experiences for every brands.
-                                        </p>
-                                        <a href="#" title="">
-                                            get started
-                                        </a>
+                                <div className="container">
+                                    <div className="row wow fadeInUp">
+                                        <div className="col-lg-6 col-md-6">
+                                            <h1 className="title-studio">
+                                                Say Hi!!
+                                                <br /> from miles studio
+                                            </h1>
+                                        </div>
+                                        <div className="col-lg-2 dis-none"></div>
+                                        <div className="col-lg-4 col-md-6">
+                                            <div className="banner-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                                <h3>An innovative & technology partner of trend setting business.</h3>
+                                                <p>
+                                                    Create value and optimize the influence power of each product, we construct a creative thinking,
+                                                    a rational processes and meaningful experiences for every brands.
+                                                </p>
+                                                <a href="#" title="">
+                                                    get started
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </Scene>
+
                     </div>
                 </div>
-            </div>
+            </Controller>
+
+
+
             <section
                 className="main-banner-style2"
                 style={{
@@ -964,75 +1005,30 @@ const HomePage2: NextPageWithLayout = () => {
                         <p>Discover our Design Thinking and Creative Philosophy that we would like to deliver in each of our projects.</p>
                     </div>
                     <div className="projects-slider">
-                        <div className="project-slide">
-                            <div className="project-thumb">
-                                <img src="/static/images/project-thumb1.jpg" alt="" />
-                                <a href="#" title="" className="pls-btn">
-                                    <i className="lni lni-plus"></i>
-                                </a>
-                            </div>
-                            <div className="project-info">
-                                <span>Print Design</span>
-                                <h2>
-                                    <a href="17_portfolio_single_layout_1.html" title="">
-                                        Fashion Design Morgen
-                                    </a>{' '}
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="project-slide">
-                            <div className="project-thumb">
-                                <img src="/static/images/project-thumb2.jpg" alt="" />
-                                <a href="#" title="" className="pls-btn">
-                                    <i className="lni lni-plus"></i>
-                                </a>
-                            </div>
-                            <div className="project-info">
-                                <span>Package Design / Branding</span>
-                                <h2>
-                                    <a href="17_portfolio_single_layout_1.html" title="">
-                                        Paint Bucket Gloss
-                                    </a>{' '}
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="project-slide">
-                            <div className="project-thumb">
-                                <img src="/static/images/project-thumb1.jpg" alt="" />
-                                <a href="#" title="" className="pls-btn">
-                                    <i className="lni lni-plus"></i>
-                                </a>
-                            </div>
-                            <div className="project-info">
-                                <span>Print Design</span>
-                                <h2>
-                                    <a href="17_portfolio_single_layout_1.html" title="">
-                                        Fashion Design Morgen
-                                    </a>{' '}
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="project-slide">
-                            <div className="project-thumb">
-                                <img src="/static/images/project-thumb2.jpg" alt="" />
-                                <a href="#" title="" className="pls-btn">
-                                    <i className="lni lni-plus"></i>
-                                </a>
-                            </div>
-                            <div className="project-info">
-                                <span>Package Design / Branding</span>
-                                <h2>
-                                    <a href="17_portfolio_single_layout_1.html" title="">
-                                        Paint Bucket Gloss
-                                    </a>{' '}
-                                </h2>
-                            </div>
-                        </div>
+                        <Carousel ref={carouselRef} {...carouselSettings}>
+                            {carouselsExample.map((item) => (
+                                <div key={item.id} className="project-slide">
+                                    <div className="project-thumb">
+                                        <img src="/static/images/project-thumb1.jpg" alt="" />
+                                        <a href="#" title="" className="pls-btn">
+                                            <i className="lni lni-plus"></i>
+                                        </a>
+                                    </div>
+                                    <div className="project-info">
+                                        <span>Print Design</span>
+                                        <h2>
+                                            <a href="17_portfolio_single_layout_1.html" title="">
+                                                Fashion Design Morgen
+                                            </a>{' '}
+                                        </h2>
+                                    </div>
+                                </div>
+                            ))}
+                        </Carousel>
                     </div>
                 </div>
             </section>
-            e
-            <div className="success-stories-section">
+            <section className="success-stories-section">
                 <div className="container">
                     <div className="mega-title v2">
                         <h2>success stories</h2>
@@ -1106,7 +1102,7 @@ const HomePage2: NextPageWithLayout = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <section className="partners-sec-v2">
                 <div className="container">
                     <div className="section-title-v2 w-100">
@@ -1416,7 +1412,7 @@ const HomePage2: NextPageWithLayout = () => {
 };
 
 HomePage2.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Home Studio">{page}</Layout>;
 };
 
 export default HomePage2;

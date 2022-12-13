@@ -1,8 +1,43 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import Carousel, { CarouselArrows } from '../app/components/carousel';
+import { useRef } from 'react';
+import { carouselsExample } from '.';
 
 const HomePage8: NextPageWithLayout = () => {
+    const carouselRef = useRef<Carousel | null>(null);
+
+    const carouselSettings = {
+        slidesToShow: 2,
+        dots: false,
+        arrows: false,
+        centerMode: false,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 600,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 480,
+                settings: { slidesToShow: 1, centerPadding: '0' }
+            }
+        ]
+    };
+
+    const handlePrev = () => {
+        carouselRef.current?.slickPrev();
+    };
+
+    const handleNext = () => {
+        carouselRef.current?.slickNext();
+    };
+
+
     return (
         <>
             <header className="pb">
@@ -702,164 +737,64 @@ const HomePage8: NextPageWithLayout = () => {
             </section>
             <section className="testimonial-sec">
                 <div className="container">
-                    <div className="section-title">
-                        <span>people love miles</span>
-                        <h2>Trusted by +9K clients</h2>
+                    <div className="d-flex align-items-stretch justify-content-between">
+                        <div className="section-title">
+                            <span>people love miles</span>
+                            <h2>Trusted by +9K clients</h2>
+                        </div>
+                        <div>
+                            <CarouselArrows
+                                sx={{
+                                    color: '#ccc'
+                                }}
+                                leftButtonProps={{
+                                    sx: {
+                                        svg: {
+                                            width: '32px',
+                                            height: '32px'
+                                        }
+                                    }
+                                }}
+                                rightButtonProps={{
+                                    sx: {
+                                        svg: {
+                                            width: '32px',
+                                            height: '32px'
+                                        }
+                                    }
+                                }}
+                                hover
+                                icon="ic:round-keyboard-arrow-right"
+                                onNext={handleNext}
+                                onPrevious={handlePrev}
+                            />
+                        </div>
                     </div>
                     <div className="testimonial-slider dots-hide">
                         <div className="row testimo-slider">
-                            <div className="col-12 col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
-                                        are always a pleasure to work with. Recommended.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb1.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Bobby Hanesto</h3>
-                                            <span>
-                                                Director of <em>Inivisionapp</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
-                                        lightweight, and outstanding support.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb2.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Jeans Grey</h3>
-                                            <span>
-                                                CEO of <em>BraveBred</em>
-                                            </span>
+                            <Carousel ref={carouselRef} {...carouselSettings}>
+                                {carouselsExample.map((item) => (
+                                    <div key={item.id} className="col-12 col-lg-6">
+                                        <div className="testimonial-slide">
+                                            <p>
+                                                “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
+                                                are always a pleasure to work with. Recommended.”
+                                            </p>
+                                            <div className="thmb-row">
+                                                <div className="thmb-img">
+                                                    <img src="/static/images/thumb1.png" alt="" />
+                                                </div>
+                                                <div className="thmb-info">
+                                                    <h3>Bobby Hanesto</h3>
+                                                    <span>
+                                                        Director of <em>Inivisionapp</em>
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Extremly impressed with the Miles release. This is the best WP theme ever. Launch your website look
-                                        amazing in fie minutes. Greated!!!
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb3.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Charlies Xavier</h3>
-                                            <span>
-                                                Onwer of <em>Growhacker</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
-                                        are always a pleasure to work with. Recommended.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb1.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Bobby Hanesto</h3>
-                                            <span>
-                                                Director of <em>Inivisionapp</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
-                                        lightweight, and outstanding support.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb2.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Jeans Grey</h3>
-                                            <span>
-                                                CEO of <em>BraveBred</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Extremly impressed with the Miles release. This is the best WP theme ever. Launch your website look
-                                        amazing in fie minutes. Greated!!!
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb3.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Charlies Xavier</h3>
-                                            <span>
-                                                Onwer of <em>Growhacker</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
-                                        are always a pleasure to work with. Recommended.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb1.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Bobby Hanesto</h3>
-                                            <span>
-                                                Director of <em>Inivisionapp</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-12 col-lg-6">
-                                <div className="testimonial-slide">
-                                    <p>
-                                        “I don’t know what else to say, this is something that you haven’t seen before. Unique design,
-                                        lightweight, and outstanding support.”
-                                    </p>
-                                    <div className="thmb-row">
-                                        <div className="thmb-img">
-                                            <img src="/static/images/thumb2.png" alt="" />
-                                        </div>
-                                        <div className="thmb-info">
-                                            <h3>Jeans Grey</h3>
-                                            <span>
-                                                CEO of <em>BraveBred</em>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                ))}
+                            </Carousel>
                         </div>
                     </div>
                 </div>
@@ -1027,7 +962,7 @@ const HomePage8: NextPageWithLayout = () => {
 };
 
 HomePage8.getLayout = function getLayout(page: React.ReactElement) {
-    return <Layout title="Home">{page}</Layout>;
+    return <Layout title="Marketing Agency">{page}</Layout>;
 };
 
 export default HomePage8;

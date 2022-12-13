@@ -40,6 +40,7 @@ specifiers:
   react-dom: 18.2.0
   react-lazy-load-image-component: ^1.5.5
   react-page-scroller: ^2.3.1
+  react-scrollmagic: ^2.3.0
   react-slick: ^0.29.0
   react-sticky-header: ^0.2.0
   react-visibility-sensor: ^5.1.1
@@ -64,6 +65,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-lazy-load-image-component: 1.5.5_biqbaboplfbrettd7655fr4n2y
   react-page-scroller: 2.3.1_biqbaboplfbrettd7655fr4n2y
+  react-scrollmagic: 2.3.0_biqbaboplfbrettd7655fr4n2y
   react-slick: 0.29.0_biqbaboplfbrettd7655fr4n2y
   react-visibility-sensor: 5.1.1_biqbaboplfbrettd7655fr4n2y
   slick-carousel: 1.8.1
@@ -2911,6 +2913,17 @@ packages:
       react-router-dom: ^4.3.1
     dependencies:
       babel-polyfill: 6.26.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /react-scrollmagic/2.3.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-yVw85uENSPow/ZJxZhPR84nZuyQZQNGfOAaL22+xNAhF5qMX2vbHv0Jeurydc9lS+6OocSY+09MHWQ0LESy9Mg==}
+    engines: {node: '>=8', npm: '>=5'}
+    peerDependencies:
+      react: ^16.0.0-0 || ^17.0.0-0
+      react-dom: ^16.0.0-0 || ^17.0.0-0
+    dependencies:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false

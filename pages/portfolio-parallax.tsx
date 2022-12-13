@@ -1,7 +1,8 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { useState } from 'react';
-import PageScroller from 'react-page-scroller';
+import ReactPageScroller from 'react-page-scroller';
+
 
 
 const originalLinks = [{
@@ -531,7 +532,7 @@ const PortfolioParallax: NextPageWithLayout = () => {
                 </ul>
             </div>
         
-            <PageScroller
+            <ReactPageScroller
                     pageOnChange={handlePageChange}
                     customPageNumber={currentPage ?? 0}
             >
@@ -543,7 +544,7 @@ const PortfolioParallax: NextPageWithLayout = () => {
                                         Enter
                                     </a>
                                 </div>
-                                <div className="container">
+                                <div className="container" >
                                     <div className="gb-content">
                                         <div className="gb-title">
                                             <h2>
@@ -604,7 +605,7 @@ const PortfolioParallax: NextPageWithLayout = () => {
                         <span className="pager-count">3/3</span>
                     </div>
                 </div>
-            </PageScroller>
+            </ReactPageScroller>
 
 
         </>
