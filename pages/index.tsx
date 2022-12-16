@@ -122,10 +122,6 @@ const tabItems = [
 const HomePage: NextPageWithLayout = () => {
     const { scrollDistance } = useScroll();
 
-    useEffect(() => {
-        console.log(scrollDistance);
-    }, []);
-
 
     return (
         <>

@@ -7,6 +7,10 @@
     display: none !important;
 }
 
+.css-pvluvm-MuiPaper-root {
+    box-shadow: none;
+}
+
 img {
     vertical-align: middle;
     height: auto;
@@ -19846,7 +19850,7 @@ header.header-v12.v13.pb .light-logo {
     }
 
     .projects-tab-sec .nav-tabs {
-        li a {
+        li button {
             margin-bottom: 30px;
         }
 

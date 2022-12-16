@@ -69,6 +69,7 @@ export const TabContent = (props: Props) => {
                             zIndex: 9,
                             color: '#ccc'
                         }}
+                        media
                     >
                         <Carousel ref={carouselRef} {...carouselSettings}>
                             {carouselsExample.map((item) => (

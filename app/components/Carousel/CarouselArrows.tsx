@@ -13,6 +13,7 @@ interface StyledIconButtonProps extends IconButtonProps {
     shape?: 'circular' | 'rounded';
     hasChildren?: boolean;
     hover?: boolean;
+    media?: boolean;
 }
 
 const StyledIconButton = styled(IconButton, {
@@ -57,7 +58,7 @@ const StyledIconButton = styled(IconButton, {
         '&:hover': {
             color: '#ff4800'
         }
-    })
+    }),
 }));
 
 // ----------------------------------------------------------------------
@@ -75,6 +76,7 @@ interface Props extends StackProps {
     topSpace?: number;
     textLeftArrow?: string;
     textRightArrow?: string;
+    media?: boolean;
 }
 
 export default function CarouselArrows({
@@ -88,6 +90,7 @@ export default function CarouselArrows({
     rightButtonProps,
     sx,
     topSpace,
+    media,
     textLeftArrow = '',
     textRightArrow = '',
     hover = false,
@@ -111,6 +114,14 @@ export default function CarouselArrows({
                     sx={{
                         top: `${topSpace}%`,
                         left: 16,
+                        ...(media && {
+                            '@media only screen and (max-width: 678px)': {
+                                top: '45%',
+                            },
+                            '@media only screen and (max-width: 480px)': {
+                                top: '60%',
+                            },
+                        }),
                         ...leftButtonProps?.sx
                     }}
                 >
@@ -128,7 +139,15 @@ export default function CarouselArrows({
                     sx={{
                         top: `${topSpace}%`,
                         right: 16,
-                        ...rightButtonProps?.sx
+                        ...rightButtonProps?.sx,
+                        ...(media && {
+                            '@media only screen and (max-width: 678px)': {
+                                top: '45%',
+                            },
+                            '@media only screen and (max-width: 480px)': {
+                                top: '60%',
+                            },
+                        }),
                     }}
                 >
                     {textRightArrow != '' ? textRightArrow : <RightIcon icon={icon} isRTL={isRTL} />}
