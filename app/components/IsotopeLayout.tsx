@@ -37,7 +37,7 @@ export default function IsotopeLayout(props: Props) {
 
     const isActive = (key: string) => {
         return filterKey === key ? 'selected' : '';
-    }
+    };
 
 
     return (<>
@@ -45,7 +45,7 @@ export default function IsotopeLayout(props: Props) {
             <div className="option-isotop">
                 <ul id="filter" className="option-set filters-nav text-center" data-option-key="filter">
                     <li>
-                        <a onClick={handleFilterKeyChange('*')} data-option-value="*" className={`${isActive('*')}`}>
+                        <a className={`${isActive('*')}`} onClick={handleFilterKeyChange('*')} data-option-value="*" >
                             All Projects
                         </a>
                     </li>

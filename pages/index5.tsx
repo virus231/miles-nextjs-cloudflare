@@ -457,9 +457,9 @@ const HomePage5: NextPageWithLayout = () => {
                                     className="animsition-link"
                                     data-animsition-out-class="fade-out"
                                     title=""
-                                    data-text="Porfolio Parallax"
+                                    data-text="Portfolio Parallax"
                                 >
-                                    Porfolio Parallax
+                                    Portfolio Parallax
                                 </a>
                             </li>
                             <li>
@@ -468,14 +468,14 @@ const HomePage5: NextPageWithLayout = () => {
                                     className="animsition-link"
                                     data-animsition-out-class="fade-out"
                                     title=""
-                                    data-text="Porfolio Horizontal Scroll"
+                                    data-text="Portfolio Horizontal Scroll"
                                 >
-                                    Porfolio Horizontal Scroll
+                                    Portfolio Horizontal Scroll
                                 </a>
                             </li>
                             <li>
                                 <a href="16_portfolio_masonry.html" title="">
-                                    Porfolio Masonary
+                                    Portfolio Masonary
                                 </a>
                             </li>
                             <li>
@@ -484,9 +484,9 @@ const HomePage5: NextPageWithLayout = () => {
                                     className="animsition-link"
                                     data-animsition-out-class="fade-out"
                                     title=""
-                                    data-text="Porfolio Single V1"
+                                    data-text="Portfolio Single V1"
                                 >
-                                    Porfolio Single V1
+                                    Portfolio Single V1
                                 </a>
                             </li>
                             <li>
@@ -495,9 +495,9 @@ const HomePage5: NextPageWithLayout = () => {
                                     className="animsition-link"
                                     data-animsition-out-class="fade-out"
                                     title=""
-                                    data-text="Porfolio Single V2"
+                                    data-text="Portfolio Single V2"
                                 >
-                                    Porfolio Single V2
+                                    Portfolio Single V2
                                 </a>
                             </li>
                             <li>
@@ -506,9 +506,9 @@ const HomePage5: NextPageWithLayout = () => {
                                     className="animsition-link"
                                     data-animsition-out-class="fade-out"
                                     title=""
-                                    data-text="Porfolio Single V3"
+                                    data-text="Portfolio Single V3"
                                 >
-                                    Porfolio Single V3
+                                    Portfolio Single V3
                                 </a>
                             </li>
                         </ul>

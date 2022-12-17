@@ -185,7 +185,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Home Agency"
                                 >
@@ -196,7 +196,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index2.html"
                                     className="animsition-link active"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Home Studio"
                                 >
@@ -207,7 +207,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index3.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Home Freelancer"
                                 >
@@ -218,7 +218,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index4.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Home Developer"
                                 >
@@ -229,7 +229,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index5.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Home Blogger"
                                 >
@@ -240,7 +240,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index7.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Home Coach"
                                 >
@@ -251,7 +251,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index6.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Business Startup"
                                 >
@@ -262,7 +262,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index8.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Marketing Agency"
                                 >
@@ -273,7 +273,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index9.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Business Consulting"
                                 >
@@ -284,7 +284,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index10.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Creative Agency"
                                 >
@@ -295,7 +295,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index11.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Creative Agency 2"
                                 >
@@ -306,7 +306,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index12.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Home Portfolio 1"
                                 >
@@ -317,7 +317,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="index13.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Home Portfolio 2"
                                 >
@@ -335,7 +335,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="about-agency.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="About Agency"
                                 >
@@ -346,7 +346,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="about-business.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="About Business"
                                 >
@@ -357,7 +357,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="about-me.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="About Me"
                                 >
@@ -375,60 +375,60 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="14_portfolio_parallax.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
-                                    data-text="Porfolio Parallax"
+                                    data-text="Portfolio Parallax"
                                 >
-                                    Porfolio Parallax
+                                    Portfolio Parallax
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="15_portfolio_horizontal_scroll.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
-                                    data-text="Porfolio Horizontal Scroll"
+                                    data-text="Portfolio Horizontal Scroll"
                                 >
-                                    Porfolio Horizontal Scroll
+                                    Portfolio Horizontal Scroll
                                 </a>
                             </li>
                             <li>
                                 <a href="16_portfolio_masonry.html" title="">
-                                    Porfolio Masonary
+                                    Portfolio Masonary
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="17_portfolio_single_layout_1.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
-                                    data-text="Porfolio Single V1"
+                                    data-text="Portfolio Single V1"
                                 >
-                                    Porfolio Single V1
+                                    Portfolio Single V1
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="portfolio-single-layout-two.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
-                                    data-text="Porfolio Single V2"
+                                    data-text="Portfolio Single V2"
                                 >
-                                    Porfolio Single V2
+                                    Portfolio Single V2
                                 </a>
                             </li>
                             <li>
                                 <a
                                     href="portfolio-single-layout-three.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
-                                    data-text="Porfolio Single V3"
+                                    data-text="Portfolio Single V3"
                                 >
-                                    Porfolio Single V3
+                                    Portfolio Single V3
                                 </a>
                             </li>
                         </ul>
@@ -442,7 +442,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="service-one.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Service V1"
                                 >
@@ -453,7 +453,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="service-two.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Service V2"
                                 >
@@ -464,7 +464,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="service-three.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Service V3"
                                 >
@@ -482,7 +482,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="32_team.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Team"
                                 >
@@ -493,7 +493,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="career.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Career"
                                 >
@@ -504,7 +504,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="career-detail.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Career Details"
                                 >
@@ -515,7 +515,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="pricing.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Pricing"
                                 >
@@ -526,7 +526,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="error.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="404"
                                 >
@@ -537,7 +537,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="coming-soon.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Coming Soon"
                                 >
@@ -555,7 +555,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="blog-layout-one.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Blog Layout V1"
                                 >
@@ -566,7 +566,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="blog-layout-two.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Blog Layout V2"
                                 >
@@ -577,7 +577,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="blog-single-layout1.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Blog Single Layout V1"
                                 >
@@ -588,7 +588,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="blog-single-layout2.html"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Blog Single Layout V2"
                                 >
@@ -606,7 +606,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="contact.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Contact V1"
                                 >
@@ -617,7 +617,7 @@ const HomePage2: NextPageWithLayout = () => {
                                 <a
                                     href="contact-two.tsx"
                                     className="animsition-link"
-                                    data-animsition-out-className="fade-out"
+                                    dataAnimsitionOutClassname="fade-out"
                                     title=""
                                     data-text="Contact V2"
                                 >

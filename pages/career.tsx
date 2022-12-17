@@ -1,8 +1,50 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+import dynamic from 'next/dynamic';
+import fetch from 'isomorphic-unfetch';
+
+
+const Isotope = dynamic(
+    () => import('../app/components/IsotopeLayoutCareer'),
+    { ssr: false }
+  );
+
+
+const items = [
+    {
+        id: 1,
+        value: 'part_time'
+    },
+    {
+        id: 2,
+        value: 'full_time'
+    },
+    {
+        id: 3,
+        value: 'full_time'
+    },
+    {
+        id: 4,
+        value: 'internship'
+    },
+    {
+        id: 5,
+        value: 'full_time'
+    },
+    {
+        id: 6,
+        value: 'part_time'
+    },
+    {
+        id: 7,
+        value: 'remote'
+    },
+];
 
 const Career: NextPageWithLayout = () => {
+
+
     return (
         <>
             <HeaderV1 />
@@ -13,149 +55,10 @@ const Career: NextPageWithLayout = () => {
                         <span>career</span>
                         <h2>Start your dream works with Miles</h2>
                     </div>
-                    <div className="options">
-                        <div className="option-isotop">
-                            <ul id="filter" className="option-set filters-nav text-center" data-option-key="filter">
-                                <li>
-                                    <a data-option-value="*" className="selected">
-                                        All Jobs{' '}
-                                    </a>
-                                </li>
-                                <li>
-                                    <a data-option-value=".full_time">Full Time</a>
-                                </li>
-                                <li>
-                                    <a data-option-value=".part_time">Part Time</a>
-                                </li>
-                                <li>
-                                    <a data-option-value=".remote">Remote</a>
-                                </li>
-                                <li>
-                                    <a data-option-value=".internship">Internship</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="row ms-row masonary">
-                        --&gt;
-                        <div className="col-lg-6 col-md-6 col-sm-6 part_time">
-                            <div className="career-item">
-                                <div className="career-thumb">
-                                    <img src="/static/images/cr1.jpg" alt="" className="w-100" />
-                                </div>
-                                <div className="career-info">
-                                    <h2>
-                                        <a href="career-detail.tsx" title="">
-                                            Creative Director
-                                        </a>
-                                    </h2>
-                                    <p>
-                                        First and foremost, you’re a leader. You see what others don’t and know what it takes to turn a
-                                        vision...
-                                    </p>
-                                    <span>Sanfrancisco / Full Time</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-sm-6 full_time">
-                            <div className="career-item">
-                                <div className="career-thumb">
-                                    <img src="/static/images/cr2.jpg" alt="" className="w-100" />
-                                </div>
-                                <div className="career-info">
-                                    <h2>
-                                        <a href="career-detail.tsx" title="">
-                                            Senior Product Management
-                                        </a>
-                                    </h2>
-                                    <p>
-                                        You’ve got grit and a deep desire to design and contribute to the creation of amazing digital
-                                        experiences...
-                                    </p>
-                                    <span>Sanfrancisco / Full Time</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-sm-6 full_time">
-                            <div className="career-item">
-                                <div className="career-thumb">
-                                    <img src="/static/images/cr.jpg" alt="" className="w-100" />
-                                </div>
-                                <div className="career-info">
-                                    <h2>
-                                        <a href="career-detail.tsx" title="">
-                                            Senior UI/UX Product Designer
-                                        </a>
-                                    </h2>
-                                    <p>
-                                        First and foremost, you’re a leader. You see what others don’t and know what it takes to turn a
-                                        vision...
-                                    </p>
-                                    <span>Sanfrancisco / Full Time</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-sm-6 internship">
-                            <div className="career-item">
-                                <div className="career-thumb">
-                                    <img src="/static/images/cr4.jpg" alt="" className="w-100" />
-                                </div>
-                                <div className="career-info">
-                                    <h2>
-                                        <a href="career-detail.tsx" title="">
-                                            Content Executive
-                                        </a>
-                                    </h2>
-                                    <p>
-                                        You’ve got grit and a deep desire to design and contribute to the creation of amazing digital
-                                        experiences...
-                                    </p>
-                                    <span>Los Angeles / intership</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-sm-6 full_time">
-                            <div className="career-item">
-                                <div className="career-thumb">
-                                    <img src="/static/images/cr5.jpg" alt="" className="w-100" />
-                                </div>
-                                <div className="career-info">
-                                    <h2>
-                                        <a href="career-detail.tsx" title="">
-                                            Leader Strategry &amp; Marketing
-                                        </a>
-                                    </h2>
-                                    <p>
-                                        First and foremost, you’re a leader. You see what others don’t and know what it takes to turn a
-                                        vision...
-                                    </p>
-                                    <span>Mahattan / Full Time</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-sm-6 remote part_time">
-                            <div className="career-item">
-                                <div className="career-thumb">
-                                    <img src="/static/images/cr6.jpg" alt="" className="w-100" />
-                                </div>
-                                <div className="career-info">
-                                    <h2>
-                                        <a href="career-detail.tsx" title="">
-                                            Graphic Designer
-                                        </a>
-                                    </h2>
-                                    <p>
-                                        You’ve got grit and a deep desire to design and contribute to the creation of amazing digital
-                                        experiences...
-                                    </p>
-                                    <span>remote</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Isotope items={items}/>
                 </div>
             </section>
-            
+
             <footer>
                 <div className="top-footer">
                     <div className="container">

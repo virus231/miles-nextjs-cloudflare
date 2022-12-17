@@ -78,27 +78,27 @@ export const rightMenu = [
         children: [
             {
                 href: '/portfolio-parallax',
-                name: 'Porfolio Parallax'
+                name: 'Portfolio Parallax'
             },
             {
                 href: '/portfolio-horizontal-scroll',
-                name: 'Porfolio Horizontal Scroll'
+                name: 'Portfolio Horizontal Scroll'
             },
             {
                 href: '/portfolio-masonary',
-                name: 'Porfolio Masonary'
+                name: 'Portfolio Masonary'
             },
             {
                 href: '/portfolio-single-layout',
-                name: 'Porfolio Single V1'
+                name: 'Portfolio Single V1'
             },
             {
                 href: '/portfolio-single-layout-two',
-                name: 'Porfolio Single V2'
+                name: 'Portfolio Single V2'
             },
             {
                 href: '/portfolio-single-layout-three',
-                name: 'Porfolio Single V3'
+                name: 'Portfolio Single V3'
             }
         ]
     },
@@ -288,27 +288,27 @@ export const navigationItems = [
         children: [
             {
                 href: '/portfolio-parallax',
-                name: 'Porfolio Parallax'
+                name: 'Portfolio Parallax'
             },
             {
                 href: '/portfolio-horizontal-scroll',
-                name: 'Porfolio Horizontal Scroll'
+                name: 'Portfolio Horizontal Scroll'
             },
             {
                 href: '/portfolio-masonary',
-                name: 'Porfolio Masonary'
+                name: 'Portfolio Masonary'
             },
             {
                 href: '/portfolio-single-layout',
-                name: 'Porfolio Single V1'
+                name: 'Portfolio Single V1'
             },
             {
                 href: '/portfolio-single-layout-two',
-                name: 'Porfolio Single V2'
+                name: 'Portfolio Single V2'
             },
             {
                 href: '/portfolio-single-layout-three',
-                name: 'Porfolio Single V3'
+                name: 'Portfolio Single V3'
             }
         ]
     },
