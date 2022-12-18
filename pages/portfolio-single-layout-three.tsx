@@ -4,8 +4,13 @@ import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { carouselsExample } from './index';
 import Carousel, { CarouselDots } from '../app/components/carousel';
 import { useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
@@ -32,7 +37,7 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
     return (
         <>
             <div className="wrapper bg-2">
-                <HeaderV1 />
+                <HeaderV1 view={inView} />
 
                 <section className="pf-single-layout3">
                     <div className="pf-head-v3">
@@ -77,7 +82,7 @@ const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
                         </div>
                     </div>
                 </section>
-                <section className="chal-sec-v3">
+                <section ref={ref} className="chal-sec-v3">
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-6">

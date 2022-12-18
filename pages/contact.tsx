@@ -1,11 +1,16 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+import { useInView } from 'react-intersection-observer';
 
-const ContactPage: NextPageWithLayout = () => {
+const ContactPage = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="contact-v1-map">
                 <div className="container-fluid">
@@ -68,7 +73,7 @@ const ContactPage: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <section className="contact-sec no-bg">
+            <section ref={ref} className="contact-sec no-bg">
                 <div className="container">
                     <div className="sec-title text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <h2>Ready to get started</h2>

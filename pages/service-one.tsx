@@ -1,12 +1,19 @@
-import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { useInView } from 'react-intersection-observer';
 
-const ServiceOne: NextPageWithLayout = () => {
+
+
+const ServiceOne = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="service_v1_page">
                 <div className="container">
@@ -174,7 +181,7 @@ const ServiceOne: NextPageWithLayout = () => {
                                     <div className="service-thumb">
                                         <img src="/static/images/service3.jpg" alt="" className="w-100" />
                                     </div>
-                                    <div className="service-info">
+                                    <div ref={ref} className="service-info">
                                         <h3>Branding</h3>
                                         <p>
                                             We build and activate brands throung cultural insigh and strategic vision to help business

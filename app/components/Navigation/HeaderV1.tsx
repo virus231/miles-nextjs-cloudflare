@@ -3,12 +3,18 @@ import { RightMenu } from '../RightMenu';
 import { NextLink } from '../BaseNextLink';
 import { Burger } from './Burger';
 
-export const HeaderV1 = () => {
+
+type Props = {
+    view?: boolean
+}
+
+export const HeaderV1 = (props: Props) => {
+    const { view } = props;
     const [open, setOpen] = useState<boolean>(false);
 
     return (
         <>
-            <header className="rel">
+            <header className={`rel ${view ? 'sticky' : ''}`}>
                 <div className="container-fluid">
                     <div className="header-content d-flex flex-wrap align-items-center">
                         <div className="logo">

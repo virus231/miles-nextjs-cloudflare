@@ -5,11 +5,17 @@ import { Testi } from '../app/components/Testi';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+import { useInView } from 'react-intersection-observer';
 
-const ServiceTwo: NextPageWithLayout = () => {
+const ServiceTwo = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+    
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="vls-sections service-v2">
                 <div className="container">
@@ -28,7 +34,7 @@ const ServiceTwo: NextPageWithLayout = () => {
                                 <span className="vl-icon clr1">
                                     <i className="lni lni-crown" />
                                 </span>
-                                <h3>Branding</h3>
+                                <h3 ref={ref}>Branding</h3>
                                 <p>I build and activate brands throung cultural insigh &amp;, strategic vision.</p>
                                 <a href="#" title="">
                                     See Projects

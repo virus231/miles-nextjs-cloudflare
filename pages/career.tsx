@@ -3,13 +3,13 @@ import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import dynamic from 'next/dynamic';
 import fetch from 'isomorphic-unfetch';
+import { useInView } from 'react-intersection-observer';
 
 
 const Isotope = dynamic(
     () => import('../app/components/IsotopeLayoutCareer'),
     { ssr: false }
   );
-
 
 const items = [
     {
@@ -43,11 +43,13 @@ const items = [
 ];
 
 const Career: NextPageWithLayout = () => {
-
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
 
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="career-page">
                 <div className="container">

@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import { ReactNode, ReactNodeArray, useState } from 'react';
+import { ReactNode } from 'react';
 import styles from './Layout.module.scss';
 
 export type LayoutProps = {
-    children?: ReactNode | ReactNodeArray;
+    children?: ReactNode;
     title?: string;
     keywords?: string;
     description?: string;

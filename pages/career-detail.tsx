@@ -2,11 +2,19 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { useInView } from 'react-intersection-observer';
+
 
 const CareerDetailPage: NextPageWithLayout = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+
+
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="career-page">
                 <div className="container">
@@ -19,7 +27,7 @@ const CareerDetailPage: NextPageWithLayout = () => {
                         <div className="cr-single-thumb">
                             <img src="/static/images/cr-single.jpg" alt="" className="w-100" />
                         </div>
-                        <div className="cr-single-content">
+                        <div ref={ref} className="cr-single-content">
                             <p>
                                 First and foremost, you’re a leader. You see what others don’t and know what it takes to turn a vision into
                                 a real world execution

@@ -2,11 +2,18 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { useInView } from 'react-intersection-observer';
+import { useCallback, useRef } from 'react';
 
 const ContactTwo: NextPageWithLayout = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
+
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="contact-v2-map">
                 <div className="container-fluid">
@@ -78,7 +85,7 @@ const ContactTwo: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
-            <section className="contact-sec no-bg gray-bg">
+            <section ref={ref} className="contact-sec no-bg gray-bg">
                 <div className="container">
                     <div className="sec-title wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <h2>Ready to get started</h2>

@@ -8,9 +8,15 @@ import Carousel, { CarouselArrowIndex } from '../app/components/carousel';
 import { carouselsExample } from './index';
 import { useTheme } from '@mui/material/styles';
 import { useRef, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 
 const ServiceThree: NextPageWithLayout = () => {
     const theme = useTheme();
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
@@ -45,7 +51,7 @@ const ServiceThree: NextPageWithLayout = () => {
     };
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="service-page-banner">
                 <div className="container">
@@ -69,8 +75,8 @@ const ServiceThree: NextPageWithLayout = () => {
             </section>
             <section className="services_03_content">
                 <div className="container">
-                    <div className="svs-03-styles">
-                        <div className="row fzt-row">
+                    <div  className="svs-03-styles">
+                        <div ref={ref} className="row fzt-row">
                             <div className="col-lg-3 col-md-6 col-sm-6">
                                 <div className="our-fzt">
                                     <h3>

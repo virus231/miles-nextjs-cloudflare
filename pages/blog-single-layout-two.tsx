@@ -23,7 +23,7 @@ const BlogSingleLayoutTwo: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="page-content bb-0">
                 <div className="single-post-meta">

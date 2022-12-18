@@ -5,8 +5,14 @@ import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
 import { useRef } from 'react';
 import { carouselsExample } from '.';
+import { useInView } from 'react-intersection-observer';
+
 
 const Pricing: NextPageWithLayout = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
@@ -44,7 +50,7 @@ const Pricing: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="pricing-v10 clr-default">
                 <div className="container">
@@ -62,13 +68,13 @@ const Pricing: NextPageWithLayout = () => {
                     </ul>
                     <div className="tb-content">
                         <div className="tab-data active" id="monthly">
-                            <div className="row prices-v10">
+                            <div  className="row prices-v10">
                                 <div className="col-lg-4 col-md-6">
                                     <div className="price-v10">
                                         <img src="/static/images/p-icon1.png" alt="" />
                                         <h4>Basic</h4>
                                         <span>Start for everyone</span>
-                                        <h2>
+                                        <h2 ref={ref}>
                                             <sup>$</sup> 9.99 <span>/ month</span>
                                         </h2>
                                         <ul>

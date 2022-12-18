@@ -2,11 +2,18 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+import { useInView } from 'react-intersection-observer';
 
-const TeamPage: NextPageWithLayout = () => {
+
+const TeamPage = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="team-page">
                 <div className="container">
@@ -225,7 +232,7 @@ const TeamPage: NextPageWithLayout = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-4 col-sm-6 col-6 full_width">
+                        <div ref={ref} className="col-lg-3 col-md-4 col-sm-6 col-6 full_width">
                             <div className="team-cl">
                                 <img src="/static/images/team8.jpg" alt="" />
                                 <div className="team-fig	">
@@ -328,6 +335,7 @@ const TeamPage: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
+            
             <FooterVariant1 />
         </>
     );

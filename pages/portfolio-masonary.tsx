@@ -53,7 +53,7 @@ const PortfolioMasonary: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 view={inView} />
 
             <section className="portfolio-ms-page">
                 <div className="container-fluid">
