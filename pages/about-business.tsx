@@ -7,8 +7,18 @@ import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carous
 import { Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
 
 const AboutBusiness: NextPageWithLayout = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+        triggerOnce: true
+    });
+    const { ref: countRef, inView: viewRef } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
@@ -46,7 +56,7 @@ const AboutBusiness: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV2 />
+            <HeaderV2 white view={inView} />
 
             <section className="business-banner">
                 <div className="container">
@@ -71,7 +81,7 @@ const AboutBusiness: NextPageWithLayout = () => {
                 </div>
             </section>
 
-            <section className="about-v9-content v2">
+            <section ref={ref} className="about-v9-content v2">
                 <div className="container-fluid">
                     <div className="about-v9-row">
                         <div className="ban-img-v9">
@@ -194,7 +204,9 @@ const AboutBusiness: NextPageWithLayout = () => {
                     <ul className="counter-sec-v6 br-top pb-0 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <li>
                             <div className="counter-cont">
-                                <h2 className="count">100%</h2>
+                                <h2 ref={countRef} className="count">
+                                    {viewRef ? <CountUp end={100} /> : '0'}
+                                </h2>
                                 <span>
                                     satisfaction <br /> clients
                                 </span>
@@ -202,13 +214,17 @@ const AboutBusiness: NextPageWithLayout = () => {
                         </li>
                         <li>
                             <div className="counter-cont">
-                                <h2 className="count">158</h2>
+                                <h2 ref={countRef} className="count">
+                                    {viewRef ? <CountUp end={158} /> : '0'}
+                                </h2>
                                 <span>event &amp; oline courses</span>
                             </div>
                         </li>
                         <li>
                             <div className="counter-cont">
-                                <h2 className="count">3875</h2>
+                                <h2 ref={countRef} className="count">
+                                    {viewRef ? <CountUp end={3875} /> : '0'}
+                                </h2>
                                 <span>successful students on 60 countries</span>
                             </div>
                         </li>

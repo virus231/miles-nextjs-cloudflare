@@ -3,12 +3,18 @@ import { NextLink } from '../BaseNextLink';
 import { RightMenu } from '../RightMenu';
 import { Burger } from './Burger';
 
-export const MainNavigation = () => {
+type Props = {
+    view?: boolean
+}
+
+
+export const MainNavigation = (props: Props) => {
+    const { view } = props;
     const [open, setOpen] = useState<boolean>(false);
 
     return (
         <>
-            <header className="pb">
+            <header className={`pb ${view ? 'sticky' : ''}`}>
                 <div className="container-fluid">
                     <div className="header-content d-flex flex-wrap align-items-center">
                         <div className="logo">
@@ -17,7 +23,7 @@ export const MainNavigation = () => {
                             </NextLink>
                         </div>
                         <div className="mile-right ms-auto">
-                            <Burger isTitleMenu={true} setOpen={() => setOpen(!open)} />
+                            <Burger isText setOpen={() => setOpen(!open)} />
                             <a href="#" title="" className="btn-default no-bg">
                                 Purchase Now
                             </a>
