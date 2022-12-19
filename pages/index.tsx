@@ -8,8 +8,7 @@ import { Testi } from '../app/components/Testi';
 import { KeepConnected } from '../app/components/KeepConnected';
 import { NextLink } from '../app/components/BaseNextLink';
 import { TabRoot } from '../app/components/Tabs/TabRoot';
-import StickyHeader from '../app/components/StickyHeader';
-import { InView, useInView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer';
 
 
 export const carouselsExample = [

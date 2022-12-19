@@ -1,15 +1,24 @@
-import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { Testi } from '../app/components/Testi';
 import { KeepConnected } from '../app/components/KeepConnected';
-import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
+import Carousel, { CarouselArrows } from '../app/components/carousel';
 import { carouselsExample } from './index';
-import { CarouselItem } from '../app/components/carousel/CarouselCenterMode';
 import { useRef } from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+import { useInView } from 'react-intersection-observer';
 
-const HomePage7: NextPageWithLayout = () => {
+
+const HomePage7 = () => {
+    const { ref, inView } = useInView({
+        threshold: 0,
+    });
+
+    const { ref: countRef, inView: viewRef } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
@@ -902,12 +911,7 @@ const HomePage7: NextPageWithLayout = () => {
                         <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <li>
                                 <div className="counter-cont">
-                                    <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                        {({ isVisible }: { isVisible: boolean }) => (
-                                            <h2 className=" count">{isVisible ? <CountUp end={100} /> : '0'}</h2>
-                                        )}
-                                    </VisibilitySensor>
-                                    {/*<h2 className="count">100</h2>*/}
+                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={100} /> : '0'}</h2>
                                     <span>
                                         satisfaction <br /> clients
                                     </span>
@@ -915,23 +919,13 @@ const HomePage7: NextPageWithLayout = () => {
                             </li>
                             <li>
                                 <div className="counter-cont">
-                                    <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                        {({ isVisible }: { isVisible: boolean }) => (
-                                            <h2 className="count">{isVisible ? <CountUp end={158} /> : '0'}</h2>
-                                        )}
-                                    </VisibilitySensor>
-                                    {/*<h2 className="count">158</h2>*/}
+                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={158} /> : '0'}</h2>
                                     <span>event &amp; oline courses</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="counter-cont">
-                                    <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                        {({ isVisible }: { isVisible: boolean }) => (
-                                            <h2 className="clr1 count">{isVisible ? <CountUp end={3875} /> : '0'}</h2>
-                                        )}
-                                    </VisibilitySensor>
-                                    {/*<h2 className="count">3875</h2>*/}
+                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={3875} /> : '0'}</h2>
                                     <span>successful students on 60 countries</span>
                                 </div>
                             </li>
