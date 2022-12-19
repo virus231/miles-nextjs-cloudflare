@@ -7,8 +7,15 @@ import { Burger } from '../app/components/Navigation/Burger';
 import { useRef, useState } from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+import { useInView } from 'react-intersection-observer';
+import { NextLink } from '../app/components/BaseNextLink';
 
 const HomePage10: NextPageWithLayout = () => {
+    
+    const { ref: countRef, inView: viewRef } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
     const [open, setOpen] = useState<boolean>(false);
     const carouselRef = useRef<Carousel | null>(null);
 
@@ -51,9 +58,9 @@ const HomePage10: NextPageWithLayout = () => {
                 <div className="container">
                     <div className="header-content-v6">
                         <div className="logo">
-                            <a href="#" title="">
+                            <NextLink href="/" title="">
                                 <img src="/static/images/logo_1.png" alt="" />
-                            </a>
+                            </NextLink>
                         </div>
                         <nav>
                             <ul>
@@ -192,16 +199,15 @@ const HomePage10: NextPageWithLayout = () => {
                         <a href="#" title="" className="hd-btn">
                             Let’s chat! <i className="lni lni-comments-reply" />
                         </a>
-                        <Burger setOpen={() => setOpen(!open)} />
+                        <Burger className="desktop-hide mobile-show" setOpen={() => setOpen(!open)} />
                     </div>
                 </div>
             </header>
-
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
 
             <section className="banner-v10">
                 <div className="container">
-                    <div className="banner-content-v10">
+                    <div className="banner-content-v10 mt-1">
                         <div className="banner-txt-v10 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <span>miles agency</span>
                             <h2>
@@ -302,12 +308,7 @@ const HomePage10: NextPageWithLayout = () => {
                     <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <li>
                             <div className="counter-cont">
-                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                    {({ isVisible }: { isVisible: boolean }) => (
-                                        <h2 className="clr1 count">{isVisible ? <CountUp end={100} /> : '0'}</h2>
-                                    )}
-                                </VisibilitySensor>
-                                {/*<h2 className="count">100</h2>*/}
+                                <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={100} /> : '0'}</h2>
                                 <span>
                                     satisfaction <br /> clients
                                 </span>
@@ -315,23 +316,13 @@ const HomePage10: NextPageWithLayout = () => {
                         </li>
                         <li>
                             <div className="counter-cont">
-                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                    {({ isVisible }: { isVisible: boolean }) => (
-                                        <h2 className="clr2 count">{isVisible ? <CountUp end={158} /> : '0'}</h2>
-                                    )}
-                                </VisibilitySensor>
-                                {/*<h2 className="count">158</h2>*/}
+                                <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={158} /> : '0'}</h2>
                                 <span>event &amp; oline courses</span>
                             </div>
                         </li>
                         <li>
                             <div className="counter-cont">
-                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                    {({ isVisible }: { isVisible: boolean }) => (
-                                        <h2 className="clr2 count">{isVisible ? <CountUp end={3875} /> : '0'}</h2>
-                                    )}
-                                </VisibilitySensor>
-                                {/*<h2 className="count">3875</h2>*/}
+                                <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={3875} /> : '0'}</h2>
                                 <span>successful students on 60 countries</span>
                             </div>
                         </li>

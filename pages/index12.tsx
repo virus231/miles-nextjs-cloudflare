@@ -8,8 +8,14 @@ import { carouselsExample } from './index';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import ReactPageScroller from 'react-page-scroller';
+import { NextLink } from '../app/components/BaseNextLink';
+import { useInView } from 'react-intersection-observer';
 
 const HomePage12: NextPageWithLayout = () => {
+    const { ref: countRef, inView: viewRef } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
     const [open, setOpen] = useState<boolean>(false);
     const carouselRef = useRef<Carousel | null>(null);
     const [currentPage, setCurrentPage] = useState<number | null>(null);
@@ -46,9 +52,9 @@ const HomePage12: NextPageWithLayout = () => {
                 <div className="container">
                     <div className="header-content">
                         <div className="logo">
-                            <a href="#" title="">
+                            <NextLink href="/" title="">
                                 <img src="/static/images/logo_12.png" alt="" />
-                            </a>
+                            </NextLink>
                         </div>
                         <nav>
                             <ul>
@@ -157,7 +163,7 @@ const HomePage12: NextPageWithLayout = () => {
                                 </li>
                             </ul>
                         </nav>
-                        <Burger setOpen={() => setOpen(!open)} />
+                        <Burger msAuto setOpen={() => setOpen(!open)} />
                     </div>
                 </div>
             </header>
@@ -376,31 +382,21 @@ const HomePage12: NextPageWithLayout = () => {
                                     <ul className="counter-sec border-bottom" id="counter">
                                         <li>
                                             <div className="count-dv">
-                                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                                    {({ isVisible }: { isVisible: boolean }) => (
-                                                        <h2 className="count">{isVisible ? <CountUp end={10} /> : '0'}</h2>
-                                                    )}
-                                                </VisibilitySensor>
+                                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={10} /> : '0'}</h2>
+
                                                 <span>Years Experience</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="count-dv">
-                                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                                    {({ isVisible }: { isVisible: boolean }) => (
-                                                        <h2 className="count">{isVisible ? <CountUp end={102} /> : '0'}</h2>
-                                                    )}
-                                                </VisibilitySensor>
+                                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={102} /> : '0'}</h2>
                                                 <span>Satisfaction Clients</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="count-dv">
-                                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                                    {({ isVisible }: { isVisible: boolean }) => (
-                                                        <h2 className="count">{isVisible ? <CountUp end={285} /> : '0'}</h2>
-                                                    )}
-                                                </VisibilitySensor>
+                                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={285} /> : '0'}</h2>
+
                                                 <span>
                                                     Projects Completed On <br /> 34 Countries
                                                 </span>

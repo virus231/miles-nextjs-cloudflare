@@ -3,13 +3,14 @@ type Props = {
     isText?: boolean;
     className?: string;
     white?: boolean;
+    msAuto?: boolean;
 };
 
-export const Burger = ({ setOpen, white, isText, className }: Props) => {
+export const Burger = ({ setOpen, white, isText, className, msAuto }: Props) => {
     return (
         <button type="button" 
                 onClick={setOpen} 
-                className={`nav-toggle-btn ${white ? 'white' : ''} a-nav-toggle ms-auto ${className}`}>
+                className={`nav-toggle-btn ${white ? 'white' : ''} a-nav-toggle ${!msAuto ? 'ms-auto' : ''} ${className}`}>
             {isText && <span className="nav-toggle-title">Menu</span>}
             <span className="nav-toggle nav-toggle-sm">
                 <span className="stick stick-1" />

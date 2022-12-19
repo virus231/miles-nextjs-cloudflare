@@ -11,7 +11,7 @@ export type LayoutProps = {
 
 export function Layout({ title, keywords, description, children }: LayoutProps) {
     return (
-        <div className={styles.layoutWrapper}>
+        <>
             <Head>
                 <title>{title ? `${title} · Miles` : 'Miles'}</title>
                 {keywords ? <meta name="keywords" content={keywords} /> : null}
@@ -30,6 +30,6 @@ export function Layout({ title, keywords, description, children }: LayoutProps) 
                 {/*</Box>*/}
                 {/* <Footer/> */}
             </div>
-        </div>
+        </>
     );
 }

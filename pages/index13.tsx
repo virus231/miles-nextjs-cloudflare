@@ -116,7 +116,7 @@ const HomePage13: NextPageWithLayout = () => {
                                 <img src="/static/images/logo14.png" alt="" />
                             </a>
                         </div>
-                        <Burger setOpen={() => setOpen(!open)} />
+                        <Burger isText white={currentPage !== 0 ? false : true} setOpen={() => setOpen(!open)} />
                     </div>
                 </div>
             </header>
