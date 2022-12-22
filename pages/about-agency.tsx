@@ -4,7 +4,6 @@ import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import Carousel, { CarouselArrows } from '../app/components/carousel';
 import { carouselsExample } from './index';
-import VisibilitySensor from 'react-visibility-sensor';
 import CountUp from 'react-countup';
 import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -50,7 +49,7 @@ const AboutAgency: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV1 view={inView} />
+            <HeaderV1 isText view={inView} />
             <section className="about-v1-page">
                 <div className="about-agency-content">
                     <div className="about-v-main">

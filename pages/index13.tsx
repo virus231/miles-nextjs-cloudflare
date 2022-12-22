@@ -6,6 +6,7 @@ import { useRef, useState } from 'react';
 import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
 import { carouselsExample } from './index';
 import ReactPageScroller from 'react-page-scroller';
+import { NextLink } from '../app/components/BaseNextLink';
 
 
 const labels = [
@@ -109,12 +110,12 @@ const HomePage13: NextPageWithLayout = () => {
                 <div className="container">
                     <div className="header-content">
                         <div className="logo">
-                            <a href="#" title="" className="light-logo">
+                            <NextLink href="/" title="" className="light-logo">
                                 <img src="/static/images/logo13.png" alt="" />
-                            </a>
-                            <a href="#" title="" className="dark-logo">
+                            </NextLink>
+                            <NextLink href="/" title="" className="dark-logo">
                                 <img src="/static/images/logo14.png" alt="" />
-                            </a>
+                            </NextLink>
                         </div>
                         <Burger isText white={currentPage !== 0 ? false : true} setOpen={() => setOpen(!open)} />
                     </div>

@@ -10,7 +10,7 @@ const ContactPage = () => {
 
     return (
         <>
-            <HeaderV1 view={inView} />
+            <HeaderV1 isText view={inView} />
 
             <section className="contact-v1-map">
                 <div className="container-fluid">

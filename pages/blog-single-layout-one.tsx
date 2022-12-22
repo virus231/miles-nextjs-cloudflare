@@ -34,7 +34,7 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV1 view={inView || !skipView} />
+            <HeaderV1 isText view={inView || !skipView} />
             <section className="page-content bb-0">
                 <div className="container v2">
                     <div ref={skipRef}>

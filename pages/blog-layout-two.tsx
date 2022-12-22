@@ -26,7 +26,7 @@ const BlogLayoutTwo: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV1 view={inView} />
+            <HeaderV1 isText view={inView} />
             <section className="page-content">
                 <div className="container v-3">
                     <div className="featured-post-sec">

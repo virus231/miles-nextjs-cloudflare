@@ -3,7 +3,7 @@ import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { useInView } from 'react-intersection-observer';
-import { useCallback, useRef } from 'react';
+
 
 const ContactTwo: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
@@ -13,7 +13,7 @@ const ContactTwo: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV1 view={inView} />
+            <HeaderV1 isText view={inView} />
 
             <section className="contact-v2-map">
                 <div className="container-fluid">

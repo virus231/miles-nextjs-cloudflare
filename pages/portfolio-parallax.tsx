@@ -2,7 +2,9 @@ import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
 import { useState } from 'react';
 import ReactPageScroller from 'react-page-scroller';
-
+import { RightMenu } from '../app/components/RightMenu';
+import { Burger } from '../app/components/Navigation/Burger';
+import { NextLink } from '../app/components/BaseNextLink';
 
 
 const originalLinks = [{
@@ -20,6 +22,7 @@ const originalLinks = [{
 
 const PortfolioParallax: NextPageWithLayout = () => {
     const [currentPage, setCurrentPage] = useState<number | null>(null);
+    const [open, setOpen] = useState<boolean>(false);
 
     const handlePageChange = (value: number | null) => {
         setCurrentPage(value);
@@ -31,22 +34,17 @@ const PortfolioParallax: NextPageWithLayout = () => {
                 <div className="container">
                     <div className="header-content">
                         <div className="logo">
-                            <a href="#" title="" className="light-logo">
+                            <NextLink href="/" title="" className="light-logo">
                                 <img src="/static/images/logo13.png" alt="" />
-                            </a>
+                            </NextLink>
                         </div>
-                        <button className="nav-toggle-btn a-nav-toggle ms-auto white">
-                            <span className="nav-toggle-title">Menu</span>
-                            <span className="nav-toggle nav-toggle-sm">
-                                <span className="stick stick-1" />
-                                <span className="stick stick-2" />
-                                <span className="stick stick-3" />
-                            </span>
-                        </button>
+                        <Burger white isText setOpen={() => setOpen(!open)} />
                     </div>
                 </div>
             </header>
 
+            <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
+            
             <div className="responsive-menu">
                 <div className="rep-header">
                     <div className="rep-logo">
@@ -536,7 +534,7 @@ const PortfolioParallax: NextPageWithLayout = () => {
                     pageOnChange={handlePageChange}
                     customPageNumber={currentPage ?? 0}
             >
-                <div className="section pp-scrollable sc-slide1" id="about">
+                <div className="section pp-scrollable sc-slide1 gb-1" id="about">
                             <div className="slide-container">
                                 <div className="fixed-bg gb-1" />
                                 <div className="enter-btn">

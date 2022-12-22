@@ -6,10 +6,11 @@ import { Burger } from './Burger';
 
 type Props = {
     view?: boolean
+    isText?: boolean
 }
 
 export const HeaderV1 = (props: Props) => {
-    const { view } = props;
+    const { view, isText } = props;
     const [open, setOpen] = useState<boolean>(false);
 
     return (
@@ -23,7 +24,7 @@ export const HeaderV1 = (props: Props) => {
                             </NextLink>
                         </div>
                         <div className="mile-right ms-auto">
-                            <Burger setOpen={() => setOpen(!open)} />
+                            <Burger isText={isText} setOpen={() => setOpen(!open)} />
 
                             <a href="#" title="" className="btn-default no-bg">
                                 Let’s talk

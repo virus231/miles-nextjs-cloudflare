@@ -32,7 +32,7 @@ const PortfolioHorizontalScroll: NextPageWithLayout = () => {
 
     return (
         <>
-            <HeaderV1 />
+            <HeaderV1 isText />
 
             <section className="portfolio-horizontol">
                 <div className="pf-hr-slider row">
