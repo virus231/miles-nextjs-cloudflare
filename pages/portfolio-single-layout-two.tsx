@@ -38,7 +38,7 @@ const PortfolioSingleLayoutTwo: NextPageWithLayout = () => {
                             </NextLink>
                         </div>
                         <div className="mile-right ms-auto">
-                            <Burger white className="black-on-mobile" setOpen={() => setOpen(!open)} />
+                            <Burger isText white className="black-on-mobile" setOpen={() => setOpen(!open)} />
 
                             <a href="#" title="" className="btn-default white no-bg">
                                 Let’s talk

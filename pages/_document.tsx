@@ -1,9 +1,7 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import { useRouter } from 'next/router';
+
 
 export default function Document() {
-    const router = useRouter();
-    
 
     return (
         <Html lang="en">
@@ -14,7 +12,11 @@ export default function Document() {
             <body >
                 <Main />
                 <NextScript />
-                <script type="text/javascript" src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
+                <script>
+                    new WOW().init();
+                </script>
+                <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
             </body>
         </Html>
     );

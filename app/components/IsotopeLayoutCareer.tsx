@@ -24,7 +24,7 @@ export default function IsotopeLayoutCareer(props: Props) {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             isotope.current = new Isotope('.masonary', {
-                itemSelector: '.career',
+                // itemSelector: '.career',
                 layoutMode: 'masonry'
             });
         }
@@ -88,6 +88,122 @@ export default function IsotopeLayoutCareer(props: Props) {
                     </div>
                 ))}
             </div>
+            {/* <div className="row ms-row masonary">
+                <div className="col-lg-6 col-md-6 col-sm-6 part_time">
+                    <div className="career-item">
+                        <div className="career-thumb">
+                            <img src="/static/images/cr1.jpg" alt="" className="w-100" />
+                        </div>
+                        <div className="career-info">
+                            <h2>
+                                <a href="34_career_detail.html" title="">
+                                    Creative Director
+                                </a>
+                            </h2>
+                            <p>
+                                First and foremost, you’re a leader. You see what others don’t and
+                                know what it takes to turn a vision...
+                            </p>
+                            <span>Sanfrancisco / Full Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-6 full_time">
+                    <div className="career-item">
+                        <div className="career-thumb">
+                            <img src="/static/images/cr2.jpg" alt="" className="w-100" />
+                        </div>
+                        <div className="career-info">
+                            <h2>
+                                <a href="34_career_detail.html" title="">
+                                    Senior Product Management
+                                </a>
+                            </h2>
+                            <p>
+                                You’ve got grit and a deep desire to design and contribute to the
+                                creation of amazing digital experiences...
+                            </p>
+                            <span>Sanfrancisco / Full Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-6 full_time">
+                    <div className="career-item">
+                        <div className="career-thumb">
+                            <img src="/static/images/cr.jpg" alt="" className="w-100" />
+                        </div>
+                        <div className="career-info">
+                            <h2>
+                                <a href="34_career_detail.html" title="">
+                                    Senior UI/UX Product Designer
+                                </a>
+                            </h2>
+                            <p>
+                                First and foremost, you’re a leader. You see what others don’t and
+                                know what it takes to turn a vision...
+                            </p>
+                            <span>Sanfrancisco / Full Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-6 internship">
+                    <div className="career-item">
+                        <div className="career-thumb">
+                            <img src="/static/images/cr4.jpg" alt="" className="w-100" />
+                        </div>
+                        <div className="career-info">
+                            <h2>
+                                <a href="34_career_detail.html" title="">
+                                    Content Executive
+                                </a>
+                            </h2>
+                            <p>
+                                You’ve got grit and a deep desire to design and contribute to the
+                                creation of amazing digital experiences...
+                            </p>
+                            <span>Los Angeles / intership</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-6 full_time">
+                    <div className="career-item">
+                        <div className="career-thumb">
+                            <img src="/static/images/cr5.jpg" alt="" className="w-100" />
+                        </div>
+                        <div className="career-info">
+                            <h2>
+                                <a href="34_career_detail.html" title="">
+                                    Leader Strategry &amp; Marketing
+                                </a>
+                            </h2>
+                            <p>
+                                First and foremost, you’re a leader. You see what others don’t and
+                                know what it takes to turn a vision...
+                            </p>
+                            <span>Mahattan / Full Time</span>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-lg-6 col-md-6 col-sm-6 remote part_time">
+                    <div className="career-item">
+                        <div className="career-thumb">
+                            <img src="/static/images/cr6.jpg" alt="" className="w-100" />
+                        </div>
+                        <div className="career-info">
+                            <h2>
+                                <a href="34_career_detail.html" title="">
+                                    Graphic Designer
+                                </a>
+                            </h2>
+                            <p>
+                                You’ve got grit and a deep desire to design and contribute to the
+                                creation of amazing digital experiences...
+                            </p>
+                            <span>remote</span>
+                        </div>
+                    </div>
+                </div>
+            </div> */}
         </>
     )
 };

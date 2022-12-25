@@ -13,7 +13,7 @@ const TeamPage = () => {
 
     return (
         <>
-            <HeaderV1 view={inView} />
+            <HeaderV1 isText view={inView} />
 
             <section className="team-page">
                 <div className="container">

@@ -1,5 +1,6 @@
 import { NextPageWithLayout } from './_app';
 import { Layout } from '../app/components/Layout';
+import { NextLink } from '../app/components/BaseNextLink';
 
 const ComingSoon: NextPageWithLayout = () => {
     return (
@@ -8,9 +9,9 @@ const ComingSoon: NextPageWithLayout = () => {
                 <div className="container-fluid">
                     <div className="header-content d-flex flex-wrap align-items-center">
                         <div className="logo">
-                            <a href="#" title="">
+                            <NextLink href="/" title="">
                                 <img src="/static/images/logo2.png" alt="" />
-                            </a>
+                            </NextLink>
                         </div>
                         <div className="mile-right ms-auto">
                             <a href="#" title="" className="btn-default white-bg box-shadow-none">

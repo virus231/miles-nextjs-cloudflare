@@ -51,7 +51,7 @@ const ServiceThree: NextPageWithLayout = () => {
     };
     return (
         <>
-            <HeaderV1 view={inView} />
+            <HeaderV1 isText view={inView} />
 
             <section className="service-page-banner">
                 <div className="container">
@@ -73,10 +73,11 @@ const ServiceThree: NextPageWithLayout = () => {
                     </div>
                 </div>
             </section>
+            <div ref={ref}></div>
             <section className="services_03_content">
                 <div className="container">
                     <div  className="svs-03-styles">
-                        <div ref={ref} className="row fzt-row">
+                        <div className="row fzt-row">
                             <div className="col-lg-3 col-md-6 col-sm-6">
                                 <div className="our-fzt">
                                     <h3>

@@ -13,7 +13,7 @@ const ServiceOne = () => {
 
     return (
         <>
-            <HeaderV1 view={inView} />
+            <HeaderV1 isText view={inView} />
 
             <section className="service_v1_page">
                 <div className="container">

@@ -1,5 +1,4 @@
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
 import { ReactElement } from 'react';
 import { Layout } from '../app/components/Layout';
 import { Navigation } from '../app/components/Navigation';

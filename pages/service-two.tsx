@@ -12,10 +12,15 @@ const ServiceTwo = () => {
         threshold: 0,
         triggerOnce: true,
     });
+    const { ref: countRef, inView: viewRef } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
+
     
     return (
         <>
-            <HeaderV1 view={inView} />
+            <HeaderV1 isText view={inView} />
 
             <section className="vls-sections service-v2">
                 <div className="container">
@@ -34,7 +39,7 @@ const ServiceTwo = () => {
                                 <span className="vl-icon clr1">
                                     <i className="lni lni-crown" />
                                 </span>
-                                <h3 ref={ref}>Branding</h3>
+                                <h3>Branding</h3>
                                 <p>I build and activate brands throung cultural insigh &amp;, strategic vision.</p>
                                 <a href="#" title="">
                                     See Projects
@@ -77,6 +82,7 @@ const ServiceTwo = () => {
                     </div>
                 </div>
             </section>
+            <div ref={ref}></div>
             <section className="clients-sec-v3 pb-0">
                 <div className="container">
                     <div className="section-title-v3 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
@@ -113,34 +119,19 @@ const ServiceTwo = () => {
                     <ul className="counter-sec border-bottom wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <li>
                             <div className="count-dv">
-                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                    {({ isVisible }: { isVisible: boolean }) => (
-                                        <h2 className="count">{isVisible ? <CountUp end={10} /> : '0'}</h2>
-                                    )}
-                                </VisibilitySensor>
-                                {/*<h2 className="count">10</h2>*/}
+                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={10} /> : '0'}</h2>
                                 <span>Years Experience</span>
                             </div>
                         </li>
                         <li>
                             <div className="count-dv">
-                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                    {({ isVisible }: { isVisible: boolean }) => (
-                                        <h2 className="clr2 count">{isVisible ? <CountUp end={102} /> : '0'}</h2>
-                                    )}
-                                </VisibilitySensor>
-                                {/*<h2 className="count">102</h2>*/}
+                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={102} /> : '0'}</h2>
                                 <span>Satisfaction Clients</span>
                             </div>
                         </li>
                         <li>
                             <div className="count-dv">
-                                <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                    {({ isVisible }: { isVisible: boolean }) => (
-                                        <h2 className="clr2 count">{isVisible ? <CountUp end={285} /> : '0'}</h2>
-                                    )}
-                                </VisibilitySensor>
-                                {/*<h2 className="count">285</h2>*/}
+                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={285} /> : '0'}</h2>
                                 <span>
                                     Projects Completed On <br /> 34 Countries
                                 </span>
