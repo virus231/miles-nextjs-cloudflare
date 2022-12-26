@@ -111,7 +111,7 @@ const HomePage11 = () => {
 
     return (
         <>
-            <header className={`header-v6 v11 pb ${inView ? 'sticky' : ''}`}>
+            <header className={`header-v6 v11 pb ${inView ? 'sticky animated slideInDown' : ''}`}>
                 <div className="container">
                     <div className="header-content-v6">
                         <div className="logo">

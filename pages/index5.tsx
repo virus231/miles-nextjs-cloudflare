@@ -16,7 +16,7 @@ const HomePage5: NextPageWithLayout = () => {
 
     return (
         <>
-            <header className={`header-v5 ${inView ? 'sticky' : ''}`}>
+            <header className={`header-v5 ${inView ? 'sticky animated slideInDown' : ''}`}>
                 <div className="container">
                     <div className="header-content">
                         <div className="logo">

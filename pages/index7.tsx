@@ -56,7 +56,7 @@ const HomePage7 = () => {
 
     return (
         <>
-            <header className={`header-v7 ${inView ? 'sticky' : ''}`}>
+            <header className={`header-v7 ${inView ? 'sticky animated slideInDown' : ''}`}>
                 <div className="container">
                     <div className="header-v7-top">
                         <div className="logo-v7">

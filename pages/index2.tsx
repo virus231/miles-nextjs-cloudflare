@@ -164,76 +164,77 @@ const HomePage2: NextPageWithLayout = () => {
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
 
             <div className="promo promo-studio-container">
-                <Controller>
-                    <Scene
+                <Controller
+                    globalSceneOptions={{
+                        triggerHook: '0',
+                    }}
+                >
+                    <Scene 
+                        duration="15%"
+                        triggerElement=".step-animate-nav"
                         triggerHook={0}
-                        duration="1000"
-                        offset={3}
-                        triggerElement="promo-studio-container"
-                        pin
                     >
-                        {(progress: any) => (
-                            <Timeline progress={progress} paused>
-                                <div className="step-animate-nav"></div>
-                                <div className="step-animate-nav-hidden"></div>
-                                <div className="step-animate-opacity"></div>
-                                <Tween
-                                    from={{ opacity: 1 }}
-                                    to={{ opacity: 0 }}
-                                    duration={1000}
-                                >
-                                    <div className="promo-studio">
-                                        <Tween
-                                            duration={5000}
-                                            to={{ scale: '1.8' }}
-                                            ease="easeNone"
-                                        >
-                                            <div className="promo-studio-bg"></div>
-                                        </Tween>
-                                        <Tween
-                                            ease="easeNone"
-                                            duration={5000}
-                                            from={{ top: '0%', left: '0%', }}
-                                            to={{ top: '-23%', left: '-28%', scale: '1.8' }}
-                                        >
-                                            <div className="promo-studio-man"></div>
-                                        </Tween>
-                                        <div className="promo-studio-content">
-                                            <div className="vertical-text-left">Crafting Digital <span className="text-muted vertical-text-block">Studio</span></div>
-                                            <div className="container">
-                                                <div className="row wow fadeInUp">
-                                                    <div className="col-lg-6 col-md-6">
-                                                        <Tween
-                                                            duration={5000}
-                                                            to={{ y: '-150%' }}
-                                                        >
-                                                            <h1 className="title-studio">Say Hi!!<br /> from miles studio</h1>
-                                                        </Tween>
-                                                    </div>
-                                                    <div className="col-lg-2 dis-none"></div>
-                                                    <div className="col-lg-4 col-md-6">
-                                                        <Tween
-                                                            duration={5000}
-                                                            to={{ y: '-150%' }}
-                                                        >
-                                                            <div className="banner-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
-                                                                <h3>An innovative & technology partner of trend setting business.</h3>
-                                                                <p>Create value and optimize the influence power of each product, we construct a creative thinking, a rational processes and meaningful experiences for every brands.</p>
-                                                                <a href="#" title="">get started</a>
-                                                            </div>
-                                                        </Tween>
-                                                    </div>
+                        <div className="step-animate-nav"></div>
+                    </Scene>
+                    <div className="step-animate-nav-hidden"></div>
+                    <div className="step-animate-opacity"></div>
+
+                    <div className="promo-studio">
+                        <Scene
+                            duration="80%"
+                            triggerElement=".promo-studio-container"
+                            triggerHook={0}
+                        >
+                            <Tween
+                                to={{ scale: '1.8', opacity: '0' }}
+                                ease="easeNone"
+                            >
+                                <div className="promo-studio-bg"></div>
+                            </Tween>
+                        </Scene>
+                        <Scene
+                            duration="80%"
+                            triggerElement=".promo-studio-container"
+                            triggerHook={0}
+                        >
+                            <Tween
+                                ease="easeNone"
+                                from={{ top: '0%', left: '0%', opacity: '1' }}
+                                to={{ top: '-23%', left: '-28%', scale: '1.8', opacity: '0' }}
+                            >
+                                <div className="promo-studio-man"></div>
+                            </Tween>
+                        </Scene>
+                        <Scene
+                            duration="80%"
+                            triggerElement=".promo-studio-container"
+                            triggerHook={0}
+                        >
+                            <Tween
+                                to={{ y: '-100%', ease: 'easeNone' }}
+                            >
+                                <div className="promo-studio-content">
+                                    <div className="vertical-text-left">Crafting Digital <span className="text-muted vertical-text-block">Studio</span></div>
+                                    <div className="container">
+                                        <div className="row wow fadeInUp">
+                                            <div className="col-lg-6 col-md-6">
+                                                <h1 className="title-studio">Say Hi!!<br /> from miles studio</h1>
+                                            </div>
+                                            <div className="col-lg-2 dis-none"></div>
+                                            <div className="col-lg-4 col-md-6">
+                                                <div className="banner-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                                    <h3>An innovative & technology partner of trend setting business.</h3>
+                                                    <p>Create value and optimize the influence power of each product, we construct a creative thinking, a rational processes and meaningful experiences for every brands.</p>
+                                                    <a href="#" title="">get started</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </Tween>
+                        </Scene>
 
-                                </Tween>
-
-                            </Timeline>
-
-                        )}
-                    </Scene>
+                    </div>
                 </Controller>
             </div>
 

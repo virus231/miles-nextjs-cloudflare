@@ -14,7 +14,7 @@ export const MainNavigation = (props: Props) => {
 
     return (
         <>
-            <header className={`pb ${view ? 'sticky' : ''}`}>
+            <header className={`pb ${view ? 'sticky animated slideInDown' : ''}`}>
                 <div className="container-fluid">
                     <div className="header-content d-flex flex-wrap align-items-center">
                         <div className="logo">

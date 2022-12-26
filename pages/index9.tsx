@@ -39,7 +39,7 @@ const HomePage9: NextPageWithLayout = () => {
 
     return (
         <>
-            <header className={`header-v8 v9 ${inView ? 'sticky' : ''}`}>
+            <header className={`header-v8 v9 ${inView ? 'sticky animated slideInDown' : ''}`}>
                 <div className="container">
                     <div className="header-content-v8">
                         <div className="logo-v8">

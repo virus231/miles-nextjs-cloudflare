@@ -15,7 +15,7 @@ export const HeaderV1 = (props: Props) => {
 
     return (
         <>
-            <header className={`rel ${view ? 'sticky' : ''}`}>
+            <header className={`rel ${view ? 'sticky animated slideInDown' : ''}`}>
                 <div className="container-fluid">
                     <div className="header-content d-flex flex-wrap align-items-center">
                         <div className="logo">

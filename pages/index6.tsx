@@ -72,7 +72,7 @@ const HomePage6: NextPageWithLayout = () => {
 
     return (
         <>
-            <header className={`header-v6 ${inView ? 'sticky' : ''}`}>
+            <header className={`header-v6 ${inView ? 'sticky animated slideInDown' : ''}`}>
                 <div className="container">
                     <div className="header-content-v6">
                         <div className="logo">
