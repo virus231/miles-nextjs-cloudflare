@@ -182,87 +182,87 @@ export const rightMenu = [
             }
         ]
     },
-    {
-        name: 'Elements',
-        children: [
-            {
-                href: '/',
-                name: 'Counter'
-            },
-            {
-                href: '/',
-                name: 'Blockquote'
-            },
-            {
-                href: '/',
-                name: 'Partners'
-            },
-            {
-                href: '/',
-                name: 'Pricing'
-            },
-            {
-                href: '/',
-                name: 'Newsletter'
-            },
-            {
-                href: '/',
-                name: 'Contact'
-            },
-            {
-                href: '/',
-                name: 'Team'
-            },
-            {
-                href: '/',
-                name: 'Blog'
-            },
-            {
-                href: '/',
-                name: 'Footer'
-            },
-            {
-                href: '/',
-                name: 'Portfolio'
-            },
-            {
-                href: '/',
-                name: 'Testimonials'
-            },
-            {
-                href: '/',
-                name: 'Header'
-            },
-            {
-                href: '/',
-                name: 'Services'
-            },
-            {
-                href: '/',
-                name: 'About Us'
-            },
-            {
-                href: '/',
-                name: 'Awards'
-            },
-            {
-                href: '/',
-                name: 'Events'
-            },
-            {
-                href: '/',
-                name: 'Features'
-            },
-            {
-                href: '/',
-                name: 'Hero'
-            },
-            {
-                href: '/',
-                name: 'Slider'
-            }
-        ]
-    }
+    // {
+    //     name: 'Elements',
+    //     children: [
+    //         {
+    //             href: '/',
+    //             name: 'Counter'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Blockquote'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Partners'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Pricing'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Newsletter'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Contact'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Team'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Blog'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Footer'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Portfolio'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Testimonials'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Header'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Services'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'About Us'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Awards'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Events'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Features'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Hero'
+    //         },
+    //         {
+    //             href: '/',
+    //             name: 'Slider'
+    //         }
+    //     ]
+    // }
 ];
 
 export const navigationItems = [

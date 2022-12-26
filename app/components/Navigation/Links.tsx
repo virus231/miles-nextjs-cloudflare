@@ -18,7 +18,7 @@ export const Links = () => {
                     </ul>
                 </li>
             ))}
-            <li>
+            {/* <li>
                 <a className="black-clr">Elements</a>
                 <ul
                     className="hover-menu"
@@ -92,7 +92,7 @@ export const Links = () => {
                         </div>
                     </div>
                 </ul>
-            </li>
+            </li> */}
         </>
     );
 };

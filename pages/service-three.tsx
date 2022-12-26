@@ -17,6 +17,10 @@ const ServiceThree: NextPageWithLayout = () => {
         threshold: 0,
         triggerOnce: true,
     });
+    const { ref: countRef, inView: viewRef } = useInView({
+        threshold: 0,
+        triggerOnce: true,
+    });
     const carouselRef = useRef<Carousel | null>(null);
 
     const carouselSettings = {
@@ -226,12 +230,7 @@ const ServiceThree: NextPageWithLayout = () => {
                             >
                                 <li>
                                     <div className="counter-cont">
-                                        <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                            {({ isVisible }: { isVisible: boolean }) => (
-                                                <h2 className=" count">{isVisible ? <CountUp end={100} /> : '0'}</h2>
-                                            )}
-                                        </VisibilitySensor>
-                                        {/*<h2 className="count">100</h2>*/}
+                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={100} /> : '0'}</h2>
                                         <span>
                                             satisfaction <br /> clients
                                         </span>
@@ -239,23 +238,13 @@ const ServiceThree: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                            {({ isVisible }: { isVisible: boolean }) => (
-                                                <h2 className="clr2 count">{isVisible ? <CountUp end={158} /> : '0'}</h2>
-                                            )}
-                                        </VisibilitySensor>
-                                        {/*<h2 className="count">158</h2>*/}
+                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={150} /> : '0'}</h2>
                                         <span>event &amp; oline courses</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <VisibilitySensor scrollCheck partialVisibility offset={{ bottom: 10 }}>
-                                            {({ isVisible }: { isVisible: boolean }) => (
-                                                <h2 className="clr2 count">{isVisible ? <CountUp end={3875} /> : '0'}</h2>
-                                            )}
-                                        </VisibilitySensor>
-                                        {/*<h2 className="count">3875</h2>*/}
+                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={3875} /> : '0'}</h2>
                                         <span>successful students on 60 countries</span>
                                     </div>
                                 </li>
