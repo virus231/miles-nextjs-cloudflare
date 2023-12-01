@@ -181,7 +181,7 @@ export const rightMenu = [
                 name: 'Contact V2'
             }
         ]
-    },
+    }
     // {
     //     name: 'Elements',
     //     children: [

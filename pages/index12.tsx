@@ -1,20 +1,18 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { RightMenu } from '../app/components/RightMenu';
 import { useRef, useState } from 'react';
-import { Burger } from '../app/components/Navigation/Burger';
-import Carousel from '../app/components/carousel';
-import { carouselsExample } from './index';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
+import { useInView } from 'react-intersection-observer';
 import ReactPageScroller from 'react-page-scroller';
 import { NextLink } from '../app/components/BaseNextLink';
-import { useInView } from 'react-intersection-observer';
-
+import Carousel from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
+import { Burger } from '../app/components/Navigation/Burger';
+import { RightMenu } from '../app/components/RightMenu';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const HomePage12: NextPageWithLayout = () => {
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const [open, setOpen] = useState<boolean>(false);
     const carouselRef = useRef<Carousel | null>(null);
@@ -171,10 +169,7 @@ const HomePage12: NextPageWithLayout = () => {
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
 
             <div id="pagepiling">
-                <ReactPageScroller renderAllPagesOnFirstRender
-                    pageOnChange={handlePageChange}
-                    customPageNumber={currentPage ?? 0}
-                >
+                <ReactPageScroller renderAllPagesOnFirstRender pageOnChange={handlePageChange} customPageNumber={currentPage ?? 0}>
                     <div className="section pp-scrollable">
                         <div className="slide-container">
                             <h2 className="page-num">Hello</h2>
@@ -188,7 +183,9 @@ const HomePage12: NextPageWithLayout = () => {
                                                 <span>
                                                     miloose creative digtal <br /> studio
                                                 </span>
-                                                <p>Like any great agency, we are only as good as the result we deliver of our recent work</p>
+                                                <p>
+                                                    Like any great agency, we are only as good as the result we deliver of our recent work
+                                                </p>
                                                 <a href="#" title="" className="btn-default-v12">
                                                     Get started
                                                 </a>
@@ -265,7 +262,8 @@ const HomePage12: NextPageWithLayout = () => {
                                                     <span>“We know good design meant that good business.”</span>
                                                     <p>
                                                         We help our client suceed by creating identities, digital experiences, and
-                                                        printmaterials that communicate clearly, achieve marketing goals &amp; look fantastic
+                                                        printmaterials that communicate clearly, achieve marketing goals &amp; look
+                                                        fantastic
                                                     </p>
                                                     <a href="about-agency.tsx" title="" className="btn-default-v12 no-bg">
                                                         Learn More
@@ -370,7 +368,7 @@ const HomePage12: NextPageWithLayout = () => {
                                         <h2>The trust from client make our value</h2>
                                         <span>Work with many big brands, brings for me great experience.</span>
                                     </div>
-                                    <Carousel className='client-works client-slider' ref={carouselRef} {...carouselSettings}>
+                                    <Carousel className="client-works client-slider" ref={carouselRef} {...carouselSettings}>
                                         {carouselsExample.map((item) => (
                                             <div key={item.id} className="col-md-2">
                                                 <div className="cl-imag">
@@ -382,20 +380,26 @@ const HomePage12: NextPageWithLayout = () => {
                                     <ul className="counter-sec border-bottom" id="counter">
                                         <li>
                                             <div className="count-dv">
-                                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={10} /> : '0'}</h2>
+                                                <h2 ref={countRef} className="count">
+                                                    {viewRef ? <CountUp end={10} /> : '0'}
+                                                </h2>
 
                                                 <span>Years Experience</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="count-dv">
-                                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={102} /> : '0'}</h2>
+                                                <h2 ref={countRef} className="count">
+                                                    {viewRef ? <CountUp end={102} /> : '0'}
+                                                </h2>
                                                 <span>Satisfaction Clients</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div className="count-dv">
-                                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={285} /> : '0'}</h2>
+                                                <h2 ref={countRef} className="count">
+                                                    {viewRef ? <CountUp end={285} /> : '0'}
+                                                </h2>
 
                                                 <span>
                                                     Projects Completed On <br /> 34 Countries
@@ -446,8 +450,8 @@ const HomePage12: NextPageWithLayout = () => {
                                                         <i className="lni lni-quotation" />
                                                     </span>
                                                     <p>
-                                                        I don’t know what else to say, this is something that you haven’t seen before. Unique
-                                                        design, lightweight, and outstanding support.
+                                                        I don’t know what else to say, this is something that you haven’t seen before.
+                                                        Unique design, lightweight, and outstanding support.
                                                     </p>
                                                     <h3>Edison Cavani</h3>
                                                     <span>Product Management at Spotify</span>
@@ -479,8 +483,8 @@ const HomePage12: NextPageWithLayout = () => {
                                                         <i className="lni lni-quotation" />
                                                     </span>
                                                     <p>
-                                                        I don’t know what else to say, this is something that you haven’t seen before. Unique
-                                                        design, lightweight, and outstanding support.
+                                                        I don’t know what else to say, this is something that you haven’t seen before.
+                                                        Unique design, lightweight, and outstanding support.
                                                     </p>
                                                     <h3>Edison Cavani</h3>
                                                     <span>Product Management at Spotify</span>
@@ -711,9 +715,7 @@ const HomePage12: NextPageWithLayout = () => {
                         </div>
                     </div>
                 </ReactPageScroller>
-
             </div>
-
 
             <ul className="social-vertical v12">
                 <li>

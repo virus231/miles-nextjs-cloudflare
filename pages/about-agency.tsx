@@ -1,21 +1,21 @@
-import { NextPageWithLayout } from './_app';
+import { useRef } from 'react';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
+import Carousel, { CarouselArrows } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import Carousel, { CarouselArrows } from '../app/components/carousel';
+import { NextPageWithLayout } from './_app';
 import { carouselsExample } from './index';
-import CountUp from 'react-countup';
-import { useRef } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 const AboutAgency: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
     const carouselSettings = {
@@ -136,7 +136,9 @@ const AboutAgency: NextPageWithLayout = () => {
                             <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className=" count">{viewRef ? <CountUp end={820} /> : '0'}</h2>
+                                        <h2 ref={countRef} className=" count">
+                                            {viewRef ? <CountUp end={820} /> : '0'}
+                                        </h2>
                                         <span>
                                             satisfaction <br /> clients
                                         </span>
@@ -144,13 +146,17 @@ const AboutAgency: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className=" count">{viewRef ? <CountUp end={643} /> : '0'}</h2>
+                                        <h2 ref={countRef} className=" count">
+                                            {viewRef ? <CountUp end={643} /> : '0'}
+                                        </h2>
                                         <span>event &amp; oline courses</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className=" count">{viewRef ? <CountUp end={1875} /> : '0'}</h2>
+                                        <h2 ref={countRef} className=" count">
+                                            {viewRef ? <CountUp end={1875} /> : '0'}
+                                        </h2>
                                         <span>successful students on 60 countries</span>
                                     </div>
                                 </li>
@@ -307,8 +313,6 @@ const AboutAgency: NextPageWithLayout = () => {
 
                 <FooterVariant1 />
             </div>
-
-
         </>
     );
 };

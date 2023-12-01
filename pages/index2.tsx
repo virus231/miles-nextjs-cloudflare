@@ -1,18 +1,17 @@
-import { NextLink } from '../app/components/BaseNextLink';
-import { Layout } from '../app/components/Layout';
-import { NextPageWithLayout } from './_app';
 import { useRef, useState } from 'react';
-import Carousel from '../app/components/carousel';
-import { carouselsExample } from '.';
-import { Controller, Scene } from 'react-scrollmagic';
-import { RightMenu } from '../app/components/RightMenu';
-import { Burger } from '../app/components/Navigation/Burger';
-import { Tween, Timeline } from 'react-gsap';
+import { Tween } from 'react-gsap';
 import { useInView } from 'react-intersection-observer';
-
+import { Controller, Scene } from 'react-scrollmagic';
+import { carouselsExample } from '.';
+import { NextLink } from '../app/components/BaseNextLink';
+import Carousel from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
+import { Burger } from '../app/components/Navigation/Burger';
+import { RightMenu } from '../app/components/RightMenu';
+import { NextPageWithLayout } from './_app';
 const HomePage2: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
     const carouselRef = useRef<Carousel | null>(null);
     const [open, setOpen] = useState<boolean>(false);
@@ -156,7 +155,6 @@ const HomePage2: NextPageWithLayout = () => {
                             </ul>
                         </nav>
                         <Burger setOpen={() => setOpen(!open)} />
-
                     </div>
                 </div>
             </header>
@@ -166,37 +164,22 @@ const HomePage2: NextPageWithLayout = () => {
             <div className="promo promo-studio-container">
                 <Controller
                     globalSceneOptions={{
-                        triggerHook: '0',
+                        triggerHook: '0'
                     }}
                 >
-                    <Scene 
-                        duration="15%"
-                        triggerElement=".step-animate-nav"
-                        triggerHook={0}
-                    >
+                    <Scene duration="15%" triggerElement=".step-animate-nav" triggerHook={0}>
                         <div className="step-animate-nav"></div>
                     </Scene>
                     <div className="step-animate-nav-hidden"></div>
                     <div className="step-animate-opacity"></div>
 
                     <div className="promo-studio">
-                        <Scene
-                            duration="80%"
-                            triggerElement=".promo-studio-container"
-                            triggerHook={0}
-                        >
-                            <Tween
-                                to={{ scale: '1.8', opacity: '0' }}
-                                ease="easeNone"
-                            >
+                        <Scene duration="80%" triggerElement=".promo-studio-container" triggerHook={0}>
+                            <Tween to={{ scale: '1.8', opacity: '0' }} ease="easeNone">
                                 <div className="promo-studio-bg"></div>
                             </Tween>
                         </Scene>
-                        <Scene
-                            duration="80%"
-                            triggerElement=".promo-studio-container"
-                            triggerHook={0}
-                        >
+                        <Scene duration="80%" triggerElement=".promo-studio-container" triggerHook={0}>
                             <Tween
                                 ease="easeNone"
                                 from={{ top: '0%', left: '0%', opacity: '1' }}
@@ -205,27 +188,35 @@ const HomePage2: NextPageWithLayout = () => {
                                 <div className="promo-studio-man"></div>
                             </Tween>
                         </Scene>
-                        <Scene
-                            duration="80%"
-                            triggerElement=".promo-studio-container"
-                            triggerHook={0}
-                        >
-                            <Tween
-                                to={{ y: '-100%', ease: 'easeNone' }}
-                            >
+                        <Scene duration="80%" triggerElement=".promo-studio-container" triggerHook={0}>
+                            <Tween to={{ y: '-100%', ease: 'easeNone' }}>
                                 <div className="promo-studio-content">
-                                    <div className="vertical-text-left">Crafting Digital <span className="text-muted vertical-text-block">Studio</span></div>
+                                    <div className="vertical-text-left">
+                                        Crafting Digital <span className="text-muted vertical-text-block">Studio</span>
+                                    </div>
                                     <div className="container">
                                         <div className="row wow fadeInUp">
                                             <div className="col-lg-6 col-md-6">
-                                                <h1 className="title-studio">Say Hi!!<br /> from miles studio</h1>
+                                                <h1 className="title-studio">
+                                                    Say Hi!!
+                                                    <br /> from miles studio
+                                                </h1>
                                             </div>
                                             <div className="col-lg-2 dis-none"></div>
                                             <div className="col-lg-4 col-md-6">
-                                                <div className="banner-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                                <div
+                                                    className="banner-text wow fadeInRight"
+                                                    data-wow-duration="1000ms"
+                                                    data-wow-delay="300ms"
+                                                >
                                                     <h3>An innovative & technology partner of trend setting business.</h3>
-                                                    <p>Create value and optimize the influence power of each product, we construct a creative thinking, a rational processes and meaningful experiences for every brands.</p>
-                                                    <a href="#" title="">get started</a>
+                                                    <p>
+                                                        Create value and optimize the influence power of each product, we construct a
+                                                        creative thinking, a rational processes and meaningful experiences for every brands.
+                                                    </p>
+                                                    <a href="#" title="">
+                                                        get started
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -233,12 +224,9 @@ const HomePage2: NextPageWithLayout = () => {
                                 </div>
                             </Tween>
                         </Scene>
-
                     </div>
                 </Controller>
             </div>
-
-
 
             <div ref={ref}>
                 <section className="main-banner-style2" style={{ display: 'none' }}>
@@ -257,8 +245,13 @@ const HomePage2: NextPageWithLayout = () => {
                             <div className="col-lg-6 col-md-6">
                                 <div className="banner-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
                                     <h3>An innovative & technology partner of trend setting business.</h3>
-                                    <p>Create value and optimize the influence power of each product, we construct a creative thinking, a rational processes and meaningful experiences for every brands.</p>
-                                    <a href="#" title="">get started</a>
+                                    <p>
+                                        Create value and optimize the influence power of each product, we construct a creative thinking, a
+                                        rational processes and meaningful experiences for every brands.
+                                    </p>
+                                    <a href="#" title="">
+                                        get started
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -312,8 +305,8 @@ const HomePage2: NextPageWithLayout = () => {
                                 <div className="abot-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
                                     <h2>who we are?</h2>
                                     <p>
-                                        Founded in 2007, Miles is specializing in providing innovative services such as website design, brand
-                                        identity and marketing
+                                        Founded in 2007, Miles is specializing in providing innovative services such as website design,
+                                        brand identity and marketing
                                     </p>
                                     <a href="about-agency.tsx" title="" className="link2">
                                         learn more
@@ -330,8 +323,18 @@ const HomePage2: NextPageWithLayout = () => {
                                 <h3>Caelie Kyle & Collin Kenelm</h3>
                                 <span>Executive Leader</span>
                             </div>
-                            <div className="abt-v-img mask-solid wow fadeIn" data-wow-offset="30" data-wow-duration="0.2s" data-wow-delay=".3s">
-                                <div className="mask wow slideInLeft" data-wow-offset="30" data-wow-duration="1.2s" data-wow-delay=".3s"></div>
+                            <div
+                                className="abt-v-img mask-solid wow fadeIn"
+                                data-wow-offset="30"
+                                data-wow-duration="0.2s"
+                                data-wow-delay=".3s"
+                            >
+                                <div
+                                    className="mask wow slideInLeft"
+                                    data-wow-offset="30"
+                                    data-wow-duration="1.2s"
+                                    data-wow-delay=".3s"
+                                ></div>
                                 <img src="/static/images/abt2.jpg" alt="" className="img-fluid" />
                             </div>
                         </div>
@@ -553,7 +556,9 @@ const HomePage2: NextPageWithLayout = () => {
                     <div className="container">
                         <div className="section-title-v2 wow fadeInUp">
                             <h2>Latest projects</h2>
-                            <p>Discover our Design Thinking and Creative Philosophy that we would like to deliver in each of our projects.</p>
+                            <p>
+                                Discover our Design Thinking and Creative Philosophy that we would like to deliver in each of our projects.
+                            </p>
                         </div>
                         <div className="projects-slider">
                             <Carousel ref={carouselRef} {...carouselSettings}>
@@ -594,13 +599,18 @@ const HomePage2: NextPageWithLayout = () => {
                                 data-wow-duration="0.2s"
                                 data-wow-delay=".3s"
                             >
-                                <div className="mask wow slideInLeft" data-wow-offset="30" data-wow-duration="1.2s" data-wow-delay=".3s"></div>
+                                <div
+                                    className="mask wow slideInLeft"
+                                    data-wow-offset="30"
+                                    data-wow-duration="1.2s"
+                                    data-wow-delay=".3s"
+                                ></div>
                                 <div className="testi-slider-v2">
                                     <div className="testi-slide-v2">
                                         <img src="/static/images/th1.png" alt="" />
                                         <p>
-                                            "Miles Studio was the best investment I ever made. It's all good. We've used Miles Studio for the
-                                            last five years. Miles Studio did exactly what you said it does."
+                                            "Miles Studio was the best investment I ever made. It's all good. We've used Miles Studio for
+                                            the last five years. Miles Studio did exactly what you said it does."
                                         </p>
                                         <h3>Eldon G.</h3>
                                         <span>
@@ -836,8 +846,8 @@ const HomePage2: NextPageWithLayout = () => {
                             <div className="mask wow slideInLeft" data-wow-offset="30" data-wow-duration="1.2s" data-wow-delay=".3s"></div>
                             <h2>we always interested in hearing about projects & opportunities</h2>
                             <p>
-                                Let's grab a coffee or jump on a Zoom chat. You can tell us about the problems you are trying to solve. I'd love
-                                to listen and see if there's anything I can do to help.
+                                Let's grab a coffee or jump on a Zoom chat. You can tell us about the problems you are trying to solve. I'd
+                                love to listen and see if there's anything I can do to help.
                             </p>
                             <div className="contact-ddd">
                                 <strong>(+706) 898-0751</strong>

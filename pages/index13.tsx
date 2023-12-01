@@ -1,40 +1,38 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { RightMenu } from '../app/components/RightMenu';
-import { Burger } from '../app/components/Navigation/Burger';
 import { useRef, useState } from 'react';
-import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
-import { carouselsExample } from './index';
 import ReactPageScroller from 'react-page-scroller';
 import { NextLink } from '../app/components/BaseNextLink';
-
-
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
+import { Burger } from '../app/components/Navigation/Burger';
+import { RightMenu } from '../app/components/RightMenu';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const labels = [
     {
         id: 0,
-        label: 'about',
+        label: 'about'
     },
     {
         id: 1,
-        label: 'services',
+        label: 'services'
     },
     {
         id: 2,
-        label: 'why choose us',
+        label: 'why choose us'
     },
     {
         id: 3,
-        label: 'cases',
+        label: 'cases'
     },
     {
         id: 4,
-        label: 'clients',
+        label: 'clients'
     },
     {
         id: 5,
-        label: 'contact',
-    },
-]
+        label: 'contact'
+    }
+];
 
 const HomePage13: NextPageWithLayout = () => {
     const [currentPage, setCurrentPage] = useState<number | null>(null);
@@ -125,23 +123,22 @@ const HomePage13: NextPageWithLayout = () => {
 
             <div className="list-menu active">
                 <ul id="menuMain">
-                    {labels.map(label => {
+                    {labels.map((label) => {
                         const active = label.id == currentPage;
-                        return (
-                            active ? (
-                                <li data-menuanchor={`${label.label}`}
-                                    className={active ? 'active' : ''}>
-                                    <a style={{
+                        return active ? (
+                            <li data-menuanchor={`${label.label}`} className={active ? 'active' : ''}>
+                                <a
+                                    style={{
                                         color: currentPage !== 0 ? '#000' : ''
-                                    }} href={`#${label.label}`} title="">
-                                        {label.label}
-                                    </a>
-                                </li>
-                            ) : null
-                        );
-                    }
-
-                    )}
+                                    }}
+                                    href={`#${label.label}`}
+                                    title=""
+                                >
+                                    {label.label}
+                                </a>
+                            </li>
+                        ) : null;
+                    })}
                 </ul>
             </div>
 
@@ -156,9 +153,12 @@ const HomePage13: NextPageWithLayout = () => {
                         <div className="slide-container">
                             <h2 className="slide-number">1</h2>
                             <div className="fixed-bg bg-3" />
-                            <div className="container" style={{
-                                zIndex: 2
-                            }}>
+                            <div
+                                className="container"
+                                style={{
+                                    zIndex: 2
+                                }}
+                            >
                                 <div className="business-txt wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                     <h2>Digital innovation companay that creates progress</h2>
                                     <p>Like any great agency, we are only as good as the result we deliver of our recent work </p>
@@ -246,10 +246,10 @@ const HomePage13: NextPageWithLayout = () => {
                                                     <h3>We know that good design mean that good business.</h3>
                                                     <p>
                                                         We help our client suceed by creating identities, digital experiences, and
-                                                        printmaterials that communicate clearly, achieve marketing goals &amp; look fantastic
-                                                        Lorem uispum dolor sit amert tunoer poea opefse ceefo goipully. Communicate clearly,
-                                                        achieve marketing goals &amp; look fantastic Lorem uispum dolor sit amert tunoer poea
-                                                        opefse ceefo goipully.
+                                                        printmaterials that communicate clearly, achieve marketing goals &amp; look
+                                                        fantastic Lorem uispum dolor sit amert tunoer poea opefse ceefo goipully.
+                                                        Communicate clearly, achieve marketing goals &amp; look fantastic Lorem uispum dolor
+                                                        sit amert tunoer poea opefse ceefo goipully.
                                                     </p>
                                                     <a href="#" title="" className="btn-default v13">
                                                         Learn More
@@ -283,8 +283,8 @@ const HomePage13: NextPageWithLayout = () => {
                                                                     <div className="svs-info">
                                                                         <h3>Affordable Price</h3>
                                                                         <p>
-                                                                            Nanotechnology immersion along the information highway will close
-                                                                            the loop on focusing solely
+                                                                            Nanotechnology immersion along the information highway will
+                                                                            close the loop on focusing solely
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -297,8 +297,8 @@ const HomePage13: NextPageWithLayout = () => {
                                                                     <div className="svs-info">
                                                                         <h3>Top-notch Experts Consulting</h3>
                                                                         <p>
-                                                                            Nanotechnology immersion along the information highway will close
-                                                                            the loop on focusing solely
+                                                                            Nanotechnology immersion along the information highway will
+                                                                            close the loop on focusing solely
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -311,8 +311,8 @@ const HomePage13: NextPageWithLayout = () => {
                                                                     <div className="svs-info">
                                                                         <h3>Dedicated Support 24/7</h3>
                                                                         <p>
-                                                                            Nanotechnology immersion along the information highway will close
-                                                                            the loop on focusing solely
+                                                                            Nanotechnology immersion along the information highway will
+                                                                            close the loop on focusing solely
                                                                         </p>
                                                                     </div>
                                                                 </div>
@@ -357,9 +357,9 @@ const HomePage13: NextPageWithLayout = () => {
                                                                 <span>Interaction</span>
                                                                 <p>
                                                                     Lewis nestled right into our wheelhouse. A dynamic co-working space
-                                                                    attracting entrepreneurs, tinkerers, and creatives in the tech hub of Ann
-                                                                    Arbor, Michigan, they wanted a lifestyle brand—a complete ecosystem of brand
-                                                                    visuals and assets.
+                                                                    attracting entrepreneurs, tinkerers, and creatives in the tech hub of
+                                                                    Ann Arbor, Michigan, they wanted a lifestyle brand—a complete ecosystem
+                                                                    of brand visuals and assets.
                                                                 </p>
                                                                 <a
                                                                     href="17_portfolio_single_layout_1.html"
@@ -410,8 +410,9 @@ const HomePage13: NextPageWithLayout = () => {
                                                         <div key={item.id} className="col-lg-6">
                                                             <div className="testimonial-slide">
                                                                 <p>
-                                                                    “Originally, creative and with an innate understanding of their customer’s
-                                                                    need. The team at Miles are always a pleasure to work with. Recommended.”
+                                                                    “Originally, creative and with an innate understanding of their
+                                                                    customer’s need. The team at Miles are always a pleasure to work with.
+                                                                    Recommended.”
                                                                 </p>
                                                                 <div className="thmb-row">
                                                                     <div className="thmb-img">
@@ -471,7 +472,10 @@ const HomePage13: NextPageWithLayout = () => {
                             <div className="contact-pp-content">
                                 <div className="container">
                                     <div className="pp-map">
-                                        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" />
+                                        <iframe
+                                            id="gmap_canvas"
+                                            src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                                        />
                                     </div>
                                     <div className="pp-text">
                                         <h2>Contact us for any further question</h2>
@@ -527,29 +531,37 @@ const HomePage13: NextPageWithLayout = () => {
                         </div>
                     </div>
                 </ReactPageScroller>
-
             </div>
 
             <ul className="social-vertical active v2">
                 <li>
                     <a href="#" title="">
-                        <i style={{
-                            color: currentPage !== 0 ? 'black' : 'white'
-                        }} className="fab fa-twitter" />
+                        <i
+                            style={{
+                                color: currentPage !== 0 ? 'black' : 'white'
+                            }}
+                            className="fab fa-twitter"
+                        />
                     </a>
                 </li>
                 <li>
                     <a href="#" title="">
-                        <i style={{
-                            color: currentPage !== 0 ? 'black' : 'white'
-                        }} className="fab fa-behance" />
+                        <i
+                            style={{
+                                color: currentPage !== 0 ? 'black' : 'white'
+                            }}
+                            className="fab fa-behance"
+                        />
                     </a>
                 </li>
                 <li>
                     <a href="#" title="">
-                        <i style={{
-                            color: currentPage !== 0 ? 'black' : 'white'
-                        }} className="fab fa-instagram" />
+                        <i
+                            style={{
+                                color: currentPage !== 0 ? 'black' : 'white'
+                            }}
+                            className="fab fa-instagram"
+                        />
                     </a>
                 </li>
             </ul>

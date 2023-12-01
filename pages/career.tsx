@@ -5,11 +5,7 @@ import dynamic from 'next/dynamic';
 import fetch from 'isomorphic-unfetch';
 import { useInView } from 'react-intersection-observer';
 
-
-const Isotope = dynamic(
-    () => import('../app/components/IsotopeLayoutCareer'),
-    { ssr: false }
-);
+const Isotope = dynamic(() => import('../app/components/IsotopeLayoutCareer'), { ssr: false });
 
 const items = [
     {
@@ -35,12 +31,12 @@ const items = [
     {
         id: 6,
         value: 'remote'
-    },
+    }
 ];
 
 const Career: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
 
     return (
@@ -61,15 +57,10 @@ const Career: NextPageWithLayout = () => {
                         <div className="footer-content">
                             <div className="row">
                                 <div className="col-lg-6 col-md-6">
-                                    <div
-                                        className="ft-text wow fadeInUp"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="ft-text wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <p>
-                                            We are a close team of creative professionals based out of
-                                            Savannah, Georgia. We are passionate about partnering &amp;
-                                            organizations to provide exceptional solutions.
+                                            We are a close team of creative professionals based out of Savannah, Georgia. We are passionate
+                                            about partnering &amp; organizations to provide exceptional solutions.
                                         </p>
                                         <div className="ft-form">
                                             <h4>Subscribe our newsletter for news update</h4>
@@ -100,11 +91,7 @@ const Career: NextPageWithLayout = () => {
                                     {/*ft-text end*/}
                                 </div>
                                 <div className="col-lg-6 col-md-6">
-                                    <div
-                                        className="get-touch-txt wow fadeInRight"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="get-touch-txt wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <span>get in touch</span>
                                         <h3>
                                             116 Fairground Rd, FL 32904, USA
@@ -188,7 +175,6 @@ const Career: NextPageWithLayout = () => {
                 </div>
                 {/*bottom-footer end*/}
             </footer>
-
         </>
     );
 };

@@ -10,14 +10,13 @@ import { useInView } from 'react-intersection-observer';
 const ServiceTwo = () => {
     const { ref, inView } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
-    
     return (
         <>
             <HeaderV1 isText view={inView} />
@@ -119,19 +118,25 @@ const ServiceTwo = () => {
                     <ul className="counter-sec border-bottom wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <li>
                             <div className="count-dv">
-                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={10} /> : '0'}</h2>
+                                <h2 ref={countRef} className="count">
+                                    {viewRef ? <CountUp end={10} /> : '0'}
+                                </h2>
                                 <span>Years Experience</span>
                             </div>
                         </li>
                         <li>
                             <div className="count-dv">
-                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={102} /> : '0'}</h2>
+                                <h2 ref={countRef} className="count">
+                                    {viewRef ? <CountUp end={102} /> : '0'}
+                                </h2>
                                 <span>Satisfaction Clients</span>
                             </div>
                         </li>
                         <li>
                             <div className="count-dv">
-                                <h2 ref={countRef} className="count">{viewRef ? <CountUp end={285} /> : '0'}</h2>
+                                <h2 ref={countRef} className="count">
+                                    {viewRef ? <CountUp end={285} /> : '0'}
+                                </h2>
                                 <span>
                                     Projects Completed On <br /> 34 Countries
                                 </span>

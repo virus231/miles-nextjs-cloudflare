@@ -1,20 +1,17 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { carouselsExample } from './index';
-import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
-import { RightMenu } from '../app/components/RightMenu';
-import { Burger } from '../app/components/Navigation/Burger';
 import { useRef, useState } from 'react';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
 import { useInView } from 'react-intersection-observer';
 import { NextLink } from '../app/components/BaseNextLink';
-
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
+import { Burger } from '../app/components/Navigation/Burger';
+import { RightMenu } from '../app/components/RightMenu';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const HomePage10: NextPageWithLayout = () => {
-    
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const [open, setOpen] = useState<boolean>(false);
     const carouselRef = useRef<Carousel | null>(null);
@@ -308,7 +305,9 @@ const HomePage10: NextPageWithLayout = () => {
                     <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                         <li>
                             <div className="counter-cont">
-                                <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={100} /> : '0'}</h2>
+                                <h2 ref={countRef} className="clr1 count">
+                                    {viewRef ? <CountUp end={100} /> : '0'}
+                                </h2>
                                 <span>
                                     satisfaction <br /> clients
                                 </span>
@@ -316,13 +315,17 @@ const HomePage10: NextPageWithLayout = () => {
                         </li>
                         <li>
                             <div className="counter-cont">
-                                <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={158} /> : '0'}</h2>
+                                <h2 ref={countRef} className="clr1 count">
+                                    {viewRef ? <CountUp end={158} /> : '0'}
+                                </h2>
                                 <span>event &amp; oline courses</span>
                             </div>
                         </li>
                         <li>
                             <div className="counter-cont">
-                                <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={3875} /> : '0'}</h2>
+                                <h2 ref={countRef} className="clr1 count">
+                                    {viewRef ? <CountUp end={3875} /> : '0'}
+                                </h2>
                                 <span>successful students on 60 countries</span>
                             </div>
                         </li>

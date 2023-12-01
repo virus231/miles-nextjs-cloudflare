@@ -11,7 +11,6 @@ const controller = new ScrollMagic.Controller();
 export default function Scroll() {
     const [open, setOpen] = useState<boolean>(false);
 
-
     // useEffect(() => {
 
     //     new ScrollMagic.Scene({
@@ -100,7 +99,6 @@ export default function Scroll() {
     //         // .addIndicators()
     //         .addTo(controller);
     // }, []);
-
 
     return (
         <>
@@ -228,53 +226,54 @@ export default function Scroll() {
 
             <Controller>
                 <div>
-                    <Scene
-                        triggerHook="onLeave"
-                        duration={1000}
-                        pin
-                    >
+                    <Scene triggerHook="onLeave" duration={1000} pin>
                         {(progress: any) => (
                             <Timeline progress={progress} paused>
                                 <div className="step-animate-nav"></div>
                                 <div className="step-animate-nav-hidden"></div>
                                 <div className="step-animate-opacity"></div>
-                                <Tween
-                                    from={{ opacity: 1 }}
-                                    to={{ opacity: 0}}
-                                    duration={30}
-                                >
+                                <Tween from={{ opacity: 1 }} to={{ opacity: 0 }} duration={30}>
                                     <div className="promo-studio">
-                                        <Tween
-                                            to={{ scale: '1.8' }}
-                                            ease="easeNone"
-                                        >
+                                        <Tween to={{ scale: '1.8' }} ease="easeNone">
                                             <div className="promo-studio-bg"></div>
                                         </Tween>
                                         <Tween
                                             ease="easeNone"
                                             duration={5}
-                                            from={{ top: '0%', left: '0%', }}
+                                            from={{ top: '0%', left: '0%' }}
                                             to={{ top: '-23%', left: '-28%', scale: '1.8' }}
                                         >
                                             <div className="promo-studio-man"></div>
                                         </Tween>
                                         <div className="promo-studio-content">
-                                            <div className="vertical-text-left">Crafting Digital <span className="text-muted vertical-text-block">Studio</span></div>
+                                            <div className="vertical-text-left">
+                                                Crafting Digital <span className="text-muted vertical-text-block">Studio</span>
+                                            </div>
                                             <div className="container">
                                                 <div className="row wow fadeInUp">
                                                     <div className="col-lg-6 col-md-6">
-                                                        <h1 className="title-studio">Say Hi!!<br /> from miles studio</h1>
+                                                        <h1 className="title-studio">
+                                                            Say Hi!!
+                                                            <br /> from miles studio
+                                                        </h1>
                                                     </div>
                                                     <div className="col-lg-2 dis-none"></div>
                                                     <div className="col-lg-4 col-md-6">
-                                                        <Tween
-                                                            duration={5}
-                                                            to={{ y: '-150%' }}
-                                                        >
-                                                            <div className="banner-text wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                                        <Tween duration={5} to={{ y: '-150%' }}>
+                                                            <div
+                                                                className="banner-text wow fadeInRight"
+                                                                data-wow-duration="1000ms"
+                                                                data-wow-delay="300ms"
+                                                            >
                                                                 <h3>An innovative & technology partner of trend setting business.</h3>
-                                                                <p>Create value and optimize the influence power of each product, we construct a creative thinking, a rational processes and meaningful experiences for every brands.</p>
-                                                                <a href="#" title="">get started</a>
+                                                                <p>
+                                                                    Create value and optimize the influence power of each product, we
+                                                                    construct a creative thinking, a rational processes and meaningful
+                                                                    experiences for every brands.
+                                                                </p>
+                                                                <a href="#" title="">
+                                                                    get started
+                                                                </a>
                                                             </div>
                                                         </Tween>
                                                     </div>
@@ -282,19 +281,19 @@ export default function Scroll() {
                                             </div>
                                         </div>
                                     </div>
-
                                 </Tween>
-
                             </Timeline>
-
                         )}
                     </Scene>
                 </div>
             </Controller>
-            <div className="section" style={{
-                height: '70vh',
-                background: 'linear-gradient(160deg, #f47c66 0%,#e51906 100%)'
-            }} />
+            <div
+                className="section"
+                style={{
+                    height: '70vh',
+                    background: 'linear-gradient(160deg, #f47c66 0%,#e51906 100%)'
+                }}
+            />
             <section
                 className="main-banner-style2"
                 style={{
@@ -614,6 +613,5 @@ export default function Scroll() {
                 </div>
             </section>
         </>
-
     );
 }

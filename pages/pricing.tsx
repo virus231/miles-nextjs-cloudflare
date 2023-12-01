@@ -1,17 +1,15 @@
-import { NextPageWithLayout } from './_app';
+import { useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { carouselsExample } from '.';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { Layout } from '../app/components/Layout';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
-import { useRef } from 'react';
-import { carouselsExample } from '.';
-import { useInView } from 'react-intersection-observer';
-
-
+import { NextPageWithLayout } from './_app';
 const Pricing: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const carouselRef = useRef<Carousel | null>(null);
 
@@ -68,7 +66,7 @@ const Pricing: NextPageWithLayout = () => {
                     </ul>
                     <div className="tb-content">
                         <div className="tab-data active" id="monthly">
-                            <div  className="row prices-v10">
+                            <div className="row prices-v10">
                                 <div className="col-lg-4 col-md-6">
                                     <div className="price-v10">
                                         <img src="/static/images/p-icon1.png" alt="" />
@@ -207,7 +205,7 @@ const Pricing: NextPageWithLayout = () => {
                     </div>
                     <div className="testimonial-slider">
                         <div className="row testimo-slider">
-                        <CarouselArrows
+                            <CarouselArrows
                                 icon="teenyicons:right-small-outline"
                                 onNext={handleNext}
                                 topSpace={50}

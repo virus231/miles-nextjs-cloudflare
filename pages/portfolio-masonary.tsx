@@ -4,7 +4,6 @@ import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import dynamic from 'next/dynamic';
 
-
 const items = [
     {
         id: 1,
@@ -41,16 +40,12 @@ const items = [
     {
         id: 9,
         value: 'branding'
-    },
+    }
 ];
 
-const Isotope = dynamic(
-    () => import('../app/components/IsotopeLayout'),
-    { ssr: false }
-  );
+const Isotope = dynamic(() => import('../app/components/IsotopeLayout'), { ssr: false });
 
 const PortfolioMasonary: NextPageWithLayout = () => {
-
     return (
         <>
             <HeaderV1 isText />
@@ -61,8 +56,8 @@ const PortfolioMasonary: NextPageWithLayout = () => {
                         <span>our works</span>
                         <h2>Bigger, Bolder &amp; Better</h2>
                     </div>
-                    
-                    <Isotope items={items}/>
+
+                    <Isotope items={items} />
                     <div className="more-items text-center">
                         <a href="#" title="" className="more-item">
                             more

@@ -1,26 +1,25 @@
-import { Layout } from '../app/components/Layout';
-import { Testi } from '../app/components/Testi';
-import { KeepConnected } from '../app/components/KeepConnected';
-import Carousel, { CarouselArrows } from '../app/components/carousel';
-import { carouselsExample } from './index';
 import { useRef, useState } from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { NextLink } from '../app/components/BaseNextLink';
+import Carousel, { CarouselArrows } from '../app/components/Carousel';
+import { KeepConnected } from '../app/components/KeepConnected';
+import { Layout } from '../app/components/Layout';
 import { Burger } from '../app/components/Navigation/Burger';
 import { RightMenu } from '../app/components/RightMenu';
-
+import { Testi } from '../app/components/Testi';
+import { carouselsExample } from './index';
 
 const HomePage7 = () => {
     const [open, setOpen] = useState<boolean>(false);
 
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
 
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
     const carouselRef = useRef<Carousel | null>(null);
@@ -65,7 +64,6 @@ const HomePage7 = () => {
                             </NextLink>
                         </div>
                         <Burger className="desktop-hide mobile-show" setOpen={() => setOpen(!open)} />
-
                     </div>
                     <div className="header-v7-btm">
                         <ul className="social-links">
@@ -219,7 +217,6 @@ const HomePage7 = () => {
 
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
 
-
             <section className="main-banner-v7">
                 <div className="container">
                     <div className="banner-content-v7">
@@ -275,11 +272,11 @@ const HomePage7 = () => {
                             <h2>Andy Grammer. I'm a life coach &amp; personal development mentor in Miami.</h2>
                             <p>
                                 With extensive experience as a business coach, trainer and speaker, Andy has helped over{' '}
-                                <span>8,000 professionals</span> – from students to senior executives – discover the tools they need to realise
-                                their full potential, whatever their aspirations. Andy will help you open up lines of communication and enable
-                                people of all levels to work together with{' '}
-                                <span>genuine passion, enthusiasm and a shared vision for the future</span>. Together, you really can change the
-                                culture of your organisation for the better.
+                                <span>8,000 professionals</span> – from students to senior executives – discover the tools they need to
+                                realise their full potential, whatever their aspirations. Andy will help you open up lines of communication
+                                and enable people of all levels to work together with{' '}
+                                <span>genuine passion, enthusiasm and a shared vision for the future</span>. Together, you really can change
+                                the culture of your organisation for the better.
                             </p>
                             <ul className="lnz-links">
                                 <li>
@@ -339,8 +336,8 @@ const HomePage7 = () => {
                                         <p>
                                             Andy has dedicated his life to learning what makes humans tick. He studies, researches and reads
                                             everything hecan, and shares his findings with his clients. His philosophy is to learn, test,
-                                            analyse, improve and re-test. His motto is stay agile, so you are best positioned to respond quickly
-                                            and effectively to market forces.
+                                            analyse, improve and re-test. His motto is stay agile, so you are best positioned to respond
+                                            quickly and effectively to market forces.
                                         </p>
                                     </div>
                                 </div>
@@ -437,7 +434,9 @@ const HomePage7 = () => {
                             <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="count">{viewRef ? <CountUp end={100} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="count">
+                                            {viewRef ? <CountUp end={100} /> : '0'}
+                                        </h2>
                                         <span>
                                             satisfaction <br /> clients
                                         </span>
@@ -445,13 +444,17 @@ const HomePage7 = () => {
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="count">{viewRef ? <CountUp end={158} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="count">
+                                            {viewRef ? <CountUp end={158} /> : '0'}
+                                        </h2>
                                         <span>event &amp; oline courses</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="count">{viewRef ? <CountUp end={3875} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="count">
+                                            {viewRef ? <CountUp end={3875} /> : '0'}
+                                        </h2>
                                         <span>successful students on 60 countries</span>
                                     </div>
                                 </li>
@@ -805,7 +808,6 @@ const HomePage7 = () => {
                     </div>
                 </footer>
             </div>
-
         </>
     );
 };

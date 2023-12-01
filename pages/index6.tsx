@@ -1,23 +1,21 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { RightMenu } from '../app/components/RightMenu';
-import { Burger } from '../app/components/Navigation/Burger';
-import { useRef, useState } from 'react';
-import { carouselsExample } from './index';
-import Carousel, { CarouselArrowIndex, CarouselArrows, CarouselDots } from '../app/components/carousel';
 import { useTheme } from '@mui/material/styles';
+import { useRef, useState } from 'react';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
 import { useInView } from 'react-intersection-observer';
 import { NextLink } from '../app/components/BaseNextLink';
-
+import Carousel, { CarouselArrowIndex, CarouselArrows } from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
+import { Burger } from '../app/components/Navigation/Burger';
+import { RightMenu } from '../app/components/RightMenu';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const HomePage6: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const [open, setOpen] = useState<boolean>(false);
     const theme = useTheme();
@@ -190,7 +188,7 @@ const HomePage6: NextPageWithLayout = () => {
                         <a href="#" title="" className="hd-btn">
                             Let’s chat! <i className="lni lni-comments-reply" />
                         </a>
-                        <Burger className='desktop-hide mobile-show' setOpen={() => setOpen(!open)} />
+                        <Burger className="desktop-hide mobile-show" setOpen={() => setOpen(!open)} />
                     </div>
                 </div>
             </header>
@@ -352,7 +350,9 @@ const HomePage6: NextPageWithLayout = () => {
                             <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={820} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="clr2 count">
+                                            {viewRef ? <CountUp end={820} /> : '0'}
+                                        </h2>
                                         <span>
                                             satisfaction <br /> clients
                                         </span>
@@ -360,13 +360,17 @@ const HomePage6: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={643} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="clr2 count">
+                                            {viewRef ? <CountUp end={643} /> : '0'}
+                                        </h2>
                                         <span>employees on worldwide</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={1875} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="clr2 count">
+                                            {viewRef ? <CountUp end={1875} /> : '0'}
+                                        </h2>
                                         <span>projects completed on 60 countries</span>
                                     </div>
                                 </li>
@@ -397,8 +401,8 @@ const HomePage6: NextPageWithLayout = () => {
                                                 </h3>
                                                 <p>
                                                     Discover how we helped CleanCloud to increase their presence on a global market by their
-                                                    scaling up its visual identity and building a flexible style guide for their future product
-                                                    elaboration.
+                                                    scaling up its visual identity and building a flexible style guide for their future
+                                                    product elaboration.
                                                 </p>
                                             </div>
                                         </div>
@@ -418,8 +422,8 @@ const HomePage6: NextPageWithLayout = () => {
                                                     </a>
                                                 </h3>
                                                 <p>
-                                                    BibliU is a digital platform that provides university students with personalized learning
-                                                    pathways
+                                                    BibliU is a digital platform that provides university students with personalized
+                                                    learning pathways
                                                 </p>
                                             </div>
                                         </div>
@@ -456,8 +460,8 @@ const HomePage6: NextPageWithLayout = () => {
                                 <h3>about us</h3>
                                 <p>
                                     We are surrounded by amazing cultural and physical weather climates. Our HQ is located in Odesa — a
-                                    beautiful seaside resort city near the Black Sea. Anton Checkhov lived in our same neighborhood, and we are
-                                    just one minute away from the opera house where Tchaikovsky conducted.
+                                    beautiful seaside resort city near the Black Sea. Anton Checkhov lived in our same neighborhood, and we
+                                    are just one minute away from the opera house where Tchaikovsky conducted.
                                 </p>
                             </div>
                         </div>
@@ -471,7 +475,11 @@ const HomePage6: NextPageWithLayout = () => {
                                 <div className="col-lg-3 col-md-4 col-sm-5">
                                     <div className="lrg-col wow slideInLeft" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <img src="/static/images/lg-img2.jpg" alt="" className="w-100" />
-                                        <a href="https://www.youtube.com/watch?v=MsFOWoPjMFY" title="" className="play-video-btn html5lightbox">
+                                        <a
+                                            href="https://www.youtube.com/watch?v=MsFOWoPjMFY"
+                                            title=""
+                                            className="play-video-btn html5lightbox"
+                                        >
                                             play <br />
                                             video
                                         </a>
@@ -482,8 +490,8 @@ const HomePage6: NextPageWithLayout = () => {
                         <div className="container">
                             <div className="abtt-para">
                                 <p>
-                                    It's always good to receive positive and constructive feedback for your work - from clients and moreover,
-                                    from designers!
+                                    It's always good to receive positive and constructive feedback for your work - from clients and
+                                    moreover, from designers!
                                 </p>
                             </div>
                             <div className="certicications-sec">
@@ -607,8 +615,8 @@ const HomePage6: NextPageWithLayout = () => {
                                             <h3>Edison Cavani</h3>
                                             <span>Product Management at Spotify</span>
                                             <p>
-                                                I don’t know what else to say, this is something that you haven’t seen before. Unique design,
-                                                lightweight, and outstanding support. Milbase are always a pleasure to work!”
+                                                I don’t know what else to say, this is something that you haven’t seen before. Unique
+                                                design, lightweight, and outstanding support. Milbase are always a pleasure to work!”
                                             </p>
                                         </div>
                                     ))}
@@ -760,8 +768,6 @@ const HomePage6: NextPageWithLayout = () => {
                     </div>
                 </footer>
             </div>
-
-
         </>
     );
 };

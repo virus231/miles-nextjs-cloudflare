@@ -4,9 +4,8 @@ import { RightMenu } from '../RightMenu';
 import { Burger } from './Burger';
 
 type Props = {
-    view?: boolean
-}
-
+    view?: boolean;
+};
 
 export const MainNavigation = (props: Props) => {
     const { view } = props;

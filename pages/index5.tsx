@@ -6,13 +6,11 @@ import { useState } from 'react';
 import { Burger } from '../app/components/Navigation/Burger';
 import { NextLink } from '../app/components/BaseNextLink';
 
-
 const HomePage5: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
     const [open, setOpen] = useState<boolean>(false);
-
 
     return (
         <>
@@ -239,9 +237,7 @@ const HomePage5: NextPageWithLayout = () => {
                                 <input type="text" name="search" placeholder="Search Here..." />
                             </form>
                         </div>
-                        <Burger setOpen={() => setOpen(!open)} 
-                                className='desktop-hide mobile-show' 
-                                />
+                        <Burger setOpen={() => setOpen(!open)} className="desktop-hide mobile-show" />
                     </div>
                 </div>
             </header>
@@ -838,8 +834,6 @@ const HomePage5: NextPageWithLayout = () => {
                     </div>
                 </footer>
             </div>
-
-
         </>
     );
 };

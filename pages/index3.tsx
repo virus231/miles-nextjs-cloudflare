@@ -1,26 +1,25 @@
-import { Layout } from '../app/components/Layout';
-import { Testi } from '../app/components/Testi';
-import { NextPageWithLayout } from './_app';
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-import { carouselsExample } from './index';
-import Carousel, { CarouselArrows } from '../app/components/carousel';
-import { useEffect, useRef, useState } from 'react';
 import Box from '@mui/material/Box/Box';
-import { RightMenu } from '../app/components/RightMenu';
-import { Burger } from '../app/components/Navigation/Burger';
+import { useRef, useState } from 'react';
+import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { NextLink } from '../app/components/BaseNextLink';
+import Carousel, { CarouselArrows } from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
+import { Burger } from '../app/components/Navigation/Burger';
+import { RightMenu } from '../app/components/RightMenu';
+import { Testi } from '../app/components/Testi';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 
 const HomePage3: NextPageWithLayout = () => {
     const [open, setOpen] = useState<boolean>(false);
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
 
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
     const carouselRef = useRef<Carousel | null>(null);
@@ -105,70 +104,69 @@ const HomePage3: NextPageWithLayout = () => {
             </section>
 
             <div ref={ref}>
-
-            <section className="vls-sections">
-                <div className="mile-vl-sec wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                    <div className="container">
-                        <div className="mile-vl-sec-details">
-                            <div className="mile-vl-dt">
-                                <span className="vl-icon clr1">
-                                    <i className="lni lni-crown" />
-                                </span>
-                                <h3>
-                                    <a href="service-one.tsx" title="" className="animsition-link" data-animsition-out-class="fade-out">
-                                        Branding
+                <section className="vls-sections">
+                    <div className="mile-vl-sec wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <div className="container">
+                            <div className="mile-vl-sec-details">
+                                <div className="mile-vl-dt">
+                                    <span className="vl-icon clr1">
+                                        <i className="lni lni-crown" />
+                                    </span>
+                                    <h3>
+                                        <a href="service-one.tsx" title="" className="animsition-link" data-animsition-out-class="fade-out">
+                                            Branding
+                                        </a>
+                                    </h3>
+                                    <p>I build and activate brands throung cultural insigh &amp;, strategic vision.</p>
+                                    <a href="17_portfolio_single_layout_1.html" title="">
+                                        See Project
                                     </a>
-                                </h3>
-                                <p>I build and activate brands throung cultural insigh &amp;, strategic vision.</p>
-                                <a href="17_portfolio_single_layout_1.html" title="">
-                                    See Project
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="mile-vl-sec wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                    <div className="container">
-                        <div className="mile-vl-sec-details v2">
-                            <div className="mile-vl-dt">
-                                <span className="vl-icon clr2">
-                                    <i className="lni lni-mobile" />
-                                </span>
-                                <h3>
-                                    <a href="service-one.tsx" title="" className="animsition-link" data-animsition-out-class="fade-out">
-                                        Motion
+                    <div className="mile-vl-sec wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <div className="container">
+                            <div className="mile-vl-sec-details v2">
+                                <div className="mile-vl-dt">
+                                    <span className="vl-icon clr2">
+                                        <i className="lni lni-mobile" />
+                                    </span>
+                                    <h3>
+                                        <a href="service-one.tsx" title="" className="animsition-link" data-animsition-out-class="fade-out">
+                                            Motion
+                                        </a>
+                                    </h3>
+                                    <p>I build and activate brands throung cultural insigh &amp;, strategic vision.</p>
+                                    <a href="17_portfolio_single_layout_1.html" title="">
+                                        See Project
                                     </a>
-                                </h3>
-                                <p>I build and activate brands throung cultural insigh &amp;, strategic vision.</p>
-                                <a href="17_portfolio_single_layout_1.html" title="">
-                                    See Project
-                                </a>
-                            </div>
-                            <div className="clearfix" />
-                        </div>
-                    </div>
-                </div>
-                <div className="mile-vl-sec wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
-                    <div className="container">
-                        <div className="mile-vl-sec-details v3">
-                            <div className="mile-vl-dt">
-                                <span className="vl-icon clr3">
-                                    <i className="lni lni-anchor" />
-                                </span>
-                                <h3>
-                                    <a href="service-one.tsx" title="" className="animsition-link" data-animsition-out-class="fade-out">
-                                        Illustration
-                                    </a>
-                                </h3>
-                                <p>Decribe things abstract become visible with a look impressive</p>
-                                <a href="17_portfolio_single_layout_1.html" title="">
-                                    See Project
-                                </a>
+                                </div>
+                                <div className="clearfix" />
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                    <div className="mile-vl-sec wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
+                        <div className="container">
+                            <div className="mile-vl-sec-details v3">
+                                <div className="mile-vl-dt">
+                                    <span className="vl-icon clr3">
+                                        <i className="lni lni-anchor" />
+                                    </span>
+                                    <h3>
+                                        <a href="service-one.tsx" title="" className="animsition-link" data-animsition-out-class="fade-out">
+                                            Illustration
+                                        </a>
+                                    </h3>
+                                    <p>Decribe things abstract become visible with a look impressive</p>
+                                    <a href="17_portfolio_single_layout_1.html" title="">
+                                        See Project
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <section className="clients-sec-v3">
                     <div className="container">
@@ -206,19 +204,25 @@ const HomePage3: NextPageWithLayout = () => {
                         <ul className="counter-sec wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <li>
                                 <div className="count-dv">
-                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={10} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="count">
+                                        {viewRef ? <CountUp end={10} /> : '0'}
+                                    </h2>
                                     <span>Years Experience</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="count-dv">
-                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={102} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="count">
+                                        {viewRef ? <CountUp end={102} /> : '0'}
+                                    </h2>
                                     <span>Satisfaction Clients</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="count-dv">
-                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={285} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="count">
+                                        {viewRef ? <CountUp end={285} /> : '0'}
+                                    </h2>
                                     <span>
                                         Projects Completed On <br /> 34 Countries
                                     </span>
@@ -396,8 +400,6 @@ const HomePage3: NextPageWithLayout = () => {
                     </div>
                 </footer>
             </div>
-
-
         </>
     );
 };

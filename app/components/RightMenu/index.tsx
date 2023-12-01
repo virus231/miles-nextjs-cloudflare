@@ -56,9 +56,14 @@ export const RightMenu = ({ isOpen = false, closeMenu }: Props) => {
                         key={menu.name}
                         className={`menu-item-has-children ${openCollapse.name === menu.name && openCollapse.isOpen ? 'active' : ''}`}
                     >
-                        <a style={{
-                          color: openCollapse.name === menu.name && openCollapse.isOpen ? '#f59e31' : '#343a40'
-                        }} onClick={() => onClick(menu)}>{menu.name}</a>
+                        <a
+                            style={{
+                                color: openCollapse.name === menu.name && openCollapse.isOpen ? '#f59e31' : '#343a40'
+                            }}
+                            onClick={() => onClick(menu)}
+                        >
+                            {menu.name}
+                        </a>
                         <ul
                             style={{
                                 display: openCollapse.name === menu.name && openCollapse.isOpen ? 'block' : 'none'

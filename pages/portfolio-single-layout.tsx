@@ -1,15 +1,13 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import { carouselsExample } from './index';
-import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
 import { useRef, useState } from 'react';
 import { Tab, Tabs } from 'react-bootstrap';
 import { NextLink } from '../app/components/BaseNextLink';
-import { RightMenu } from '../app/components/RightMenu';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { Layout } from '../app/components/Layout';
 import { Burger } from '../app/components/Navigation/Burger';
-
-
+import { RightMenu } from '../app/components/RightMenu';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const tabItems = [
     {
         id: '1',
@@ -26,8 +24,8 @@ const tabItems = [
     {
         id: '4',
         title: 'showcase'
-    },
-];  
+    }
+];
 
 const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
@@ -67,7 +65,6 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
         centerMode: false
     };
 
-
     const handlePrev = () => {
         carouselRef2.current?.slickPrev();
     };
@@ -91,7 +88,7 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
                         </div>
                         <div className="mile-right ms-auto">
                             <Burger isText white setOpen={() => setOpen(!open)} />
-                            
+
                             <a href="#" title="" className="btn-default white no-bg">
                                 Let’s talk
                                 <i className="lni lni-comments" />
@@ -303,7 +300,11 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div className="pp-tabs-sec wow zoomIn d-flex flex-column-reverse" data-wow-duration="1000ms" data-wow-delay="0ms">
+                            <div
+                                className="pp-tabs-sec wow zoomIn d-flex flex-column-reverse"
+                                data-wow-duration="1000ms"
+                                data-wow-delay="0ms"
+                            >
                                 {/* <div className="tab-content" id="myTabContent">
                                     <div className="tab-pane fade show active" id="strategy" role="tabpanel" aria-labelledby="strategy-tab">
                                         <div className="vl-img">
@@ -327,25 +328,33 @@ const PortfolioSingleLayoutOnePage: NextPageWithLayout = () => {
                                     </div>
                                 </div> */}
                                 {/* <ul className="nav nav-tabs" id="myTab" role="tablist"> */}
-                                    <Tabs  activeKey={key} onSelect={(k) => setKey(k || '')} id="myTab">
-                                        {tabItems.map((item: { id: string; title: string }) => {
-                                            return (
-                                                <Tab as="div" key={`tab-${item.title}`} className="nav-item" eventKey={item.title} title={item.title.toUpperCase()}>
-                                                    <div className="tab-content" id="myTabContent">
-                                                        <div className="tab-pane fade show active" 
-                                                            id={item.title.toLowerCase()} 
-                                                            role="tabpanel" 
-                                                            aria-labelledby={`${item.title.toLowerCase()}-tab`}>
-                                                            <div className="vl-img">
-                                                                <img src={`/static/images/vl-img${item.id}.png`} alt="" />
-                                                            </div>
+                                <Tabs activeKey={key} onSelect={(k) => setKey(k || '')} id="myTab">
+                                    {tabItems.map((item: { id: string; title: string }) => {
+                                        return (
+                                            <Tab
+                                                as="div"
+                                                key={`tab-${item.title}`}
+                                                className="nav-item"
+                                                eventKey={item.title}
+                                                title={item.title.toUpperCase()}
+                                            >
+                                                <div className="tab-content" id="myTabContent">
+                                                    <div
+                                                        className="tab-pane fade show active"
+                                                        id={item.title.toLowerCase()}
+                                                        role="tabpanel"
+                                                        aria-labelledby={`${item.title.toLowerCase()}-tab`}
+                                                    >
+                                                        <div className="vl-img">
+                                                            <img src={`/static/images/vl-img${item.id}.png`} alt="" />
                                                         </div>
                                                     </div>
-                                                </Tab>
-                                            );
-                                        })}
-                                    </Tabs>
-                                    {/* <li className="nav-item">
+                                                </div>
+                                            </Tab>
+                                        );
+                                    })}
+                                </Tabs>
+                                {/* <li className="nav-item">
                                         <a
                                             className="nav-link active"
                                             id="strategy-tab"

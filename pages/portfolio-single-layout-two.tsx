@@ -1,13 +1,12 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import Carousel, { CarouselArrows } from '../app/components/carousel';
-import { carouselsExample } from './index';
 import { useRef, useState } from 'react';
+import { NextLink } from '../app/components/BaseNextLink';
+import Carousel, { CarouselArrows } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { Layout } from '../app/components/Layout';
 import { Burger } from '../app/components/Navigation/Burger';
 import { RightMenu } from '../app/components/RightMenu';
-import { NextLink } from '../app/components/BaseNextLink';
-
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const PortfolioSingleLayoutTwo: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
     const [open, setOpen] = useState<boolean>(false);
@@ -49,7 +48,6 @@ const PortfolioSingleLayoutTwo: NextPageWithLayout = () => {
                 </div>
             </header>
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
-            
 
             <section className="pf-single-layout-2">
                 <div className="container-fluid p-0">

@@ -1,15 +1,14 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import { carouselsExample } from './index';
-import Carousel, { CarouselDots } from '../app/components/carousel';
 import { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
-
+import Carousel from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const PortfolioSingleLayoutThree: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const carouselRef = useRef<Carousel | null>(null);
 

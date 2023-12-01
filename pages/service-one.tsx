@@ -3,12 +3,10 @@ import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { useInView } from 'react-intersection-observer';
 
-
-
 const ServiceOne = () => {
     const { ref, inView } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
     return (

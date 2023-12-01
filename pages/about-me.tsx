@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 const AboutMe = () => {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
 
     return (
@@ -43,7 +43,8 @@ const AboutMe = () => {
                             <p>
                                 <span>Miles Raymond</span> is a designer from Toronto, Canada. <br />
                                 He works in his little studio-home for galleries around the world. His work has been featured in the most
-                                important galleries in the five continents. Also, Miles is one of the most recognizable painters in our time.
+                                important galleries in the five continents. Also, Miles is one of the most recognizable painters in our
+                                time.
                             </p>
                             <h4>Doing great since 2011 from Canada</h4>
                         </div>
@@ -206,8 +207,8 @@ const AboutMe = () => {
                                 <div className="col-lg-9">
                                     <div className="testi-content">
                                         <p>
-                                            “Originally, creative &amp; with an innate understand of their customer’s need. Miles Raymond are
-                                            always a pleasure to work !”
+                                            “Originally, creative &amp; with an innate understand of their customer’s need. Miles Raymond
+                                            are always a pleasure to work !”
                                         </p>
                                     </div>
                                 </div>
@@ -230,7 +231,6 @@ const AboutMe = () => {
                 </section>
                 <FooterVariant1 />
             </div>
-
         </>
     );
 };

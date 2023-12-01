@@ -1,25 +1,22 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-import Carousel, { CarouselArrowIndex } from '../app/components/carousel';
-import { carouselsExample } from './index';
 import { useTheme } from '@mui/material/styles';
 import { useRef, useState } from 'react';
+import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
-
-
+import Carousel, { CarouselArrowIndex } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { Layout } from '../app/components/Layout';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const ServiceThree: NextPageWithLayout = () => {
     const theme = useTheme();
     const { ref, inView } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const carouselRef = useRef<Carousel | null>(null);
 
@@ -80,7 +77,7 @@ const ServiceThree: NextPageWithLayout = () => {
             <div ref={ref}></div>
             <section className="services_03_content">
                 <div className="container">
-                    <div  className="svs-03-styles">
+                    <div className="svs-03-styles">
                         <div className="row fzt-row">
                             <div className="col-lg-3 col-md-6 col-sm-6">
                                 <div className="our-fzt">
@@ -230,7 +227,9 @@ const ServiceThree: NextPageWithLayout = () => {
                             >
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={100} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="clr2 count">
+                                            {viewRef ? <CountUp end={100} /> : '0'}
+                                        </h2>
                                         <span>
                                             satisfaction <br /> clients
                                         </span>
@@ -238,13 +237,17 @@ const ServiceThree: NextPageWithLayout = () => {
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={150} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="clr2 count">
+                                            {viewRef ? <CountUp end={150} /> : '0'}
+                                        </h2>
                                         <span>event &amp; oline courses</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div className="counter-cont">
-                                        <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={3875} /> : '0'}</h2>
+                                        <h2 ref={countRef} className="clr2 count">
+                                            {viewRef ? <CountUp end={3875} /> : '0'}
+                                        </h2>
                                         <span>successful students on 60 countries</span>
                                     </div>
                                 </li>

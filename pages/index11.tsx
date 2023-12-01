@@ -1,24 +1,22 @@
-import { Layout } from '../app/components/Layout';
-import { BlogPosts } from '../app/components/BlogPosts';
 import { useRef, useState } from 'react';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
-import { carouselsExample } from './index';
 import { useInView } from 'react-intersection-observer';
 import { NextLink } from '../app/components/BaseNextLink';
+import { BlogPosts } from '../app/components/BlogPosts';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
 import { Burger } from '../app/components/Navigation/Burger';
 import { RightMenu } from '../app/components/RightMenu';
-
+import { carouselsExample } from './index';
 const HomePage11 = () => {
     const [open, setOpen] = useState<boolean>(false);
 
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const carouselRef = useRef<Carousel | null>(null);
     const carouselRef2 = useRef<Carousel | null>(null);
@@ -390,8 +388,8 @@ const HomePage11 = () => {
                                         <p>
                                             We help our client suceed by creating identities, digital experiences, and printmaterials that
                                             communicate clearly, achieve marketing goals &amp; look fantastic Lorem uispum dolor sit amert
-                                            tunoer poea opefse ceefo goipully. Communicate clearly, achieve marketing goals &amp; look fantastic
-                                            Lorem uispum dolor sit amert tunoer poea opefse ceefo goipully.
+                                            tunoer poea opefse ceefo goipully. Communicate clearly, achieve marketing goals &amp; look
+                                            fantastic Lorem uispum dolor sit amert tunoer poea opefse ceefo goipully.
                                         </p>
                                         <a href="about-agency.tsx" title="" className="btn-default v11">
                                             Learn More
@@ -467,7 +465,9 @@ const HomePage11 = () => {
                         <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <li>
                                 <div className="counter-cont">
-                                    <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={820} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="clr1 count">
+                                        {viewRef ? <CountUp end={820} /> : '0'}
+                                    </h2>
                                     <span>
                                         satisfaction <br /> clients
                                     </span>
@@ -475,13 +475,17 @@ const HomePage11 = () => {
                             </li>
                             <li>
                                 <div className="counter-cont">
-                                    <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={643} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="clr1 count">
+                                        {viewRef ? <CountUp end={643} /> : '0'}
+                                    </h2>
                                     <span>employees on worldwide</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="counter-cont">
-                                    <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={1875} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="clr1 count">
+                                        {viewRef ? <CountUp end={1875} /> : '0'}
+                                    </h2>
                                     <span>projects completed on 60 countries</span>
                                 </div>
                             </li>
@@ -527,8 +531,8 @@ const HomePage11 = () => {
                             <span>awards</span>
                             <h2>Rewards for our efforts</h2>
                             <p>
-                                It's always good to receive positive and constructive feedback for your work - from clients and moreover, from
-                                designers!
+                                It's always good to receive positive and constructive feedback for your work - from clients and moreover,
+                                from designers!
                             </p>
                         </div>
                         <div className="certicications-sec">

@@ -7,12 +7,12 @@ import CountUp from 'react-countup';
 
 const MainPage: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
 
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
     return (
@@ -40,29 +40,32 @@ const MainPage: NextPageWithLayout = () => {
                 </div>
             </section>
 
-
             <div ref={ref}>
-
-
                 <section className="clients-sec-v3 counter-miles">
                     <div className="container">
                         <ul className="counter-sec wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <li>
                                 <div className="count-dv flex-column align-items-baseline">
-                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={12} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="count">
+                                        {viewRef ? <CountUp end={12} /> : '0'}
+                                    </h2>
 
                                     <span className="span-count">Demos</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="count-dv flex-column align-items-baseline">
-                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={37} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="count">
+                                        {viewRef ? <CountUp end={37} /> : '0'}
+                                    </h2>
                                     <span className="span-count">html files</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="count-dv flex-column align-items-baseline">
-                                    <h2 ref={countRef} className="count">{viewRef ? <CountUp end={160} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="count">
+                                        {viewRef ? <CountUp end={160} /> : '0'}
+                                    </h2>
                                     <span className="span-count">elements</span>
                                 </div>
                             </li>
@@ -201,8 +204,8 @@ const MainPage: NextPageWithLayout = () => {
                                     Beautiful &amp; Versatile <br /> Portfolio
                                 </h2>
                                 <p className="mt-2">
-                                    With many layouts as carousel, masonry, parallax, you can easy to custom your portfolio items and showcase
-                                    it like the way that you want
+                                    With many layouts as carousel, masonry, parallax, you can easy to custom your portfolio items and
+                                    showcase it like the way that you want
                                 </p>
                             </div>
                         </div>
@@ -296,7 +299,6 @@ const MainPage: NextPageWithLayout = () => {
 
                 <MainFooter />
             </div>
-
         </>
     );
 };

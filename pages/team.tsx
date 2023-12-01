@@ -4,11 +4,10 @@ import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
 import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
 import { useInView } from 'react-intersection-observer';
 
-
 const TeamPage = () => {
     const { ref, inView } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
     return (
@@ -335,7 +334,7 @@ const TeamPage = () => {
                     </div>
                 </div>
             </section>
-            
+
             <FooterVariant1 />
         </>
     );

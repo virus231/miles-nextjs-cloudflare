@@ -9,7 +9,6 @@ import { NextLink } from '../app/components/BaseNextLink';
 import { TabRoot } from '../app/components/Tabs/TabRoot';
 import { useInView } from 'react-intersection-observer';
 
-
 export const carouselsExample = [
     {
         id: '1',
@@ -120,13 +119,12 @@ const tabItems = [
 
 const HomePage = () => {
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
-
 
     return (
         <>
@@ -215,8 +213,8 @@ const HomePage = () => {
                                         <p>
                                             Andy has dedicated his life to learning what makes humans tick. He studies, researches and reads
                                             everything hecan, and shares his findings with his clients. His philosophy is to learn, test,
-                                            analyse, improve and re-test. His motto is stay agile, so you are best positioned to respond quickly
-                                            and effectively to market forces.
+                                            analyse, improve and re-test. His motto is stay agile, so you are best positioned to respond
+                                            quickly and effectively to market forces.
                                         </p>
                                         <NextLink href="24_about_agency.html" title="" className="btn-default-v8 v2">
                                             Learn More
@@ -238,8 +236,8 @@ const HomePage = () => {
                                         <h4>Over 10 years Onum helping companies reach their financial and branding goals</h4>
                                         <p>
                                             Over the years, we have worked with Fortune 500s and brand-new startups.. We help ambitious
-                                            businesses like yours generate more profits by building awareness, driving web traffic, connecting
-                                            with customers, and growing overall sales. Give us a call.
+                                            businesses like yours generate more profits by building awareness, driving web traffic,
+                                            connecting with customers, and growing overall sales. Give us a call.
                                         </p>
                                         <NextLink href="24_about_agency.html" title="" className="btn-default-v8 v2">
                                             Learn More
@@ -275,7 +273,9 @@ const HomePage = () => {
                         <ul className="counter-sec-v6 wow fadeInUp" id="counter" data-wow-duration="1000ms" data-wow-delay="0ms">
                             <li>
                                 <div className="counter-cont">
-                                    <h2 ref={countRef} className="clr1 count">{viewRef ? <CountUp end={100} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="clr1 count">
+                                        {viewRef ? <CountUp end={100} /> : '0'}
+                                    </h2>
                                     <span>
                                         satisfaction <br />
                                         clients
@@ -284,13 +284,17 @@ const HomePage = () => {
                             </li>
                             <li>
                                 <div className="counter-cont">
-                                    <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={250} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="clr2 count">
+                                        {viewRef ? <CountUp end={250} /> : '0'}
+                                    </h2>
                                     <span>employees on worldwide</span>
                                 </div>
                             </li>
                             <li>
                                 <div className="counter-cont">
-                                    <h2 ref={countRef} className="clr2 count">{viewRef ? <CountUp end={3875} /> : '0'}</h2>
+                                    <h2 ref={countRef} className="clr2 count">
+                                        {viewRef ? <CountUp end={3875} /> : '0'}
+                                    </h2>
                                     <span>Project Completed on 60 countries</span>
                                 </div>
                             </li>
@@ -583,8 +587,6 @@ const HomePage = () => {
 
                 <Footer />
             </div>
-
-
         </>
     );
 };

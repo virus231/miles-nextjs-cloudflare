@@ -3,11 +3,10 @@ import { RightMenu } from '../RightMenu';
 import { NextLink } from '../BaseNextLink';
 import { Burger } from './Burger';
 
-
 type Props = {
-    view?: boolean
-    isText?: boolean
-}
+    view?: boolean;
+    isText?: boolean;
+};
 
 export const HeaderV1 = (props: Props) => {
     const { view, isText } = props;

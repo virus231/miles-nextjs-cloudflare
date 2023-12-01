@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from '@mui/material';
-import CarouselCenterMode from '../app/components/carousel/CarouselCenterMode';
+import CarouselCenterMode from '../app/components/Carousel/CarouselCenterMode';
 
 const _carouselsExample = [
     {

@@ -1,15 +1,12 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import { HeaderV2 } from '../app/components/Navigation/HeaderV2';
-import { carouselsExample } from './index';
-import Carousel, { CarouselArrows, CarouselDots } from '../app/components/carousel';
-import { Box } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 import { useRef } from 'react';
-import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
-
+import { useInView } from 'react-intersection-observer';
+import Carousel, { CarouselArrows, CarouselDots } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { Layout } from '../app/components/Layout';
+import { HeaderV2 } from '../app/components/Navigation/HeaderV2';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const AboutBusiness: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
         threshold: 0,
@@ -17,7 +14,7 @@ const AboutBusiness: NextPageWithLayout = () => {
     });
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const carouselRef = useRef<Carousel | null>(null);
 

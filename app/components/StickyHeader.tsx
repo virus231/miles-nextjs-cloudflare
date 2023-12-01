@@ -1,12 +1,12 @@
 import { useInView } from 'react-intersection-observer';
 
 const StickyHeader = () => {
-  const { ref, inView: myElementIsVisible } = useInView();
+    const { ref, inView: myElementIsVisible } = useInView();
 
-  return {
-    ref,
-    myElementIsVisible,
-  };
+    return {
+        ref,
+        myElementIsVisible
+    };
 };
 
 export default StickyHeader;

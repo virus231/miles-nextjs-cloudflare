@@ -1,14 +1,12 @@
-import { Layout } from '../app/components/Layout';
-import { NextPageWithLayout } from './_app';
-import Carousel, { CarouselDots } from '../app/components/carousel';
-import { carouselsExample } from './index';
 import { useRef, useState } from 'react';
 import ReactPageScroller from 'react-page-scroller';
 import { NextLink } from '../app/components/BaseNextLink';
+import Carousel, { CarouselDots } from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
 import { Burger } from '../app/components/Navigation/Burger';
 import { RightMenu } from '../app/components/RightMenu';
-
-
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const HomePage4: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
     const [currentPage, setCurrentPage] = useState<number | null>(null);
@@ -163,43 +161,29 @@ const HomePage4: NextPageWithLayout = () => {
                                 <i className="lni lni-envelope" />
                             </a>
                         </div>
-                        
-                        <Burger white className="desktop-hide mobile-show " setOpen={() => setOpen(!open)} />
 
+                        <Burger white className="desktop-hide mobile-show " setOpen={() => setOpen(!open)} />
                     </div>
                 </div>
             </header>
-            
+
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
 
-            <div id="pagepiling" className='developer'>
-                <ReactPageScroller renderAllPagesOnFirstRender
-                    pageOnChange={handlePageChange}
-                    customPageNumber={currentPage ?? 0}
-                >
+            <div id="pagepiling" className="developer">
+                <ReactPageScroller renderAllPagesOnFirstRender pageOnChange={handlePageChange} customPageNumber={currentPage ?? 0}>
                     <section className="section pp-scrollable">
                         <div className="main-banner-v4">
                             <div className="container">
                                 <div className="banner-content-v4">
-                                    <div
-                                        className="banner-txt-v4 wow fadeInUp"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="banner-txt-v4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <span>Front-End Developer</span>
                                         <h2>Talk is cheap. Show me the code</h2>
-                                        <p>
-                                            I design and code beautifully simple things, and I love what I do.
-                                        </p>
+                                        <p>I design and code beautifully simple things, and I love what I do.</p>
                                         <a href="30_contact_1.html" title="">
                                             let’s chat!
                                         </a>
                                     </div>
-                                    <div
-                                        className="banner-img-v4 wow zoomIn"
-                                        data-wow-duration="1000ms"
-                                        data-wow-delay="0ms"
-                                    >
+                                    <div className="banner-img-v4 wow zoomIn" data-wow-duration="1000ms" data-wow-delay="0ms">
                                         <img src="/static/images/ban-img5.png" alt="" />
                                         <div className="col-icon v1">
                                             <img src="/static/images/col1.png" alt="" />
@@ -287,12 +271,11 @@ const HomePage4: NextPageWithLayout = () => {
                                                     <h2>Hello! I’m Daniel Stephan</h2>
                                                     <h3>Every great design begin with an even better story</h3>
                                                     <p>
-                                                        Since beginning my journey as a freelance designer nearly 8
-                                                        years ago, I've done remote work for agencies, consulted for
-                                                        startups, and collaborated with talented people to create
-                                                        digital products for both business and consumer use. I'm
-                                                        quietly confident, naturally curious, and perpetually working
-                                                        on improving my chopsone design problem at a time.
+                                                        Since beginning my journey as a freelance designer nearly 8 years ago, I've done
+                                                        remote work for agencies, consulted for startups, and collaborated with talented
+                                                        people to create digital products for both business and consumer use. I'm quietly
+                                                        confident, naturally curious, and perpetually working on improving my chopsone
+                                                        design problem at a time.
                                                     </p>
                                                 </div>
                                             </div>
@@ -458,11 +441,11 @@ const HomePage4: NextPageWithLayout = () => {
                                                     </ul>
                                                     <span>5.0 Rating</span>
                                                     <p>
-                                                        Daniel was a real pleasure to work with and we look forward to working with him again. He’s
-                                                        definitely the kind of designer you can trust with a project from start to finish
+                                                        Daniel was a real pleasure to work with and we look forward to working with him
+                                                        again. He’s definitely the kind of designer you can trust with a project from start
+                                                        to finish
                                                     </p>
                                                 </div>
-
                                             ))}
                                         </Carousel>
                                     </div>
@@ -679,7 +662,6 @@ const HomePage4: NextPageWithLayout = () => {
                         </div>
                     </section>
                 </ReactPageScroller>
-
             </div>
         </>
     );

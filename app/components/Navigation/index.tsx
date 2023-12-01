@@ -5,10 +5,9 @@ import StickyHeader from '../StickyHeader';
 import { Burger } from './Burger';
 import { Links } from './Links';
 
-
 type Props = {
-    view: boolean
-}
+    view: boolean;
+};
 
 export const Navigation = (props: Props) => {
     const { view } = props;

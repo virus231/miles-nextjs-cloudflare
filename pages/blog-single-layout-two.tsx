@@ -1,11 +1,10 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import { carouselsExample } from './index';
-import Carousel, { CarouselDots } from '../app/components/carousel';
 import { useRef } from 'react';
-
+import Carousel, { CarouselDots } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { Layout } from '../app/components/Layout';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const BlogSingleLayoutTwo: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
 

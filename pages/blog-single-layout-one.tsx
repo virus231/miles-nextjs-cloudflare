@@ -1,17 +1,15 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
-import Carousel, { CarouselDots } from '../app/components/carousel';
 import { useRef } from 'react';
-import { carouselsExample } from './index';
 import { useInView } from 'react-intersection-observer';
-
-
+import Carousel, { CarouselDots } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { Layout } from '../app/components/Layout';
+import { HeaderV1 } from '../app/components/Navigation/HeaderV1';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const BlogSingleLayoutOne: NextPageWithLayout = () => {
     const { ref, inView } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
     const { ref: skipRef, inView: skipView } = useInView({
         threshold: 0,
@@ -82,14 +80,16 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                                     Brief Guide into Social <br /> Media Marketing Trends 2020
                                                 </h2>
                                                 <p>
-                                                    <strong>N</strong>ever ever think of giving up. Winners never quit and quitters never win.
-                                                    Take all negative words out of your mental dictionary and focus on the solutions with utmost
-                                                    conviction and patience. The battle is never lost until you’ve abandon your vision.
+                                                    <strong>N</strong>ever ever think of giving up. Winners never quit and quitters never
+                                                    win. Take all negative words out of your mental dictionary and focus on the solutions
+                                                    with utmost conviction and patience. The battle is never lost until you’ve abandon your
+                                                    vision.
                                                 </p>
                                                 <p>
-                                                    utmost conviction and patience. The battle is never lost until you’ve abandon your vision.
-                                                    But what if you’re really exhausted physically, mentally, and most of all emotionally? Here
-                                                    are some sources of motivation to prompt you in reaching the peak of accomplishment.
+                                                    utmost conviction and patience. The battle is never lost until you’ve abandon your
+                                                    vision. But what if you’re really exhausted physically, mentally, and most of all
+                                                    emotionally? Here are some sources of motivation to prompt you in reaching the peak of
+                                                    accomplishment.
                                                 </p>
                                                 <div className="row pst-large">
                                                     <div className="col-12">
@@ -99,29 +99,29 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                                 </div>
                                                 <h3>Challenge</h3>
                                                 <p>
-                                                    Success needs hard work. Don’t listen to these ‘get rich quick’ schemes. You need to build
-                                                    your character and work hard on yourself and your business to achieve greatness. Work hard
-                                                    and work smart. Do the right things and do them in the right way. Don’t procrastinate. Take
-                                                    bold actions. Work long hours and craft your legacy.
+                                                    Success needs hard work. Don’t listen to these ‘get rich quick’ schemes. You need to
+                                                    build your character and work hard on yourself and your business to achieve greatness.
+                                                    Work hard and work smart. Do the right things and do them in the right way. Don’t
+                                                    procrastinate. Take bold actions. Work long hours and craft your legacy.
                                                 </p>
                                                 <h3>Methods for Everyone</h3>
                                                 <p>
                                                     Successful people do not see failures as failures. They see them as important learning
                                                     lessons. Lessons that are capable of giving them insights to prevent such mistakes from
-                                                    happening again. By adopting this mindset of turning each failure into a learning lesson or
-                                                    opportunity, you can never fail until you yourself quit.
+                                                    happening again. By adopting this mindset of turning each failure into a learning lesson
+                                                    or opportunity, you can never fail until you yourself quit.
                                                 </p>
                                                 <p>
                                                     You should be able to find several indispensable facts about motivation in the following
-                                                    paragraphs. If there’s at least one fact you didn’t know before, imagine the difference it
-                                                    might make. It’s so difficult to go on when everything seems to fail, isn’t it? Are there
-                                                    times in your life when you really want to call it “quits” because you just can’t see any
-                                                    good results from all the hard work you’ve done?
+                                                    paragraphs. If there’s at least one fact you didn’t know before, imagine the difference
+                                                    it might make. It’s so difficult to go on when everything seems to fail, isn’t it? Are
+                                                    there times in your life when you really want to call it “quits” because you just can’t
+                                                    see any good results from all the hard work you’ve done?
                                                 </p>
                                                 <blockquote>
                                                     <p>
-                                                        To make these eternity bands more specially, you can use your birthstone into the band
-                                                        or your luck stone .
+                                                        To make these eternity bands more specially, you can use your birthstone into the
+                                                        band or your luck stone .
                                                     </p>
                                                     <span>
                                                         <strong>Daniel Bagneto</strong>, Invisionapp Inc
@@ -130,17 +130,18 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                                 <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
                                                 <h3>Highlight on the Worldwide</h3>
                                                 <p>
-                                                    Just set something gratifying to indulge in after completing a certain undertaking. The best
-                                                    time to learn about motivation is before you’re in the thick of things. Wise readers will
-                                                    keep reading to earn some valuable motivation experience while it’s still free.
+                                                    Just set something gratifying to indulge in after completing a certain undertaking. The
+                                                    best time to learn about motivation is before you’re in the thick of things. Wise
+                                                    readers will keep reading to earn some valuable motivation experience while it’s still
+                                                    free.
                                                 </p>
                                                 <h3>So Result</h3>
                                                 <p>
-                                                    If you want to succeed, surround yourself with the right kind of people who will support and
-                                                    encourage you all the way. Be with people who have the same beliefs and aspirations as
-                                                    yours. Positive aura is generated by this fusion of collective energy from people of “like
-                                                    minds.” On the contrary, being with people who oppose your ways of thinking may trigger a
-                                                    negative, yet very powerful, kind of motivation.
+                                                    If you want to succeed, surround yourself with the right kind of people who will support
+                                                    and encourage you all the way. Be with people who have the same beliefs and aspirations
+                                                    as yours. Positive aura is generated by this fusion of collective energy from people of
+                                                    “like minds.” On the contrary, being with people who oppose your ways of thinking may
+                                                    trigger a negative, yet very powerful, kind of motivation.
                                                 </p>
                                                 <div className="row post-cont align-items-center">
                                                     <div className="col-lg-6 col-md-6">
@@ -209,8 +210,8 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                                                 </h3>
                                                 <span>Content Editor</span>
                                                 <p>
-                                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                                                    anim id est laborum sed ut perspiciatis unde.
+                                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                                    mollit anim id est laborum sed ut perspiciatis unde.
                                                 </p>
                                             </div>
                                         </div>
@@ -415,7 +416,6 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
             <section className="commented-sec">
@@ -518,8 +518,6 @@ const BlogSingleLayoutOne: NextPageWithLayout = () => {
                 </div>
             </section>
             <FooterVariant1 />
-
-
         </>
     );
 };

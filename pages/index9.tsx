@@ -1,22 +1,21 @@
-import { useEffect, useRef, useState } from 'react';
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { BlogPosts } from '../app/components/BlogPosts';
-import { NextLink } from '../app/components/BaseNextLink';
-import { RightMenu } from '../app/components/RightMenu';
-import { Burger } from '../app/components/Navigation/Burger';
-import { carouselsExample } from './index';
-import Carousel, { CarouselDots } from '../app/components/carousel';
+import { useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-
+import { NextLink } from '../app/components/BaseNextLink';
+import { BlogPosts } from '../app/components/BlogPosts';
+import Carousel, { CarouselDots } from '../app/components/Carousel';
+import { Layout } from '../app/components/Layout';
+import { Burger } from '../app/components/Navigation/Burger';
+import { RightMenu } from '../app/components/RightMenu';
+import { NextPageWithLayout } from './_app';
+import { carouselsExample } from './index';
 const HomePage9: NextPageWithLayout = () => {
     const [open, setOpen] = useState<boolean>(false);
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
     const { ref: countRef, inView: viewRef } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
     const carouselRef = useRef<Carousel | null>(null);
@@ -353,8 +352,8 @@ const HomePage9: NextPageWithLayout = () => {
                                                 <div className="svs-info">
                                                     <h3>Affordable Price</h3>
                                                     <p>
-                                                        Nanotechnology immersion along the information highway will close the loop on focusing
-                                                        solely
+                                                        Nanotechnology immersion along the information highway will close the loop on
+                                                        focusing solely
                                                     </p>
                                                 </div>
                                             </div>
@@ -367,8 +366,8 @@ const HomePage9: NextPageWithLayout = () => {
                                                 <div className="svs-info">
                                                     <h3>Top-notch Experts Consulting</h3>
                                                     <p>
-                                                        Nanotechnology immersion along the information highway will close the loop on focusing
-                                                        solely
+                                                        Nanotechnology immersion along the information highway will close the loop on
+                                                        focusing solely
                                                     </p>
                                                 </div>
                                             </div>
@@ -381,8 +380,8 @@ const HomePage9: NextPageWithLayout = () => {
                                                 <div className="svs-info">
                                                     <h3>Dedicated Support 24/7</h3>
                                                     <p>
-                                                        Nanotechnology immersion along the information highway will close the loop on focusing
-                                                        solely
+                                                        Nanotechnology immersion along the information highway will close the loop on
+                                                        focusing solely
                                                     </p>
                                                 </div>
                                             </div>
@@ -485,8 +484,8 @@ const HomePage9: NextPageWithLayout = () => {
                                             </h2>
                                         </div>
                                         <p>
-                                            Meet our talented team of creatives, fun-lovers, and magic makers. Shall seas yielding a he, moveth
-                                            said gathering under all cattle were years fruit whose isn’t.
+                                            Meet our talented team of creatives, fun-lovers, and magic makers. Shall seas yielding a he,
+                                            moveth said gathering under all cattle were years fruit whose isn’t.
                                         </p>
                                         <a href="32_team.html" title="" className="btn-default-v9 v2">
                                             Learn More

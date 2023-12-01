@@ -2,15 +2,14 @@ import { useEffect, useRef, useState } from 'react';
 import Isotope, { IsotopeOptions } from 'isotope-layout';
 import fetch from 'isomorphic-unfetch';
 
-
 type Item = {
-    id: number,
-    value: string
-}
+    id: number;
+    value: string;
+};
 
 type Props = {
-    items: Item[]
-}
+    items: Item[];
+};
 
 export default function IsotopeLayoutCareer(props: Props) {
     const [filterKey, setFilterKey] = useState('*');
@@ -18,7 +17,6 @@ export default function IsotopeLayoutCareer(props: Props) {
 
     const handleFilterKeyChange = (key: string) => () => {
         setFilterKey(key);
-
     };
 
     useEffect(() => {
@@ -50,24 +48,43 @@ export default function IsotopeLayoutCareer(props: Props) {
                             </a>
                         </li>
                         <li>
-                            <a className={`${isActive('full_time')}`} onClick={handleFilterKeyChange('full_time')} data-option-value=".full_time">Full Time</a>
+                            <a
+                                className={`${isActive('full_time')}`}
+                                onClick={handleFilterKeyChange('full_time')}
+                                data-option-value=".full_time"
+                            >
+                                Full Time
+                            </a>
                         </li>
                         <li>
-                            <a className={`${isActive('part_time')}`} onClick={handleFilterKeyChange('part_time')} data-option-value=".part_time">Part Time</a>
+                            <a
+                                className={`${isActive('part_time')}`}
+                                onClick={handleFilterKeyChange('part_time')}
+                                data-option-value=".part_time"
+                            >
+                                Part Time
+                            </a>
                         </li>
                         <li>
-                            <a className={`${isActive('remote')}`} onClick={handleFilterKeyChange('remote')} data-option-value=".remote">Remote</a>
+                            <a className={`${isActive('remote')}`} onClick={handleFilterKeyChange('remote')} data-option-value=".remote">
+                                Remote
+                            </a>
                         </li>
                         <li>
-                            <a className={`${isActive('internship')}`} onClick={handleFilterKeyChange('internship')} data-option-value=".internship">Internship</a>
+                            <a
+                                className={`${isActive('internship')}`}
+                                onClick={handleFilterKeyChange('internship')}
+                                data-option-value=".internship"
+                            >
+                                Internship
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div className="row ms-row masonary">
                 {props.items.map((item: Item) => (
-                    <div key={item.id}
-                        className={`career col-lg-6 col-md-6 col-sm-6 ${item.value}`}>
+                    <div key={item.id} className={`career col-lg-6 col-md-6 col-sm-6 ${item.value}`}>
                         <div className="career-item">
                             <div className="career-thumb">
                                 <img src={`/static/images/cr${item.id}.jpg`} alt="" className="w-100" />
@@ -205,5 +222,5 @@ export default function IsotopeLayoutCareer(props: Props) {
                 </div>
             </div> */}
         </>
-    )
-};
+    );
+}

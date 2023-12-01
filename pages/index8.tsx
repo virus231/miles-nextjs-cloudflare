@@ -1,22 +1,20 @@
-import { NextPageWithLayout } from './_app';
-import { Layout } from '../app/components/Layout';
-import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
-import Carousel, { CarouselArrows } from '../app/components/carousel';
 import { useRef, useState } from 'react';
-import { carouselsExample } from '.';
-import { RightMenu } from '../app/components/RightMenu';
-import { NextLink } from '../app/components/BaseNextLink';
-import { Burger } from '../app/components/Navigation/Burger';
+import { Tween } from 'react-gsap';
 import { useInView } from 'react-intersection-observer';
 import { Controller, Scene } from 'react-scrollmagic';
-import { Tween } from 'react-gsap';
-
-
+import { carouselsExample } from '.';
+import { NextLink } from '../app/components/BaseNextLink';
+import Carousel, { CarouselArrows } from '../app/components/Carousel';
+import { FooterVariant1 } from '../app/components/Footer/FooterVariant1';
+import { Layout } from '../app/components/Layout';
+import { Burger } from '../app/components/Navigation/Burger';
+import { RightMenu } from '../app/components/RightMenu';
+import { NextPageWithLayout } from './_app';
 const HomePage8: NextPageWithLayout = () => {
     const carouselRef = useRef<Carousel | null>(null);
     const [open, setOpen] = useState<boolean>(false);
     const { ref, inView } = useInView({
-        threshold: 0,
+        threshold: 0
     });
 
     const carouselSettings = {
@@ -48,7 +46,6 @@ const HomePage8: NextPageWithLayout = () => {
         carouselRef.current?.slickNext();
     };
 
-
     return (
         <>
             <header className={`pb ${inView ? 'sticky animated slide' : ''}`}>
@@ -73,18 +70,13 @@ const HomePage8: NextPageWithLayout = () => {
 
             <RightMenu isOpen={open} closeMenu={() => setOpen(!open)} />
 
-
             <div className="promo promo-primary-container">
                 <Controller
                     globalSceneOptions={{
-                        triggerHook: '0',
+                        triggerHook: '0'
                     }}
                 >
-                    <Scene
-                        duration="48%"
-                        triggerElement=".promo-primary-container"
-                        triggerHook={0}
-                    >
+                    <Scene duration="48%" triggerElement=".promo-primary-container" triggerHook={0}>
                         <Tween
                             to={{
                                 backgroundPosition: '620px 0',
@@ -98,10 +90,7 @@ const HomePage8: NextPageWithLayout = () => {
                         </Tween>
                     </Scene>
 
-                    <Scene
-                        duration="50%"
-                        triggerElement=".step-position"
-                    >
+                    <Scene duration="50%" triggerElement=".step-position">
                         <div className="step-position" />
                     </Scene>
 
@@ -113,17 +102,12 @@ const HomePage8: NextPageWithLayout = () => {
                         }}
                         to={{
                             ease: 'easeNone',
-                            position: 'relative',
+                            position: 'relative'
                         }}
                     >
                         <div className="promo-primary">
                             <div className="container">
-                                <Scene
-                                    duration="50%"
-                                    triggerElement=".promo-primary-container"
-                                    triggerHook={0}
-                                    offset={100}
-                                >
+                                <Scene duration="50%" triggerElement=".promo-primary-container" triggerHook={0} offset={100}>
                                     <Tween
                                         to={{
                                             ease: 'easeNone',
@@ -141,11 +125,7 @@ const HomePage8: NextPageWithLayout = () => {
                                     </Tween>
                                 </Scene>
                             </div>
-                            <Scene
-                                duration="50%"
-                                triggerElement=".promo-primary-container"
-                                triggerHook={0}
-                            >
+                            <Scene duration="50%" triggerElement=".promo-primary-container" triggerHook={0}>
                                 <Tween
                                     to={{
                                         ease: 'easeNone',
@@ -157,9 +137,7 @@ const HomePage8: NextPageWithLayout = () => {
                             </Scene>
                         </div>
                     </Tween>
-                    
                 </Controller>
-
             </div>
             <div ref={ref}>
                 <section className="banner-sec" style={{ display: 'none' }}>
@@ -257,7 +235,11 @@ const HomePage8: NextPageWithLayout = () => {
                                                 <p>We build and activate brands throung cultural insigh &amp;, strategic vision.</p>
                                             </div>
                                         </div>
-                                        <div className="service-card clr2 wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                        <div
+                                            className="service-card clr2 wow fadeInRight"
+                                            data-wow-duration="1000ms"
+                                            data-wow-delay="300ms"
+                                        >
                                             <div className="service-icon">
                                                 <img src="/static/images/icon2.png" alt="" />
                                             </div>
@@ -385,8 +367,8 @@ const HomePage8: NextPageWithLayout = () => {
                                         <div key={item.id} className="col-12 col-lg-6">
                                             <div className="testimonial-slide">
                                                 <p>
-                                                    “Originally, creative and with an innate understanding of their customer’s need. The team at Miles
-                                                    are always a pleasure to work with. Recommended.”
+                                                    “Originally, creative and with an innate understanding of their customer’s need. The
+                                                    team at Miles are always a pleasure to work with. Recommended.”
                                                 </p>
                                                 <div className="thmb-row">
                                                     <div className="thmb-img">
@@ -423,8 +405,8 @@ const HomePage8: NextPageWithLayout = () => {
                                             <h2>Creative and Funny</h2>
                                         </div>
                                         <p>
-                                            Meet our talented team of creatives, fun-lovers, and magic makers. Shall seas yielding a he, moveth
-                                            said gathering under all cattle were years fruit whose isn’t.{' '}
+                                            Meet our talented team of creatives, fun-lovers, and magic makers. Shall seas yielding a he,
+                                            moveth said gathering under all cattle were years fruit whose isn’t.{' '}
                                         </p>
                                         <a href="32_team.html" title="" className="btn-default no-bg">
                                             Meet Our Team
@@ -444,8 +426,8 @@ const HomePage8: NextPageWithLayout = () => {
                                         <span>Featured Post</span>
                                         <h2>Brief Guide into Social Media Marketing Trends 2020</h2>
                                         <p>
-                                            These days, the Internet permeates every single facet of our lives on a daily basis. Indeed, there
-                                            is rarely a thing that anyone.
+                                            These days, the Internet permeates every single facet of our lives on a daily basis. Indeed,
+                                            there is rarely a thing that anyone.
                                         </p>
                                         <a href="blog-single-layout1.html" title="" className="btn-default">
                                             Continue Reading <i className="lni lni-chevron-right" />
@@ -566,7 +548,6 @@ const HomePage8: NextPageWithLayout = () => {
                 </section>
                 <FooterVariant1 />
             </div>
-
         </>
     );
 };

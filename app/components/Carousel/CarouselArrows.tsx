@@ -58,7 +58,7 @@ const StyledIconButton = styled(IconButton, {
         '&:hover': {
             color: '#ff4800'
         }
-    }),
+    })
 }));
 
 // ----------------------------------------------------------------------
@@ -116,11 +116,11 @@ export default function CarouselArrows({
                         left: 16,
                         ...(media && {
                             '@media only screen and (max-width: 678px)': {
-                                top: '45%',
+                                top: '45%'
                             },
                             '@media only screen and (max-width: 480px)': {
-                                top: '60%',
-                            },
+                                top: '60%'
+                            }
                         }),
                         ...leftButtonProps?.sx
                     }}
@@ -142,12 +142,12 @@ export default function CarouselArrows({
                         ...rightButtonProps?.sx,
                         ...(media && {
                             '@media only screen and (max-width: 678px)': {
-                                top: '45%',
+                                top: '45%'
                             },
                             '@media only screen and (max-width: 480px)': {
-                                top: '60%',
-                            },
-                        }),
+                                top: '60%'
+                            }
+                        })
                     }}
                 >
                     {textRightArrow != '' ? textRightArrow : <RightIcon icon={icon} isRTL={isRTL} />}

@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 const ErrorPage = () => {
     const { ref, inView } = useInView({
         threshold: 0,
-        triggerOnce: true,
+        triggerOnce: true
     });
 
     return (
