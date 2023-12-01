@@ -1,8 +1,8 @@
 import { carouselsExample } from '../../../pages';
-import CarouselCenterMode, { CarouselItem } from '../carousel/CarouselCenterMode';
-import Carousel, { CarouselArrows, CarouselDots } from '../carousel';
 import { useTheme } from '@mui/material/styles';
 import { useRef } from 'react';
+import Carousel, { CarouselArrows, CarouselDots } from '../Carousel';
+import { CarouselItem } from '../Carousel/CarouselCenterMode';
 
 type Props = {
     content: {
