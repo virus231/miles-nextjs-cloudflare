@@ -1,4 +1,4 @@
-import Box from '@mui/material/Box/Box';
+import Box from '@mui/material/Box';
 import { useRef, useState } from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
