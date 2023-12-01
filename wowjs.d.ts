@@ -9,3 +9,4 @@ declare module 'wowjs' {
     const wow: any;
     export default wow;
 }
+
